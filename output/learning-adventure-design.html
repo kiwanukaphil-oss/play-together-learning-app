@@ -1,0 +1,110 @@
+<div id="learning-design">
+  <header><div class="brand">🌱 Little Learning Adventures</div><span class="preview-label">Design preview</span></header>
+  <nav aria-label="Preview screens">
+    <button data-screen="home" aria-pressed="true">🏡 Today</button>
+    <button data-screen="words" aria-pressed="false">🔤 Words</button>
+    <button data-screen="maths" aria-pressed="false">🍎 Numbers</button>
+    <button data-screen="art" aria-pressed="false">🎨 Create</button>
+    <button data-screen="parent" aria-pressed="false">Parent corner</button>
+  </nav>
+  <main>
+    <section data-panel="home">
+      <div class="eyebrow">A LITTLE LEARNING, TOGETHER</div>
+      <div class="welcome"><div><h1>A picnic with Pip</h1><p>Words, counting, and something<br>only you can create.</p><button class="primary" data-go="words">Let's play →</button></div><div class="scene" aria-label="Pip the cat beside a picnic basket"><span>☀️</span><div>🐈 🧺</div><span>🌼 🌿 🌼</span></div></div>
+      <div class="journey" aria-label="Today's activities"><button data-go="words"><span>🔤</span><strong>Build a word</strong><small>Say it together</small></button><button data-go="maths"><span>🍎</span><strong>Pack the picnic</strong><small>Count and share</small></button><button data-go="art"><span>🎨</span><strong>Make a picture</strong><small>Your ideas belong here</small></button></div>
+      <footer>A short adventure. Stop whenever you need. <button data-go="art">Just draw today →</button></footer>
+    </section>
+    <section data-panel="words" hidden>
+      <div class="eyebrow">WORDS · BUILD TOGETHER</div><h1>Make the word “cat”</h1><p>Say the word. Listen for each sound. Choose its letter.</p>
+      <div class="word-slots" aria-label="Your word" aria-live="polite"><span>_</span><span>_</span><span>_</span></div>
+      <div class="letter-bank" aria-label="Letter choices"><button data-letter="a">a</button><button data-letter="m">m</button><button data-letter="t">t</button><button data-letter="c">c</button></div>
+      <div class="action-row"><button id="undo-letter">Undo letter</button><button id="check-word" class="primary">Try our word</button></div><p id="word-feedback" class="feedback" aria-live="polite">Take your time. You can do this together.</p>
+      <details><summary>Grown-up tip</summary><p>Use the letter sounds, then blend them together. This sample assumes c, a, and t have already been taught. Reviewed sound recordings will be added in the app.</p></details><footer><button data-go="maths">Next: pack the picnic →</button></footer>
+    </section>
+    <section data-panel="maths" hidden>
+      <div class="eyebrow">NUMBERS · COUNT TOGETHER</div><h1>Pack 3 apples for Pip</h1><p>Tap an apple to put it in the basket.</p><div class="apple-bank" aria-label="Apples to pack"><button data-apple="0" aria-label="Pack apple 1">🍎</button><button data-apple="1" aria-label="Pack apple 2">🍎</button><button data-apple="2" aria-label="Pack apple 3">🍎</button><button data-apple="3" aria-label="Pack apple 4">🍎</button><button data-apple="4" aria-label="Pack apple 5">🍎</button></div>
+      <div class="basket"><span aria-hidden="true">🧺</span><div id="packed-apples" aria-label="Basket contents">Your basket is empty</div></div><div class="action-row"><button id="unpack-apple">Take one out</button><button id="check-apples" class="primary">Check together</button></div><p id="math-feedback" class="feedback" aria-live="polite">Touch and count each apple as you go.</p><details><summary>Grown-up tip</summary><p>Ask “How many altogether?” Try the same game with three real toys or snacks after the screen activity.</p></details><footer><button data-go="art">Next: make a picture →</button></footer>
+    </section>
+    <section data-panel="art" hidden>
+      <div class="eyebrow">CREATE · EVERY IDEA IS WELCOME</div><h1>Design a picnic blanket</h1><p>Choose a colour, then tap the squares. Or draw your picnic on paper.</p><div class="palette" aria-label="Choose a colour"><button data-colour="rose" aria-pressed="true">Rose</button><button data-colour="sun" aria-pressed="false">Sun</button><button data-colour="leaf" aria-pressed="false">Leaf</button><button data-colour="sky" aria-pressed="false">Sky</button></div><div id="blanket" aria-label="Colour your picnic blanket"></div><div class="action-row"><button id="undo-colour">Undo colour</button><button class="primary" id="finish-art">I made this!</button></div><p id="art-feedback" class="feedback" aria-live="polite">There is no wrong way to colour your blanket.</p><footer><button data-go="parent">Grown-up: finish our session →</button></footer>
+    </section>
+    <section data-panel="parent" hidden>
+      <div class="eyebrow">PARENT CORNER · SAMPLE SESSION</div><h1>Notice the little steps</h1><p>Record how much support helped today. These preview notes stay in this conversation only.</p><div class="observations"><label>Connecting sounds to letters<select data-observation="sounds"><option value="">Choose an observation</option><option>Did it independently</option><option>Did it with help</option><option>Let's practise again</option><option>Skipped today</option></select></label><label>Counting a small group<select data-observation="counting"><option value="">Choose an observation</option><option>Did it independently</option><option>Did it with help</option><option>Let's practise again</option><option>Skipped today</option></select></label></div><label class="paper-check"><input type="checkbox" id="paper-writing"> We also tried drawing or writing on paper</label><div class="parent-note"><h2>Next time</h2><p>Begin with something familiar. Revisit today's sounds and quantities with different examples, then introduce a small new step when he is ready.</p></div><button class="primary" data-go="home">Back to our adventure</button>
+    </section>
+  </main>
+</div>
+<style>
+#learning-design{--paper:light-dark(#fffaf1,#20271f);--surface:light-dark(#ffffff,#2c352b);--ink:light-dark(#273e32,#eff4e9);--soft:light-dark(#eaf0dd,#354332);--accent:light-dark(#326348,#b8d59b);--on-accent:light-dark(#ffffff,#203122);--line:light-dark(#dbe3d4,#53634c);background:var(--paper);color:var(--ink);font:17px/1.55 'Trebuchet MS',sans-serif;border-radius:24px;overflow:hidden}
+#learning-design *{box-sizing:border-box}#learning-design [hidden]{display:none!important}#learning-design header{padding:22px 26px 12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding-right:100px}#learning-design .brand{font-weight:700}#learning-design .preview-label{font-size:12px;opacity:.7}#learning-design nav{display:flex;gap:8px;padding:12px 26px;flex-wrap:wrap;border-bottom:1px solid var(--line)}#learning-design button,#learning-design select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 18px;min-height:48px}#learning-design button:disabled{opacity:.4}#learning-design button[aria-pressed=true],#learning-design .primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}#learning-design main{padding:30px;min-height:490px}#learning-design h1{font-size:clamp(28px,5vw,42px);line-height:1.15;letter-spacing:-1px;margin:14px 0}#learning-design h2{font-size:20px;margin:0}#learning-design p{margin:12px 0 22px}#learning-design .eyebrow{font-size:12px;letter-spacing:1.6px;font-weight:700}#learning-design .welcome{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:25px}#learning-design .scene{background:var(--soft);border-radius:48% 48% 25% 25%;padding:20px;text-align:center}#learning-design .scene div{font-size:76px}#learning-design .scene span{font-size:28px}#learning-design .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 10px}#learning-design .journey button{text-align:left;padding:18px}#learning-design .journey span{font-size:28px;display:block}#learning-design .journey strong,#learning-design .journey small{display:block}#learning-design .journey small{font-size:13px;margin-top:4px}#learning-design footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px;font-size:13px}#learning-design footer button{border:0;background:transparent;padding:8px 0}#learning-design .word-slots,#learning-design .letter-bank,#learning-design .action-row,#learning-design .apple-bank,#learning-design .palette{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}#learning-design .word-slots span{display:grid;place-items:center;width:76px;height:86px;border-bottom:4px solid var(--accent);background:var(--soft);border-radius:15px;font-size:48px}#learning-design .letter-bank button{font-size:32px;min-width:64px}#learning-design .feedback{text-align:center;min-height:27px}#learning-design details{background:var(--soft);padding:12px 18px;border-radius:14px;font-size:14px}#learning-design details p{margin-bottom:6px}#learning-design .apple-bank button{font-size:32px;padding:8px 12px}#learning-design .basket{background:var(--soft);border-radius:20px;padding:20px;text-align:center;min-height:135px}#learning-design .basket>span{font-size:36px}#learning-design #packed-apples{min-height:32px}#learning-design #blanket{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;max-width:420px;margin:auto;padding:10px;border:2px solid var(--line);border-radius:12px}#learning-design #blanket button{aspect-ratio:1;padding:0;min-height:0;border-radius:5px;background:var(--soft)}#learning-design [data-paint=rose]{background:light-dark(#e7a8a6,#a34e66)!important}#learning-design [data-paint=sun]{background:light-dark(#edca76,#aa8034)!important}#learning-design [data-paint=leaf]{background:light-dark(#8fb797,#457a5d)!important}#learning-design [data-paint=sky]{background:light-dark(#9ec7d6,#447e99)!important}#learning-design .observations{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}#learning-design label{display:block}#learning-design select{display:block;width:100%;margin-top:8px;white-space:normal}#learning-design .parent-note{padding:20px;background:var(--soft);border-radius:16px;margin:24px 0}#learning-design .parent-note p{margin-bottom:0}#learning-design input{width:20px;height:20px;vertical-align:middle}
+@media(max-width:560px){#learning-design header{padding-left:18px}#learning-design nav{padding:12px;gap:6px}#learning-design nav button{font-size:13px;padding:10px}#learning-design main{padding:20px 16px}#learning-design .welcome{grid-template-columns:1fr}#learning-design .scene{display:none}#learning-design .journey{grid-template-columns:1fr;gap:8px}#learning-design .journey button{padding:12px 18px}#learning-design .journey span{float:left;margin-right:16px}#learning-design .observations{grid-template-columns:1fr}#learning-design .palette{gap:6px}#learning-design .palette button{padding:10px}#learning-design #blanket{gap:4px;padding:4px}}
+</style>
+<script>
+(() => {
+  const root = document.getElementById('learning-design');
+  const screens = ['home','words','maths','art','parent'];
+  let selectedLetters = [], packedApples = [], selectedColour = 'rose', paintHistory = [];
+  const blanket = root.querySelector('#blanket');
+  for(let index=0; index<24; index++) {
+    const square = document.createElement('button');
+    square.type='button'; square.dataset.square=String(index);
+    square.setAttribute('aria-label',`Blanket square ${index+1}, uncoloured`);
+    blanket.appendChild(square);
+  }
+  function savePreviewState(screen) {
+    const observations = Object.fromEntries([...root.querySelectorAll('select')].map(select=>[select.dataset.observation,select.value]));
+    window.openai?.setWidgetState?.({modelContent:{screen,observations},privateContent:{screen,observations}})?.catch(()=>{});
+  }
+  function showScreen(screen, persist=true) {
+    const safeScreen = screens.includes(screen) ? screen : 'home';
+    root.querySelectorAll('[data-panel]').forEach(panel=>panel.hidden=panel.dataset.panel!==safeScreen);
+    root.querySelectorAll('[data-screen]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.screen===safeScreen)));
+    if(persist) savePreviewState(safeScreen);
+  }
+  function restorePreviewState(state) {
+    const saved = state?.privateContent;
+    if(!saved) return;
+    showScreen(saved.screen,false);
+    root.querySelectorAll('select').forEach(select=>select.value=saved.observations?.[select.dataset.observation]||'');
+  }
+  function renderLetters() {
+    root.querySelectorAll('.word-slots span').forEach((slot,index)=>slot.textContent=selectedLetters[index]||'_');
+    root.querySelector('#word-feedback').textContent='Take your time. You can do this together.';
+  }
+  function renderApples() {
+    root.querySelector('#packed-apples').textContent=packedApples.length ? '🍎 '.repeat(packedApples.length) : 'Your basket is empty';
+    root.querySelectorAll('[data-apple]').forEach(button=>button.disabled=packedApples.includes(button.dataset.apple));
+    root.querySelector('#math-feedback').textContent='Touch and count each apple as you go.';
+  }
+  // Delegate preview navigation and activity controls so every screen remains usable without a backend.
+  root.addEventListener('click', event => {
+    const button=event.target.closest('button');
+    if(!button) return;
+    if(button.dataset.screen||button.dataset.go) showScreen(button.dataset.screen||button.dataset.go);
+    if(button.dataset.letter && selectedLetters.length<3) {selectedLetters.push(button.dataset.letter);renderLetters();}
+    if(button.id==='undo-letter') {selectedLetters.pop();renderLetters();}
+    if(button.id==='check-word') root.querySelector('#word-feedback').textContent=selectedLetters.join('')==='cat' ? 'You built cat! Say the sounds, then blend them together.' : 'Let’s say cat slowly together and listen for each sound.';
+    if(button.dataset.apple) {packedApples.push(button.dataset.apple);renderApples();}
+    if(button.id==='unpack-apple') {packedApples.pop();renderApples();}
+    if(button.id==='check-apples') root.querySelector('#math-feedback').textContent=packedApples.length===3 ? 'Three apples altogether. Pip’s picnic is ready!' : 'Let’s count what is in the basket. We need three altogether.';
+    if(button.dataset.colour) {
+      selectedColour=button.dataset.colour;
+      root.querySelectorAll('[data-colour]').forEach(choice=>choice.setAttribute('aria-pressed',String(choice===button)));
+    }
+    if(button.dataset.square!==undefined) {
+      paintHistory.push({button,previous:button.dataset.paint||''});
+      button.dataset.paint=selectedColour;
+      button.setAttribute('aria-label',`Blanket square ${Number(button.dataset.square)+1}, ${selectedColour}`);
+      root.querySelector('#art-feedback').textContent='There is no wrong way to colour your blanket.';
+    }
+    if(button.id==='undo-colour' && paintHistory.length) {
+      const last=paintHistory.pop();last.button.dataset.paint=last.previous;
+      last.button.setAttribute('aria-label',`Blanket square ${Number(last.button.dataset.square)+1}, ${last.previous||'uncoloured'}`);
+    }
+    if(button.id==='finish-art') root.querySelector('#art-feedback').textContent='Your very own picnic blanket! Tell your grown-up about your picture.';
+  });
+  root.querySelectorAll('select').forEach(select=>select.addEventListener('change',()=>savePreviewState('parent')));
+  root.querySelectorAll('button').forEach(button=>button.classList.add('cursor-interaction'));
+  restorePreviewState(window.openai?.widgetState);
+  window.addEventListener('openai:set_globals',event=>restorePreviewState(event.detail?.globals?.widgetState));
+})();
+</script>

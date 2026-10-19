@@ -1,0 +1,120 @@
+<!-- Revised design. The earlier learning-adventure-design.html is retained for comparison; its grid-colouring activity is a candidate for retirement after approval. -->
+<div id="journey-preview">
+ <header><strong>🌱 Little Learning Adventures</strong><span>Laptop design · sample learning profile</span></header>
+ <nav aria-label="Explore the design"><button data-page="today" aria-pressed="true">Today's adventure</button><button data-page="map" aria-pressed="false">Learning map</button><button data-page="drawing" aria-pressed="false">Draw with me</button><button data-page="parent" aria-pressed="false">Parent corner</button></nav>
+ <main>
+  <section data-view="today">
+   <div class="eyebrow">SMALL STEPS. A WORLD TO DISCOVER.</div><h1>A little practice. A big imagination.</h1><p>Play on your laptop. Keep paper and pencils beside you.</p>
+   <div class="session-heading"><h2>Our next adventure</h2><span>Flexible · about 10–15 minutes</span></div>
+   <div id="daily-plan" class="daily-grid" aria-live="polite"></div>
+   <div class="invitation"><div><h2>Your learning journey keeps growing</h2><p>Sounds, stories, numbers, patterns, writing, and pictures.</p></div><button data-page="map">Explore the learning map →</button></div>
+   <footer>Take a break whenever you need. <button data-page="drawing">Just draw today →</button></footer>
+  </section>
+  <section data-view="map" hidden>
+   <div class="eyebrow">PARENT VIEW · PROPOSED LEARNING SEQUENCE</div><h1>More than one kind of progress</h1><p>Each area moves at its own pace. Choose one to explore the activities ahead.</p>
+   <div class="map-layout"><div id="subject-list" aria-label="Learning areas"></div><div id="subject-detail" aria-live="polite"></div></div>
+   <div class="note">Illustrative starting points, not an assessment of your child. We will align the phonics order and letter formation with his school.</div>
+  </section>
+  <section data-view="drawing" hidden>
+   <div class="eyebrow">DRAW WITH ME · PAPER AND PENCILS</div><h1>Let's draw Pip the cat</h1><p>Look at the screen. Draw on your paper. Your cat can look different!</p>
+   <div class="drawing-layout"><div class="drawing-board">
+    <svg viewBox="0 0 440 390" role="img" aria-labelledby="cat-title cat-description"><title id="cat-title">Step-by-step cat drawing</title><desc id="cat-description">A circle head, triangular ears, face, whiskers, oval body, and curling tail.</desc>
+     <g class="cat-lines" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <g data-drawing-step="5"><path d="M278 284 C378 322 391 221 354 226 C321 232 363 272 303 276"/><ellipse cx="220" cy="278" rx="75" ry="82"/><path d="M181 310 L181 344 M259 310 L259 344 M176 345 Q192 353 209 345 M231 345 Q248 353 265 345"/></g>
+      <g data-drawing-step="2"><path d="M145 115 L139 43 L192 78 M248 78 L301 43 L295 115"/></g>
+      <g data-drawing-step="1"><circle cx="220" cy="143" r="80" class="cat-head"/></g>
+      <g data-drawing-step="3"><circle cx="191" cy="133" r="5" fill="currentColor"/><circle cx="249" cy="133" r="5" fill="currentColor"/><path d="M210 155 L230 155 L220 165 Z M220 165 L220 175 Q207 189 196 175 M220 175 Q233 189 244 175"/></g>
+      <g data-drawing-step="4"><path d="M165 162 L113 148 M166 174 L108 175 M275 162 L327 148 M274 174 L332 175"/></g>
+      <g data-drawing-step="6" class="cat-decoration"><path d="M157 97 L151 64 L177 82 M263 82 L289 64 L283 97"/><path d="M202 74 L208 93 M220 68 L220 91 M238 74 L232 93"/><path d="M200 255 Q220 239 240 255 Q254 284 220 309 Q186 284 200 255 Z"/></g>
+     </g>
+    </svg>
+    <span id="drawing-caption">Step 1 of 6</span>
+   </div><div class="drawing-instructions"><span class="eyebrow" id="step-counter">STEP 1 OF 6</span><h2 id="drawing-instruction">Draw a big circle.</h2><p id="drawing-hint">Leave room underneath for the body.</p><div class="step-actions"><button id="previous-step" disabled>← Previous</button><button id="next-step" class="primary">Next step →</button></div><button id="show-complete">Show finished picture</button><div class="paper-prompt"><strong>Make it yours</strong><p>Add a blanket, a ball, or a place for Pip to sleep.</p></div></div></div>
+   <div class="paper-links"><div><strong>Say it</strong><p>Say “cat” together. What sound comes first?</p></div><div><strong>Count it</strong><p>Draw three spots on the blanket. Count each one.</p></div><div><strong>Write it</strong><p>Copy <b>cat</b> below your picture. Try without the model only when ready.</p></div></div>
+   <footer>No photo or automatic grading needed. <button data-page="parent">Grown-up: note how it went →</button></footer>
+  </section>
+  <section data-view="parent" hidden>
+   <div class="eyebrow">PARENT VIEW · EXPLORE HOW PRACTICE CHANGES</div><h1>Support first. Small next steps.</h1><p>Change the sample observations to see a different practice plan. This demonstrates the proposed rules; it is not a live assessment.</p>
+   <div class="observation-grid"><label>Blending sounds into words<select id="literacy-evidence"><option value="support">Needs help blending</option><option value="once">Independent in one session</option><option value="repeated">Independent across several sessions and examples</option><option value="skip">Not observed today</option></select></label><label>Counting objects within five<select id="maths-evidence"><option value="support">Needs help counting each object once</option><option value="once">Independent in one session</option><option value="repeated">Independent across several sessions and examples</option><option value="skip">Not observed today</option></select></label></div>
+   <div id="adaptation-detail" class="note" aria-live="polite"></div>
+   <div class="parent-principles"><div><h2>Find a starting point</h2><p>Begin with a few playful tasks in each area. You can move the starting point up or down.</p></div><div><h2>Keep the breadth</h2><p>Rotate writing, shapes, patterns, measurement, and storytelling through the week.</p></div><div><h2>Check understanding</h2><p>Use new examples and your observations. Revisit skills later; one correct answer never means mastery.</p></div></div>
+   <button data-page="today" class="primary">See the changed adventure →</button>
+  </section>
+ </main>
+</div>
+<style>
+#journey-preview{--paper:light-dark(#fbf8ef,#222a23);--panel:light-dark(#ffffff,#2b352c);--text:light-dark(#263d32,#edf3e9);--soft:light-dark(#eaf0e0,#354532);--line:light-dark(#dbe3d5,#53634c);--green:light-dark(#326348,#bedba9);--on-green:light-dark(#ffffff,#243321);--warm:light-dark(#fff0d3,#493c28);background:var(--paper);color:var(--text);border-radius:22px;font:17px/1.5 'Trebuchet MS',sans-serif;overflow:hidden}
+#journey-preview *{box-sizing:border-box}#journey-preview [hidden]{display:none!important}#journey-preview header{padding:24px 110px 16px 28px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}#journey-preview header span{font-size:12px}#journey-preview nav{padding:8px 28px 18px;border-bottom:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}#journey-preview button,#journey-preview select{font:inherit;color:var(--text);border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:12px 16px;min-height:46px}#journey-preview button[aria-pressed=true],#journey-preview .primary{background:var(--green);color:var(--on-green);border-color:var(--green)}#journey-preview button:disabled{opacity:.4}#journey-preview main{padding:32px}#journey-preview h1{font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.8px;margin:12px 0 16px}#journey-preview h2{font-size:22px;line-height:1.3;margin:0 0 10px}#journey-preview p{margin:0 0 18px}#journey-preview .eyebrow{font-size:12px;letter-spacing:1.5px;font-weight:700}#journey-preview .session-heading{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:30px}#journey-preview .session-heading span{font-size:13px}#journey-preview .daily-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}#journey-preview .daily-item{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:18px}#journey-preview .daily-item h2{margin-top:8px}#journey-preview .daily-item p{font-size:15px;margin-bottom:0}#journey-preview .daily-item small{font-size:12px;color:var(--green);font-weight:700;letter-spacing:1px}#journey-preview .invitation{background:var(--soft);padding:22px;border-radius:18px;margin-top:22px;display:flex;gap:20px;align-items:center;justify-content:space-between}#journey-preview .invitation p{margin:0}#journey-preview footer{display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-top:24px;font-size:14px}#journey-preview footer button{background:transparent;border:0}#journey-preview .map-layout{display:grid;grid-template-columns:240px 1fr;gap:24px;margin-top:24px}#journey-preview #subject-list{display:grid;gap:8px;align-content:start}#journey-preview #subject-list button{text-align:left}#journey-preview .learning-step{display:grid;grid-template-columns:32px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}#journey-preview .step-number{background:var(--soft);width:30px;height:30px;border-radius:50%;display:grid;place-items:center}#journey-preview .learning-step p{margin:6px 0 0;font-size:15px}#journey-preview .note{padding:20px;background:var(--warm);border-radius:15px;margin:24px 0;font-size:15px}#journey-preview .drawing-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}#journey-preview .drawing-board{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px;text-align:center}#journey-preview .drawing-board svg{display:block;width:100%;max-height:380px}#journey-preview .cat-head{fill:var(--panel)}#journey-preview .cat-decoration{stroke:light-dark(#b9652b,#e6ae78)}#journey-preview .step-actions{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 12px}#journey-preview .paper-prompt{margin-top:26px;background:var(--soft);padding:18px;border-radius:16px}#journey-preview .paper-prompt p{margin:6px 0 0}#journey-preview .paper-links,#journey-preview .parent-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}#journey-preview .paper-links p{font-size:14px;margin:6px 0 0}#journey-preview .observation-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:25px}#journey-preview select{width:100%;display:block;margin-top:10px;white-space:normal;font-size:15px}#journey-preview .parent-principles{margin-bottom:22px}#journey-preview .parent-principles h2{font-size:18px}#journey-preview .parent-principles p{font-size:15px}
+@media(max-width:650px){#journey-preview main{padding:22px 16px}#journey-preview nav{padding:8px 16px 16px}#journey-preview nav button{font-size:14px}#journey-preview .map-layout,#journey-preview .drawing-layout,#journey-preview .observation-grid{grid-template-columns:1fr}#journey-preview #subject-list{grid-template-columns:1fr 1fr}#journey-preview #subject-list button{font-size:14px;padding:10px}#journey-preview .invitation{align-items:stretch;flex-direction:column}#journey-preview .daily-grid,#journey-preview .paper-links,#journey-preview .parent-principles{grid-template-columns:1fr}#journey-preview .drawing-board svg{max-height:290px}}
+</style>
+<script>
+// This self-contained design demonstrates learning pathways and paper drawing without making assessment claims.
+(() => {
+ const root=document.getElementById('journey-preview');
+ const learningAreas={
+  sounds:{name:'Sounds & listening',steps:[['Hear and compare','Listen for first sounds in familiar spoken words.'],['Blend spoken sounds','Join spoken sounds into a word, with a grown-up modelling.'],['Separate the sounds','Use counters for each sound in a short word.'],['Listen more closely','Explore middle and ending sounds, then more complex words.']]},
+  reading:{name:'Reading',steps:[['Connect sounds and letters','Introduce a small, planned set of letter–sound correspondences.'],['Blend short words','Read different words using only the patterns already taught.'],['Extend the patterns','Gradually introduce further spellings, such as sh and ch.'],['Read for meaning','Read short decodable sentences and stories; talk about what happened.']]},
+  spelling:{name:'Spelling',steps:[['Say and separate','Say a familiar word and identify its sounds.'],['Build with letters','Choose a letter for each sound from a small set of tiles.'],['Write from sounds','Spell taught patterns on paper with less support.'],['Use words in a sentence','Compose a short sentence together and write manageable parts.']]},
+  writing:{name:'Handwriting',steps:[['Control lines and shapes','Draw paths, curves, circles, and simple patterns on paper.'],['Form letters','Watch a formation model, copy, then try a familiar letter independently.'],['Write labels and words','Copy a useful label; gradually write from sounds when ready.'],['Write short messages','Practise spacing, readable formation, and a short sentence with help.']]},
+  numbers:{name:'Number understanding',steps:[['Count objects within five','Touch each object once; say how many altogether; match to a numeral.'],['Compare and order','Explore more, fewer, equal, and zero with small groups.'],['Explore numbers to ten','Count varied arrangements and make numbers in different ways.'],['Build tens and ones','Bundle ten objects and explore teen numbers with concrete materials.']]},
+  operations:{name:'Adding & taking away',steps:[['Make and split groups','Find different ways to make a small total using real objects.'],['Join and remove','Act out adding one or taking one away.'],['Solve picture stories','Explain a small addition or subtraction story with objects or drawings.'],['Connect to symbols','Match familiar actions to simple written number sentences.']]},
+  shapes:{name:'Shapes, patterns & measure',steps:[['Notice shapes and position','Find circles, triangles, and squares; explore above, below, and beside.'],['Copy and extend patterns','Use colours, shapes, claps, and household objects.'],['Compare and measure','Explore longer, shorter, heavier, and lighter with real objects.'],['Create and explain','Design a pattern or measure with equal blocks; explain the choice.']]},
+  creativity:{name:'Drawing & storytelling',steps:[['Draw from simple shapes','Follow a few large, clear steps on screen while drawing on paper.'],['Combine and complete','Finish a picture, combine shapes, or add a background.'],['Illustrate an idea','Draw a scene from a short spoken story and describe it.'],['Create a picture story','Make a sequence of pictures; dictate or write a short caption with help.']]}
+ };
+ const drawingSteps=[['Draw a big circle.','Leave room underneath for the body.'],['Add two triangle ears.','Put one on each side, near the top.'],['Give Pip a face.','Add two eyes, a small nose, and a smile.'],['Add the whiskers.','Draw two lines on each side of the face.'],['Draw a body and tail.','Add an oval below the head, two paws, and a curling tail.'],['Colour and decorate.','Add stripes or spots. Choose your own colours on paper.']];
+ let currentPage='today', selectedArea='sounds', drawingStep=1, showingComplete=false;
+ const literacy=root.querySelector('#literacy-evidence'), maths=root.querySelector('#maths-evidence');
+ function persistPreview(){window.openai?.setWidgetState?.({modelContent:{page:currentPage,area:selectedArea,literacy:literacy.value,maths:maths.value},privateContent:{page:currentPage,area:selectedArea,step:drawingStep,complete:showingComplete,literacy:literacy.value,maths:maths.value}})?.catch(()=>{});}
+ function displayPage(page){currentPage=['today','map','drawing','parent'].includes(page)?page:'today';root.querySelectorAll('[data-view]').forEach(view=>view.hidden=view.dataset.view!==currentPage);root.querySelectorAll('nav button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.page===currentPage)));}
+ function renderLearningArea(){
+  const area=learningAreas[selectedArea];
+  root.querySelectorAll('[data-area]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.area===selectedArea)));
+  root.querySelector('#subject-detail').innerHTML='<h2>'+area.name+'</h2>'+area.steps.map((step,index)=>'<div class="learning-step"><span class="step-number">'+(index+1)+'</span><div><strong>'+step[0]+'</strong><p>'+step[1]+'</p></div></div>').join('');
+ }
+ // Reveal cumulative drawing strokes while preserving the child's place when viewing the finished example.
+ function renderDrawing(){
+  const visibleStep=showingComplete?6:drawingStep;
+  root.querySelectorAll('[data-drawing-step]').forEach(group=>group.style.display=Number(group.dataset.drawingStep)<=visibleStep?'':'none');
+  root.querySelector('#step-counter').textContent=showingComplete?'FINISHED PICTURE':'STEP '+drawingStep+' OF 6';
+  root.querySelector('#drawing-caption').textContent=showingComplete?'Your cat can look different.':'Step '+drawingStep+' of 6';
+  root.querySelector('#drawing-instruction').textContent=showingComplete?'Here is the whole cat.':drawingSteps[drawingStep-1][0];
+  root.querySelector('#drawing-hint').textContent=showingComplete?'Go back to your step whenever you are ready.':drawingSteps[drawingStep-1][1];
+  root.querySelector('#previous-step').disabled=drawingStep===1||showingComplete;
+  root.querySelector('#next-step').disabled=drawingStep===6||showingComplete;
+  root.querySelector('#show-complete').textContent=showingComplete?'Back to my step':'Show finished picture';
+ }
+ // Evidence changes only its own learning strand, preserving review and avoiding advancement after one success.
+ function renderPracticePlan(){
+  const readingReady=literacy.value==='repeated', mathsReady=maths.value==='repeated';
+  const readingTitle=readingReady?'A new word, familiar sounds':literacy.value==='support'?'Blend with a grown-up':'Revisit familiar sounds';
+  const readingTask=readingReady?'Try a different short word using taught sounds. Revisit a familiar word too.':literacy.value==='support'?'Hear the grown-up join the sounds, then try together with a familiar word.':'Try another example at the same level. One session is not enough to move on.';
+  const mathsTitle=mathsReady?'Make five in two groups':'Count a small collection';
+  const mathsTask=mathsReady?'Use five toys. Split them into two groups, then count the total again.':'Point to each of up to five toys once, then say how many altogether.';
+  const activities=[['FAMILIAR START','Say a sound you know','Revisit a taught sound and find something that starts with it.'],['SOUNDS & WORDS',readingTitle,readingTask],['NUMBER PLAY',mathsTitle,mathsTask],['PAPER & PENCILS','Draw Pip, then add a label','Follow the picture steps. Copy cat below your drawing if comfortable.']];
+  root.querySelector('#daily-plan').innerHTML=activities.map(item=>'<article class="daily-item"><small>'+item[0]+'</small><h2>'+item[1]+'</h2><p>'+item[2]+'</p></article>').join('');
+  root.querySelector('#adaptation-detail').textContent='Words: '+(readingReady?'offer a new example using taught sounds; keep review.':literacy.value==='support'?'model blending and practise together.':literacy.value==='skip'?'keep the current level; no new evidence today.':'keep the current level and check again on another day.')+' Numbers: '+(mathsReady?'try splitting five into groups while revisiting counting.':maths.value==='support'?'use a smaller group and touch each object together.':maths.value==='skip'?'keep the current level; no new evidence today.':'practise a different arrangement before moving on.');
+ }
+ function restorePreview(state){
+  const saved=state?.privateContent;if(!saved)return;
+  selectedArea=learningAreas[saved.area]?saved.area:'sounds';drawingStep=Number.isInteger(saved.step)?Math.max(1,Math.min(6,saved.step)):1;showingComplete=saved.complete===true;
+  literacy.value=['support','once','repeated','skip'].includes(saved.literacy)?saved.literacy:'support';maths.value=['support','once','repeated','skip'].includes(saved.maths)?saved.maths:'support';
+  displayPage(saved.page);renderLearningArea();renderDrawing();renderPracticePlan();
+ }
+ root.querySelector('#subject-list').innerHTML=Object.entries(learningAreas).map(([key,area])=>'<button data-area="'+key+'" aria-pressed="false">'+area.name+'</button>').join('');
+ // Keep mouse and native keyboard activation on the same controls; no dragging is required.
+ root.addEventListener('click',event=>{
+  const button=event.target.closest('button');if(!button)return;
+  if(button.dataset.page)displayPage(button.dataset.page);
+  if(button.dataset.area){selectedArea=button.dataset.area;renderLearningArea();}
+  if(button.id==='previous-step'){drawingStep=Math.max(1,drawingStep-1);renderDrawing();}
+  if(button.id==='next-step'){drawingStep=Math.min(6,drawingStep+1);renderDrawing();}
+  if(button.id==='show-complete'){showingComplete=!showingComplete;renderDrawing();}
+  persistPreview();
+ });
+ [literacy,maths].forEach(select=>select.addEventListener('change',()=>{renderPracticePlan();persistPreview();}));
+ root.querySelectorAll('button').forEach(button=>button.classList.add('cursor-interaction'));
+ root.querySelector('.drawing-instructions').setAttribute('aria-live','polite');
+ renderLearningArea();renderDrawing();renderPracticePlan();restorePreview(window.openai?.widgetState);
+ window.addEventListener('openai:set_globals',event=>restorePreview(event.detail?.globals?.widgetState));
+})();
+</script>
