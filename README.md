@@ -2,6 +2,8 @@
 
 A colourful, laptop-friendly learning playground for a child and grown-up to use together.
 
+**Live development release:** https://kiwanukaphil-oss.github.io/play-together-learning-app/
+
 ## Run locally
 
 Requires Node.js 22 or newer. There are no package dependencies to install.

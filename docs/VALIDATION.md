@@ -39,3 +39,14 @@ Do not describe automated interaction tests as a substitute for a child usabilit
 - Keyboard focus restoration added for controls rebuilt after each interaction.
 
 Deployment/offline evidence is recorded after the published milestone is verified, not inferred from local tests.
+
+## 2026-10-19 — Public deployment and cache correction
+
+- GitHub Actions check/build/deploy completed successfully for the playable release and subsequent expansion.
+- Public app opened at https://kiwanukaphil-oss.github.io/play-together-learning-app/; six destinations and the 26-letter studio verified on the deployed site.
+- Deployed resource inspection found no external font or asset requests; production payload is approximately 0.94 MB uncompressed, including bundled fonts and licences.
+- An offline-emulation experiment exposed mixed old/new module caches. Fixed production packaging to give all modules, stylesheets, and fonts the same content version; added a regression test verifying the shared version and cache manifest.
+- New deployed cache contains 20 matching release resources. Old release cache was removed on activation, and the app/letter studio loaded after the transition.
+- Browser tool's page-level offline emulation did **not** reliably disconnect service-worker network requests: an uncached probe returned HTTP 404, not an offline failure. Therefore a physical disconnected-network browser session is still unverified.
+- Added tests that execute the actual worker handler with a failed network, verifying cached-response fallback, missing-asset 503 responses, and non-interception of external requests.
+- Final automated suite: 13 tests. Passing worker tests and a complete deployed cache are evidence for the implementation, not a claim that a physical disconnected session was tested.

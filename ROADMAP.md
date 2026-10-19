@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-19 (Africa/Nairobi)
 
-**Current phase:** First playable milestone implemented and browser-tested; continuing content breadth, resilience, and deployment.
+**Current phase:** Playable development release deployed and verified; remaining roadmap items stay open. Continue autonomously from the outstanding work listed below.
 **Working authority:** Proceed autonomously through all phases. Commits and pushes to the specified GitHub repository are authorised. See AGENTS.md.
 **Product status:** A new colourful static app is implemented with six destinations, sixteen game modes, fifteen paper-drawing lessons, 26 generic lowercase letter models, six short reading books, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
 
@@ -272,9 +272,9 @@ Goal: Deliver a dependable, documented app suitable for regular family use.
 - [ ] Review with the parent and, where feasible, observe the child using the app; record confusing interactions and fix them.
 - [ ] Verify backup restoration, upgrades, storage errors, and offline behaviour where promised.
 - [x] Prepare parent instructions covering setup, session use, audio, backups, and recovery.
-- [ ] Verify deployment configuration, asset loading, HTTPS where hosted, and production behaviour.
-- [ ] Obtain approval for the concrete deployment destination and release build before publication unless already explicitly authorised.
-- [ ] Publish through the approved hosting path and smoke-test the actual deployed app.
+- [x] Verify deployment configuration, asset loading, HTTPS where hosted, and production behaviour.
+- [x] Deployment authorised by autonomous build instructions; GitHub Pages selected for the requested public GitHub repository.
+- [x] Publish through the approved hosting path and smoke-test the actual deployed app.
 - [ ] Record remaining limitations, content coverage, release version, and maintenance instructions.
 
 Acceptance: No known critical gameplay, data-loss, teaching-content, or accessibility defects remain. The parent can use the released app and recover progress without developer help. Deployment is verified, not merely reported as successful by a build command.
@@ -408,3 +408,13 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - Verified: ten unit tests, syntax checks, static build, all sixteen game-mode completion flows, drawing/letter/book navigation, local gallery import, narrow-screen layout checks, and no console errors in verified flows. See `docs/VALIDATION.md`.
 - Still incomplete: reviewed phoneme recordings; educator/school alignment; a comprehensive authored and reviewed content inventory; richer shape construction and number composition activities; unfinished-session resume; an onboarding starting-point assessment; scheduled spaced review; broader browser testing; real-child observation; final full-release acceptance.
 - Do not mark the full roadmap complete. Existing code is a usable development release with explicit teaching limitations, not evidence that every planned feature or quality gate is complete.
+
+### Latest verified delivery
+
+- Live app: https://kiwanukaphil-oss.github.io/play-together-learning-app/
+- Source milestones pushed: `7aee4d7` (standing instructions), `fed5af5` (playground), `62b9e32` (content expansion), `2a5f66e` (coherent versioned offline assets).
+- Latest automated checks: 13 passing tests plus JavaScript syntax checks and production build.
+- Production release version `47095c6e8555` verified in-browser with all 20 cache resources present. Public Pages workflow succeeded.
+- Fixed a genuine mixed-cache module failure found during release QA; regression coverage is now in `tests/build.test.mjs`.
+- Offline fallback logic is tested, but the browser tool did not fully disconnect worker requests. Real disconnected-browser verification remains open; offline voice depends on installed system voices.
+- No user input is currently needed for the remaining reversible engineering work. School alignment, human educational review, and child observation will require real-world input before those specific quality items can be marked complete.
