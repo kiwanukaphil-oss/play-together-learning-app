@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {defaultProgress,validateProgress,recordObservation,persistProgress,loadProgress,chooseFresh} from '../src/learning.js';
-import {WORDS,STORIES,SOUND_GROUPS} from '../src/content.js';
+import {WORDS,STORIES,SOUND_GROUPS,BOOKS} from '../src/content.js';
 import {DRAWINGS} from '../src/drawing.js';
+import {LETTER_MODELS,letterSvg} from '../src/handwriting.js';
 
 test('same-day repeats never advance a skill',()=>{
  let progress=defaultProgress();
@@ -45,4 +46,21 @@ test('drawing and story collections are complete enough to navigate',()=>{
 });
 test('fresh selection avoids recent examples until the pool is exhausted',()=>{
  const pool=[{id:'a'},{id:'b'},{id:'c'}];assert.equal(chooseFresh(pool,['a','b'],()=>.5).id,'c');assert.ok(chooseFresh(pool,['a','b','c']));
+});
+test('letter models have valid start points and all 26 lowercase letters',()=>{
+ assert.equal(Object.keys(LETTER_MODELS).join(''),'abcdefghijklmnopqrstuvwxyz');
+ for(const [letter,strokes] of Object.entries(LETTER_MODELS))for(let index=0;index<strokes.length;index++){
+  assert.match(strokes[index],/^M\d+ \d+/);assert.ok(!letterSvg(letter,index).includes('undefined'));
+ }
+});
+test('little books disclose special words and keep the starter book within starter sounds',()=>{
+ assert.equal(BOOKS.length,6);
+ for(const book of BOOKS){assert.equal(book.pages.length,3);if(book.stage===0)assert.match(book.pages.map(page=>page[1]).join('').toLowerCase(),/^[satpinm .]+$/);}
+ assert.ok(BOOKS.find(book=>book.id==='fish-dish').specialWords.includes('a'));
+});
+test('gallery rejects arbitrary URLs and oversized data while preserving valid small JPEG data',()=>{
+ const valid={...defaultProgress(),pictures:[{id:'sample-1',image:'data:image/jpeg;base64,/9j/AA=='}]};
+ assert.equal(validateProgress(valid).pictures.length,1);
+ assert.throws(()=>validateProgress({...valid,pictures:[{id:'x',image:'https://external.example/image.jpg'}]}));
+ assert.throws(()=>validateProgress({...valid,pictures:[{id:'x',image:'data:image/jpeg;base64,'+'a'.repeat(250000)}]}));
 });

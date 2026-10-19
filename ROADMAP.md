@@ -4,7 +4,7 @@ Last updated: 2026-10-19 (Africa/Nairobi)
 
 **Current phase:** First playable milestone implemented and browser-tested; continuing content breadth, resilience, and deployment.
 **Working authority:** Proceed autonomously through all phases. Commits and pushes to the specified GitHub repository are authorised. See AGENTS.md.
-**Product status:** A new colourful static app is implemented with six destinations, twelve game modes, fifteen paper-drawing lessons, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
+**Product status:** A new colourful static app is implemented with six destinations, sixteen game modes, fifteen paper-drawing lessons, 26 generic lowercase letter models, six short reading books, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
 
 ## 1. Product vision
 
@@ -254,8 +254,8 @@ Goal: Make the world feel personal without adding pressure or unnecessary comple
 - [x] Add a companion name and a small set of appearance choices.
 - [ ] Add gentle world decoration rewards based on participation, without blocking learning or art.
 - [ ] Provide completed-adventure replay and a simple story collection.
-- [ ] Add an optional parent-managed drawing gallery with local image handling under the approved storage model.
-- [ ] Provide intentional image removal, storage-limit feedback, and clear backup inclusion/exclusion.
+- [x] Add an optional parent-managed drawing gallery with local image handling under the approved storage model.
+- [x] Provide intentional image removal, storage-limit feedback, and clear backup inclusion/exclusion.
 - [ ] Add purposeful animation, transitions, and sound effects with reduced-motion and mute equivalents.
 - [ ] Polish loading, empty, offline, unavailable-audio, and recovery states.
 
@@ -318,7 +318,7 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - [ ] Core play does not require reading instructions.
 - [ ] Spoken instructions can be replayed; a visible demonstration conveys the action.
 - [ ] Child action targets are comfortably large; aim for at least 48 × 48 CSS pixels with spacing.
-- [ ] Required interactions work with clicks and keyboard activation; no drag-only or hover-only tasks.
+- [x] Required interactions work with clicks and keyboard activation; no drag-only or hover-only tasks.
 - [ ] Focus remains visible; navigation and dialogs do not trap or lose keyboard focus.
 - [ ] Colour is never the only cue; text and essential controls meet appropriate contrast requirements.
 - [ ] Verify zoom to 200%, reduced motion, mute, and common laptop viewport sizes including 1280 × 720 and 1366 × 768.
@@ -341,13 +341,13 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - [ ] Test major rules and user journeys rather than writing tests that merely reproduce implementation details.
 - [x] No uncaught errors or broken assets in verified core flows.
 - [ ] Playback stops correctly when leaving an activity; repeated clicks cannot queue competing instructions.
-- [ ] Save/import/export and migrations protect existing valid progress.
+- [x] Save/import/export and migrations protect existing valid progress.
 - [ ] Storage quota errors and cleared browser data have understandable recovery guidance.
 - [ ] Measure startup and activity transitions on the target laptop/browser; optimise heavy artwork and audio before release.
 - [ ] Test the agreed primary browser plus at least one other relevant browser; record actual versions and results.
 - [ ] Verify offline claims after initial loading and across app updates, if offline use is included.
 - [x] Collect only data needed for the experience; no analytics or external uploads by default.
-- [ ] Optional child images remain under explicit parent control, with storage and backup behaviour documented.
+- [x] Optional child images remain under explicit parent control, with storage and backup behaviour documented.
 
 ### Visual polish
 
@@ -396,3 +396,15 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 4. Validate Phase 1 deliverables and continue to the playground design phase without stopping for routine approval.
 
 **Completion rule:** The app is complete only when the complete planned release scope, content coverage, quality checks, deployment verification, and parent acceptance are satisfied. A visual prototype, successful build, or exhausted development session is not completion.
+
+## Autonomous delivery update — 2026-10-19
+
+- Standing instructions saved in `AGENTS.md`, committed and pushed. Routine phase approvals are superseded; remaining historical review wording is a quality checkpoint, not a request to stop.
+- GitHub source: https://github.com/kiwanukaphil-oss/play-together-learning-app
+- Hosting: GitHub Pages, configured for tested Actions deployments. First deployment workflow succeeded; verify the latest public release before claiming completion.
+- Native browser modules selected instead of the proposed React stack: no runtime dependencies, straightforward static hosting/offline support, and separate content/learning/drawing modules.
+- English, local device storage, generic manuscript letter forms, and a reversible starter phonics sequence are the documented defaults. School alignment remains unconfirmed and is not silently assumed.
+- Implemented: six illustrated destinations; sixteen game modes; daily adventure; 15 paper drawing lessons; six pencil patterns; 26 stroke-based lowercase letter models; six short reading books; 12 physical-world missions; independent evidence across nine strands; parent overrides; local backup/restore; optional six-photo gallery; companion preferences; gentle treasure collection.
+- Verified: ten unit tests, syntax checks, static build, all sixteen game-mode completion flows, drawing/letter/book navigation, local gallery import, narrow-screen layout checks, and no console errors in verified flows. See `docs/VALIDATION.md`.
+- Still incomplete: reviewed phoneme recordings; educator/school alignment; a comprehensive authored and reviewed content inventory; richer shape construction and number composition activities; unfinished-session resume; an onboarding starting-point assessment; scheduled spaced review; broader browser testing; real-child observation; final full-release acceptance.
+- Do not mark the full roadmap complete. Existing code is a usable development release with explicit teaching limitations, not evidence that every planned feature or quality gate is complete.

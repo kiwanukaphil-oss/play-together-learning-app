@@ -25,3 +25,17 @@ Pending at this milestone:
 - Full roadmap features and content inventory, including reviewed letter formation and decodable books.
 
 Do not describe automated interaction tests as a substitute for a child usability session or educator content review.
+
+## 2026-10-19 — Breadth and resilience milestone
+
+- Ten unit tests pass, adding checks for all 26 letter models, starter book constraints, and rejection of unsafe/oversized gallery data.
+- All four additional game modes (word switch, fair shares, spatial position, and ribbon length) completed full four-question sessions in Chromium.
+- Letter studio exposes 26 models; stroke navigation and animation exercised on a three-stroke letter; paper practice saved separately from drawing.
+- Starter reading book completed its three pages; higher-stage books are filtered by the parent's taught-sounds limit.
+- Synthetic test drawing was imported through the parent file input, resized locally, and persisted as a JPEG. The test image exists only in an isolated browser profile, not in Git.
+- Parent layout checked at 1366 × 768 with no horizontal overflow.
+- No console errors/warnings during the new flows.
+- Reading, spelling, number understanding, operations, and handwriting now persist independently.
+- Keyboard focus restoration added for controls rebuilt after each interaction.
+
+Deployment/offline evidence is recorded after the published milestone is verified, not inferred from local tests.

@@ -21,7 +21,7 @@ English is the current content language. Whole-word browser narration uses an En
 | Storytelling | Arrange three events and tell a story | Spoken descriptions and adult discussion | Parent observation, not a rigid correctness judgement of creative narration |
 | Drawing/writing | Copy a step-by-step picture and pencil patterns | Large diagrams and repeatable steps | Adult observes paper work; app does not grade it |
 
-Reading/spelling and drawing/writing share initial storage strands, but activity IDs preserve task differences. Separate strand-level controls for all eight areas remain future work; do not claim the six initial storage groups provide that granularity.
+Nine independent storage strands now distinguish listening, reading, spelling, number understanding, operations, shapes/patterns, storytelling, drawing, and handwriting. Each has its own evidence and parent-set practice level. Activity IDs preserve task differences within a strand.
 
 ## Starter phonics constraints
 
@@ -54,7 +54,7 @@ Start with sounds, continue to word building, then number or pattern play, and f
 - Modules separate content, learning/persistence logic, drawing definitions, and application rendering. Game routing is still centralised; split it as activity complexity grows.
 - Use Node's built-in test runner for learning rules and content invariants.
 - Store versioned progress in this browser only. Export/import provides parent-controlled portability.
-- No backend, accounts, analytics, microphone, camera, or external AI service.
+- No backend, accounts, analytics, microphone, camera, or external AI service. A parent can select an existing drawing image; it is resized locally and included in backups, with a six-image limit.
 - Bundle fonts locally with their open-font licences. Custom scene and drawing SVGs are repository-native artwork.
 - Use the requested GitHub repository as source of truth. A static GitHub Pages deployment is the simplest compatible release target.
 
@@ -63,4 +63,5 @@ Start with sounds, continue to word building, then number or pattern play, and f
 - Emoji artwork varies between systems and some word pictures remain approximate; concrete reading selections are filtered.
 - No professional educational review or real-child usability session has been claimed.
 - Runtime-generated maths variations do not count as a reviewed inventory of authored prompts.
-- Reviewed phoneme audio, complete letter formation, broader measurement/position activities, and full decodable story coverage remain tracked in the roadmap.
+- Generic lowercase letter models, position/length games, and six short reading books are now implemented. Letter forms still need school alignment. Two later books disclose additional words/patterns for adult introduction rather than silently claiming full decodability.
+- Reviewed phoneme audio and full school-aligned story coverage remain tracked in the roadmap.

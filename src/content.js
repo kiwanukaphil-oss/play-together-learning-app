@@ -55,9 +55,21 @@ export const MISSIONS = [
 
 export const SKILLS = {
  listening:{name:'Listening & sounds',steps:['Hear first sounds','Blend spoken sounds','Separate sounds','Listen for middle and ending sounds']},
- spelling:{name:'Reading & spelling',steps:['Starter sounds: s a t p i n m','Short words: c d g o u e r h b','More single letters','sh ch th ng ck','Selected vowel patterns']},
- number:{name:'Numbers & operations',steps:['Count to five','Compare and count to ten','Join small groups','Take away','Make and split totals']},
+ spelling:{name:'Spelling',steps:['Starter sounds: s a t p i n m','Short words: c d g o u e r h b','More single letters','sh ch th ng ck','Selected vowel patterns']},
+ reading:{name:'Reading',steps:['Read starter words','Read more short words','More single letters','Read digraph words','Selected vowel patterns']},
+ number:{name:'Number understanding',steps:['Count to five','Compare and count to ten','Count to twelve','Compare arrangements','Make and split totals']},
+ operations:{name:'Adding & taking away',steps:['Join groups within five','Join groups within ten','Take away small groups','Picture number stories','Explore number sentences']},
  patterns:{name:'Shapes & patterns',steps:['Name simple shapes','Continue a pattern','Compare shapes','Position and measurement']},
  storytelling:{name:'Stories & language',steps:['Talk about pictures','Order three events','Tell your own ending','Read together']},
- drawing:{name:'Drawing & writing',steps:['Lines and shapes','Copy a picture','Add your own details','Label your drawing']},
+ drawing:{name:'Drawing',steps:['Lines and shapes','Copy a picture','Add your own details','Illustrate your own story']},
+ handwriting:{name:'Handwriting',steps:['Pencil patterns','Copy letter strokes','Copy familiar labels','Try writing independently']},
 };
+
+export const BOOKS=[
+ {id:'sam-pat',name:'Sam & Pat',stage:0,pages:[['👦','Sam sat.'],['👧','Pat sat.'],['👦 👧','Sam sat. Pat sat.']]},
+ {id:'cat-nap',name:'Cat nap',stage:1,pages:[['🐈','Cat sat.'],['🐈 💤','Cat can nap.'],['🐈','Cat can hop.']]},
+ {id:'dog-dig',name:'Dog can dig',stage:1,pages:[['🐕','Dog can dig.'],['🐕 🟤','Dog can pat mud.'],['🐕 💤','Dog can nap.']]},
+ {id:'hen-hop',name:'Hen can hop',stage:1,pages:[['🐔','Hen can hop.'],['🐔','Hen can run.'],['🐔 💤','Hen can nap.']]},
+ {id:'sam-cup',name:'Sam has fun',stage:2,pages:[['👦 ☕','Sam has a cup.'],['👦 🧢','Sam has a cap.'],['👦 🏃','Sam can run.']],specialWords:['a','has']},
+ {id:'fish-dish',name:'Fish & chips',stage:3,pages:[['🐟','Fish.'],['🍽️','Fish in a dish.'],['🍟 🍽️','Chips in a dish.']],specialWords:['a'],specialPatterns:['final consonant cluster in chips']},
+];

@@ -1,6 +1,6 @@
 export const SAVE_KEY='play-together-v1';
 export const SAVE_VERSION=1;
-export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,taughtStage:0,skills:{},recent:[],art:[],stickers:[],sessions:[],updatedAt:null});
+export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,taughtStage:0,skills:{},recent:[],art:[],pictures:[],stickers:[],sessions:[],updatedAt:null});
 export const sessionId=()=>{const now=new Date();return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;};
 
 // Validate a complete imported save before touching stored data; unknown or unsafe fields are never blindly assigned.
@@ -13,7 +13,7 @@ export function validateProgress(value){
  safe.taughtStage=Number.isInteger(value.taughtStage)?Math.max(0,Math.min(4,value.taughtStage)):0;
  if(!value.skills||typeof value.skills!=='object'||Array.isArray(value.skills))throw new Error('Learning progress is missing.');
  for(const [key,skill] of Object.entries(value.skills)){
-  if(!['listening','spelling','number','patterns','storytelling','drawing'].includes(key))continue;
+  if(!['listening','spelling','reading','number','operations','patterns','storytelling','drawing','handwriting'].includes(key))continue;
   if(!skill||!Array.isArray(skill.evidence)||skill.evidence.length>500)throw new Error('A learning record is invalid.');
   if(!skill.evidence.every(item=>item&&['independent','supported','revisit','skipped'].includes(item.result)&&typeof item.day==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(item.day)&&typeof item.content==='string'&&item.content.length<100))throw new Error('An observation is invalid.');
   safe.skills[key]={level:Number.isInteger(skill.level)?Math.max(0,Math.min(4,skill.level)):0,evidence:skill.evidence.map(item=>({day:item.day,result:item.result,content:item.content})),override:skill.override===true};
@@ -23,6 +23,10 @@ export function validateProgress(value){
  safe.stickers=Array.isArray(value.stickers)?value.stickers.filter(item=>['star','flower','rocket','rainbow','heart','sun'].includes(item)).slice(0,6):[];
  safe.sessions=Array.isArray(value.sessions)?value.sessions.filter(item=>typeof item==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(item)).slice(-365):[];
  safe.art=Array.isArray(value.art)?value.art.filter(item=>typeof item==='string'&&item.length<40).slice(-100):[];
+ if(value.pictures!==undefined){
+  if(!Array.isArray(value.pictures)||value.pictures.length>6||!value.pictures.every(item=>item&&typeof item.id==='string'&&/^[a-zA-Z0-9-]{1,60}$/.test(item.id)&&typeof item.image==='string'&&item.image.length<250000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/]+=*$/.test(item.image)))throw new Error('The drawing gallery is invalid.');
+  safe.pictures=value.pictures.map(item=>({id:item.id,image:item.image}));
+ }
  safe.updatedAt=typeof value.updatedAt==='string'?value.updatedAt:null;
  return safe;
 }
