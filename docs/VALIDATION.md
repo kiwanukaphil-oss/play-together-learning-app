@@ -58,3 +58,4 @@ Deployment/offline evidence is recorded after the published milestone is verifie
 - Refresh after question one restored **Activity 2 of 4** with the existing supported observation retained.
 - Parent starting-point flow changed only the selected number practice level; oral blending is deliberately separate from reading/spelling.
 - Half-entered answers restart on resume; the next unfinished question and completed-round observations are retained. This scope is documented rather than claiming full input-state restoration.
+- GitHub Actions run `39249869630` succeeded for commit `5cc81b7`. Public release `a7046afcce12` was opened and its six Number Kitchen modes (including composition) verified after deployment.

@@ -427,3 +427,4 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - Added number composition with two visible groups and a shape-by-shape robot-building activity. The app now has eighteen game modes.
 - Verification: 15 automated tests; both new modes completed in-browser; refresh resumed Activity 2 of 4; starting-point settings applied correctly.
 - Remaining release-quality work includes human content/audio review, school-specific alignment, full content inventory review, broader browser/device testing, real-child observation, physical disconnected-browser verification, and any unchecked feature details above. No claim of full roadmap completion is made.
+- Latest live implementation: commit `5cc81b7`, release `a7046afcce12`, successful Actions run `39249869630`; public composition mode verified after deployment. Documentation-only commits after this do not change the application release.
