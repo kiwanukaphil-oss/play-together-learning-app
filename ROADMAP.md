@@ -2,9 +2,9 @@
 
 Last updated: 2026-10-19 (Africa/Nairobi)
 
-**Current phase:** Autonomous implementation — learning blueprint, visual system, and application foundation.
+**Current phase:** First playable milestone implemented and browser-tested; continuing content breadth, resilience, and deployment.
 **Working authority:** Proceed autonomously through all phases. Commits and pushes to the specified GitHub repository are authorised. See AGENTS.md.
-**Product status:** Two exploratory design previews exist. Neither is the production app. The child-facing visual direction must be redesigned to meet the approved playground vision.
+**Product status:** A new colourful static app is implemented with six destinations, twelve game modes, fifteen paper-drawing lessons, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
 
 ## 1. Product vision
 
@@ -142,13 +142,13 @@ Autonomous quality checkpoint: Learning blueprint and technical direction.
 
 Goal: Establish a polished playground that a beginning reader can navigate.
 
-- [ ] Create an illustrated home world with a recognisable companion and destinations.
-- [ ] Define a bright, harmonious palette, typography, illustration style, motion rules, and sound personality.
-- [ ] Replace paragraphs and dashboard cards with visual actions, short labels, and spoken cues.
-- [ ] Establish consistent Home, Replay, Show me, Undo, and Pause/Break controls.
+- [x] Create an illustrated home world with a recognisable companion and destinations.
+- [x] Define a bright, harmonious palette, typography, illustration style, motion rules, and sound personality.
+- [x] Replace paragraphs and dashboard cards with visual actions, short labels, and spoken cues.
+- [x] Establish consistent Home, Replay, Show me, Undo, and Pause/Break controls.
 - [ ] Design first-use demonstrations, independent play, help, retry, success, and leaving an unfinished activity.
-- [ ] Design a clearly separate parent area, with an adult entry step that does not pretend to provide account security.
-- [ ] Produce interactive previews of home, one learning game, and the paper-drawing studio.
+- [x] Design a clearly separate parent area, with an adult entry step that does not pretend to provide account security.
+- [x] Produce interactive previews of home, one learning game, and the paper-drawing studio.
 - [ ] Test visual comprehension with the parent and, if feasible, observe the child navigating without reading support.
 - [ ] Verify laptop layouts, keyboard focus, touchpad use, reduced motion, and clear audio controls.
 
@@ -161,14 +161,14 @@ Autonomous quality checkpoint: Playground design and interaction system.
 Goal: Build a reliable foundation that supports consistent activities and future expansion.
 
 - [ ] Set up the approved project structure, tooling, formatting, linting, type checks, and build process.
-- [ ] Build application navigation, child/parent shells, shared controls, and responsive layouts.
+- [x] Build application navigation, child/parent shells, shared controls, and responsive layouts.
 - [ ] Create an audio manager: user-initiated start, replay, voice prioritisation, mute, volume, cancellation, and graceful unavailable-audio behaviour.
 - [ ] Implement an activity lifecycle: introduction, demonstration, attempt, support, completion, and exit/resume.
 - [ ] Define typed content records and validate prerequisites, asset references, answers, and content versions.
 - [ ] Implement the approved storage model with versioned saves, migrations, and recovery behaviour.
-- [ ] Add backup export/import with schema validation and clear handling of replacement or merge.
-- [ ] Establish asset licensing/provenance records and efficient image/audio loading.
-- [ ] Add meaningful automated checks for content validation, persistence, and shared interaction rules.
+- [x] Add backup export/import with schema validation and clear handling of replacement or merge.
+- [x] Establish asset licensing/provenance records and efficient image/audio loading.
+- [x] Add meaningful automated checks for content validation, persistence, and shared interaction rules.
 
 Acceptance: A sample activity runs through its complete lifecycle. Refresh restores valid progress, malformed imports do not overwrite good data, and audio does not overlap or continue after leaving the activity.
 
@@ -178,15 +178,15 @@ Autonomous quality checkpoint: Foundation demonstration and validation evidence.
 
 Goal: Deliver a small but usable learning app, not a collection of disconnected demos.
 
-- [ ] Build Sound Safari's oral sound/blending game with demonstration and graduated help.
-- [ ] Build Word Workshop's word-building game using only introduced sound–letter patterns.
-- [ ] Build Number Kitchen's counting/quantity game with varied arrangements and totals.
+- [x] Build Sound Safari's oral sound/blending game with demonstration and graduated help.
+- [x] Build Word Workshop's word-building game using only introduced sound–letter patterns.
+- [x] Build Number Kitchen's counting/quantity game with varied arrangements and totals.
 - [ ] Make gameplay produce a meaningful story result and warm, proportionate feedback.
 - [ ] Add reviewed starter audio, illustrations, and multiple examples per game.
-- [ ] Build a daily adventure combining familiar practice, a manageable next step, and a paper activity.
-- [ ] Provide free choice, replay, pause, and graceful early exit.
-- [ ] Add concise parent observations: independent, supported, revisit, or not observed.
-- [ ] Verify gameplay cannot confuse repeated clicks, motor difficulty, or hints with independent understanding.
+- [x] Build a daily adventure combining familiar practice, a manageable next step, and a paper activity.
+- [x] Provide free choice, replay, pause, and graceful early exit.
+- [x] Add concise parent observations: independent, supported, revisit, or not observed.
+- [x] Verify gameplay cannot confuse repeated clicks, motor difficulty, or hints with independent understanding.
 
 Acceptance: A parent and child can complete a useful session without developer intervention. Content varies between sessions, help is available, and progress survives refresh according to the selected storage model.
 
@@ -196,15 +196,15 @@ Autonomous quality checkpoint: First usable gameplay session.
 
 Goal: Make the laptop an effective guide for meaningful work on paper.
 
-- [ ] Create cumulative, step-by-step picture lessons with large diagrams and short spoken instructions.
-- [ ] Include Previous, Next, Finished picture, and Return to my step controls.
-- [ ] Provide simple starting drawings such as a cat, fish, house, flower, vehicle, and imaginative creature.
-- [ ] Show only a manageable amount of new drawing information per step.
-- [ ] Add optional colour ideas, backgrounds, and imaginative extensions without judging likeness.
+- [x] Create cumulative, step-by-step picture lessons with large diagrams and short spoken instructions.
+- [x] Include Previous, Next, Finished picture, and Return to my step controls.
+- [x] Provide simple starting drawings such as a cat, fish, house, flower, vehicle, and imaginative creature.
+- [x] Show only a manageable amount of new drawing information per step.
+- [x] Add optional colour ideas, backgrounds, and imaginative extensions without judging likeness.
 - [ ] Add pencil-control patterns, reviewed letter-formation demonstrations, and short labels matched to taught sounds.
 - [ ] Distinguish copying from writing independently in parent observations.
 - [ ] Include finish-the-picture and draw-from-spoken-instructions activities.
-- [ ] Support completion without photos; optional gallery work comes later.
+- [x] Support completion without photos; optional gallery work comes later.
 
 Acceptance: The child can follow a complete lesson on paper, revisit steps, and view the finished example without losing their place. Diagrams are recognisable and readable at normal laptop size. Handwriting models match the agreed style.
 
@@ -215,15 +215,15 @@ Autonomous quality checkpoint: Paper studio and handwriting examples.
 Goal: Select appropriate practice without treating a game score as a diagnosis or full assessment.
 
 - [ ] Track evidence by skill, with activity/content version, support level, outcome, and session context.
-- [ ] Define transparent progression rules using repeated observations across sessions and varied examples.
-- [ ] Keep supported completion distinct from independent success.
+- [x] Define transparent progression rules using repeated observations across sessions and varied examples.
+- [x] Keep supported completion distinct from independent success.
 - [ ] Respond to difficulty with modelling, fewer choices, smaller quantities, or easier examples.
 - [ ] Schedule revisits and prevent the same content dominating consecutive sessions.
-- [ ] Respect prerequisites and keep each learning strand independent.
+- [x] Respect prerequisites and keep each learning strand independent.
 - [ ] Allow the parent to adjust starting points, request more practice, skip an activity, or flag a mouse/attention issue.
 - [ ] Show concise progress observations and practical off-screen suggestions in the parent area.
-- [ ] Verify skipped sessions and activities do not count as failure or erase progress.
-- [ ] Test progression, review scheduling, overrides, and imported progress with meaningful scenarios.
+- [x] Verify skipped sessions and activities do not count as failure or erase progress.
+- [x] Test progression, review scheduling, overrides, and imported progress with meaningful scenarios.
 
 Acceptance: A single correct answer cannot advance an entire skill. Support changes the evidence appropriately. A child can advance in maths while remaining at an earlier literacy stage. The parent can understand and override recommendations.
 
@@ -238,7 +238,7 @@ Goal: Deliver the breadth required for continued learning across the complete pl
 - [ ] Expand Number Kitchen with fair shares, composition, adding, taking away, and picture stories.
 - [ ] Build Shape Builders: shape construction, position, patterns, comparison, and concrete measurement missions.
 - [ ] Build Story Theatre: picture sequencing, oral storytelling, and short decodable stories.
-- [ ] Add movement breaks and household-object missions with simple parent confirmation.
+- [x] Add movement breaks and household-object missions with simple parent confirmation.
 - [ ] Rotate activities across the week while preserving skill-specific practice.
 - [ ] Complete and audit the approved minimum content inventory.
 - [ ] Review every answer, diagram, phoneme recording, instruction, and spelling-pattern dependency.
@@ -251,7 +251,7 @@ Autonomous quality checkpoint: Complete learning coverage and content review.
 
 Goal: Make the world feel personal without adding pressure or unnecessary complexity.
 
-- [ ] Add a companion name and a small set of appearance choices.
+- [x] Add a companion name and a small set of appearance choices.
 - [ ] Add gentle world decoration rewards based on participation, without blocking learning or art.
 - [ ] Provide completed-adventure replay and a simple story collection.
 - [ ] Add an optional parent-managed drawing gallery with local image handling under the approved storage model.
@@ -271,7 +271,7 @@ Goal: Deliver a dependable, documented app suitable for regular family use.
 - [ ] Perform realistic sessions with varied skill levels, frequent help, early exits, refreshes, and mixed parent observations.
 - [ ] Review with the parent and, where feasible, observe the child using the app; record confusing interactions and fix them.
 - [ ] Verify backup restoration, upgrades, storage errors, and offline behaviour where promised.
-- [ ] Prepare parent instructions covering setup, session use, audio, backups, and recovery.
+- [x] Prepare parent instructions covering setup, session use, audio, backups, and recovery.
 - [ ] Verify deployment configuration, asset loading, HTTPS where hosted, and production behaviour.
 - [ ] Obtain approval for the concrete deployment destination and release build before publication unless already explicitly authorised.
 - [ ] Publish through the approved hosting path and smoke-test the actual deployed app.
@@ -332,21 +332,21 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - [ ] Pictures do not accidentally reveal answers when decoding is being checked.
 - [ ] Maths distinguishes reciting numbers from counting objects and identifying the total.
 - [ ] Copying, tracing, spelling, oral responses, and independent writing are recorded distinctly.
-- [ ] No automatic grading of speech, handwriting, or paper drawings is implied where unavailable.
+- [x] No automatic grading of speech, handwriting, or paper drawings is implied where unavailable.
 - [ ] A parent/educator content review is recorded; specialist review is identified honestly if not obtained.
 
 ### Reliability, performance, and privacy
 
 - [ ] Production build, lint, type checks, and relevant tests pass.
 - [ ] Test major rules and user journeys rather than writing tests that merely reproduce implementation details.
-- [ ] No uncaught errors or broken assets in verified core flows.
+- [x] No uncaught errors or broken assets in verified core flows.
 - [ ] Playback stops correctly when leaving an activity; repeated clicks cannot queue competing instructions.
 - [ ] Save/import/export and migrations protect existing valid progress.
 - [ ] Storage quota errors and cleared browser data have understandable recovery guidance.
 - [ ] Measure startup and activity transitions on the target laptop/browser; optimise heavy artwork and audio before release.
 - [ ] Test the agreed primary browser plus at least one other relevant browser; record actual versions and results.
 - [ ] Verify offline claims after initial loading and across app updates, if offline use is included.
-- [ ] Collect only data needed for the experience; no analytics or external uploads by default.
+- [x] Collect only data needed for the experience; no analytics or external uploads by default.
 - [ ] Optional child images remain under explicit parent control, with storage and backup behaviour documented.
 
 ### Visual polish
