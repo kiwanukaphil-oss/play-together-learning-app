@@ -46,7 +46,9 @@ The parent sets the highest taught group. Game content is further limited by cur
 
 ## Daily flow and free choice
 
-Start with sounds, continue to word building, then number or pattern play, and finish on paper. Free choice is always available. Four questions form a short game round, but the learner may leave at any time. Completed sessions persist; unfinished questions currently restart. No time limit, streaks, or locked creative activities.
+Start with sounds, continue to word building, then number or pattern play, and finish on paper. Free choice is always available. Four questions form a short game round, but the learner may leave at any time. Completed sessions persist. An unfinished game resumes at its next unfinished question; half-entered answers restart, and a resumed game is free play rather than a restored daily sequence. No time limit, streaks, or locked creative activities.
+
+Word selection now prioritises due reviews: supported words can return after one day; independent examples after three days. Already-used examples are avoided within the current session where the pool allows it. These are adjustable product heuristics, not a validated learning schedule. Parent starting-point tasks separately observe oral blending, counting, and pencil control; success in oral blending does not automatically raise reading or spelling levels.
 
 ## Architecture decisions
 

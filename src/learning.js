@@ -62,3 +62,22 @@ export function levelFor(progress,skillId){return progress.skills[skillId]?.leve
 export function shuffled(items,random=Math.random){return items.map(value=>({value,key:random()})).sort((a,b)=>a.key-b.key).map(item=>item.value);}
 export function chooseFresh(items,recent,random=Math.random){const fresh=items.filter(item=>!recent.includes(item.id));return shuffled(fresh.length?fresh:items,random)[0];}
 export function dailyWorlds(progress){return ['sounds','words',progress.sessions.length%3===2?'shapes':'numbers','art'];}
+
+// Prefer due reviews without repeating examples already used in this session; supported work returns sooner than independent work.
+export function choosePracticeItem(items,progress,skillId,used=[],day=sessionId(),random=Math.random){
+ const evidence=progress.skills[skillId]?.evidence||[];
+ const latest=new Map();for(const item of evidence)if(item.content!=='level-change'&&item.result!=='skipped')latest.set(item.content,item);
+ const available=items.filter(item=>!used.includes(item.id));const pool=available.length?available:items;
+ const today=Date.parse(`${day}T12:00:00Z`);
+ const due=pool.filter(item=>{const last=latest.get(item.id);if(!last)return false;const interval=last.result==='independent'?3:1;return today-Date.parse(`${last.day}T12:00:00Z`)>=interval*86400000;});
+ const unseen=pool.filter(item=>!latest.has(item.id));
+ return shuffled(due.length?due:unseen.length?unseen:pool,random)[0];
+}
+
+export const RESUME_KEY='play-together-resume-v1';
+export function validateResume(value){
+ const allowed={sounds:['first','blend'],words:['build','read','switch'],numbers:['count','compare','add','subtract','share','compose'],shapes:['shape','pattern','position','measure','construct'],stories:['sequence','readstory']};
+ if(!value||value.version!==1||!allowed[value.world]?.includes(value.mode)||!Number.isInteger(value.round)||value.round<0||value.round>4||!Array.isArray(value.evidence)||value.evidence.length>4)throw new Error('Unfinished activity is not compatible.');
+ if(!value.evidence.every(item=>typeof item.content==='string'&&item.content.length<100&&typeof item.supported==='boolean'))throw new Error('Unfinished observations are invalid.');
+ return {version:1,world:value.world,mode:value.mode,round:value.round,evidence:value.evidence.map(item=>({content:item.content,supported:item.supported}))};
+}

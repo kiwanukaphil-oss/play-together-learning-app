@@ -4,7 +4,7 @@ Last updated: 2026-10-19 (Africa/Nairobi)
 
 **Current phase:** Playable development release deployed and verified; remaining roadmap items stay open. Continue autonomously from the outstanding work listed below.
 **Working authority:** Proceed autonomously through all phases. Commits and pushes to the specified GitHub repository are authorised. See AGENTS.md.
-**Product status:** A new colourful static app is implemented with six destinations, sixteen game modes, fifteen paper-drawing lessons, 26 generic lowercase letter models, six short reading books, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
+**Product status:** A new colourful static app is implemented with six destinations, eighteen game modes, fifteen paper-drawing lessons, 26 generic lowercase letter models, six short reading books, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
 
 ## 1. Product vision
 
@@ -218,7 +218,7 @@ Goal: Select appropriate practice without treating a game score as a diagnosis o
 - [x] Define transparent progression rules using repeated observations across sessions and varied examples.
 - [x] Keep supported completion distinct from independent success.
 - [ ] Respond to difficulty with modelling, fewer choices, smaller quantities, or easier examples.
-- [ ] Schedule revisits and prevent the same content dominating consecutive sessions.
+- [x] Schedule revisits and prevent the same content dominating consecutive sessions.
 - [x] Respect prerequisites and keep each learning strand independent.
 - [ ] Allow the parent to adjust starting points, request more practice, skip an activity, or flag a mouse/attention issue.
 - [ ] Show concise progress observations and practical off-screen suggestions in the parent area.
@@ -235,8 +235,8 @@ Goal: Deliver the breadth required for continued learning across the complete pl
 
 - [ ] Expand Sound Safari with first/middle/ending sound activities and robot blending.
 - [ ] Expand Word Workshop with sound train, changing a letter, and picture labels.
-- [ ] Expand Number Kitchen with fair shares, composition, adding, taking away, and picture stories.
-- [ ] Build Shape Builders: shape construction, position, patterns, comparison, and concrete measurement missions.
+- [x] Expand Number Kitchen with fair shares, composition, adding, taking away, and picture stories.
+- [x] Build Shape Builders: shape construction, position, patterns, comparison, and concrete measurement missions.
 - [ ] Build Story Theatre: picture sequencing, oral storytelling, and short decodable stories.
 - [x] Add movement breaks and household-object missions with simple parent confirmation.
 - [ ] Rotate activities across the week while preserving skill-specific practice.
@@ -404,9 +404,9 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - Hosting: GitHub Pages, configured for tested Actions deployments. First deployment workflow succeeded; verify the latest public release before claiming completion.
 - Native browser modules selected instead of the proposed React stack: no runtime dependencies, straightforward static hosting/offline support, and separate content/learning/drawing modules.
 - English, local device storage, generic manuscript letter forms, and a reversible starter phonics sequence are the documented defaults. School alignment remains unconfirmed and is not silently assumed.
-- Implemented: six illustrated destinations; sixteen game modes; daily adventure; 15 paper drawing lessons; six pencil patterns; 26 stroke-based lowercase letter models; six short reading books; 12 physical-world missions; independent evidence across nine strands; parent overrides; local backup/restore; optional six-photo gallery; companion preferences; gentle treasure collection.
+- Implemented: six illustrated destinations; eighteen game modes; daily adventure; 15 paper drawing lessons; six pencil patterns; 26 stroke-based lowercase letter models; six short reading books; 12 physical-world missions; independent evidence across nine strands; parent overrides; local backup/restore; optional six-photo gallery; companion preferences; gentle treasure collection.
 - Verified: ten unit tests, syntax checks, static build, all sixteen game-mode completion flows, drawing/letter/book navigation, local gallery import, narrow-screen layout checks, and no console errors in verified flows. See `docs/VALIDATION.md`.
-- Still incomplete: reviewed phoneme recordings; educator/school alignment; a comprehensive authored and reviewed content inventory; richer shape construction and number composition activities; unfinished-session resume; an onboarding starting-point assessment; scheduled spaced review; broader browser testing; real-child observation; final full-release acceptance.
+- Still incomplete: reviewed phoneme recordings; educator/school alignment; a comprehensive authored and reviewed content inventory; broader browser testing; real-child observation; final full-release acceptance.
 - Do not mark the full roadmap complete. Existing code is a usable development release with explicit teaching limitations, not evidence that every planned feature or quality gate is complete.
 
 ### Latest verified delivery
@@ -418,3 +418,12 @@ Keep content editable without rewriting game logic. Use deterministic progressio
 - Fixed a genuine mixed-cache module failure found during release QA; regression coverage is now in `tests/build.test.mjs`.
 - Offline fallback logic is tested, but the browser tool did not fully disconnect worker requests. Real disconnected-browser verification remains open; offline voice depends on installed system voices.
 - No user input is currently needed for the remaining reversible engineering work. School alignment, human educational review, and child observation will require real-world input before those specific quality items can be marked complete.
+
+### Continuity and constructive play update
+
+- Added a parent-guided starting-point flow for oral blending, counting real objects, and pencil control. Oral blending does not imply decoding or spelling proficiency.
+- Added validated unfinished-game snapshots. Refresh resumes at the next unfinished question and retains completed-round observations; half-entered answers restart.
+- Added due-word review selection (one day after support, three after independence) with per-session repetition avoidance. These are product heuristics, not validated educational thresholds.
+- Added number composition with two visible groups and a shape-by-shape robot-building activity. The app now has eighteen game modes.
+- Verification: 15 automated tests; both new modes completed in-browser; refresh resumed Activity 2 of 4; starting-point settings applied correctly.
+- Remaining release-quality work includes human content/audio review, school-specific alignment, full content inventory review, broader browser/device testing, real-child observation, physical disconnected-browser verification, and any unchecked feature details above. No claim of full roadmap completion is made.

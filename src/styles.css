@@ -14,3 +14,5 @@
 :root[data-motion=off] .stroke-animation{stroke-dashoffset:0}
 /* Small supporting copy remains readable; lighter colours are reserved for decorative shapes. */
 .world-heading button,.home-footer,.small-note,.skill-card small{color:#71617f}.eyebrow{color:#74558f}.library-note{color:#71617f}
+.resume-button{display:block;background:transparent;color:#65449c;font-size:14px;font-weight:900;padding:16px 5px 0;min-height:44px}.composition-scene{display:flex;gap:18px;align-items:center;justify-content:center;margin:20px auto;font-size:36px}.fixed-apples{max-width:300px;overflow-wrap:anywhere;background:#fff0d8;border-radius:20px;padding:20px;line-height:1.6}.robot-builder{height:230px;max-width:300px;margin:15px auto}.robot-builder+.shape-choices{margin:12px 0}.robot-builder+.shape-choices .shape-choice{width:75px;height:75px;font-size:45px}
+@media(max-width:600px){.composition-scene{font-size:27px;gap:10px}.fixed-apples{max-width:130px;padding:12px}.composition-scene .basket-items{min-width:110px;max-width:145px}.robot-builder{height:190px}.robot-builder+.shape-choices .shape-choice{width:60px;height:65px;font-size:38px}}

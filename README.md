@@ -46,7 +46,7 @@ Completion is initially recorded as supported. A parent can record independence,
 - [Learning blueprint](docs/LEARNING_BLUEPRINT.md): current teaching rules and implementation defaults.
 - [Validation log](docs/VALIDATION.md): checks actually performed, including limitations.
 
-This is an actively developing app. It now includes sixteen game modes, fifteen drawing lessons, 26 lowercase letter models, six short reading books, and an optional local photo gallery. Reviewed phoneme recordings, school alignment, full content review, and real-child usability review are not yet complete. See the roadmap rather than assuming every planned feature is released.
+This is an actively developing app. It now includes eighteen game modes, fifteen drawing lessons, 26 lowercase letter models, six short reading books, and an optional local photo gallery. Reviewed phoneme recordings, school alignment, full content review, and real-child usability review are not yet complete. See the roadmap rather than assuming every planned feature is released.
 
 ## Assets
 

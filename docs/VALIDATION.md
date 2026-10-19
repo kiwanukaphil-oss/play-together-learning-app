@@ -50,3 +50,11 @@ Deployment/offline evidence is recorded after the published milestone is verifie
 - Browser tool's page-level offline emulation did **not** reliably disconnect service-worker network requests: an uncached probe returned HTTP 404, not an offline failure. Therefore a physical disconnected-network browser session is still unverified.
 - Added tests that execute the actual worker handler with a failed network, verifying cached-response fallback, missing-asset 503 responses, and non-interception of external requests.
 - Final automated suite: 13 tests. Passing worker tests and a complete deployed cache are evidence for the implementation, not a claim that a physical disconnected session was tested.
+
+## 2026-10-19 — Continuity and constructive play
+
+- Added due-review selection tests and validated unfinished-session snapshots; suite now has 15 passing tests.
+- Number composition and stepwise robot construction both completed full four-question sessions in Chromium, bringing the total to 18 game modes.
+- Refresh after question one restored **Activity 2 of 4** with the existing supported observation retained.
+- Parent starting-point flow changed only the selected number practice level; oral blending is deliberately separate from reading/spelling.
+- Half-entered answers restart on resume; the next unfinished question and completed-round observations are retained. This scope is documented rather than claiming full input-state restoration.

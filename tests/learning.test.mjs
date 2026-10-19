@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultProgress,validateProgress,recordObservation,persistProgress,loadProgress,chooseFresh} from '../src/learning.js';
+import {defaultProgress,validateProgress,validateResume,recordObservation,persistProgress,loadProgress,chooseFresh,choosePracticeItem} from '../src/learning.js';
 import {WORDS,STORIES,SOUND_GROUPS,BOOKS} from '../src/content.js';
 import {DRAWINGS} from '../src/drawing.js';
 import {LETTER_MODELS,letterSvg} from '../src/handwriting.js';
@@ -63,4 +63,18 @@ test('gallery rejects arbitrary URLs and oversized data while preserving valid s
  assert.equal(validateProgress(valid).pictures.length,1);
  assert.throws(()=>validateProgress({...valid,pictures:[{id:'x',image:'https://external.example/image.jpg'}]}));
  assert.throws(()=>validateProgress({...valid,pictures:[{id:'x',image:'data:image/jpeg;base64,'+'a'.repeat(250000)}]}));
+});
+test('due reviews return supported words sooner and exclude examples already used in the current session',()=>{
+ const pool=[{id:'a'},{id:'b'},{id:'c'}];
+ let progress=recordObservation(defaultProgress(),'spelling','a','supported','2026-10-18');
+ progress=recordObservation(progress,'spelling','b','independent','2026-10-18');
+ assert.equal(choosePracticeItem(pool,progress,'spelling',[],'2026-10-19',()=>.5).id,'a');
+ assert.equal(choosePracticeItem(pool,progress,'spelling',['a'],'2026-10-19',()=>.5).id,'c');
+});
+test('unfinished activities restore only compatible modes, positions and bounded observations',()=>{
+ const valid={version:1,world:'words',mode:'build',round:2,evidence:[{content:'word-sat',supported:true}]};
+ assert.deepEqual(validateResume(valid),valid);
+ assert.throws(()=>validateResume({...valid,mode:'execute'}));
+ assert.throws(()=>validateResume({...valid,round:99}));
+ assert.throws(()=>validateResume({...valid,evidence:[{content:'x',supported:'yes'}]}));
 });
