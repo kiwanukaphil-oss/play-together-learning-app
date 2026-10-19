@@ -1,430 +1,295 @@
-# Little Learning Adventures — Product and Build Roadmap
+# Play Together — Creative Quality and Build Roadmap
 
 Last updated: 2026-10-19 (Africa/Nairobi)
 
-**Current phase:** Playable development release deployed and verified; remaining roadmap items stay open. Continue autonomously from the outstanding work listed below.
-**Working authority:** Proceed autonomously through all phases. Commits and pushes to the specified GitHub repository are authorised. See AGENTS.md.
-**Product status:** A new colourful static app is implemented with six destinations, eighteen game modes, fifteen paper-drawing lessons, 26 generic lowercase letter models, six short reading books, local progress, parent controls, and backup/restore. Earlier previews are retained references. Full roadmap scope and educational review remain unfinished.
+**Current milestone:** Q1 — Creative direction and picnic specification. Ready to start; implementation has not begun.
+**Latest completed work:** Q0 — Review and updated build roadmap.
+**Next deliverable:** Character/style guide, a scene-by-scene picnic storyboard, and an annotated voice script.
+**Product status:** Existing playable development release remains the baseline. The creative upgrade is approved as a direction, not yet delivered or validated.
+**Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
-## 1. Product vision
+## 1. Purpose and source of truth
 
-Build a polished, joyful learning playground for a child approaching six who knows the alphabet, can count, and can copy writing, but needs support connecting sounds to written words. The primary device is a laptop with a mouse and keyboard. The child should navigate much of the experience without reading or having a parent translate the interface.
+The user reviewed the app as a good start but below the desired quality, specifically identifying bland voiceovers and the need for more creative thought. On 2026-10-19 the user accepted the proposed direction and requested an updated roadmap to guide the build and track progress.
 
-The parent remains a learning partner. The app should support gradually greater independence without treating game completion as proof of understanding.
+The next objective is one exceptional, approximately five-minute on-screen adventure: **The Moonlight Picnic**. Paper drawing takes as long as the child needs. Establish the quality through this complete experience before extending it across all six destinations.
 
-The world should feel alive through expressive characters, bright harmonious colours, purposeful animation, clear sound, and playful cause and effect. Learning should produce a meaningful result: feed a character, complete a journey, build an object, or create a picture.
+This roadmap governs the new build order. The [original roadmap and delivery history](docs/ROADMAP_BASELINE_2026-10-19.md) are preserved in full. All unfinished original requirements remain in scope; a redesign does not erase them. Historical checked items describe the earlier release and do not certify the new quality standard.
 
-### Non-negotiable product principles
+Supporting records:
 
-- Child-facing screens use pictures, short spoken prompts, demonstrations, and minimal words.
-- A colourful illustrated playground is the main navigation, not a dashboard or grid of instructional cards.
-- Keep curriculum explanations, settings, progress reports, and observations in a separate parent area.
-- Use large, forgiving controls; all required actions work with clicks and ordinary keyboard controls. Dragging is optional.
-- One clear immediate action per activity step; consistent Home, Replay instruction, Show me, and Undo controls.
-- Keep essential instructions separate from optional background music. Avoid overlapping speech.
-- Offer warm, specific feedback, gentle retries, and help. No countdown pressure, lost lives, streak penalties, adverts, or purchases in the child flow.
-- Free drawing, exploration, and breaks remain available without earning access.
-- Prioritise paper drawing and handwriting supported by on-screen examples.
-- Progress each learning area independently, using repeated evidence and parent observations.
-- Do not claim to diagnose learning difficulties or guarantee educational outcomes.
+- [Learning blueprint](docs/LEARNING_BLUEPRINT.md): current teaching rules, skill tracking, defaults, and limitations.
+- [Validation record](docs/VALIDATION.md): checks actually performed.
+- [README](README.md): running the app and current parent guidance.
+- [Live development release](https://kiwanukaphil-oss.github.io/play-together-learning-app/).
+- [Source repository](https://github.com/kiwanukaphil-oss/play-together-learning-app).
 
-## 2. Delivery rules and roadmap maintenance
+## 2. Starting point and quality gaps
 
-This file is the source of truth for scope, delivery status, approval gates, and remaining work.
+### Preserve and regression-test
 
-- `[ ]` means incomplete, including partially implemented work. `[x]` means completed and verified.
-- Check off an item only after its stated acceptance criteria are met. Link implementation, validation evidence, or a review note where appropriate.
-- Update this file after each meaningful delivery: completion checkboxes, current phase, decisions, validation results, known issues, and next steps.
-- Record scope changes explicitly; do not silently drop requirements or mark unfinished features complete.
-- Proceed through phase checkpoints autonomously. The user superseded routine phase approvals on 2026-10-19; ask only for genuine blockers.
-- Commit and push coherent verified milestones to the authorised GitHub repository without asking again.
-- Resolve reversible uncertainty with reasonable defaults and document decisions; ask only when input unlocks a blocker.
-- Flag candidates for removal with a comment and preserve them until removal is approved.
-- Use intent-based function names and explanatory comments on functions longer than ten lines.
-- Prefer tools that preserve fidelity and allow verification. If unavailable, use a capable safe fallback, record it briefly, and validate the result.
+The existing app has six destinations, eighteen game modes, fifteen paper-drawing lessons, six pencil patterns, 26 generic lowercase letter models, six short books, twelve physical-world missions, independent tracking across nine strands, parent controls, backup/restore, unfinished-game resume, and an optional local gallery.
 
-### Definition of done for every phase
+The latest recorded app implementation is commit `5cc81b7`, release `a7046afcce12`. Historical verification includes fifteen automated tests, syntax/build checks, browser activity flows, and a public deployment. See the validation record; this roadmap update does not claim those checks were rerun.
 
-- [ ] Required deliverables and acceptance criteria are satisfied.
-- [ ] Relevant functionality, visual states, accessibility, and error paths are verified.
-- [ ] New content and teaching examples are reviewed for correctness.
-- [ ] Material limitations and deferred items are recorded.
-- [ ] Roadmap checkboxes and delivery log reflect actual evidence.
-- [ ] Phase evidence is recorded and the next phase is ready; routine user approval is not required.
+Preserve existing progress, backup compatibility, taught-sound limits, independent skill levels, accessible controls, free play, privacy, and early exit. Flag obsolete UI/assets as retirement candidates in comments; do not remove preserved references without authorisation.
 
-## 3. Existing work and confirmed direction
+### Findings driving the upgrade
 
-- [x] Establish laptop as the primary device.
-- [x] Establish core needs: sounds, reading, spelling, maths, writing, drawing, and colouring.
-- [x] Agree that paper drawing should follow clear on-screen picture steps.
-- [x] Agree on a broad learning journey with separate progression by area.
-- [x] Establish the revised child-centred playground direction and reject the text-heavy green-and-cream approach.
-- [x] Explore initial session screens and learning-map interactions in local previews.
-- [x] Inspect the workspace: only the two exploratory HTML previews existed before this roadmap.
-- [x] Approve autonomous execution of this build roadmap (user instruction, 2026-10-19).
-
-Existing references:
-
-- `output/learning-adventure-design.html` — early activity exploration; grid colouring is a candidate for retirement, not the planned art experience.
-- `output/learning-journey-design.html` — learning-path and paper-drawing exploration; useful interaction reference, not approved visual design for the child app.
-
-Preserve both files as references until removal is explicitly approved. Their existence does not satisfy implementation milestones below.
-
-## 4. Product scope and priorities
-
-### First usable release
-
-A cohesive playground with a companion, spoken guidance, three substantial learning games, a paper-drawing studio, a simple daily adventure, local progress with backup, and a parent area. It must have enough varied, reviewed content for repeated use, not just one demonstration per game.
-
-### Complete planned release
-
-All six destinations, coverage across the eight learning areas, a structured content library, independent progression per skill, physical-world missions, optional personalisation and gallery, robust recovery, and documented release verification.
-
-### Later possibilities, outside the initial completion target
-
-- Speech recognition for pronunciation or oral responses.
-- Automatic handwriting or drawing grading.
-- Generative lessons or child-facing AI chat.
-- Cloud accounts, cross-device sync, and multiple household profiles unless chosen explicitly.
-- Additional languages and complete school-specific curriculum variants.
-
-The initial app must work without these capabilities. No child voice recording or external AI service is required for the core experience.
-
-## 5. Playground destinations
-
-| Destination | Core learning | Representative games | Priority |
-|---|---|---|---|
-| Sound Safari | Listening, sound awareness, sound–letter connections | Sound hunt, robot blending, mystery bag | First usable release |
-| Word Workshop | Reading and spelling | Sound train, build a spoken word, change a letter, label an object | First usable release |
-| Number Kitchen | Quantity, counting, early operations | Fill an order, share snacks, add or remove ingredients | First usable release |
-| Art Treehouse | Paper drawing, pencil control, handwriting | Draw with me, finish a picture, pattern paths, label a drawing | First usable release |
-| Shape Builders | Shapes, position, patterns, measurement | Shape robot, pattern parade, picture detective, build and compare | Complete release |
-| Story Theatre | Oral language, sequencing, early reading | Story scramble, tell the next event, illustrated decodable stories | Complete release |
-
-Avoid a cluttered world. Later destinations should be introduced gently, without making the child feel punished by locked content.
-
-## 6. Decisions to resolve in Phase 1
-
-Record choices in the decision log before dependent implementation. English is a working assumption, not a confirmed school language.
-
-| Decision | Options / information needed | Recommendation or constraint | Status |
-|---|---|---|---|
-| Learning language and phonics | School language, pronunciation/accent, phonics programme | Align teaching sounds and sequence with school where possible | Open |
-| Handwriting | School letter forms, lowercase conventions, formation order | Match school practice; introduce lowercase deliberately | Open |
-| Storage | Device-only with backup, or account-based sync | Device-only with export/import suits one laptop; explain browser-data loss risk | Open |
-| Implementation stack | Component framework vs simpler static implementation | Propose React + TypeScript for reusable games and typed content; verify current tooling before setup | Proposed, not adopted |
-| Hosting and connectivity | Local use, hosted app, installable offline app | Hosted static app with offline core is a candidate; confirm deployment destination | Open |
-| Audio production | Reviewed human recordings vs carefully reviewed generated audio | Reviewed recordings for phonemes; synthetic speech must not be assumed accurate | Open |
-| Art direction | Companion, world style, child's interests | Present a coherent colourful direction and a meaningful alternative for review | Open |
-| Release content budget | Minimum reviewed content in each skill family | Use the inventory below as a floor, not a substitute for instructional coverage | Proposed |
-
-## 7. Phased build plan
-
-### Phase 1 — Learning blueprint and build decisions
-
-Goal: Define the teaching content, product boundaries, and technical direction before building the app.
-
-- [ ] Resolve critical decisions in Section 6 with the parent.
-- [ ] Define eight strands: listening, reading, spelling, handwriting, number understanding, operations, shapes/patterns/measure, and drawing/storytelling.
-- [ ] Map each strand into explicit skills, prerequisites, activity types, help levels, and review opportunities.
-- [ ] Define a phonics sequence; tag every word with its required sounds and spellings.
-- [ ] Distinguish oral blending, decoding, spelling, copying, and independent writing in both content and tracking.
-- [ ] Create a gentle starting-point experience; do not infer proficiency solely from age or alphabet knowledge.
-- [ ] Define daily adventure rotation, free-play access, and parent overrides.
-- [ ] Approve the content inventory and first-release boundaries.
-- [ ] Document architecture, hosting/storage choice, and asset/audio production approach.
-
-Acceptance: We can identify why each starter activity is appropriate, what skill it teaches, what comes next, and how the parent can change its starting level. No unresolved decision blocks Phase 2.
-
-Autonomous quality checkpoint: Learning blueprint and technical direction.
-
-### Phase 2 — Child-centred visual and interaction design
-
-Goal: Establish a polished playground that a beginning reader can navigate.
-
-- [x] Create an illustrated home world with a recognisable companion and destinations.
-- [x] Define a bright, harmonious palette, typography, illustration style, motion rules, and sound personality.
-- [x] Replace paragraphs and dashboard cards with visual actions, short labels, and spoken cues.
-- [x] Establish consistent Home, Replay, Show me, Undo, and Pause/Break controls.
-- [ ] Design first-use demonstrations, independent play, help, retry, success, and leaving an unfinished activity.
-- [x] Design a clearly separate parent area, with an adult entry step that does not pretend to provide account security.
-- [x] Produce interactive previews of home, one learning game, and the paper-drawing studio.
-- [ ] Test visual comprehension with the parent and, if feasible, observe the child navigating without reading support.
-- [ ] Verify laptop layouts, keyboard focus, touchpad use, reduced motion, and clear audio controls.
-
-Acceptance: The child can identify a destination, enter an activity, request help, and return home using visual or spoken cues. Navigation does not depend on hover, reading, or precise dragging. The parent approves the visual direction.
-
-Autonomous quality checkpoint: Playground design and interaction system.
-
-### Phase 3 — Application foundation
-
-Goal: Build a reliable foundation that supports consistent activities and future expansion.
-
-- [ ] Set up the approved project structure, tooling, formatting, linting, type checks, and build process.
-- [x] Build application navigation, child/parent shells, shared controls, and responsive layouts.
-- [ ] Create an audio manager: user-initiated start, replay, voice prioritisation, mute, volume, cancellation, and graceful unavailable-audio behaviour.
-- [ ] Implement an activity lifecycle: introduction, demonstration, attempt, support, completion, and exit/resume.
-- [ ] Define typed content records and validate prerequisites, asset references, answers, and content versions.
-- [ ] Implement the approved storage model with versioned saves, migrations, and recovery behaviour.
-- [x] Add backup export/import with schema validation and clear handling of replacement or merge.
-- [x] Establish asset licensing/provenance records and efficient image/audio loading.
-- [x] Add meaningful automated checks for content validation, persistence, and shared interaction rules.
-
-Acceptance: A sample activity runs through its complete lifecycle. Refresh restores valid progress, malformed imports do not overwrite good data, and audio does not overlap or continue after leaving the activity.
-
-Autonomous quality checkpoint: Foundation demonstration and validation evidence.
-
-### Phase 4 — First complete play loop
-
-Goal: Deliver a small but usable learning app, not a collection of disconnected demos.
-
-- [x] Build Sound Safari's oral sound/blending game with demonstration and graduated help.
-- [x] Build Word Workshop's word-building game using only introduced sound–letter patterns.
-- [x] Build Number Kitchen's counting/quantity game with varied arrangements and totals.
-- [ ] Make gameplay produce a meaningful story result and warm, proportionate feedback.
-- [ ] Add reviewed starter audio, illustrations, and multiple examples per game.
-- [x] Build a daily adventure combining familiar practice, a manageable next step, and a paper activity.
-- [x] Provide free choice, replay, pause, and graceful early exit.
-- [x] Add concise parent observations: independent, supported, revisit, or not observed.
-- [x] Verify gameplay cannot confuse repeated clicks, motor difficulty, or hints with independent understanding.
-
-Acceptance: A parent and child can complete a useful session without developer intervention. Content varies between sessions, help is available, and progress survives refresh according to the selected storage model.
-
-Autonomous quality checkpoint: First usable gameplay session.
-
-### Phase 5 — Paper drawing and handwriting studio
-
-Goal: Make the laptop an effective guide for meaningful work on paper.
-
-- [x] Create cumulative, step-by-step picture lessons with large diagrams and short spoken instructions.
-- [x] Include Previous, Next, Finished picture, and Return to my step controls.
-- [x] Provide simple starting drawings such as a cat, fish, house, flower, vehicle, and imaginative creature.
-- [x] Show only a manageable amount of new drawing information per step.
-- [x] Add optional colour ideas, backgrounds, and imaginative extensions without judging likeness.
-- [ ] Add pencil-control patterns, reviewed letter-formation demonstrations, and short labels matched to taught sounds.
-- [ ] Distinguish copying from writing independently in parent observations.
-- [ ] Include finish-the-picture and draw-from-spoken-instructions activities.
-- [x] Support completion without photos; optional gallery work comes later.
-
-Acceptance: The child can follow a complete lesson on paper, revisit steps, and view the finished example without losing their place. Diagrams are recognisable and readable at normal laptop size. Handwriting models match the agreed style.
-
-Autonomous quality checkpoint: Paper studio and handwriting examples.
-
-### Phase 6 — Adaptive progression and parent controls
-
-Goal: Select appropriate practice without treating a game score as a diagnosis or full assessment.
-
-- [ ] Track evidence by skill, with activity/content version, support level, outcome, and session context.
-- [x] Define transparent progression rules using repeated observations across sessions and varied examples.
-- [x] Keep supported completion distinct from independent success.
-- [ ] Respond to difficulty with modelling, fewer choices, smaller quantities, or easier examples.
-- [x] Schedule revisits and prevent the same content dominating consecutive sessions.
-- [x] Respect prerequisites and keep each learning strand independent.
-- [ ] Allow the parent to adjust starting points, request more practice, skip an activity, or flag a mouse/attention issue.
-- [ ] Show concise progress observations and practical off-screen suggestions in the parent area.
-- [x] Verify skipped sessions and activities do not count as failure or erase progress.
-- [x] Test progression, review scheduling, overrides, and imported progress with meaningful scenarios.
-
-Acceptance: A single correct answer cannot advance an entire skill. Support changes the evidence appropriately. A child can advance in maths while remaining at an earlier literacy stage. The parent can understand and override recommendations.
-
-Autonomous quality checkpoint: Progression rules and parent experience.
-
-### Phase 7 — Broader playground and content library
-
-Goal: Deliver the breadth required for continued learning across the complete planned release.
-
-- [ ] Expand Sound Safari with first/middle/ending sound activities and robot blending.
-- [ ] Expand Word Workshop with sound train, changing a letter, and picture labels.
-- [x] Expand Number Kitchen with fair shares, composition, adding, taking away, and picture stories.
-- [x] Build Shape Builders: shape construction, position, patterns, comparison, and concrete measurement missions.
-- [ ] Build Story Theatre: picture sequencing, oral storytelling, and short decodable stories.
-- [x] Add movement breaks and household-object missions with simple parent confirmation.
-- [ ] Rotate activities across the week while preserving skill-specific practice.
-- [ ] Complete and audit the approved minimum content inventory.
-- [ ] Review every answer, diagram, phoneme recording, instruction, and spelling-pattern dependency.
-
-Acceptance: Every planned strand has usable activities, reviewed examples, and clear progression/review opportunities. Later reading content never silently introduces untaught patterns. Content breadth is demonstrated through the inventory, not destination icons alone.
-
-Autonomous quality checkpoint: Complete learning coverage and content review.
-
-### Phase 8 — Personalisation, gallery, and finishing touches
-
-Goal: Make the world feel personal without adding pressure or unnecessary complexity.
-
-- [x] Add a companion name and a small set of appearance choices.
-- [ ] Add gentle world decoration rewards based on participation, without blocking learning or art.
-- [ ] Provide completed-adventure replay and a simple story collection.
-- [x] Add an optional parent-managed drawing gallery with local image handling under the approved storage model.
-- [x] Provide intentional image removal, storage-limit feedback, and clear backup inclusion/exclusion.
-- [ ] Add purposeful animation, transitions, and sound effects with reduced-motion and mute equivalents.
-- [ ] Polish loading, empty, offline, unavailable-audio, and recovery states.
-
-Acceptance: Personalisation persists, rewards do not disrupt learning, and the app remains complete when images are never uploaded or sound/motion is reduced.
-
-Autonomous quality checkpoint: Personalisation and final visual polish.
-
-### Phase 9 — Release verification and deployment
-
-Goal: Deliver a dependable, documented app suitable for regular family use.
-
-- [ ] Run the quality checks in Section 10 on the final integrated app.
-- [ ] Perform realistic sessions with varied skill levels, frequent help, early exits, refreshes, and mixed parent observations.
-- [ ] Review with the parent and, where feasible, observe the child using the app; record confusing interactions and fix them.
-- [ ] Verify backup restoration, upgrades, storage errors, and offline behaviour where promised.
-- [x] Prepare parent instructions covering setup, session use, audio, backups, and recovery.
-- [x] Verify deployment configuration, asset loading, HTTPS where hosted, and production behaviour.
-- [x] Deployment authorised by autonomous build instructions; GitHub Pages selected for the requested public GitHub repository.
-- [x] Publish through the approved hosting path and smoke-test the actual deployed app.
-- [ ] Record remaining limitations, content coverage, release version, and maintenance instructions.
-
-Acceptance: No known critical gameplay, data-loss, teaching-content, or accessibility defects remain. The parent can use the released app and recover progress without developer help. Deployment is verified, not merely reported as successful by a build command.
-
-Autonomous quality checkpoint: Release acceptance and transition to maintenance.
-
-## 8. Proposed minimum content inventory
-
-These are planning floors to approve in Phase 1. Counts refer to reviewed content records or lessons, not automatically generated variations. Valid phonics coverage takes precedence over reaching a word count.
-
-| Content | First usable release | Complete planned release |
+| Area | Current evidence | Required improvement |
 |---|---|---|
-| Literacy games | 2 distinct game types | At least 6 distinct game types |
-| Literacy examples | At least 24 reviewed examples across the approved starter sounds | At least 80 across the approved taught sequence, including review |
-| Maths games | Counting/quantity with at least 20 reviewed prompts | At least 5 types and 60 prompts spanning approved number and operation skills |
-| Paper drawing | 6 complete step-by-step lessons | At least 15 lessons plus 10 open-ended picture prompts |
-| Handwriting | Approved starter letter set and 6 pencil-pattern activities | All agreed letter forms, with labels and supported writing prompts |
-| Shapes/patterns/measure | Included in a few paper activities | At least 24 reviewed prompts across the strand |
-| Storytelling/reading | Parent-supported story prompts | At least 8 picture sequences and 6 short reviewed decodable stories |
-| Physical-world missions | 4 simple missions | At least 12 across learning areas |
+| Voice | One browser-selected English voice, fixed rate/pitch, repeated generic success lines | Directed character performances, varied contextual dialogue, consistent bundled recordings |
+| World | Illustrated destination cards beneath a large introduction | A connected, recognisable picture-book setting with obvious destinations |
+| Activities | Picnic and word-building screens use sparse panels, buttons, and emoji | Meaningful manipulation of illustrated objects with visible story consequences |
+| Help | Generic retry; several help paths reveal or highlight an answer | Graduated, action-specific demonstrations that return control to the learner |
+| Continuity | Short question sets and generic celebration | A beginning, purpose, changing scene, and satisfying ending |
+| Drawing | Cumulative static diagrams and short prompts | Animated demonstrations, paced paper practice, imaginative choices, and story context |
 
-Content records should include a stable ID, strand/skill, prerequisites, difficulty/support options, visual and audio references, expected responses, feedback, review status, and version. Do not treat artwork variants as new instructional coverage.
+Review scope: live home, picnic, and word-building screens plus source inspection of audio, activities, feedback, and drawing. The review did not include a direct audition of the device's voice, educator review, or real-child observation.
 
-## 9. Proposed implementation boundaries
+## 3. Product and creative principles
 
-Confirm the stack in Phase 1. Regardless of framework, separate:
+- Design for a child approaching six on a laptop with mouse and keyboard; use minimal child-facing text.
+- Give each learning action a visible purpose: feed, build, discover, share, draw, or help.
+- Use a coherent illustrated style for characters, scenery, objects, controls, and animation.
+- Make characters warm, curious, and occasionally funny. Avoid constant shouting, exaggerated praise, and babyish delivery.
+- Keep a clear immediate action. Background motion settles during listening and thinking.
+- Keep Home, Replay, Show me, Undo where applicable, and Break consistent and reachable.
+- Support clicks and keyboard activation for every required action; dragging is optional.
+- Offer calm retries, specific feedback, replayable demonstrations, and unhurried response time.
+- Keep narrative dialogue expressive and instructional phonemes precise.
+- Keep story variation separate from teaching difficulty. Each skill progresses independently.
+- Paper drawing and handwriting remain physical activities; the app never pretends to see or grade the paper.
+- Free play, creative exploration, and breaks remain available without earning access.
+- No countdowns, lost lives, streak penalties, advertising, purchases, required camera/microphone, or child-facing AI chat.
+- Keep progress local by default. No child data is sent to voice or image production services.
+- Keep detailed curriculum, settings, evidence, and recovery in the parent area.
 
-- **Playground and navigation:** destinations, companion, shared controls, and scene transitions.
-- **Activity engine:** lifecycle, input handling, feedback, help, and exit/resume behaviour.
-- **Reviewed content:** lessons, word lists, maths prompts, diagrams, stories, and audio manifests.
-- **Learning model:** skill prerequisites, evidence, review scheduling, recommendations, and parent overrides.
-- **Persistence:** profiles, observations, settings, backup/import, migrations, and optional gallery assets.
-- **Parent experience:** observations, progress summaries, settings, and recovery tools.
+## 4. First quality benchmark — The Moonlight Picnic
 
-Keep content editable without rewriting game logic. Use deterministic progression rules before considering AI-generated content. Do not place secrets in browser code. Any new external service or data collection requires an explicit product decision.
+### Cast and setting
 
-## 10. Quality and verification standards
+Working creative direction: Pip is the familiar, curious companion; Bear is a gentle picnic chef. A playful workshop robot can join later. Final names, appearance, accent, and delivery are production decisions to document in Q1/Q2, not assumed to have been auditioned or approved.
 
-### Child usability and accessibility
+Use a cosy treehouse clearing at dusk with readable, warm lighting. The child prepares a small picnic and sees the characters enjoy what was made. Avoid a long introduction or time pressure.
 
-- [ ] Core play does not require reading instructions.
-- [ ] Spoken instructions can be replayed; a visible demonstration conveys the action.
-- [ ] Child action targets are comfortably large; aim for at least 48 × 48 CSS pixels with spacing.
-- [x] Required interactions work with clicks and keyboard activation; no drag-only or hover-only tasks.
-- [ ] Focus remains visible; navigation and dialogs do not trap or lose keyboard focus.
-- [ ] Colour is never the only cue; text and essential controls meet appropriate contrast requirements.
-- [ ] Verify zoom to 200%, reduced motion, mute, and common laptop viewport sizes including 1280 × 720 and 1366 × 768.
-- [ ] Important content and controls remain reachable without clipping; smaller screens reflow gracefully.
-- [ ] Audio failure has a parent-supported fallback, and the limitation is made clear without silently breaking the activity.
+### Scene sequence
 
-### Educational correctness
-
-- [ ] Phonemes and letter names are distinct; reviewed consonant recordings avoid unnecessary added vowel sounds.
-- [ ] Words, stories, and distractors respect the taught sequence and the target skill.
-- [ ] Pictures do not accidentally reveal answers when decoding is being checked.
-- [ ] Maths distinguishes reciting numbers from counting objects and identifying the total.
-- [ ] Copying, tracing, spelling, oral responses, and independent writing are recorded distinctly.
-- [x] No automatic grading of speech, handwriting, or paper drawings is implied where unavailable.
-- [ ] A parent/educator content review is recorded; specialist review is identified honestly if not obtained.
-
-### Reliability, performance, and privacy
-
-- [ ] Production build, lint, type checks, and relevant tests pass.
-- [ ] Test major rules and user journeys rather than writing tests that merely reproduce implementation details.
-- [x] No uncaught errors or broken assets in verified core flows.
-- [ ] Playback stops correctly when leaving an activity; repeated clicks cannot queue competing instructions.
-- [x] Save/import/export and migrations protect existing valid progress.
-- [ ] Storage quota errors and cleared browser data have understandable recovery guidance.
-- [ ] Measure startup and activity transitions on the target laptop/browser; optimise heavy artwork and audio before release.
-- [ ] Test the agreed primary browser plus at least one other relevant browser; record actual versions and results.
-- [ ] Verify offline claims after initial loading and across app updates, if offline use is included.
-- [x] Collect only data needed for the experience; no analytics or external uploads by default.
-- [x] Optional child images remain under explicit parent control, with storage and backup behaviour documented.
-
-### Visual polish
-
-- [ ] Illustrations, controls, typography, spacing, and character expressions form a coherent visual system.
-- [ ] No placeholder artwork, silent stub buttons, or unexplained dead ends remain in released flows.
-- [ ] Success feedback is satisfying without obstructing the next action.
-- [ ] Wrong attempts remain calm and helpful; feedback never shames the child.
-- [ ] Inspect screenshots of key screens and states at supported sizes, then verify the interactions in-browser.
-
-## 11. Risks and mitigations
-
-| Risk | Planned response |
-|---|---|
-| Beautiful world with shallow exercises | Maintain skill coverage and reviewed content inventory as release criteria |
-| Too much visual stimulation | One immediate task per scene; purposeful motion; adjustable sound and reduced motion |
-| Incorrect phonics audio or sequence | Review recordings and content dependencies before release; align with school |
-| Guessing looks like learning | Use varied examples, supported/independent evidence, and parent observations |
-| Mouse difficulty looks like a learning gap | Generous targets, click alternatives, and parent override |
-| Device-only progress is lost | Export/import, clear backup guidance, versioned saves, and recovery verification |
-| Offline audio/assets are incomplete | Explicit caching strategy and real offline tests before making promises |
-| Scope grows indefinitely | Deliver phase gates; maintain complete-release scope separately from future ideas |
-| Prior previews mistaken for completed app work | Mark them as exploratory references and verify production deliverables independently |
-
-## 12. Decision log
-
-| Date | Decision | Basis / status |
-|---|---|---|
-| 2026-10-19 | Primary device is a laptop | Confirmed by parent |
-| 2026-10-19 | Child-facing experience is an illustrated, colourful playground with minimal text | Explicit parent direction |
-| 2026-10-19 | Drawing is guided on screen and completed on paper | Confirmed by parent |
-| 2026-10-19 | Parent controls and curriculum detail belong outside the child flow | Accepted product direction |
-| 2026-10-19 | English, stack, storage, hosting, and school alignment remain unconfirmed | Resolve during Phase 1; do not infer approval |
-
-## 13. Delivery and validation log
-
-| Date | Work completed | Verification | Remaining work |
+| Beat | Child's action | Learning purpose | Visible consequence |
 |---|---|---|---|
-| 2026-10-19 | Initial activity and learning-journey previews | Prior browser checks covered sample activity interactions, drawing step navigation, and independent literacy/maths preview changes | Replace child-facing visual direction; implement production app |
-| 2026-10-19 | Create this roadmap from the agreed vision and inspect workspace | Confirm both existing previews; review phase order, scope, acceptance criteria, and approval gates | Roadmap approval, then Phase 1 |
+| Welcome | Choose to help Bear or explore freely | Understand the immediate goal | Bear opens an empty basket; Pip joins |
+| Sound clue | Choose a picture after a reviewed sound prompt | Practise the selected listening skill | Discover the friend or item needed for the picnic |
+| Workshop | Build an eligible word such as **map** | Connect taught sounds and spellings | The completed map unfolds and reveals the picnic spot |
+| Pack | Add/remove actual illustrated food items | One-to-one counting and total quantity | Food moves into the basket; characters react to the action |
+| Share, when appropriate | Distribute a suitable quantity across plates | Equal sharing or simple composition | Friends receive the food; totals remain visible |
+| Make on paper | Follow a short lantern drawing or choose an extension | Pencil control, drawing, optional eligible label | The child confirms completion; the story continues without judging the drawing |
+| Picnic ending | Choose a small decoration or revisit a scene | Agency and a clear ending | Characters gather with the prepared food; the chosen world decoration persists |
 
-## 14. Immediate next steps
+Default to an approximately five-minute on-screen route; no timer is shown. Sharing and later content appear only when appropriate to that strand. Provide authored alternatives when a word or task exceeds taught prerequisites. A story never forces an untaught spelling or treats oral blending as reading.
 
-1. Continue autonomously under the instructions in AGENTS.md.
-2. Record reversible defaults for language, phonics, handwriting, storage, hosting, and technical direction.
-3. Produce the concrete learning blueprint and record decisions here.
-4. Validate Phase 1 deliverables and continue to the playground design phase without stopping for routine approval.
+### Minimum benchmark content and behaviour
 
-**Completion rule:** The app is complete only when the complete planned release scope, content coverage, quality checks, deployment verification, and parent acceptance are satisfied. A visual prototype, successful build, or exhausted development session is not completion.
+- [ ] Author at least three eligible word examples for the starter route and map their sound prerequisites.
+- [ ] Author at least six counting prompts spanning quantities 1–5 with varied arrangements.
+- [ ] Author at least three sharing/composition prompts for the optional appropriate-level branch.
+- [ ] Author one complete lantern paper lesson with two imaginative extensions and a simple alternative.
+- [ ] Provide a full script for every route: introduction, instruction, demonstration, partial progress, retry, success, exit, resume, and ending.
+- [ ] Include specific responses to too many, too few, removing an item, and completing a quantity.
+- [ ] Supply at least three contextual success lines and three support lines per core activity, selected without immediate repetition where appropriate.
+- [ ] Deliver an ending that reflects completed story actions, including supported completion.
+- [ ] Verify at least three sessions with different content selections; count only distinct authored/reviewed teaching examples toward coverage.
 
-## Autonomous delivery update — 2026-10-19
+These are production floors, not claims of educational sufficiency. A smaller evidenced prototype may be used during development, but it does not complete the benchmark.
 
-- Standing instructions saved in `AGENTS.md`, committed and pushed. Routine phase approvals are superseded; remaining historical review wording is a quality checkpoint, not a request to stop.
-- GitHub source: https://github.com/kiwanukaphil-oss/play-together-learning-app
-- Hosting: GitHub Pages, configured for tested Actions deployments. First deployment workflow succeeded; verify the latest public release before claiming completion.
-- Native browser modules selected instead of the proposed React stack: no runtime dependencies, straightforward static hosting/offline support, and separate content/learning/drawing modules.
-- English, local device storage, generic manuscript letter forms, and a reversible starter phonics sequence are the documented defaults. School alignment remains unconfirmed and is not silently assumed.
-- Implemented: six illustrated destinations; eighteen game modes; daily adventure; 15 paper drawing lessons; six pencil patterns; 26 stroke-based lowercase letter models; six short reading books; 12 physical-world missions; independent evidence across nine strands; parent overrides; local backup/restore; optional six-photo gallery; companion preferences; gentle treasure collection.
-- Verified: ten unit tests, syntax checks, static build, all sixteen game-mode completion flows, drawing/letter/book navigation, local gallery import, narrow-screen layout checks, and no console errors in verified flows. See `docs/VALIDATION.md`.
-- Still incomplete: reviewed phoneme recordings; educator/school alignment; a comprehensive authored and reviewed content inventory; broader browser testing; real-child observation; final full-release acceptance.
-- Do not mark the full roadmap complete. Existing code is a usable development release with explicit teaching limitations, not evidence that every planned feature or quality gate is complete.
+## 5. Milestone tracker
 
-### Latest verified delivery
+Statuses: **Ready**, **In progress**, **Blocked**, **Complete**. Only mark Complete when the checklist, acceptance criteria, and linked evidence agree. Record a concrete dependency for Blocked; continue independent work.
 
-- Live app: https://kiwanukaphil-oss.github.io/play-together-learning-app/
-- Source milestones pushed: `7aee4d7` (standing instructions), `fed5af5` (playground), `62b9e32` (content expansion), `2a5f66e` (coherent versioned offline assets).
-- Latest automated checks: 13 passing tests plus JavaScript syntax checks and production build.
-- Production release version `47095c6e8555` verified in-browser with all 20 cache resources present. Public Pages workflow succeeded.
-- Fixed a genuine mixed-cache module failure found during release QA; regression coverage is now in `tests/build.test.mjs`.
-- Offline fallback logic is tested, but the browser tool did not fully disconnect worker requests. Real disconnected-browser verification remains open; offline voice depends on installed system voices.
-- No user input is currently needed for the remaining reversible engineering work. School alignment, human educational review, and child observation will require real-world input before those specific quality items can be marked complete.
+| ID | Milestone | Status | Depends on | Completion evidence |
+|---|---|---|---|---|
+| Q0 | Review and revised roadmap | Complete | User direction | Review in this conversation; this document; preserved baseline |
+| Q1 | Creative direction and picnic specification | Ready | Q0 | Pending |
+| Q2 | Character audio and sound production | Ready | Q1 script/cast | Pending |
+| Q3 | Complete playable picnic | Ready | Q1; Q2 required for final acceptance | Pending |
+| Q4 | Benchmark validation and refinement | Ready | Q2, Q3 | Pending |
+| Q5 | Connected world and destination upgrades | Ready | Q4 technical/creative acceptance | Pending |
+| Q6 | Full coverage, reliability, and release acceptance | Ready | Q5; original outstanding scope | Pending |
 
-### Continuity and constructive play update
+Q2 production and Q3 implementation may overlap once their contracts are defined. Temporary art/audio must be visibly tracked as provisional. Passing a technical checkpoint permits useful downstream work; human review items stay open until actual evidence exists.
 
-- Added a parent-guided starting-point flow for oral blending, counting real objects, and pencil control. Oral blending does not imply decoding or spelling proficiency.
-- Added validated unfinished-game snapshots. Refresh resumes at the next unfinished question and retains completed-round observations; half-entered answers restart.
-- Added due-word review selection (one day after support, three after independence) with per-session repetition avoidance. These are product heuristics, not validated educational thresholds.
-- Added number composition with two visible groups and a shape-by-shape robot-building activity. The app now has eighteen game modes.
-- Verification: 15 automated tests; both new modes completed in-browser; refresh resumed Activity 2 of 4; starting-point settings applied correctly.
-- Remaining release-quality work includes human content/audio review, school-specific alignment, full content inventory review, broader browser/device testing, real-child observation, physical disconnected-browser verification, and any unchecked feature details above. No claim of full roadmap completion is made.
-- Latest live implementation: commit `5cc81b7`, release `a7046afcce12`, successful Actions run `39249869630`; public composition mode verified after deployment. Documentation-only commits after this do not change the application release.
+### Q1 — Creative direction and picnic specification
+
+- [ ] Create `docs/CREATIVE_DIRECTION.md`: palette, lighting, illustration style, typography, composition, object scale, motion, sound character, and accessibility constraints.
+- [ ] Define character silhouettes, proportions, personalities, relationships, and expression/pose sheets.
+- [ ] Create `docs/PICNIC_STORYBOARD.md`: every scene and interaction, including first use, mistakes, help, leaving, resume, and completion.
+- [ ] Create `docs/AUDIO_SCRIPT.md` with stable line IDs, speaker, exact text, delivery direction, trigger, timing, and pronunciation notes.
+- [ ] Define the teaching prerequisites and alternatives for every picnic task in the learning blueprint.
+- [ ] Produce visual samples for home/world navigation, the picnic, and a help state at laptop sizes.
+- [ ] Inventory assets and scripts with ownership/licensing, production status, and review status.
+- [ ] Record reversible creative decisions and unresolved external dependencies.
+
+**Acceptance:** The storyboard explains what the child sees, hears, does, and changes at every step. Teaching actions and support paths are explicit. The samples demonstrate a coherent visual direction that can be built and verified.
+
+### Q2 — Character audio and sound production
+
+- [ ] Prepare a common audition script covering welcome, instruction, humour, support, success, and a quiet ending.
+- [ ] Compare available human-performed and directed generated samples; record intelligibility, warmth, pacing, consistency, pronunciation, licensing, and production cost/access.
+- [ ] Select the production route and voice per character based on listening evidence; document any unavailable candidate without inventing a comparison.
+- [ ] Produce and listen-review every required picnic line, including pronunciation and natural sentence flow.
+- [ ] Produce separately reviewed phoneme, word, and blending assets needed by the supported learning routes.
+- [ ] Record reviewer, review scope, date, pronunciation convention, and revisions for teaching audio.
+- [ ] Create a versioned audio manifest linking line IDs, transcripts, speakers, files, duration, review status, and provenance.
+- [ ] Add restrained object sounds, short character reactions, and optional ambience/music that lowers beneath speech.
+- [ ] Implement speech priority, replay/cancellation, separate voice/music/effects controls, and user-initiated audio start.
+- [ ] Bundle production clips; verify loading, caching, missing-file behaviour, and interruption when navigating away.
+- [ ] Keep browser speech as a clearly documented fallback; do not count fallback speech as finished character production.
+
+**Acceptance:** All benchmark routes have reviewed recordings; no overlapping dialogue, clipped phrases, or blocking audio queues. The voices have distinct character and remain clear at normal laptop volume. Phonics correctness and performance quality have separate evidence. Mute and audio failure have usable visual demonstrations and clearly explained parent support where listening is essential.
+
+**Dependency handling:** If a paid service, credentials, performer, or reviewer is needed, prepare the script and sample specification first and ask only for the concrete missing input. Continue visual and engineering work. Do not clone a real person's voice without permission or put credentials in the repository.
+
+### Q3 — Complete playable picnic
+
+- [ ] Separate scene flow, rendering, audio, content, and learning evidence as needed; retain the static browser-module foundation unless a documented requirement justifies changing it.
+- [ ] Implement introduction → demonstration → attempt → support → consequence → completion → exit/resume.
+- [ ] Build reusable character states: idle, speaking, attentive, thinking, encouraging, and celebrating.
+- [ ] Replace benchmark emoji and placeholder surfaces with consistent authored assets.
+- [ ] Animate objects in direct response to the child's action; make quantities readable throughout.
+- [ ] Implement graduated help: a cue, one demonstrated step, then supported completion when needed.
+- [ ] Preserve correct partial spelling work; target the next needed sound without revealing an answer prematurely.
+- [ ] Implement counting, over/under-target feedback, and optional equal sharing using actual manipulable objects.
+- [ ] Add animated paper demonstrations with start point, direction, pause/replay, previous/next, and finished-view state.
+- [ ] Connect the route to current per-skill levels, parent limits, review scheduling, and evidence semantics.
+- [ ] Save narrative progress without duplicating learning evidence; restore at a documented safe checkpoint.
+- [ ] Add a short story-specific ending and persistent non-pressure decoration choice.
+- [ ] Preserve old activities, backups, gallery, parent controls, and accessible free-play entry.
+
+**Acceptance:** A complete route has finished assets/audio, meaningful changes to the scene, useful mistakes/help, and a coherent ending. Refresh, early exit, repeated clicks, and help cannot corrupt progress or produce false independence. All mandatory actions work by keyboard and click.
+
+### Q4 — Benchmark validation and refinement
+
+- [ ] Run relevant automated behaviour/content checks, JavaScript checks, and production build.
+- [ ] Walk every branch, including small/large quantities, wrong answers, repeated input, full support, replay, pause, exit, and resume.
+- [ ] Verify pictures, quantities, spoken nouns, displayed symbols, and answer logic agree.
+- [ ] Inspect key visual states at 1280 × 720 and 1366 × 768, narrow layouts, and 200% zoom.
+- [ ] Verify visible focus, target sizes of at least 48 × 48 CSS pixels where practical, contrast, non-colour cues, mute, and reduced motion.
+- [ ] Audition the complete mixed scene on laptop speakers; verify pauses, volume consistency, and reduced ambience beneath instructions.
+- [ ] Measure startup, input feedback, asset transfer size, and scene transitions on a recorded device/network; set and meet explicit budgets before final acceptance.
+- [ ] Inspect a production build and the actual published release; record commit, release ID, and evidence.
+- [ ] Obtain parent feedback on voice warmth, character appeal, clarity, and perceived quality.
+- [ ] Where feasible, observe voluntary child use: understanding the goal, navigation, response to mistakes, use of help, and interest in returning.
+- [ ] Keep private observations outside Git; record only anonymised product issues and resulting fixes.
+- [ ] Fix identified issues and repeat the affected checks; publish a benchmark acceptance note with remaining limitations.
+
+**Acceptance:** Technical checks pass with no known critical gameplay, teaching, accessibility, or data-loss issues. Parent feedback on the upgraded experience is recorded. Child usability is reported honestly as observed or unverified. No claim of “world class” follows from automated tests alone.
+
+**Observation targets:** The child can begin through visual/spoken cues, manipulate objects, request help, and return home; recovery feels calm; actions have understandable consequences. These are qualitative design targets, not developmental assessment thresholds.
+
+### Q5 — Connected world and destination upgrades
+
+- [ ] Build a connected illustrated home world with recognisable landmarks and accessible destination controls.
+- [ ] Add small optional discoveries and remembered creations; settle decorative motion during tasks.
+- [ ] Apply the benchmark's character, art, audio, help, and feedback systems across all six destinations.
+- [ ] Connect short authored adventures through beginning, purpose, consequence, and ending.
+- [ ] Add deliberate variation without weakening phonics prerequisites or independent skill progression.
+- [ ] Keep all existing modes reachable during staged rollout; flag retirement candidates rather than silently removing them.
+- [ ] Validate each destination with the Q4 technical checklist and record its content/audio review status.
+
+| Destination | Planned experience | Done when |
+|---|---|---|
+| Sound Safari | Find hidden friends through sound clues | First/middle/ending sound tasks and blending use reviewed examples and accurate audio |
+| Word Workshop | Build objects and repair word machines | Building, reading, word switching, sound train, and labels respect taught patterns |
+| Number Kitchen | Prepare and share visible meals | Counting, comparison, operations, composition, and sharing have concrete consequences and useful support |
+| Shape Builders | Construct creatures, vehicles, and structures | Shape, position, pattern, comparison, and measurement tasks use meaningful manipulation |
+| Story Theatre | Arrange and perform puppet stories | Sequencing, open storytelling, and reviewed decodable books have coherent illustrations/audio |
+| Art Treehouse | Make objects for adventures on paper | Drawing, pencil patterns, handwriting, labels, and open prompts are paced and clearly demonstrated |
+
+**Acceptance:** Every destination reaches the agreed benchmark with recognisable character and distinct play. The completed picnic retains its quality. A common screen template or new illustration alone does not count as upgrading a game.
+
+### Q6 — Full coverage, reliability, and release acceptance
+
+- [ ] Reconcile every unfinished item in the original roadmap against this plan and actual implementation; record evidence or explicit remaining work.
+- [ ] Complete the authored content inventory and review prerequisites, distractors, diagrams, answers, scripts, and audio.
+- [ ] Align phonics and letter forms with school information when available; keep unconfirmed defaults labelled.
+- [ ] Distinguish oral blending, decoding, spelling, copying, tracing, and independent writing in evidence and parent views.
+- [ ] Add missing adaptive supports, parent practice/skip controls, and practical off-screen suggestions.
+- [ ] Verify content/save versions, migrations, valid backup round trips, malformed imports, quota failures, and cleared-storage guidance.
+- [ ] Test at least two relevant browsers, recording versions, devices, and limitations.
+- [ ] Test genuine disconnected use of promised core assets/audio and upgrades between releases; retain a stable old release until a replacement is complete.
+- [ ] Verify privacy, asset provenance, payload/performance budgets, error recovery, and production behaviour.
+- [ ] Update parent instructions, known limitations, release version, and maintenance guidance.
+- [ ] Record final parent acceptance and accurately report child/educator review status.
+
+**Acceptance:** The complete agreed scope, content floors, technical checks, and review requirements have evidence. School/educator/audio review and child observation cannot be inferred from code, generated assets, or game counts. No full-release completion claim while material requirements remain unchecked.
+
+## 6. Retained content coverage commitments
+
+The first benchmark adds quality; it does not replace the complete-release content scope.
+
+| Content family | Retained complete-release floor | Review status |
+|---|---|---|
+| Literacy | At least 6 game types and 80 examples across the agreed taught sequence | Inventory/review outstanding |
+| Maths | At least 5 game types and 60 prompts across number and operations | Modes exist; authored inventory/review outstanding |
+| Paper art | At least 15 lessons plus 10 open-ended prompts | 15 lessons implemented; expanded prompts/review outstanding |
+| Handwriting | Agreed letter forms, 6 pencil patterns, labels and supported writing | Generic models exist; school alignment/review outstanding |
+| Shapes, patterns, measure | At least 24 reviewed prompts | Inventory/review outstanding |
+| Storytelling and reading | At least 8 picture sequences and 6 reviewed decodable stories | Existing stories/books do not establish reviewed coverage |
+| Physical-world missions | At least 12 across learning areas | 12 implemented; review outstanding |
+
+Each record needs a stable ID, strand/skill, prerequisites, support options, expected response, feedback, visual/audio references, content version, and review status. Randomised quantities and artwork variants do not establish a reviewed inventory.
+
+Original-to-current mapping: learning blueprint → Q1/Q6; design → Q1/Q4/Q5; foundation → Q2/Q3/Q6; play loop → Q3/Q4; paper studio → Q3/Q5/Q6; progression/parent controls → Q3/Q6; breadth → Q5/Q6; personalisation/gallery/polish → Q3/Q5/Q6; deployment/verification → Q4/Q6. The baseline checklist remains the item-level reconciliation reference.
+
+## 7. Decisions and external dependencies
+
+| Topic | Current decision | Remaining input/evidence |
+|---|---|---|
+| Build order | One complete picnic benchmark, then destination rollout | Accepted direction on 2026-10-19 |
+| Runtime | Retain native browser modules and static GitHub Pages hosting | Revisit only for a demonstrated need |
+| Data | Preserve local progress, backups, and optional local gallery | Migration and recovery verification |
+| Art | Coherent picture-book world with custom characters/objects | Q1 visual samples and asset production |
+| Cast | Pip and Bear first; workshop robot later | Final character/voice production choices |
+| Voice | Directed bundled recordings; audition accessible human/generated options | Access, licensing, listening reviews; no provider selected |
+| Teaching audio | Separately reviewed phonemes and blending | Qualified human review and school conventions where available |
+| Language | English working default | School pronunciation/phonics confirmation |
+| Handwriting | Existing generic manuscript models remain provisional | School forms and formation order |
+| Timing | Approximately five on-screen minutes; paper time flexible | Actual session observation |
+| Privacy | No new runtime external service or collection | Any later change requires an explicit product decision |
+
+Future scope remains outside this release: speech recognition, automatic paper grading, child-facing generative chat/lessons, required accounts/cloud sync, multiple profiles, and additional languages.
+
+## 8. Progress and evidence protocol
+
+At the start of work, read AGENTS.md, this current-milestone summary, the latest delivery entry, and Git status. Inspect remote state before integration. Preserve others' work and never force-push or publish secrets/private child data.
+
+For each meaningful milestone:
+
+1. Set the active milestone to In progress and identify the next concrete deliverable.
+2. Update task checkboxes only for implemented and verified work; partial work stays unchecked.
+3. Record significant decisions, dependencies, fallback tools, and limitations.
+4. Link implementation commits, artefacts, and validation evidence in the delivery log.
+5. Update the content/audio inventory and review statuses when assets change.
+6. Run checks appropriate to the change; repeat only for new changes or unresolved concerns.
+7. Commit/push coherent validated milestones under the standing authorisation.
+8. Update this top summary and the tracker so the next agent can continue immediately.
+
+Every production validation entry should identify date, commit/build, environment, scenario, expected result, actual result, evidence location, and limitation. Distinguish automated checks, visual inspection, listening review, parent feedback, educator review, and child observation.
+
+Routine checkpoints are not approval stops. When an external dependency blocks one requirement, continue independent work and leave that requirement visibly open. Never fabricate human review or mark a phase complete simply because code builds.
+
+## 9. Delivery log
+
+| Date | Milestone / change | Evidence | Limitations / next step |
+|---|---|---|---|
+| 2026-10-19 | Existing development release baseline retained | App commit `5cc81b7`, release `a7046afcce12`; [validation record](docs/VALIDATION.md) | Historical evidence; creative upgrade not implemented |
+| 2026-10-19 | Q0: user accepted creative direction; roadmap reorganised around the picnic benchmark | Review conversation; this document; [preserved original checklist](docs/ROADMAP_BASELINE_2026-10-19.md); exact baseline preservation, local links, Q0–Q6 tracker, and diff whitespace checks verified | Documentation only; app tests not rerun; no new art, recordings, gameplay, or human review claimed |
+
+## 10. Immediate build queue
+
+1. Start Q1: produce the creative direction guide and Pip/Bear character specifications.
+2. Write the picnic storyboard, task alternatives, graduated-help flows, and complete annotated script.
+3. Produce representative visual samples and an asset/content/audio inventory.
+4. Start Q2 auditions/production and Q3 scene/audio foundations once the Q1 contracts are defined.
+5. Deliver and validate the complete picnic before broad visual/gameplay rollout.
+
+**Completion rule:** Finish only when the agreed full scope and quality requirements have supporting evidence. A roadmap, attractive screenshot, successful deployment, or polished single adventure does not complete the planned app.
