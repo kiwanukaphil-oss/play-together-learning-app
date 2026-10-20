@@ -59,3 +59,39 @@ Deployment/offline evidence is recorded after the published milestone is verifie
 - Parent starting-point flow changed only the selected number practice level; oral blending is deliberately separate from reading/spelling.
 - Half-entered answers restart on resume; the next unfinished question and completed-round observations are retained. This scope is documented rather than claiming full input-state restoration.
 - GitHub Actions run `39249869630` succeeded for commit `5cc81b7`. Public release `a7046afcce12` was opened and its six Number Kitchen modes (including composition) verified after deployment.
+
+## 2026-10-20 — Moonlight Picnic development milestone
+
+Environment: Windows workspace, Node 24.18.1, connected Chrome UI and isolated Chrome DevTools test context. Local production build: `e02a1fd60715`, 30 offline manifest resources. Deployment evidence follows separately after publication.
+
+Implemented and checked:
+
+- Q1 creative guide, storyboard, audio direction/audition brief, exact 58-line CSV recording sheet, asset register, and a runnable visual sample/character sheet.
+- Generated woodland artwork copied into the project and encoded as a 343,342-byte WebP with FFmpeg. Original editable character/object SVGs remain separate.
+- New home invitation and word/packing/optional-sharing/paper/ending route. All six previous destinations remain available.
+- `npm test`: 23 tests pass. New cases cover three different complete state routes, partial-answer backup restoration, supported evidence recorded once, graduated help, editing a single spelling slot, quantity limits, sharing, skipped paper, invalid imports, simpler paper alternative, hidden spelling answers, and stale audio callbacks.
+- `npm run check`: all ten application JavaScript modules and the service worker pass syntax checks.
+- `npm run build`: versioned output includes the new modules and background. The release hash includes public assets and shell files; regression tests verify the background and transitive module imports are represented in the versioned offline manifest.
+- Browser route one: wrong spelling, partial-word refresh/resume, one-letter help preserving other positions, keyboard Check activation, correct pan reveal, too-few and too-many apples, removal to the target, classic lantern previous/next/finished preview, paper confirmation, ending and leaf-decoration persistence.
+- Browser route two: parent-selected operations level; mat reveal; five-apple basket; unequal two-apple sharing followed by correction to one per plate; reduced-motion preference; classic/round paper switching; drawing pause/continue, replay and creative prompts; skipped-paper ending without claiming a drawing.
+- Parent screen showed spelling/number/drawing observations after the first route, with zero reading/listening observations. State tests additionally verify no duplicate completion records.
+- No console warnings/errors in the inspected connected-Chrome flows.
+- Home, packing, word support, paper, ending, and character-sheet visuals were inspected. A 1366 × 768 home screenshot is saved at `output/picnic-review/home-1366.png`. The character sheet exposes twelve samples (six states each for Pip/Bear).
+- Connected-Chrome viewport requests used 1366 × 768, 1280 × 720 and 390 × 844. Its browser scaling produced narrower CSS widths (including 1150 and 340); measured content widths matched the viewport without horizontal overflow in the checked sharing/paper states. The isolated DevTools home was separately verified at an actual 1366 × 768 viewport. Do not describe this as completed exact-size coverage for every state.
+
+Issues found and corrected:
+
+- Spelling dialogue initially printed its target word. The pre-completion visible caption now asks the child to listen; the correct word appears only after completion.
+- The dedicated Hear the word control could replay the most recent support message. It now always speaks the selected word.
+- Counting help initially invited touching apples even though clicking a basket apple removes it. The instruction now says to count them.
+- Sharing now explicitly introduces Bear's additional apples so its quantity does not imply the packed basket changed.
+
+Tool fallbacks and limits:
+
+- Initial visual checks used the connected browser. When DevTools became available, an isolated context provided the exact-size home screenshot and character-sheet inspection.
+- DevTools rejected direct screenshot saving because of its configured workspace-root check. The returned PNG bytes were saved through local filesystem tooling in bounded chunks; the image is a screenshot, not a recreated mockup.
+- A later DevTools screenshot request stalled and was cancelled. Additional screenshots were not fabricated; the runnable samples and recorded connected-browser inspection remain available.
+- Browser speech remains a development fallback. A recorded-audio path exists but no produced clip, voice audition, direct listening review, or final sound mix has been verified.
+- Sound clues are deliberately omitted until reviewed audio/art exist. The script includes a disabled-branch production brief, not an implemented listening game.
+- Full keyboard/contrast/200%-zoom audits, target-size audit, multiple-browser testing, measured startup/interaction budgets, real disconnected-browser testing, and production update recovery remain open.
+- No parent/educator acceptance, school alignment, professional audio review, real-child observation, or completed Q2/Q3/Q4 acceptance is claimed.

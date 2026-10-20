@@ -31,6 +31,16 @@ The static production files are written to `dist/`.
 - Open the gear for Parent corner; the small addition question separates adult settings from play, not a security boundary.
 - In Parent corner, choose the sound groups already taught, adjust practice levels, and export a backup.
 
+## The Moonlight Picnic
+
+The home invitation opens a new illustrated adventure with Pip and Bear: build a starter word, pack apples, share food when the parent-selected operations level is appropriate, and draw a lantern on paper. A simpler round lantern and optional creative prompts are available. Partial answers and the chosen decoration are included in local backups.
+
+The adventure is a development edition. Character recordings and reviewed sound clues are still pending; browser speech currently provides whole-word instructions. Its observations are recorded as supported. Existing destinations remain available below the invitation.
+
+Creative specification: [direction](docs/CREATIVE_DIRECTION.md), [storyboard](docs/PICNIC_STORYBOARD.md), [voice script](docs/AUDIO_SCRIPT.md), and [asset register](docs/PICNIC_ASSETS.md). With the local server running, open `http://127.0.0.1:4173/src/picnic-preview.html` for the character sheet and visual samples.
+
+Run `npm run picnic:script` to export exact current dialogue into `docs/PICNIC_RECORDING_SCRIPT.csv` for audio production and review.
+
 ## Progress and privacy
 
 Progress remains in this browser. Clearing browser data or switching browsers can remove access to it. Export regularly. Imports are validated before replacing anything and require an explicit replacement confirmation.

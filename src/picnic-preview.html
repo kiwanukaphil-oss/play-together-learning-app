@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Moonlight Picnic — visual production samples</title>
+ <link rel="stylesheet" href="./styles.css">
+ <style>
+  body{padding:30px 0;background:#f6f1e8}.sample-label{max-width:1100px;margin:32px auto 18px;padding:0 24px}.sample-label h1{font-size:32px}.sample-label p{font-size:14px;color:#645b61}.sample-home{max-width:1180px;margin:auto;padding:0 24px}
+  .pose-sheet{max-width:1200px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(6,1fr);gap:16px}.pose-card{background:#fff9ed;border-radius:20px;text-align:center;padding:18px 12px}.pose-card span{font-size:12px;font-weight:800}.pose-card svg{height:180px}.picnic-page{margin-bottom:32px}
+  @media(max-width:700px){.pose-sheet{grid-template-columns:repeat(3,1fr)}.pose-card svg{height:130px}}
+ </style>
+</head>
+<body>
+ <header class="sample-label"><h1>The Moonlight Picnic</h1><p>Production samples · 20 October 2026 · original editable characters and generated woodland artwork. Static design samples; use the main app to play.</p></header>
+ <h2 class="sample-label">A place to begin</h2><div id="home-sample" class="sample-home"></div>
+ <h2 class="sample-label">Bear & Pip — expression and pose sheet</h2><div id="pose-samples" class="pose-sheet"></div>
+ <h2 class="sample-label">Packing the picnic</h2><div id="pack-sample"></div>
+ <h2 class="sample-label">A little help, one step at a time</h2><div id="help-sample"></div>
+ <script type="module">
+  import {picnicInvitation,renderPicnic} from './picnic-view.js';
+  import {picnicCharacter} from './picnic-art.js';
+  import {createPicnic} from './picnic-state.js';
+  const progress={taughtStage:0,skills:{}},state=createPicnic(progress,()=>.4);
+  document.getElementById('home-sample').innerHTML=picnicInvitation(progress);
+  document.getElementById('pose-samples').innerHTML=['bear','pip'].flatMap(character=>['idle','speaking','attentive','thinking','encouraging','celebrating'].map(pose=>`<div class="pose-card">${picnicCharacter(character,pose)}<span>${character} · ${pose}</span></div>`)).join('');
+  document.getElementById('pack-sample').innerHTML=renderPicnic({...state,scene:'pack',basket:2},{lineId:'pack-three-in-row'});
+  document.getElementById('help-sample').innerHTML=renderPicnic({...state,scene:'word',letters:['m','a',''],help:1},{lineId:'word-help-1'});
+  document.querySelectorAll('main').forEach((element,index)=>element.id=`sample-${index}`);
+  document.querySelectorAll('button').forEach(button=>button.disabled=true);
+ </script>
+</body>
+</html>

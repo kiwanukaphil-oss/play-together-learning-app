@@ -1,6 +1,7 @@
+import {validatePicnic} from './picnic-state.js';
 export const SAVE_KEY='play-together-v1';
 export const SAVE_VERSION=1;
-export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,taughtStage:0,skills:{},recent:[],art:[],pictures:[],stickers:[],sessions:[],updatedAt:null});
+export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,taughtStage:0,skills:{},recent:[],art:[],pictures:[],stickers:[],sessions:[],picnic:null,updatedAt:null});
 export const sessionId=()=>{const now=new Date();return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;};
 
 // Validate a complete imported save before touching stored data; unknown or unsafe fields are never blindly assigned.
@@ -27,6 +28,7 @@ export function validateProgress(value){
   if(!Array.isArray(value.pictures)||value.pictures.length>6||!value.pictures.every(item=>item&&typeof item.id==='string'&&/^[a-zA-Z0-9-]{1,60}$/.test(item.id)&&typeof item.image==='string'&&item.image.length<250000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/]+=*$/.test(item.image)))throw new Error('The drawing gallery is invalid.');
   safe.pictures=value.pictures.map(item=>({id:item.id,image:item.image}));
  }
+ safe.picnic=validatePicnic(value.picnic);
  safe.updatedAt=typeof value.updatedAt==='string'?value.updatedAt:null;
  return safe;
 }

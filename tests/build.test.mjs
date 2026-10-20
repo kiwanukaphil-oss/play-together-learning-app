@@ -16,4 +16,9 @@ test('production modules, styles and offline cache share one content version',as
  for(const path of imports){assert.ok(path.endsWith(`?v=${version}`));assert.ok(worker.includes(`./src/${path}`));}
  const styles=await readFile('dist/src/styles.css','utf8');assert.ok(styles.includes(`fonts.css?v=${version}`));
  const fonts=await readFile('dist/src/fonts.css','utf8');assert.equal([...fonts.matchAll(/\.ttf\?v=/g)].length,9);
+ const picnicStyles=await readFile('dist/src/picnic.css','utf8');
+ assert.ok(picnicStyles.includes(`moonlight-clearing.webp?v=${version}`));
+ assert.ok(worker.includes(`./assets/picnic/moonlight-clearing.webp?v=${version}`));
+ const learning=await readFile('dist/src/learning.js','utf8');
+ assert.ok(learning.includes(`picnic-state.js?v=${version}`));
 });

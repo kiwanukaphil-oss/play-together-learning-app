@@ -2,8 +2,22 @@ import {WORLDS,WORDS,SOUND_GROUPS,STORIES,MISSIONS,SKILLS,BOOKS} from './content
 import {DRAWINGS,drawingSvg} from './drawing.js';
 import {LETTER_MODELS,letterSvg} from './handwriting.js';
 import {SAVE_KEY,RESUME_KEY,defaultProgress,loadProgress,persistProgress,validateProgress,validateResume,recordObservation,levelFor,shuffled,chooseFresh,choosePracticeItem,dailyWorlds} from './learning.js';
+import {createPicnic,updatePicnic,picnicCount,picnicObservations} from './picnic-state.js';
+import {PICNIC_LINES} from './picnic-content.js';
+import {picnicInvitation,renderPicnic,picnicInstruction} from './picnic-view.js';
+import {createPicnicAudio} from './picnic-audio.js';
 
 const app=document.getElementById('app');
+let picnicLineId='',picnicPreview=false,picnicPaused=false,picnicExtension=0;
+const picnicAudio=createPicnicAudio({
+ onSpeaking:speaker=>{
+  for(const element of app.querySelectorAll('.picnic-character')){
+   element.classList.remove('pose-speaking');
+   if(speaker&&element.classList.contains(speaker))element.classList.add('pose-speaking');
+  }
+ },
+ onUnavailable:()=>notify('Picnic sound is unavailable. The instruction stays on screen; a grown-up can help.')
+});
 let progress=defaultProgress(), storageWarning='', storageHealthy=true;
 try{progress=loadProgress(localStorage);}catch{storageHealthy=false;storageWarning='Your saved progress could not be read. It has been kept untouched. Export the saved data in Parent corner before replacing it.';}
 let screen='home',world=null,activity=null,round=0,correct=false,helped=false,roundHelp=false,sessionEvidence=[],selectedLetters=[],selectedFrames=[],basket=0;
@@ -18,7 +32,7 @@ const activitySkill=(mode=activity?.mode)=>world==='words'&&mode==='read'?'readi
 const companion=()=>progress.avatar==='bunny'?'🐰':progress.avatar==='bear'?'🐻':'🐈';
 
 function announce(message){document.getElementById('announcement').textContent=message;}
-function stopSpeech(){if('speechSynthesis'in window)window.speechSynthesis.cancel();}
+function stopSpeech(){picnicAudio.stop();if('speechSynthesis'in window)window.speechSynthesis.cancel();}
 
 // Speak whole-word instructions only: browser speech is not used as an authoritative phoneme recording.
 function speak(message){
@@ -57,11 +71,15 @@ function scene(worldId){
  return `<svg class="world-scene" viewBox="0 0 300 200" aria-hidden="true"><g fill="#543541">${scenes[worldId]}</g></svg>`;
 }
 
-function renderHome(){
+// Retirement candidate: retained original home renderer as a reference until the new direction is accepted.
+function renderLegacyHome(){
  return `<main id="main" class="home-page"><section class="welcome"><div><div class="hello-tag">${icon('✨')} COME ON IN!</div><h1>Little steps.<br><span>Big adventures.</span></h1><p>Where shall we play today?</p><button class="primary adventure-button" data-action="daily">${icon('▶')} Let's play <span class="button-sparkle">✦</span></button>${resume?button('↪ Keep playing','resume','class="resume-button"'):''}</div><div class="welcome-art" aria-hidden="true"><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span><span class="sky-star star-one">✧</span><span class="sky-star star-two">✦</span><div class="mascot-orbit"><img class="mascot" src="./assets/icon.svg" alt=""><span class="speech-bubble">Hi, explorer! 👋</span></div><span class="rainbow">🌈</span><div class="hill hill-one"></div><div class="hill hill-two"></div></div></section><div class="world-heading"><h2>Your playground</h2><button class="text-button" data-action="mission">${icon('🦶')} Play away from the screen</button></div><section class="world-grid" aria-label="Choose a place to play">${WORLDS.map(item=>`<button class="world-card ${item.colour}" data-action="world" data-world="${item.id}" aria-label="${item.name}"><div class="scene-wrap">${scene(item.id)}<span class="world-arrow">↗</span></div><div class="world-card-footer"><span>${item.name}</span><span class="world-small-icon">${item.icon}</span></div></button>`).join('')}</section><footer class="home-footer"><span>Made for curious little minds. Best enjoyed together.</span>${button('⭐ My treasures','treasures','class="text-button"')}</footer></main>`;
 }
 
 const modes={sounds:[['first','🔎','Sound hunt'],['blend','🤖','Robot words']],words:[['build','🚂','Build a word'],['read','📖','Read & find'],['switch','🪄','Word switch']],numbers:[['count','🧺','Pack a picnic'],['compare','⚖️','More or fewer'],['add','🍓','Put together'],['subtract','🐰','Take away'],['share','🍽️','Fair shares'],['compose','🧩','Make a number']],shapes:[['shape','🔺','Find a shape'],['pattern','🟣','What comes next?'],['position','🧸','Where is it?'],['measure','📏','Long & short'],['construct','🤖','Build a friend']],stories:[['sequence','🎬','Picture stories'],['readstory','📚','Read together']]};
+function renderHome(){
+ return `<main id="main" class="home-page">${picnicInvitation(progress)}<div class="world-heading"><h2>Where else shall we play?</h2>${button('A little daily adventure','daily','class="text-button"')}</div><section class="world-grid" aria-label="Choose a place to play">${WORLDS.map(item=>`<button class="world-card ${item.colour}" data-action="world" data-world="${item.id}" aria-label="${item.name}"><div class="scene-wrap">${scene(item.id)}<span class="world-arrow">↗</span></div><div class="world-card-footer"><span>${item.name}</span><span class="world-small-icon">${item.icon}</span></div></button>`).join('')}</section><footer class="home-footer">${resume?button('↪ Keep playing your game','resume','class="text-button"'):button('Play away from the screen','mission','class="text-button"')}${button('⭐ My treasures','treasures','class="text-button"')}</footer></main>`;
+}
 function renderWorld(){
  const place=currentWorld();
  return `<main id="main" class="activity-page"><div class="world-title"><span class="world-emoji">${place.icon}</span><h1>${place.name}</h1><p>${place.description}</p></div><div class="mode-grid">${modes[world].map(([id,symbol,name])=>`<button class="mode-card ${place.colour}" data-action="start" data-mode="${id}">${icon(symbol)}<strong>${name}</strong><span class="mode-play">▶</span></button>`).join('')}${world==='stories'?'<button class="mode-card yellow" data-action="books"><span>📚</span><strong>Little books</strong><span class="mode-play">▶</span></button>':''}</div><button class="secondary back-button" data-action="home">⌂ Home</button></main>`;
@@ -220,8 +238,10 @@ function render(){
  const previousAction=active?.dataset.action;
  const previousAttributes=active?Object.entries(active.dataset):[];
  document.documentElement.dataset.motion=progress.motion?'on':'off';
- const views={home:renderHome,world:renderWorld,game:renderGame,'art-menu':renderArt,drawing:renderArt,pencil:renderPencil,letters:renderLetters,books:renderBooks,book:renderBooks,starting:renderStartingPoint,complete:renderComplete,parent:renderParent,mission:renderMission,treasures:renderTreasures};
+ const views={home:renderHome,picnic:()=>renderPicnic(progress.picnic,{lineId:picnicLineId,preview:picnicPreview,paused:picnicPaused}),world:renderWorld,game:renderGame,'art-menu':renderArt,drawing:renderArt,pencil:renderPencil,letters:renderLetters,books:renderBooks,book:renderBooks,starting:renderStartingPoint,complete:renderComplete,parent:renderParent,mission:renderMission,treasures:renderTreasures};
  app.innerHTML=header()+(views[screen]||renderHome)();
+ if(picnicPaused)app.querySelector('.lantern-stroke')?.style.setProperty('animation-play-state','paused');
+ if(screen==='parent'&&parentUnlocked)app.querySelector('.disclosure')?.insertAdjacentHTML('afterbegin','<h2>The Moonlight Picnic · development edition</h2><p>The new adventure includes word-building, packing, optional sharing, and a paper lantern. Its character recordings are still in production: whole words and instructions currently use browser speech. Reviewed sound clues are not yet included. Picnic observations are recorded as supported, including paper work only when confirmed.</p>');
  document.title=screen==='home'?'Play Together · A little world of wonder':`${screen==='game'?currentWorld().name:screen==='drawing'?DRAWINGS[drawingIndex].name:'Play Together'} · Learning playground`;
  if(previousAction){
   const replacement=[...app.querySelectorAll('[data-action]')].find(element=>previousAttributes.every(([key,value])=>element.dataset[key]===value));
@@ -231,6 +251,60 @@ function render(){
 }
 
 function goHome(){stopSpeech();screen='home';daily=false;parentUnlocked=false;render();window.scrollTo(0,0);}
+
+// Derive dialogue from the actual transition so spoken feedback agrees with the food, letters, and route on screen.
+function choosePicnicFeedback(before,after,action){
+ if(after.scene!==before.scene)return picnicInstruction(after);
+ if(action==='help')return `${after.scene}-help-${after.help}`;
+ if(action==='check'){
+  if(after.completed.includes(after.scene)){
+   if(after.scene==='word')return `word-success-${after.wordId}`;
+   return `${after.scene}-success-${1+(after.basket%3)}`;
+  }
+  if(after.scene==='pack')return after.basket<picnicCount(after).total?'pack-few':'pack-many';
+  return `${after.scene}-retry`;
+ }
+ if(action==='add'||action==='remove')return `count-${after.basket}`;
+ if(action==='decorate')return 'decoration';
+ return picnicInstruction(after);
+}
+
+// Persist the exact task and partial answer; commit each completed adventure's supported evidence only once.
+function actOnPicnic(action,value){
+ if(action==='open'||action==='new'){
+  if(action==='new'&&progress.picnic?.scene!=='ending')return;
+  stopSpeech();daily=false;
+  if(!progress.picnic||action==='new')progress.picnic=createPicnic(progress,Math.random,(items,skill)=>choosePracticeItem(items,progress,skill));
+  screen='picnic';picnicPreview=false;picnicPaused=false;picnicLineId=picnicInstruction(progress.picnic);save();render();
+  picnicAudio.play(picnicLineId,{muted:progress.muted});window.scrollTo(0,0);return;
+ }
+ if(screen!=='picnic'||!progress.picnic)return;
+ if(action==='pause'){goHome();return;}
+ if(action==='word-listen'){picnicAudio.play(`word-${progress.picnic.wordId}`,{muted:progress.muted});return;}
+ if(action==='paper-pause'){
+  picnicPaused=!picnicPaused;app.querySelector('.lantern-stroke')?.style.setProperty('animation-play-state',picnicPaused?'paused':'running');
+  app.querySelector('[data-action="picnic-paper-pause"]').textContent=picnicPaused?'Continue drawing':'Pause drawing';
+  if(picnicPaused)picnicAudio.stop();return;
+ }
+ if(action==='paper-extension'){
+  picnicLineId=`paper-extension-${1+(picnicExtension++%2)}`;render();picnicAudio.play(picnicLineId,{muted:progress.muted});return;
+ }
+ if(action==='replay'){
+  if(progress.picnic.scene==='paper'){picnicPreview=false;picnicPaused=false;picnicLineId=picnicInstruction(progress.picnic);render();}
+  picnicAudio.play(picnicLineId||picnicInstruction(progress.picnic),{muted:progress.muted});return;
+ }
+ if(action==='paper-preview'){picnicPreview=!picnicPreview;render();return;}
+ const before=progress.picnic;
+ progress.picnic=updatePicnic(before,action,value);picnicPreview=false;picnicPaused=false;
+ const observations=picnicObservations(progress.picnic);
+ for(const observation of observations)progress=recordObservation(progress,observation.skill,observation.content,'supported');
+ if(observations.length)progress.picnic.recorded=true;
+ picnicLineId=choosePicnicFeedback(before,progress.picnic,action);
+ save();render();
+ if(!['letter','clear-letter','undo','plate-add','plate-remove'].includes(action))picnicAudio.play(picnicLineId,{muted:progress.muted});
+ if(before.scene!==progress.picnic.scene){const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true});}
+ else if(!before.completed.includes(before.scene)&&progress.picnic.completed.includes(before.scene))app.querySelector('[data-action="picnic-next"]')?.focus({preventScroll:true});
+}
 function openWorld(id){stopSpeech();world=id;screen=id==='art'?'art-menu':'world';render();speak(id==='art'?'Choose a picture. Get your paper and pencils ready.':`${currentWorld().name}. Choose a game.`);window.scrollTo(0,0);}
 function giveFeedback(message){const feedback=document.getElementById('game-feedback');if(feedback){feedback.textContent=message;feedback.classList.remove('success');}announce(message);speak(message);}
 
@@ -269,6 +343,7 @@ function downloadBackup(value,name){const blob=new Blob([value],{type:'applicati
 app.addEventListener('click',event=>{
  const target=event.target.closest('[data-action]');if(!target||target.disabled)return;
  const action=target.dataset.action;
+ if(action.startsWith('picnic-')){actOnPicnic(action.slice(7),target.dataset.value);return;}
  if(action==='home'){goHome();return;}
  if(action==='mute'){progress.muted=!progress.muted;stopSpeech();save();render();return;}
  if(action==='parent'){stopSpeech();screen='parent';render();return;}

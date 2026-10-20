@@ -67,3 +67,17 @@ Word selection now prioritises due reviews: supported words can return after one
 - Runtime-generated maths variations do not count as a reviewed inventory of authored prompts.
 - Generic lowercase letter models, position/length games, and six short reading books are now implemented. Letter forms still need school alignment. Two later books disclose additional words/patterns for adult introduction rather than silently claiming full decodability.
 - Reviewed phoneme audio and full school-aligned story coverage remain tracked in the roadmap.
+
+## Moonlight Picnic — 2026-10-20
+
+The new authored route is additive. It uses starter spellings `s a t p i n m` and the words map, mat, pan; spelling selection is constrained by both taught stage and spelling level. Word transcripts do not display the answer before completion. Correct letters can be retained while another space is edited.
+
+Six authored counting records cover 1–5 apples with row, pair, and staggered arrangements. The child must explicitly check the basket. Equal sharing of 2/4/6 apples is included only when operations practice level is at least 1; this is a reversible product heuristic, not a validated developmental threshold.
+
+The story omits sound clues until reviewed teaching audio exists. It records no listening or reading evidence. Spelling, number, optional operations, and confirmed paper drawing receive separate supported observations at the ending; a completion marker prevents duplicate records after refresh. Skipped paper work receives no observation. New-route independent parent assessment remains pending.
+
+Narrative state and partial answers now travel inside validated local backups. Existing saves without a picnic field remain compatible. The original generic unfinished-game snapshot continues to operate separately.
+
+The route reuses due-review selection with picnic-specific content IDs; new sessions prefer due or unseen tasks. The paper stage includes a simple round alternative and two optional creative prompts.
+
+Final voice performance, phonics recordings, educator review, school alignment, and observed child usability remain open. See the creative guide, storyboard, audio script, and asset register for production details.
