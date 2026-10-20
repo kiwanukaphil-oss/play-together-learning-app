@@ -21,6 +21,8 @@ const retakeArgument=args.includes('--retake')?args[args.indexOf('--retake')+1]?
 const retakeIds=new Set(retakeArgument.split(',').filter(Boolean));
 
 const sha256=value=>createHash('sha256').update(value).digest('hex');
+// Re-copying an unchanged file keeps its earlier transcript evidence; a changed file must be verified again.
+const keepVerifiedCopy=(previous,next)=>previous?.originalSha256===next.originalSha256?{...previous,...next}:next;
 const exists=path=>access(path).then(()=>true,()=>false);
 
 // Reduce text to comparable spoken words: drop delivery tags, unify apostrophes and spell out numerals.
@@ -107,7 +109,7 @@ async function producePicnicVoices(){
  if(!verifyOnly){
   for(const id of reused){
    await copyFile(`${ENERGY_REVIEW}/${id}.mp3`,`${ORIGINALS}/${id}.mp3`);
-   log.entries[id]={source:'energy-review accepted sample',generationTextSha256:sha256(direction.lines[id].generationText)};
+   log.entries[id]=keepVerifiedCopy(log.entries[id],{source:'energy-review accepted sample',generationTextSha256:sha256(direction.lines[id].generationText),originalSha256:sha256(await readFile(`${ORIGINALS}/${id}.mp3`))});
   }
   for(const [index,id] of toGenerate.entries()){
    const line=direction.lines[id],speaker=PICNIC_LINES[id].speaker;
@@ -122,7 +124,7 @@ async function producePicnicVoices(){
   for(const id of ids.filter(id=>direction.lines[id].reuseTakeOf)){
    const source=direction.lines[id].reuseTakeOf;
    await copyFile(`${ORIGINALS}/${source}.mp3`,`${ORIGINALS}/${id}.mp3`);
-   log.entries[id]={source:`identical prompt; reuses ${source}`,generationTextSha256:sha256(direction.lines[id].generationText)};
+   log.entries[id]=keepVerifiedCopy(log.entries[id],{source:`identical prompt; reuses ${source}`,generationTextSha256:sha256(direction.lines[id].generationText),originalSha256:sha256(await readFile(`${ORIGINALS}/${id}.mp3`))});
   }
  }
 
@@ -134,6 +136,10 @@ async function producePicnicVoices(){
    Object.assign(log.entries[id],{transcript:heard,transcriptMatches:matches});
    if(!matches)mismatches.push(`${id}: heard "${heard}"`);
   }catch(error){
+   // A key without speech-to-text permission should not erase transcripts from the local Whisper checker.
+   if(error.message.includes('speech_to_text')){
+    await save();console.log('Key lacks speech-to-text permission; run: python scripts/verify-voice-transcripts.py');return;
+   }
    Object.assign(log.entries[id],{transcript:null,transcriptMatches:null});
    mismatches.push(`${id}: transcription unavailable (${error.message})`);
   }

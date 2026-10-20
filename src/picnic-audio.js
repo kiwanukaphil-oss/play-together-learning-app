@@ -14,7 +14,7 @@ export function createPicnicAudio({environment=globalThis,onSpeaking=()=>{},onUn
   stop();const line=PICNIC_LINES[id];if(!line||muted)return;
   const token=generation;
   const finish=()=>{if(token===generation)onSpeaking(null);};
-  if(line.file&&PLAYABLE_CLIP_REVIEWS.includes(line.review)){
+  if(line.file&&environment.Audio&&PLAYABLE_CLIP_REVIEWS.includes(line.review)){
    clip=new environment.Audio(line.file);clip.onended=finish;clip.onerror=()=>{finish();onUnavailable();};
    onSpeaking(line.speaker);clip.play().catch(()=>{if(token===generation){finish();onUnavailable();}});return;
   }

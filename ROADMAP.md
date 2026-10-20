@@ -3,9 +3,9 @@
 Last updated: 2026-10-20 (Africa/Nairobi)
 
 **Current milestone:** Q2/Q3 — Character audio production and completion of the picnic benchmark; Q4 technical checks are in progress.
-**Latest completed work:** Following user feedback that first takes were whispery, produced eight original/revised comparisons targeting brighter, fully voiced delivery with the selected Tamsin/Pip and Mike/Bear cast.
-**Next deliverable:** Calibrate the revised performance direction from listening feedback, revise the full catalogue accordingly, then integrate reviewed recordings and sound-clue assets.
-**Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
+**Latest completed work:** Produced all 68 picnic lines in the accepted brighter direction (Tamsin/Pip, Mike/Bear) via the ElevenLabs API, verified every take's words locally, and bundled them into the app with offline caching.
+**Next deliverable:** Sound effects and character speaking animation, then an observed play session; then the sound-clue scene aligned to the school's phonics programme.
+**Product status:** The illustrated home and picnic are implemented with recorded Pip/Bear dialogue for all 68 lines. Per-line listening review, sound effects, sound clues, human review and full benchmark acceptance remain incomplete.
 **Latest published code:** `cde5df1`, release `bbe506dbf6b3`; successful Actions run `39374550445`; live home, word demonstration, transition to the task, and updated controls verified on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
@@ -118,7 +118,7 @@ Statuses: **Ready**, **In progress**, **Blocked**, **Complete**. Only mark Compl
 |---|---|---|---|---|
 | Q0 | Review and revised roadmap | Complete | User direction | Review in this conversation; this document; preserved baseline |
 | Q1 | Creative direction and picnic specification | Complete | Q0 | Linked guides, exact recording sheet, asset register, character/scene samples; 2026-10-20 validation entry |
-| Q2 | Character audio and sound production | In progress | Q1 script/cast | First 68-ID set technically checked; user found several takes whispery; eight revised energy samples produced; direction calibration, retakes and integration pending |
+| Q2 | Character audio and sound production | In progress | Q1 script/cast | Direction 2 accepted; 68/68 lines produced, transcript-checked and bundled with offline/replay browser checks; per-line listening, effects/ambience and phonics audio pending |
 | Q3 | Complete playable picnic | In progress | Q1; Q2 required for final acceptance | Word/pack/share/paper/ending route implemented; sound clues and final recordings pending |
 | Q4 | Benchmark validation and refinement | In progress | Q2, Q3 | 25 automated tests; browser routes, demonstration persistence, keyboard, narrow-layout and target-size checks; full acceptance remains open |
 | Q5 | Connected world and destination upgrades | Ready | Q4 technical/creative acceptance | Pending |
@@ -269,6 +269,7 @@ Original-to-current mapping: learning blueprint → Q1/Q6; design → Q1/Q4/Q5; 
 | Voice | ElevenLabs v4; Tamsin/Pip and Mike/Bear selected by user; direction v2 (~70% presenter energy) accepted 2026-10-20; API production route | Key in gitignored `.env`; full v2 production, transcript checks, per-line listening and publication pending |
 | Teaching audio | Separately reviewed phonemes and blending | Qualified human review and school conventions where available |
 | Language | English working default | School pronunciation/phonics confirmation |
+| Curriculum | User confirmed 2026-10-20: school follows Pearson Edexcel (iPrimary, based on the English National Curriculum 2014). Working phonics assumption: Pearson's mapped Bug Club Phonics sequence; current starter set s a t p i n m is consistent with it | Ask school which phonics programme/letter-sound order and letter formation they actually teach; keep Bug Club assumption labelled unconfirmed |
 | Handwriting | Existing generic manuscript models remain provisional | School forms and formation order |
 | Timing | Approximately five on-screen minutes; paper time flexible | Actual session observation |
 | Privacy | No new runtime external service or collection | Any later change requires an explicit product decision |
@@ -317,13 +318,17 @@ The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs 
 
 The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
 
+### Direction 2 voices produced and integrated — 2026-10-20
+
+All 68 lines produced (59 new + 8 accepted samples + 1 shared take; 8 retakes after local Whisper checks) and bundled as 64 kbps clips (1,870 KiB). 68/68 transcripts match; 26 tests, syntax and build pass; Chrome production-build checks cover decoding, recorded welcome without speech fallback, replay interruption, leaving, 68/68 offline playback and offline resume, with no console errors. Details and limits in [VOICE_PRODUCTION.md](docs/VOICE_PRODUCTION.md). Per-line human listening review remains open.
+
 ### Revised direction accepted; API production pipeline — 2026-10-20
 
 The user listened to the comparison and asked for the revised voices to be implemented, chose API production, and is supplying an ElevenLabs key in the gitignored `.env`. Added [direction v2 for all 68 lines](docs/PICNIC_VOICE_DIRECTION_V2.json) (8 accepted samples reused verbatim), `scripts/generate-picnic-voices.mjs` (word-sequence guard before spending credits, resumable, per-take request IDs, ElevenLabs Scribe transcript check of every take) and `scripts/prepare-revised-voices.py` (levelling, 64 kbps runtime clips in `assets/picnic/voice/`, generated `src/picnic-voice.js`, listening sheet in `output/voice-revised/`). The runtime now plays `produced-auto-checked` clips; takes with transcript mismatches are held back. Dry run: 68/68 prompts match runtime words; 59 to generate (~4,292 characters). 26 tests, syntax and build pass. Fixed missing `<option>` tags in the first-batch review sheet filters. No new takes yet; the app is unchanged until the clip module is populated. Automatic word checks do not establish tone or per-line listening approval.
 
 ## 10. Immediate build queue
 
-1. Run the direction-v2 API production (`node scripts/generate-picnic-voices.mjs`, then `python scripts/prepare-revised-voices.py`) once the user's API key is in `.env`; retake any transcript mismatches; verify in-app playback, interruption, replay and offline caching; publish.
+1. Add restrained sound effects/ambience (ElevenLabs sound effects via the same key) and speaking/idle character animation; then hold one observed play session (private notes outside Git).
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

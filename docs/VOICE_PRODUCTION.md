@@ -4,7 +4,19 @@ Date: 2026-10-20. The user selected **Pip A / Tamsin** and **Bear A / Mike**. Th
 
 Open [the recording review sheet](../output/voice-production/index.html), or serve its directory with `python -m http.server 4175 --bind 127.0.0.1` and visit `http://127.0.0.1:4175/`.
 
-## Current direction revision
+## Direction 2 production and integration — 2026-10-20
+
+The user accepted the revised direction after the eight-line comparison and asked for it to be implemented. All 68 lines now play in the app as Tamsin/Pip and Mike/Bear recordings.
+
+- Direction: [PICNIC_VOICE_DIRECTION_V2.json](PICNIC_VOICE_DIRECTION_V2.json); the eight accepted comparison takes are reused byte-for-byte.
+- Production: `node scripts/generate-picnic-voices.mjs` via the ElevenLabs API (`eleven_v4`, stability 0.5, similarity 0.75, MP3 44.1 kHz/128 kbps). The key lives only in the gitignored `.env`. 59 first takes plus 8 retakes; 1,714 + ~470 credits reported via `character-cost` headers (see `output/voice-revised/generation-log.json`).
+- Word check: `python scripts/verify-voice-transcripts.py` transcribes each take locally with faster-whisper `small.en` (the key lacks speech-to-text permission; audio stays local). First pass: 61/68 matched. Retakes fixed a throat-clear on count-1/count-5 (the `[clear, upbeat]` tag, changed to `[cheerfully]` for count-1), a slurred "Pip and me" (commas added), "There can" for "Bear can", "check" for "checked" and an added "I'd". "Matt"/"mat" is recorded as a recogniser homophone. Final: 68/68 match.
+- Bundling: `python scripts/prepare-revised-voices.py` levels to -18 LUFS / -1.5 dBTP, writes 64 kbps mono runtime clips to `assets/picnic/voice/` (1,870 KiB, 234.9 s) and `src/picnic-voice.js`, and a 128 kbps listening sheet in `output/voice-revised/`. Only transcript-matched takes are bundled, with status `produced-auto-checked`.
+- Runtime: the controller plays `produced-auto-checked`, `listen-reviewed` and `teaching-reviewed` clips and falls back to browser speech when a clip is missing or `Audio` is unavailable.
+- Browser evidence (Chrome, production build, service worker active): 68/68 clips decode and are precached; the picnic opens with the recorded welcome and no browser speech; speaking state shown; replay pauses then restarts; leaving pauses; 68/68 clips play offline; offline reload resumes with a recorded line; no console errors or warnings.
+- Limits: automatic word checks confirm words, not tone, pacing or pronunciation quality. Per-line listening review remains open in the [revised listening sheet](../output/voice-revised/index.html). Count words are not phonics audio; teaching phonemes still require separately reviewed recordings.
+
+## Earlier direction revision
 
 The user reported that a number of first takes sounded whispery and requested more children's-presenter energy, referencing Ms Rachel/Blippi at roughly 70% intensity. This is collection-level listening feedback; it does not identify every affected line or approve the remaining takes.
 
