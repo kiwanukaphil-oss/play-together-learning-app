@@ -146,7 +146,7 @@ Q2 production and Q3 implementation may overlap once their contracts are defined
 - [ ] Compare available human-performed and directed generated samples; record intelligibility, warmth, pacing, consistency, pronunciation, licensing, and production cost/access.
 - [x] Select the production route and voice per character: user chose ElevenLabs Tamsin/Pip and Mike/Bear from the audition sheet.
 - [x] Produce first takes for every current runtime ID, preserve originals and verify coverage, decoding, durations and levels.
-- [ ] Produce and listen-review every required picnic line, including pronunciation and natural sentence flow.
+- [x] Produce and listen-review every required picnic line, including pronunciation and natural sentence flow. (Parent listening 2026-10-20; two cough retakes. Not professional phonics review.)
 - [ ] Produce separately reviewed phoneme, word, and blending assets needed by the supported learning routes.
 - [ ] Record reviewer, review scope, date, pronunciation convention, and revisions for teaching audio.
 - [x] Create a versioned production audio manifest linking line IDs, transcripts, speakers, files, duration, review status, and provenance; runtime integration remains pending review.
@@ -320,7 +320,7 @@ The user reported whispery delivery in several first takes and requested childre
 
 ### Direction 2 voices produced and integrated — 2026-10-20
 
-All 68 lines produced (59 new + 8 accepted samples + 1 shared take; 8 retakes after local Whisper checks) and bundled as 64 kbps clips (1,870 KiB). 68/68 transcripts match; 26 tests, syntax and build pass; Chrome production-build checks cover decoding, recorded welcome without speech fallback, replay interruption, leaving, 68/68 offline playback and offline resume, with no console errors. Details and limits in [VOICE_PRODUCTION.md](docs/VOICE_PRODUCTION.md). Published as code `f14d853`, release `89fefd41a061`, Actions `39440450623`; live Chrome check confirmed the recorded welcome. Per-line human listening review remains open.
+All 68 lines produced (59 new + 8 accepted samples + 1 shared take; 8 retakes after local Whisper checks) and bundled as 64 kbps clips (1,870 KiB). 68/68 transcripts match; 26 tests, syntax and build pass; Chrome production-build checks cover decoding, recorded welcome without speech fallback, replay interruption, leaving, 68/68 offline playback and offline resume, with no console errors. Details and limits in [VOICE_PRODUCTION.md](docs/VOICE_PRODUCTION.md). Published as code `f14d853`, release `89fefd41a061`, Actions `39440450623`; live Chrome check confirmed the recorded welcome. User listened to all 68: excellent apart from coughs on count-0 and paper-handle, now retaken (avoid "clear" in delivery tags). Parent listening review complete; professional/phonics audio review not claimed.
 
 ### Revised direction accepted; API production pipeline — 2026-10-20
 
