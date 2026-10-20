@@ -2,7 +2,9 @@
 export function picnicCharacter(character='pip',pose='attentive'){
  const bear=character==='bear',fur=bear?'#b77c50':'#ecaa55',shade=bear?'#8f583b':'#d9853d';
  const gaze=pose==='attentive'?(bear?3:-3):0;
- const smile=pose==='speaking'?'<ellipse cx="130" cy="135" rx="9" ry="12" fill="#443142"/>':pose==='thinking'?'<path d="M120 140q10-5 20 0" fill="none" stroke="#443142" stroke-width="4" stroke-linecap="round"/>':'<path d="M116 134q14 19 28 0" fill="none" stroke="#443142" stroke-width="4" stroke-linecap="round"/>';
+ // Closed and open mouths are both drawn; --mouth (0-1) from the recording's loudness envelope blends between them.
+ const closedMouth=pose==='thinking'?'<path d="M120 140q10-5 20 0" fill="none" stroke="#443142" stroke-width="4" stroke-linecap="round"/>':'<path d="M116 134q14 19 28 0" fill="none" stroke="#443142" stroke-width="4" stroke-linecap="round"/>';
+ const smile=`<g class="character-mouth"${pose==='speaking'?' style="--mouth:.8"':''}><g class="mouth-closed">${closedMouth}</g><ellipse class="mouth-open" cx="130" cy="137" rx="10" ry="12" fill="#443142"/></g>`;
  const ears=bear?'<circle cx="77" cy="58" r="26"/><circle cx="183" cy="58" r="26"/><g fill="#dba17b"><circle cx="77" cy="58" r="14"/><circle cx="183" cy="58" r="14"/></g>':'<path d="M69 85 61 18 113 57M153 57 202 18 194 91Z"/><path d="m75 64-5-30 26 24m70 0 24-24-3 32" fill="#df8a77"/>';
  return `<svg viewBox="0 0 260 320" class="picnic-character pose-${pose} ${character}" aria-hidden="true"><ellipse cx="130" cy="302" rx="81" ry="11" fill="#162d35" opacity=".18"/>
  ${!bear?'<path d="M181 255c80 23 62-89 25-66" fill="none" stroke="#d9853d" stroke-width="24" stroke-linecap="round"/>':''}
@@ -12,9 +14,9 @@ export function picnicCharacter(character='pip',pose='attentive'){
  <g class="character-head">${ears}<ellipse cx="130" cy="105" rx="${bear?76:73}" ry="66"/>
  ${!bear?'<path d="m110 45 5 19m15-22v20m20-17-5 19" stroke="#be7039" stroke-width="9" stroke-linecap="round"/>':''}
  <ellipse cx="130" cy="128" rx="43" ry="31" fill="#ffe4bd"/>
- <g fill="#342c38"><ellipse cx="${102+gaze}" cy="104" rx="5.5" ry="7"/><ellipse cx="${158+gaze}" cy="104" rx="5.5" ry="7"/></g>
+ <g class="character-eyes"><g fill="#342c38"><ellipse cx="${102+gaze}" cy="104" rx="5.5" ry="7"/><ellipse cx="${158+gaze}" cy="104" rx="5.5" ry="7"/></g>
+ <g fill="#fff7e6"><circle cx="100" cy="101" r="1.7"/><circle cx="156" cy="101" r="1.7"/></g></g>
  ${pose==='thinking'?'<path d="M94 86q8-6 16-1" stroke="#73513c" stroke-width="3" fill="none" stroke-linecap="round"/>':''}
- <g fill="#fff7e6"><circle cx="100" cy="101" r="1.7"/><circle cx="156" cy="101" r="1.7"/></g>
  <path d="M121 121q9-6 18 0l-9 8Z" fill="#634147"/>${smile}
  <ellipse cx="84" cy="124" rx="10" ry="5" fill="#df886d" opacity=".6"/><ellipse cx="176" cy="124" rx="10" ry="5" fill="#df886d" opacity=".6"/>
  ${!bear?'<path d="m91 132-30-5m30 15-28 5m106-15 30-5m-30 15 28 5" stroke="#845137" stroke-width="2.5" stroke-linecap="round"/>':''}</g></g>

@@ -1,7 +1,7 @@
 import {validatePicnic} from './picnic-state.js';
 export const SAVE_KEY='play-together-v1';
 export const SAVE_VERSION=1;
-export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,taughtStage:0,skills:{},recent:[],art:[],pictures:[],stickers:[],sessions:[],picnic:null,updatedAt:null});
+export const defaultProgress=()=>({version:SAVE_VERSION,name:'Pip',avatar:'cat',muted:false,motion:true,effects:true,ambience:true,taughtStage:0,skills:{},recent:[],art:[],pictures:[],stickers:[],sessions:[],picnic:null,updatedAt:null});
 export const sessionId=()=>{const now=new Date();return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;};
 
 // Validate a complete imported save before touching stored data; unknown or unsafe fields are never blindly assigned.
@@ -10,7 +10,7 @@ export function validateProgress(value){
  const safe=defaultProgress();
  if(typeof value.name!=='string'||value.name.length>24)throw new Error('The companion name is invalid.');
  safe.name=value.name; safe.avatar=['cat','bunny','bear'].includes(value.avatar)?value.avatar:'cat';
- safe.muted=value.muted===true;safe.motion=value.motion!==false;
+ safe.muted=value.muted===true;safe.motion=value.motion!==false;safe.effects=value.effects!==false;safe.ambience=value.ambience!==false;
  safe.taughtStage=Number.isInteger(value.taughtStage)?Math.max(0,Math.min(4,value.taughtStage)):0;
  if(!value.skills||typeof value.skills!=='object'||Array.isArray(value.skills))throw new Error('Learning progress is missing.');
  for(const [key,skill] of Object.entries(value.skills)){

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "date": "2026-10-20",
+  "brief": "Restrained, warm, close-up object sounds that confirm what the child just did, plus a calm night ambience beneath speech. No cartoon boings, no buzzers or negative sounds for mistakes, no music competing with Pip and Bear.",
+  "model": "eleven_text_to_sound_v2",
+  "sounds": {
+    "tile-place": {"seconds": 0.5, "trigger": "letter placed in a word space", "prompt": "a small smooth wooden letter tile placed onto a wooden tray, one soft click, close, dry, no reverb"},
+    "tile-lift": {"seconds": 0.5, "trigger": "letter removed or undo", "prompt": "a small wooden tile gently lifted off a wooden tray, one light soft tick, close, dry"},
+    "apple-basket": {"seconds": 0.7, "trigger": "apple added to the basket", "prompt": "one apple gently dropped into a wicker picnic basket, soft thud with a light wicker creak, close, dry"},
+    "apple-lift": {"seconds": 0.6, "trigger": "apple taken out of basket or off a plate", "prompt": "one apple lifted out of a wicker basket, soft brief wicker rustle, close, gentle"},
+    "apple-plate": {"seconds": 0.5, "trigger": "apple placed on a friend's plate", "prompt": "one apple placed gently on a ceramic plate, soft muted clink, close, dry"},
+    "reveal": {"seconds": 1.6, "trigger": "word completed and its object appears", "prompt": "an old paper map unfolding, ending in a soft warm shimmer of tiny bells, gentle, magical, quiet"},
+    "success": {"seconds": 1.2, "trigger": "basket, plates or drawing completed", "prompt": "gentle warm three-note rising marimba chime, soft and cheerful, for young children, short, no long tail"},
+    "sparkle": {"seconds": 0.8, "trigger": "decoration chosen", "prompt": "tiny soft twinkling sparkle like small glass bells, gentle, brief"},
+    "paper-turn": {"seconds": 0.5, "trigger": "next or previous drawing step", "prompt": "a single soft sheet of paper being turned, gentle, close, dry"},
+    "whoosh": {"seconds": 0.8, "trigger": "moving to the next scene", "prompt": "a soft airy gentle whoosh, like a light warm breeze, quiet, brief"},
+    "ending": {"seconds": 2.5, "trigger": "arriving at the picnic ending", "prompt": "little lanterns lighting up one by one, soft twinkling glockenspiel notes and gentle shimmer, calm, warm, magical, quiet"},
+    "ambience": {"seconds": 22, "loop": true, "trigger": "loops quietly during the picnic, ducked under speech", "prompt": "peaceful summer night meadow ambience, soft crickets, gentle breeze in leaves, a very occasional distant soft owl, calm, no music, no voices"}
+  }
+}

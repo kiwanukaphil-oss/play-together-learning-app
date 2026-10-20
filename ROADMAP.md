@@ -151,7 +151,7 @@ Q2 production and Q3 implementation may overlap once their contracts are defined
 - [ ] Record reviewer, review scope, date, pronunciation convention, and revisions for teaching audio.
 - [x] Create a versioned production audio manifest linking line IDs, transcripts, speakers, files, duration, review status, and provenance; runtime integration remains pending review.
 - [ ] Add restrained object sounds, short character reactions, and optional ambience/music that lowers beneath speech.
-- [ ] Implement speech priority, replay/cancellation, separate voice/music/effects controls, and user-initiated audio start.
+- [ ] Implement speech priority, replay/cancellation, separate voice/music/effects controls, and user-initiated audio start. (Engine, ducking and effects/ambience toggles implemented; awaiting produced sounds and a mixed-scene listening check.)
 - [ ] Bundle production clips; verify loading, caching, missing-file behaviour, and interruption when navigating away.
 - [x] Keep browser speech as a clearly documented fallback; do not count fallback speech as finished character production.
 
@@ -317,6 +317,10 @@ The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs 
 ### Performance direction revision — 2026-10-20
 
 The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
+
+### Character animation and sound engine — 2026-10-20
+
+Pip and Bear now lip-sync to their recordings: `prepare-revised-voices.py` stores a 25 fps loudness envelope per clip, and the audio controller drives a `--mouth` value on the speaking character each frame (generic chatter only for the speech fallback). Characters blink and breathe; completion adds a short hop. All motion respects the Playful motion setting and `prefers-reduced-motion` (mouth stays closed). Added a Web Audio sound engine (`src/picnic-sound.js`): action-matched effects (mistakes stay silent), a looped night ambience that ducks under speech, separate parent toggles for effects and night sounds (backward-compatible save fields), and silent fallback when files or Web Audio are missing. Sound direction, generation and preparation scripts are ready (`docs/PICNIC_SOUND_DIRECTION.json`, `scripts/generate-picnic-sounds.mjs`, `scripts/prepare-picnic-sounds.py`); generation is waiting on the Sound Effects permission for the API key. Evidence: 34 tests; Chrome checks of six distinct mouth openings during Bear's welcome, Pip closed, reset at line end, closed under reduced motion, close-up screenshot, and the 12 voice/offline regression checks.
 
 ### Direction 2 voices produced and integrated — 2026-10-20
 
