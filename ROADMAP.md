@@ -3,7 +3,7 @@
 Last updated: 2026-10-20 (Africa/Nairobi)
 
 **Current milestone:** Q2/Q3 — Character audio production and completion of the picnic benchmark; Q4 technical checks are in progress.
-**Latest completed work:** Q1 creative specification, character sheet, visual samples, and a playable development picnic with automated and browser evidence.
+**Latest completed work:** Q1 specification and playable development picnic; self-paced first-use examples, answer-preserving demonstration replay, clearer sharing feedback, and larger controls verified on 2026-10-20.
 **Next deliverable:** Voice audition clips from the prepared script, reviewed sound-clue assets, and remaining benchmark quality checks.
 **Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
 **Latest published code:** `75302b8`, release `0e4c6ca79eb9`; successful Actions run `39371407554`; live home/welcome/word screen verified on 2026-10-20.
@@ -23,7 +23,7 @@ Supporting records:
 - [Validation record](docs/VALIDATION.md): checks actually performed.
 - [README](README.md): running the app and current parent guidance.
 - [Creative direction](docs/CREATIVE_DIRECTION.md), [storyboard](docs/PICNIC_STORYBOARD.md), [audio script](docs/AUDIO_SCRIPT.md), and [asset register](docs/PICNIC_ASSETS.md).
-- [Exact recording sheet](docs/PICNIC_RECORDING_SCRIPT.csv): 58 draft runtime lines with production/review fields.
+- [Exact recording sheet](docs/PICNIC_RECORDING_SCRIPT.csv): 68 draft runtime lines with production/review fields.
 - [Home screenshot](output/picnic-review/home-1366.png); the runnable character/scene sheet is `src/picnic-preview.html`.
 - [Live development release](https://kiwanukaphil-oss.github.io/play-together-learning-app/).
 - [Source repository](https://github.com/kiwanukaphil-oss/play-together-learning-app).
@@ -115,9 +115,9 @@ Statuses: **Ready**, **In progress**, **Blocked**, **Complete**. Only mark Compl
 |---|---|---|---|---|
 | Q0 | Review and revised roadmap | Complete | User direction | Review in this conversation; this document; preserved baseline |
 | Q1 | Creative direction and picnic specification | Complete | Q0 | Linked guides, exact recording sheet, asset register, character/scene samples; 2026-10-20 validation entry |
-| Q2 | Character audio and sound production | In progress | Q1 script/cast | Audition brief and 58 draft lines ready; production connection and listening review pending |
+| Q2 | Character audio and sound production | In progress | Q1 script/cast | Audition brief and 68 draft lines ready; production connection and listening review pending |
 | Q3 | Complete playable picnic | In progress | Q1; Q2 required for final acceptance | Word/pack/share/paper/ending route implemented; sound clues and final recordings pending |
-| Q4 | Benchmark validation and refinement | In progress | Q2, Q3 | Automated tests and two browser routes; full acceptance remains open |
+| Q4 | Benchmark validation and refinement | In progress | Q2, Q3 | 25 automated tests; browser routes, demonstration persistence, keyboard, narrow-layout and target-size checks; full acceptance remains open |
 | Q5 | Connected world and destination upgrades | Ready | Q4 technical/creative acceptance | Pending |
 | Q6 | Full coverage, reliability, and release acceptance | Ready | Q5; original outstanding scope | Pending |
 
@@ -159,7 +159,7 @@ The audio controller cancels/replays speech and guards against late callbacks. R
 ### Q3 — Complete playable picnic
 
 - [x] Separate scene flow, rendering, audio, content, and learning evidence as needed; retain the static browser-module foundation unless a documented requirement justifies changing it.
-- [ ] Implement introduction → demonstration → attempt → support → consequence → completion → exit/resume.
+- [x] Implement introduction → demonstration → attempt → support → consequence → completion → exit/resume.
 - [x] Build reusable character states: idle, speaking, attentive, thinking, encouraging, and celebrating.
 - [x] Replace benchmark emoji and placeholder surfaces with consistent authored assets.
 - [x] Animate objects in direct response to the child's action; make quantities readable throughout.
@@ -172,7 +172,9 @@ The audio controller cancels/replays speech and guards against late callbacks. R
 - [x] Add a short story-specific ending and persistent non-pressure decoration choice.
 - [x] Preserve old activities, backups, gallery, parent controls, and accessible free-play entry.
 
-Remaining Q3: integrate the reviewed sound-clue branch; provide a first-use demonstration before attempts; replace fallback voice; make spelling support use reviewed target sounds; improve gesture/transition polish. Correct letter positions already survive editing/help, and all new-route evidence defaults to supported. Dedicated parent independence assessment for the picnic remains pending.
+First-use interaction demonstrations now precede word/packing/sharing tasks, are self-paced and replayable, and preserve answers and the current frame through backups. Older saves resume directly with examples available on request. These are static visual sequences with draft narration, not reviewed phonics teaching demonstrations or additional assessed content.
+
+Remaining Q3: integrate the reviewed sound-clue branch; replace fallback voice; make spelling support use reviewed target sounds; improve gesture/transition polish. Correct letter positions survive editing/help, and all new-route evidence defaults to supported. Dedicated parent independence assessment for the picnic remains pending.
 
 **Acceptance:** A complete route has finished assets/audio, meaningful changes to the scene, useful mistakes/help, and a coherent ending. Refresh, early exit, repeated clicks, and help cannot corrupt progress or produce false independence. All mandatory actions work by keyboard and click.
 
@@ -296,12 +298,13 @@ Routine checkpoints are not approval stops. When an external dependency blocks o
 | 2026-10-20 | Q1 specification and first Q3 implementation: illustrated home, Pip/Bear poses, word/packing/sharing route, paper lessons, ending, partial-state backups, draft audio controller | Guides and asset register; `tests/picnic.test.mjs`; 23 automated tests, syntax/build checks; browser walkthrough and home screenshot; see validation entry | Sound clues, final character recordings, listening/educator/parent/child review, complete accessibility/performance/offline checks remain open |
 | 2026-10-20 | Follow-up replay correction: replay the task after count/support feedback; fresh map selection checked in a third browser session | Browser assertion of the restored five-apple instruction; 23 tests and syntax/build checks pass | Production verification recorded below once the final deployment is checked |
 | 2026-10-20 | Published and smoke-tested the picnic development release | Code `75302b8`; release `0e4c6ca79eb9`; successful Actions run `39371407554`; matching public module/art version, home/welcome/word rendering, no console warnings/errors | Final voice/audio, full quality audit, and human acceptance remain open |
+| 2026-10-20 | Added self-paced first-use examples, saved demonstration frames, answer-preserving replay, clearer equal-plate feedback, and larger controls | 25 tests, syntax/build checks; muted browser walkthrough, keyboard progression, 1366/1280/390 CSS-width inspection; [validation record](docs/VALIDATION.md) | Draft script now 68 lines; voice connection, reviewed sound guidance, complete quality audit, and human review remain open |
 
 ## 10. Immediate build queue
 
 1. Produce audition clips from `docs/AUDIO_SCRIPT.md` once a production route is accessible; obtain actual listening evidence.
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
-3. Add first-use demonstrations, reviewed sound-based spelling support, and remaining sound/motion polish.
+3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.
 5. Extend the accepted benchmark across the world only after the Q4 technical/creative checkpoint.
 

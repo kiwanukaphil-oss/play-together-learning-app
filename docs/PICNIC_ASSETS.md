@@ -12,9 +12,10 @@ Date: 2026-10-20. No human educational, listening, or child review has been reco
 | Six counting tasks | `PICNIC_COUNTS` in `src/picnic-content.js` | Authored quantities 1–5, version 1 | Implemented; educator review pending |
 | Three sharing tasks | `PICNIC_SHARES` in `src/picnic-content.js` | Authored equal shares of 2/4/6, version 1 | Implemented; reviewed mastery thresholds not claimed |
 | Lantern lessons | `LANTERN_STEPS` and `ROUND_LANTERN_STEPS` in `src/picnic-content.js` | Original paths/instructions, version 1 | Four-step classic and three-step round alternative implemented, with pause/replay and two optional creative prompts |
-| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 1 | Draft text only; no audio files, duration, listening review, performer, or selected provider |
+| Interaction examples | `PICNIC_DEMOS` in `src/picnic-content.js` | Nine original self-paced frames | Implemented with existing SVG objects; separate from answer state and content-coverage counts |
+| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 2 | Draft text only; no audio files, duration, listening review, performer, or selected provider |
 | Audition script | `docs/AUDIO_SCRIPT.md` | Original production direction | Ready for sample production |
-| Exact recording sheet | `docs/PICNIC_RECORDING_SCRIPT.csv` | Reproducible export of the runtime catalogue | 58 draft lines; blank performer, rights and reviewer fields are deliberate |
+| Exact recording sheet | `docs/PICNIC_RECORDING_SCRIPT.csv` | Reproducible export of the runtime catalogue | 68 draft lines; blank performer, rights and reviewer fields are deliberate |
 
 Generated artwork is not claimed to be human-illustrated or exclusively owned. Provider terms govern generated output. Original local SVG/code uses no imported character IP. Confirm production-service and performer rights before distributing new recordings.
 

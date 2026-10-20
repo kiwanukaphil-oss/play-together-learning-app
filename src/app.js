@@ -2,7 +2,7 @@ import {WORLDS,WORDS,SOUND_GROUPS,STORIES,MISSIONS,SKILLS,BOOKS} from './content
 import {DRAWINGS,drawingSvg} from './drawing.js';
 import {LETTER_MODELS,letterSvg} from './handwriting.js';
 import {SAVE_KEY,RESUME_KEY,defaultProgress,loadProgress,persistProgress,validateProgress,validateResume,recordObservation,levelFor,shuffled,chooseFresh,choosePracticeItem,dailyWorlds} from './learning.js';
-import {createPicnic,updatePicnic,picnicCount,picnicObservations} from './picnic-state.js';
+import {createPicnic,updatePicnic,picnicCount,picnicObservations,picnicNeedsDemo} from './picnic-state.js';
 import {PICNIC_LINES} from './picnic-content.js';
 import {picnicInvitation,renderPicnic,picnicInstruction} from './picnic-view.js';
 import {createPicnicAudio} from './picnic-audio.js';
@@ -254,7 +254,7 @@ function goHome(){stopSpeech();screen='home';daily=false;parentUnlocked=false;re
 
 // Derive dialogue from the actual transition so spoken feedback agrees with the food, letters, and route on screen.
 function choosePicnicFeedback(before,after,action){
- if(after.scene!==before.scene)return picnicInstruction(after);
+ if(after.scene!==before.scene||action.startsWith('demo-'))return picnicInstruction(after);
  if(action==='help')return `${after.scene}-help-${after.help}`;
  if(action==='check'){
   if(after.completed.includes(after.scene)){
@@ -262,6 +262,7 @@ function choosePicnicFeedback(before,after,action){
    return `${after.scene}-success-${1+(after.basket%3)}`;
   }
   if(after.scene==='pack')return after.basket<picnicCount(after).total?'pack-few':'pack-many';
+  if(after.scene==='share'&&after.plates[0]===after.plates[1])return 'share-left';
   return `${after.scene}-retry`;
  }
  if(action==='add'||action==='remove')return `count-${after.basket}`;
@@ -303,7 +304,7 @@ function actOnPicnic(action,value){
  picnicLineId=choosePicnicFeedback(before,progress.picnic,action);
  save();render();
  if(!['letter','clear-letter','undo','plate-add','plate-remove'].includes(action))picnicAudio.play(picnicLineId,{muted:progress.muted});
- if(before.scene!==progress.picnic.scene){const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true});}
+ if(before.scene!==progress.picnic.scene||picnicNeedsDemo(before)!==picnicNeedsDemo(progress.picnic)){const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true});}
  else if(!before.completed.includes(before.scene)&&progress.picnic.completed.includes(before.scene))app.querySelector('[data-action="picnic-next"]')?.focus({preventScroll:true});
 }
 function openWorld(id){stopSpeech();world=id;screen=id==='art'?'art-menu':'world';render();speak(id==='art'?'Choose a picture. Get your paper and pencils ready.':`${currentWorld().name}. Choose a game.`);window.scrollTo(0,0);}

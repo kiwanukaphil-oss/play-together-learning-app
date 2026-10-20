@@ -25,6 +25,24 @@ export const ROUND_LANTERN_STEPS=[
  {id:'round-pattern',text:'Add a stripe, or a pattern of your own.',path:'M86 135H194',start:[86,135]},
 ];
 export const picnicPaperSteps=state=>state.paperVariant==='round'?ROUND_LANTERN_STEPS:LANTERN_STEPS;
+// Demonstrations use their own objects; none of these examples edits or completes the child's task.
+export const PICNIC_DEMOS={
+ word:[
+  {title:'Choose a letter',text:'Watch my little example. I choose a letter to put it in a space.'},
+  {title:'Into the space',text:'The letter moves into the space. You can choose the next letter.'},
+  {title:'Change one letter',text:'Choose a filled space to empty it. The other letters can stay.'},
+ ],
+ pack:[
+  {title:'An empty basket',text:'Watch my little example. I choose an apple to put it in the basket.'},
+  {title:'One apple goes in',text:'One apple is in my basket. Each tap adds one apple.'},
+  {title:'One apple comes out',text:'Choose an apple in the basket to take it out. Then check when your basket is ready.'},
+ ],
+ share:[
+  {title:'Two friends, four apples',text:'Watch my little example. I have four apples for two friends.'},
+  {title:'One for each friend',text:'One for Pip, and one for Bear. Two apples are still waiting.'},
+  {title:'The same for both',text:'One more for each friend. Two each, and no apples left. Both plates are ready.'},
+ ],
+};
 const line=(speaker,text,direction='Warm, clear, conversational.')=>({speaker,text,direction,file:null,duration:null,review:'draft'});
 export const PICNIC_LINES={
  welcome:line('bear','A little picnic, under the moon. Will you help us get ready?','A small smile; pause after picnic.'),
@@ -44,6 +62,7 @@ export const PICNIC_LINES={
  'pack-success-3':line('bear','You checked the apples. We are ready for our picnic.'),
  share:line('bear','Give Pip and me the same number of apples. Use all the apples.'),
  'share-retry':line('bear','Let’s look at both plates. Does each friend have the same number?'),
+ 'share-left':line('bear','The plates match. There are still apples waiting. Give one to each friend.'),
  'share-help-1':line('bear','Try giving one apple to Pip, then one to me.'),
  'share-help-2':line('bear','I’ll move one apple to help make the plates the same.'),
  'share-help-3':line('bear','Count each plate. You can move an apple back if you need to.'),
@@ -65,4 +84,7 @@ for(const count of PICNIC_COUNTS)PICNIC_LINES[`pack-${count.id}`]=line('bear',`P
 for(const share of PICNIC_SHARES)PICNIC_LINES[`share-start-${share.id}`]=line('bear',`I brought ${share.total} more apples. Share these between Pip and me. Give us the same number.`);
 for(let count=0;count<=6;count++)PICNIC_LINES[`count-${count}`]=line('bear',String(count),'Clear number, short and dry.');
 for(const step of [...LANTERN_STEPS,...ROUND_LANTERN_STEPS])PICNIC_LINES[`paper-${step.id}`]=line('pip',step.text,'One stroke instruction, then wait.');
-export const PICNIC_SCRIPT_VERSION=1;
+for(const [scene,steps] of Object.entries(PICNIC_DEMOS))steps.forEach((step,index)=>{
+ PICNIC_LINES[`demo-${scene}-${index}`]=line(scene==='word'?'pip':'bear',step.text,'Patient modelling. Pause between actions; wait for the child to continue.');
+});
+export const PICNIC_SCRIPT_VERSION=2;

@@ -105,3 +105,21 @@ Tool fallbacks and limits:
 - The app was returned to Home and left open for review. Full gameplay, incorrect answers, paper work, and sharing were exercised locally as described above, not misreported as a full production test suite.
 - Local packaged output was approximately 1.34 MB before the small replay correction, including fonts and the new artwork. This is a file-size measurement, not measured network startup or responsiveness.
 - Roadmap status remains Q1 complete, Q2/Q3/Q4 in progress. Deployment success does not complete the audio or human-review requirements.
+
+## 2026-10-20 — Self-paced examples and interaction refinement
+
+Environment: Windows, Node 24.18.1, isolated Chrome DevTools browser context with synthetic local progress. No private child progress was used or added to Git.
+
+- Added three-frame examples for placing/removing a letter, adding/removing an apple, and sharing four example apples. The child controls the pace, can begin their turn early, and can reopen an example without changing partial work. These frames do not increase assessed content counts.
+- Demonstration state persists in validated backups. Later picnics remember seen examples, while newly eligible sharing still gets its introduction; this carry-forward rule is tested. Missing optional fields in old saves resume the existing task directly; malformed new fields are rejected. Examples cannot submit answers, change task quantities, record completion, or generate observations.
+- `npm test`: 25 tests pass, including two new cases covering all demonstration routes, action isolation, restoration, bounded navigation, partial-answer replay, legacy saves, and invalid imported fields. Existing full-route and audio cancellation tests still pass.
+- `npm run check`: ten application modules and service worker pass. Production build and Git whitespace check pass. Exact recording sheet regenerated with 68 draft lines, script version 2.
+- Browser: started a new muted picnic, advanced the word example, refreshed at frame two, and resumed that exact frame. Tab/Enter advanced the example; focus remained usable when the last Next control changed to My turn.
+- Browser: entered a partial word, reopened/advanced/closed its example, and confirmed the letters remained. Completed the word, inspected all packing example frames, skipped into the task, checked an empty basket, and added an apple. Example counts and captions matched the separate example objects.
+- Browser: a synthetic valid six-apple sharing fixture exercised all three four-apple example frames, then returned to the original six-apple task. Checking equal empty plates now explains the apples still waiting. Distributed three per plate, completed sharing, and entered the paper lesson.
+- Visual inspection used actual CSS viewports 1366 × 768 (word example), 1280 × 720 (six-apple sharing), and 390 × 844 (packing, sharing example, sharing task). Inspected states had no horizontal overflow. All measured picnic buttons in these states and the paper lesson met the 48 × 48 CSS-pixel minimum, including removable fruit and the previous-step control.
+- Reduced-motion emulation on the narrow packing screen produced no apple animation. Examples are static labelled frames, so their action sequence remains visible with sound muted and motion reduced.
+- Fixed a narrow-layout overlap between tall task cards and character heads; added spacing below demonstration/sharing cards. Singular apple labels now agree with quantities. The visual sample page retains its original task/help examples and adds a demonstration example.
+- The final inspected page reported no console warnings or errors after reload.
+
+Limits: the keyboard zoom shortcut did not change the browser's measured CSS viewport, so genuine 200% zoom remains unverified. These checks are targeted evidence, not a full contrast, keyboard, every-screen, offline, performance, or multiple-browser audit. No new voice tool is connected; no voice sample, listening review, phonics review, parent acceptance, or child observation is claimed. Q2/Q3/Q4 remain in progress.

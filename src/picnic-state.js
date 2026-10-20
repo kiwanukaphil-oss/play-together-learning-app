@@ -1,10 +1,11 @@
-import {PICNIC_WORDS,PICNIC_COUNTS,PICNIC_SHARES,picnicPaperSteps} from './picnic-content.js';
+import {PICNIC_WORDS,PICNIC_COUNTS,PICNIC_SHARES,PICNIC_DEMOS,picnicPaperSteps} from './picnic-content.js';
 export const PICNIC_SCENES=['welcome','word','pack','share','paper','ending'];
 export const PICNIC_DECORATIONS=['star','leaf','flower'];
 const boundedInteger=(value,max)=>Number.isInteger(value)&&value>=0&&value<=max;
 export const picnicWord=state=>PICNIC_WORDS.find(word=>word.id===state.wordId);
 export const picnicCount=state=>PICNIC_COUNTS.find(count=>count.id===state.countId);
 export const picnicShare=state=>PICNIC_SHARES.find(share=>share.id===state.shareId);
+export const picnicNeedsDemo=state=>Object.hasOwn(PICNIC_DEMOS,state.scene)&&!state.completed.includes(state.scene)&&!(state.demonstrated||Object.keys(PICNIC_DEMOS)).includes(state.scene);
 
 export function createPicnic(progress,random=Math.random,selectPractice=null){
  const pick=items=>items[Math.min(items.length-1,Math.floor(random()*items.length))];
@@ -12,7 +13,7 @@ export function createPicnic(progress,random=Math.random,selectPractice=null){
  const eligible=PICNIC_WORDS.filter(word=>word.stage<=Math.min(progress.taughtStage,progress.skills.spelling?.level||0));
  return {version:1,scene:'welcome',wordId:choose(eligible,'spelling'),countId:choose(PICNIC_COUNTS,'number'),shareId:choose(PICNIC_SHARES,'operations'),
   sharing:(progress.skills.operations?.level||0)>=1,letters:[],basket:0,plates:[0,0],paperStep:0,paperVariant:'classic',paperDone:false,
-  completed:[],support:[],help:0,recorded:false,decoration:progress.picnic?.decoration||'star'};
+  completed:[],support:[],help:0,demonstrated:[...(progress.picnic?.demonstrated||[])],demoStep:0,recorded:false,decoration:progress.picnic?.decoration||'star'};
 }
 
 // Validate cross-field invariants as well as types so imported snapshots cannot invent completed learning evidence.
@@ -27,6 +28,9 @@ export function validatePicnic(value){
  if(!boundedInteger(value.paperStep,picnicPaperSteps(value).length-1)||!boundedInteger(value.help,3))throw new Error('The picnic step is invalid.');
  for(const key of ['sharing','paperDone','recorded'])if(typeof value[key]!=='boolean')throw new Error('The picnic status is invalid.');
  for(const key of ['completed','support'])if(!Array.isArray(value[key])||value[key].length>4||new Set(value[key]).size!==value[key].length||!value[key].every(scene=>['word','pack','share','paper'].includes(scene)))throw new Error('The picnic observations are invalid.');
+ // Older saves resume their existing task without a new interruption; the example remains available on request.
+ const demonstrated=value.demonstrated===undefined?Object.keys(PICNIC_DEMOS):value.demonstrated,demoStep=value.demoStep===undefined?0:value.demoStep;
+ if(!Array.isArray(demonstrated)||demonstrated.length>3||new Set(demonstrated).size!==demonstrated.length||!demonstrated.every(scene=>Object.hasOwn(PICNIC_DEMOS,scene))||!boundedInteger(demoStep,2))throw new Error('The picnic demonstration is invalid.');
  if(!PICNIC_DECORATIONS.includes(value.decoration))throw new Error('The picnic decoration is invalid.');
  if(value.completed.includes('word')&&value.letters.join('')!==value.wordId)throw new Error('The completed picnic word does not match.');
  if(value.completed.includes('pack')&&value.basket!==picnicCount(value).total)throw new Error('The completed picnic basket does not match.');
@@ -37,19 +41,29 @@ export function validatePicnic(value){
  if(value.scene==='share'&&!value.sharing||value.recorded&&value.scene!=='ending')throw new Error('The picnic route is invalid.');
  return {version:1,scene:value.scene,wordId:value.wordId,countId:value.countId,shareId:value.shareId,sharing:value.sharing,
   letters:[...value.letters],basket:value.basket,plates:[...value.plates],paperStep:value.paperStep,paperVariant:value.paperVariant||'classic',paperDone:value.paperDone,
-  completed:[...value.completed],support:[...value.support],help:value.help,recorded:value.recorded,decoration:value.decoration};
+  completed:[...value.completed],support:[...value.support],help:value.help,demonstrated:[...demonstrated],demoStep,recorded:value.recorded,decoration:value.decoration};
 }
 
 // A pure transition function keeps double clicks, help, and restoration independent of animation and browser timing.
 export function updatePicnic(state,action,value){
  const next=structuredClone(state),scene=next.scene,finished=next.completed.includes(scene);
  const support=()=>{if(!next.support.includes(scene))next.support.push(scene);};
+ if(action==='demo-open'&&Object.hasOwn(PICNIC_DEMOS,scene)&&!finished){
+  next.demonstrated=(next.demonstrated||Object.keys(PICNIC_DEMOS)).filter(item=>item!==scene);next.demoStep=0;
+  return validatePicnic(next);
+ }
+ if(picnicNeedsDemo(next)){
+  if(action==='demo-next')next.demoStep=Math.min(2,next.demoStep+1);
+  if(action==='demo-prev')next.demoStep=Math.max(0,next.demoStep-1);
+  if(action==='demo-done'){next.demonstrated.push(scene);next.demoStep=0;}
+  return validatePicnic(next);
+ }
  if(action==='next'){
   if(scene==='welcome')next.scene='word';
   else if(finished&&scene==='word')next.scene='pack';
   else if(finished&&scene==='pack')next.scene=next.sharing?'share':'paper';
   else if(finished&&scene==='share')next.scene='paper';
-  next.help=0;
+  next.help=0;next.demoStep=0;
  }
  if(scene==='word'&&!finished){
   if(action==='letter'&&picnicWord(next).bank.includes(value)){

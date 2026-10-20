@@ -61,6 +61,29 @@ button.apple-piece:hover{background:#fff0c68c;transform:translateY(-3px)}
 .picnic-task .picnic-ending{padding-top:15px}.ending-objects{height:150px;display:flex;align-items:center;justify-content:center;gap:10px}.ending-objects>.picnic-object{width:105px}.ending-objects>.picnic-lantern{height:140px;width:90px;filter:drop-shadow(0 0 16px #f5cd8180)}.ending-objects>div{max-width:150px}
 .picnic-ending h1{margin:12px 0 5px}.picnic-ending p{margin:0}.decoration-choices{display:flex;justify-content:center;gap:14px;margin-top:16px}.decoration-choices button{width:58px;height:58px;border-radius:50%;padding:8px;background:#eee3cd;border:3px solid transparent}.decoration-choices button[aria-pressed=true]{border-color:#387b78;background:#fff5d8}
 .picnic-page button:focus-visible,.picnic-invitation button:focus-visible{outline:4px solid #6e4f9a;outline-offset:4px}.picnic-invitation button:focus-visible{outline-color:#fff}
+.picnic-page button{min-width:48px;min-height:48px}
+.picnic-support-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.picnic-footer{gap:12px;flex-wrap:wrap}
+.picnic-demo h1{margin-top:12px}
+.demo-letter-tray{max-width:280px;margin:20px auto 8px}
+.demo-slots{display:flex;justify-content:center;gap:12px}
+.demo-slots span,.demo-letter{display:inline-grid;place-items:center;width:62px;height:64px;border:2px dashed #ad9676;border-radius:14px;background:#e8dfcc;font:500 38px 'Fredoka',sans-serif;color:#634e44}
+.demo-letter{background:#f8d49b;border-style:solid}
+.demo-letter-tray .demo-arrow{display:block;margin:2px}
+.demo-arrow{font-size:32px;font-weight:900;color:#39736f}
+.demo-changed{outline:3px solid #39736f;outline-offset:3px}
+.demo-packing{display:flex;align-items:center;justify-content:center;gap:14px;margin:36px auto;max-width:330px}
+.demo-supply{display:grid;place-items:center;width:68px;height:76px;flex-shrink:0;background:#f3e4c6;border-radius:16px}
+.demo-basket{width:160px;min-height:112px;flex-shrink:1}
+.demo-sharing{max-width:360px;margin:18px auto}
+.demo-waiting{min-height:85px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.demo-waiting>span:last-child{flex-basis:100%;font-weight:800;font-size:13px}
+.demo-sharing .picnic-plates{margin-top:16px}
+.demo-sharing .picnic-plate{flex-wrap:wrap}
+.picnic-plates .picnic-plate{flex-wrap:wrap}
+.picnic-plate button.apple-piece{width:48px;height:54px}
+.picnic-letter-bank{flex-wrap:wrap}
+@media(max-width:600px){.showing-example .picnic-task,.scene-share .picnic-task{margin-bottom:265px}}
 @media(prefers-reduced-motion:no-preference){:root[data-motion=on] .picnic-basket .apple-piece:last-child{animation:apple-arrive .23s ease-out}:root[data-motion=on] .object-reveal{animation:object-unfold .45s ease-out}:root[data-motion=on] .lantern-stroke{stroke-dasharray:1;animation:lantern-draw 2.4s ease-in-out}:root[data-motion=on] .pose-speaking .character-head{animation:character-talk .5s ease-in-out infinite}}
 @keyframes apple-arrive{from{opacity:0;translate:0 -13px}to{opacity:1;translate:0 0}}@keyframes object-unfold{from{opacity:0;transform:scale(.8) rotate(-5deg)}to{opacity:1;transform:none}}@keyframes lantern-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@keyframes character-talk{50%{transform:rotate(2deg)}}
 @media(max-width:850px){.picnic-invitation-copy{padding:34px}.picnic-invitation{min-height:420px}.invitation-friends{right:3%;width:42%}.picnic-task{width:74%}.picnic-friend{width:16%;bottom:110px}.picnic-task>div{padding:18px}.picnic-dialogue{font-size:14px}.picnic-task h1{font-size:27px}.picnic-task .picnic-intro h1{font-size:42px}}

@@ -16,6 +16,7 @@
  <h2 class="sample-label">Bear & Pip — expression and pose sheet</h2><div id="pose-samples" class="pose-sheet"></div>
  <h2 class="sample-label">Packing the picnic</h2><div id="pack-sample"></div>
  <h2 class="sample-label">A little help, one step at a time</h2><div id="help-sample"></div>
+ <h2 class="sample-label">An example before my turn</h2><div id="demo-sample"></div>
  <script type="module">
   import {picnicInvitation,renderPicnic} from './picnic-view.js';
   import {picnicCharacter} from './picnic-art.js';
@@ -23,8 +24,9 @@
   const progress={taughtStage:0,skills:{}},state=createPicnic(progress,()=>.4);
   document.getElementById('home-sample').innerHTML=picnicInvitation(progress);
   document.getElementById('pose-samples').innerHTML=['bear','pip'].flatMap(character=>['idle','speaking','attentive','thinking','encouraging','celebrating'].map(pose=>`<div class="pose-card">${picnicCharacter(character,pose)}<span>${character} · ${pose}</span></div>`)).join('');
-  document.getElementById('pack-sample').innerHTML=renderPicnic({...state,scene:'pack',basket:2},{lineId:'pack-three-in-row'});
-  document.getElementById('help-sample').innerHTML=renderPicnic({...state,scene:'word',letters:['m','a',''],help:1},{lineId:'word-help-1'});
+  document.getElementById('pack-sample').innerHTML=renderPicnic({...state,scene:'pack',basket:2,demonstrated:['pack']},{lineId:'pack-three-in-row'});
+  document.getElementById('help-sample').innerHTML=renderPicnic({...state,scene:'word',letters:['m','a',''],help:1,demonstrated:['word']},{lineId:'word-help-1'});
+  document.getElementById('demo-sample').innerHTML=renderPicnic({...state,scene:'share',demoStep:1});
   document.querySelectorAll('main').forEach((element,index)=>element.id=`sample-${index}`);
   document.querySelectorAll('button').forEach(button=>button.disabled=true);
  </script>

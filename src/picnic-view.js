@@ -1,9 +1,24 @@
-import {PICNIC_LINES,picnicPaperSteps} from './picnic-content.js';
-import {picnicWord,picnicCount,picnicShare,PICNIC_DECORATIONS} from './picnic-state.js';
+import {PICNIC_LINES,PICNIC_DEMOS,picnicPaperSteps} from './picnic-content.js';
+import {picnicWord,picnicCount,picnicShare,picnicNeedsDemo,PICNIC_DECORATIONS} from './picnic-state.js';
 import {picnicCharacter,picnicApple,picnicObject,picnicLantern} from './picnic-art.js';
 const control=(label,action,extra='')=>`<button type="button" data-action="picnic-${action}" ${extra}>${label}</button>`;
 const apples=(count,action='',plate='')=>Array.from({length:count},(_,index)=>action?control(picnicApple(),action,`data-value="${plate}" aria-label="Remove apple ${index+1}${plate!==''?' from '+(plate==='0'?'Pip’s':'Bear’s')+' plate':''}" class="apple-piece"`):`<span class="apple-piece">${picnicApple()}</span>`).join('');
-export const picnicInstruction=state=>state.scene==='word'?`word-${state.wordId}`:state.scene==='pack'?`pack-${state.countId}`:state.scene==='share'?`share-start-${state.shareId}`:state.scene==='paper'?`paper-${picnicPaperSteps(state)[state.paperStep].id}`:state.scene==='ending'?(state.paperDone?'ending-drawn':'ending-skipped'):state.scene;
+const appleQuantity=count=>`${count} ${count===1?'apple':'apples'}`;
+export const picnicInstruction=state=>picnicNeedsDemo(state)?`demo-${state.scene}-${state.demoStep}`:state.scene==='word'?`word-${state.wordId}`:state.scene==='pack'?`pack-${state.countId}`:state.scene==='share'?`share-start-${state.shareId}`:state.scene==='paper'?`paper-${picnicPaperSteps(state)[state.paperStep].id}`:state.scene==='ending'?(state.paperDone?'ending-drawn':'ending-skipped'):state.scene;
+
+// Static, labelled frames work with muted audio and reduced motion; the child advances at their own pace.
+function picnicDemonstration(state){
+ const step=state.demoStep,scene=state.scene,content=PICNIC_DEMOS[scene][step];
+ let example='';
+ if(scene==='word'){
+  example=`<div class="demo-letter-tray" role="img" aria-label="${step===1?'The example letter m is in the first space.':'The example letter m is below three empty spaces.'}"><div class="demo-slots"><span class="${step===1?'demo-changed':''}">${step===1?'m':'·'}</span><span>·</span><span>·</span></div><span class="demo-arrow" aria-hidden="true">${step===2?'↓':'↑'}</span><span class="demo-letter ${step!==1?'demo-changed':''}">${step===1?'·':'m'}</span></div>`;
+ }else if(scene==='pack'){
+  example=`<div class="demo-packing" role="img" aria-label="${step===1?'One apple in the example basket.':'Empty example basket; one apple beside it.'}"><div class="demo-supply">${step===1?'<span aria-hidden="true">·</span>':picnicApple()}</div><span class="demo-arrow" aria-hidden="true">${step===2?'←':'→'}</span><div class="picnic-basket demo-basket ${step===1?'demo-changed':''}">${step===1?apples(1):'<span class="empty-basket-mark">0</span>'}</div></div>`;
+ }else{
+  example=`<div class="demo-sharing" role="img" aria-label="${appleQuantity(4-step*2)} waiting; ${appleQuantity(step)} on each friend's plate."><div class="demo-waiting">${apples(4-step*2)}<span>${4-step*2} waiting</span></div><div class="picnic-plates">${['Pip','Bear'].map(name=>`<div><div class="picnic-plate ${step?'demo-changed':''}">${step?apples(step):'<span>0</span>'}</div><strong>${name} · ${step}</strong></div>`).join('')}</div></div>`;
+ }
+ return `<div class="picnic-demo"><span class="picnic-kicker">${scene==='word'?'PIP':'BEAR'}’S LITTLE EXAMPLE · ${step+1} / 3</span><h1>${content.title}</h1>${example}<div class="picnic-task-actions">${control('←','demo-prev',`class="picnic-secondary" aria-label="Previous example step" ${step===0?'disabled':''}`)}${step<2?control('Watch next →','demo-next','class="picnic-primary"'):control('My turn →','demo-done','class="picnic-primary"')}</div>${step<2?control('I’m ready to try','demo-done','class="picnic-text-button"'):''}</div>`;
+}
 
 export function picnicInvitation(progress){
  const ongoing=progress.picnic&&progress.picnic.scene!=='ending';
@@ -13,6 +28,7 @@ export function picnicInvitation(progress){
 // Each task keeps meaningful objects in the foreground; illustration never replaces an accessible native control.
 function picnicTask(state,preview,paused){
  const finished=state.completed.includes(state.scene),disabled=finished?'disabled':'';
+ if(picnicNeedsDemo(state))return picnicDemonstration(state);
  if(state.scene==='welcome')return `<div class="picnic-intro"><span class="picnic-kicker">PIP & BEAR’S LITTLE ADVENTURES</span><h1>A picnic under<br>the moon.</h1><p>Will you help us get ready?</p>${control('Let’s go <span aria-hidden="true">→</span>','next','class="picnic-primary"')}</div>`;
  if(state.scene==='word'){
   const word=picnicWord(state),hint=state.help?word.letters.findIndex((letter,index)=>state.letters[index]!==letter):-1;
@@ -20,11 +36,11 @@ function picnicTask(state,preview,paused){
  }
  if(state.scene==='pack'){
   const target=picnicCount(state).total;
-  return `<div class="picnic-pack"><h1>Pack <strong>${target}</strong> ${target===1?'apple':'apples'}</h1><div class="packing-table"><div class="fruit-supply">${control(`${picnicApple()}<span>Add an apple <b aria-hidden="true">+</b></span>`,'add',`class="apple-supply" aria-label="Add an apple" ${disabled||state.basket>=6?'disabled':''}`)}</div><div class="picnic-basket-wrap"><div class="basket-handle"></div><div class="picnic-basket layout-${picnicCount(state).layout}" aria-label="${state.basket} apples in the basket">${apples(state.basket,finished?'':'remove')}${!state.basket?'<span class="empty-basket-mark" aria-hidden="true">+</span>':''}</div><span class="basket-count">${state.basket} in our basket</span></div></div>${!finished?control('Basket ready ✓','check','class="picnic-primary"'):''}</div>`;
+  return `<div class="picnic-pack"><h1>Pack <strong>${target}</strong> ${target===1?'apple':'apples'}</h1><div class="packing-table"><div class="fruit-supply">${control(`${picnicApple()}<span>Add an apple <b aria-hidden="true">+</b></span>`,'add',`class="apple-supply" aria-label="Add an apple" ${disabled||state.basket>=6?'disabled':''}`)}</div><div class="picnic-basket-wrap"><div class="basket-handle"></div><div class="picnic-basket layout-${picnicCount(state).layout}" aria-label="${appleQuantity(state.basket)} in the basket">${apples(state.basket,finished?'':'remove')}${!state.basket?'<span class="empty-basket-mark" aria-hidden="true">+</span>':''}</div><span class="basket-count">${state.basket} in our basket</span></div></div>${!finished?control('Basket ready ✓','check','class="picnic-primary"'):''}</div>`;
  }
  if(state.scene==='share'){
   const remaining=picnicShare(state).total-state.plates[0]-state.plates[1];
-  return `<div class="picnic-sharing"><h1>The same for each friend</h1><div class="share-supply" aria-label="${remaining} apples left to share">${apples(remaining)}</div><div class="picnic-plates">${['Pip','Bear'].map((name,index)=>`<div><div class="picnic-plate" aria-label="${name} has ${state.plates[index]} apples">${apples(state.plates[index],finished?'':'plate-remove',String(index))}</div>${control(`Give ${name} an apple +`,'plate-add',`class="picnic-secondary" data-value="${index}" ${disabled||remaining===0?'disabled':''}`)}</div>`).join('')}</div>${!finished?control('Both plates ready ✓','check','class="picnic-primary"'):''}</div>`;
+  return `<div class="picnic-sharing"><h1>The same for each friend</h1><div class="share-supply" aria-label="${appleQuantity(remaining)} left to share">${apples(remaining)}</div><div class="picnic-plates">${['Pip','Bear'].map((name,index)=>`<div><div class="picnic-plate" aria-label="${name} has ${appleQuantity(state.plates[index])}">${apples(state.plates[index],finished?'':'plate-remove',String(index))}</div>${control(`Give ${name} an apple +`,'plate-add',`class="picnic-secondary" data-value="${index}" ${disabled||remaining===0?'disabled':''}`)}</div>`).join('')}</div>${!finished?control('Both plates ready ✓','check','class="picnic-primary"'):''}</div>`;
  }
  if(state.scene==='paper'){
   const steps=picnicPaperSteps(state),step=steps[state.paperStep],shown=preview?steps.length-1:state.paperStep;
@@ -35,7 +51,7 @@ function picnicTask(state,preview,paused){
 
 export function renderPicnic(state,{lineId,preview=false,paused=false}={}){
  const complete=state.completed.includes(state.scene),instruction=PICNIC_LINES[lineId||picnicInstruction(state)],speaker=instruction?.speaker||'pip';
- const caption=state.scene==='word'&&!complete&&(!lineId||lineId===`word-${state.wordId}`)?'Listen to the word. Choose its letters.':instruction?.text||'';
- const poses=complete?'celebrating':state.help?'thinking':'attentive';
- return `<main id="main" class="picnic-page scene-${state.scene}"><div class="picnic-topline"><span>THE MOONLIGHT PICNIC</span><div class="picnic-journey" aria-label="Adventure scene: ${state.scene}">${['word','pack',...(state.sharing?['share']:[]),'paper','ending'].map(scene=>`<span class="${state.completed.includes(scene)||state.scene===scene?'visited':''}" aria-hidden="true"></span>`).join('')}</div></div><section class="picnic-stage" aria-label="Moonlight clearing"><div class="stage-wash"></div><div class="picnic-friend friend-bear">${picnicCharacter('bear',poses)}<span>Bear</span></div><div class="picnic-friend friend-pip">${picnicCharacter('pip',poses)}<span>Pip</span></div><div class="picnic-task">${picnicTask(state,preview,paused)}</div><div class="picnic-dialogue" role="status"><span class="speaker-name">${speaker==='bear'?'Bear':'Pip'}</span><span>${caption}</span>${control('♫','replay','class="picnic-replay" aria-label="Hear instruction again"')}${complete?control('Let’s go →','next','class="picnic-primary"'):''}</div></section><div class="picnic-footer">${['word','pack','share'].includes(state.scene)&&!complete?control('Show me','help','class="picnic-secondary"'):'<span></span>'}${control('Take a break','pause','class="picnic-text-button"')}</div></main>`;
+ const caption=state.scene==='word'&&!picnicNeedsDemo(state)&&!complete&&(!lineId||lineId===`word-${state.wordId}`)?'Listen to the word. Choose its letters.':instruction?.text||'';
+ const poses=complete?'celebrating':picnicNeedsDemo(state)?'encouraging':state.help?'thinking':'attentive';
+ return `<main id="main" class="picnic-page scene-${state.scene}${picnicNeedsDemo(state)?' showing-example':''}"><div class="picnic-topline"><span>THE MOONLIGHT PICNIC</span><div class="picnic-journey" aria-label="Adventure scene: ${state.scene}">${['word','pack',...(state.sharing?['share']:[]),'paper','ending'].map(scene=>`<span class="${state.completed.includes(scene)||state.scene===scene?'visited':''}" aria-hidden="true"></span>`).join('')}</div></div><section class="picnic-stage" aria-label="Moonlight clearing"><div class="stage-wash"></div><div class="picnic-friend friend-bear">${picnicCharacter('bear',poses)}<span>Bear</span></div><div class="picnic-friend friend-pip">${picnicCharacter('pip',poses)}<span>Pip</span></div><div class="picnic-task">${picnicTask(state,preview,paused)}</div><div class="picnic-dialogue" role="status"><span class="speaker-name">${speaker==='bear'?'Bear':'Pip'}</span><span>${caption}</span>${control('♫','replay','class="picnic-replay" aria-label="Hear instruction again"')}${complete?control('Let’s go →','next','class="picnic-primary"'):''}</div></section><div class="picnic-footer">${['word','pack','share'].includes(state.scene)&&!complete&&!picnicNeedsDemo(state)?`<div class="picnic-support-controls">${control('Help me','help','class="picnic-secondary"')}${control('Watch an example','demo-open','class="picnic-text-button"')}</div>`:'<span></span>'}${control('Take a break','pause','class="picnic-text-button"')}</div></main>`;
 }

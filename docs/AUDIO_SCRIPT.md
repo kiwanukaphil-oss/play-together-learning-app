@@ -1,6 +1,6 @@
 # Moonlight Picnic — voice production script
 
-Date: 2026-10-20. Version 1. Draft, unrecorded, not listen-reviewed.
+Date: 2026-10-20. Version 2. Draft, unrecorded, not listen-reviewed. The recording sheet now has 68 lines, including nine demonstration lines and a separate response for equal plates with apples still waiting.
 
 Runtime transcripts and stable IDs live in `src/picnic-content.js`. They are the exact-text source for production; this guide describes performance, timing, and coverage. Never ship prose annotations as spoken text.
 
@@ -30,6 +30,8 @@ Log each candidate's provider/performer, rights, production cost, voice settings
 |---|---|---|---|
 | welcome, resume | Bear | Enter/resume | Friendly invitation; wait for child |
 | word-* | Pip | Workshop word selected | Clear whole word; pause before repeating |
+| demo-word-* | Pip | Self-paced word example frame | Patient modelling; describe the example, then wait |
+| demo-pack-* / demo-share-* | Bear | Self-paced apple example frame | One action/thought at a time; no automatic advance |
 | word-help-* | Pip | Help stages | Calm cue, then modelling; never pronounce raw graphemes with generic TTS |
 | word-success-* | Pip | Correct word | Name the object and its purpose; short delighted pause |
 | pack-* | Bear | Counting prompt selected | Emphasise quantity once, then wait |
@@ -38,6 +40,7 @@ Log each candidate's provider/performer, rights, production cost, voice settings
 | pack-help-* | Bear | Help stages | Slow enough to follow object highlights |
 | pack-success-* | Bear | Correct quantity | Warm, specific; no repeated generic “You did it” |
 | share-* | Bear | Sharing branch | Two friends, same amount; short and concrete |
+| share-left | Bear | Equal plates with fruit still in the supply | Notice both success conditions: equal plates and all apples shared |
 | share-help-* | Bear | Requested support | Notice unequal plates; demonstrate one action |
 | share-success-* | Pip | Equal distribution | Acknowledge both plates |
 | paper-* | Pip | Drawing step | One shape at a time, natural pauses; child controls timing |

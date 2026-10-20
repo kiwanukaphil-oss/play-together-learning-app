@@ -24,6 +24,12 @@ Different words create different useful objects. **Map** shows the path; **mat**
 
 ## Help sequence
 
+On the first encounter with each of word-building, packing, and sharing, show a three-frame example with its own objects. The child controls previous/next, replay, or an early move to their turn. Word frames show placing/removing a single example letter; packing shows adding/removing one apple; sharing distributes four example apples across two plates. These are interaction demonstrations, not extra teaching examples or assessed attempts. Later picnics remember which examples have already been seen; a newly eligible sharing branch still introduces its example.
+
+The examples have labelled static frames, so their meaning survives mute and reduced motion. They do not reveal the selected target word or alter letters, basket, plates, completion, or learning observations. Refresh/resume retains the current frame. The **Watch an example** control returns to the first frame while preserving partial task answers; **Help me** retains the separate graduated task support.
+
+Existing saves without demonstration fields migrate to the current task without an imposed interruption. New players start with demonstrations enabled. The new fields are included in validated backups.
+
 Help is requested, never imposed after a timer. The first request cues attention, the second demonstrates one action, later requests continue supported modelling. Once help or a wrong attempt is used, evidence cannot become independent automatically.
 
 - Spelling: locate the earliest incorrect/missing letter. Keep correctly placed letters; mark the relevant slot. Demonstrate that letter on the next request. Speech may name the whole word; phoneme demonstrations require reviewed recordings.

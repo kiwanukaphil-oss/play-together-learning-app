@@ -35,6 +35,8 @@ The static production files are written to `dist/`.
 
 The home invitation opens a new illustrated adventure with Pip and Bear: build a starter word, pack apples, share food when the parent-selected operations level is appropriate, and draw a lantern on paper. A simpler round lantern and optional creative prompts are available. Partial answers and the chosen decoration are included in local backups.
 
+The first encounter with word-building, packing, or sharing starts with a short, self-paced example. **My turn** starts the task; **Watch an example** reopens it without changing an answer. Later picnics remember which examples you have already seen. **Help me** provides support with the current task. Older saved adventures resume directly, with examples available on request.
+
 The adventure is a development edition. Character recordings and reviewed sound clues are still pending; browser speech currently provides whole-word instructions. Its observations are recorded as supported. Existing destinations remain available below the invitation.
 
 Creative specification: [direction](docs/CREATIVE_DIRECTION.md), [storyboard](docs/PICNIC_STORYBOARD.md), [voice script](docs/AUDIO_SCRIPT.md), and [asset register](docs/PICNIC_ASSETS.md). With the local server running, open `http://127.0.0.1:4173/src/picnic-preview.html` for the character sheet and visual samples.
