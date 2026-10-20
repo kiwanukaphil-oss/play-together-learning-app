@@ -3,8 +3,8 @@
 Last updated: 2026-10-20 (Africa/Nairobi)
 
 **Current milestone:** Q2/Q3 — Character audio production and completion of the picnic benchmark; Q4 technical checks are in progress.
-**Latest completed work:** User selected Tamsin/Pip and Mike/Bear; all 68 runtime IDs have technically checked first takes and a searchable recording-review sheet.
-**Next deliverable:** Listen-review the production takes, integrate approved recordings, and produce reviewed sound-clue assets.
+**Latest completed work:** Following user feedback that first takes were whispery, produced eight original/revised comparisons targeting brighter, fully voiced delivery with the selected Tamsin/Pip and Mike/Bear cast.
+**Next deliverable:** Calibrate the revised performance direction from listening feedback, revise the full catalogue accordingly, then integrate reviewed recordings and sound-clue assets.
 **Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
 **Latest published code:** `cde5df1`, release `bbe506dbf6b3`; successful Actions run `39374550445`; live home, word demonstration, transition to the task, and updated controls verified on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
@@ -26,6 +26,7 @@ Supporting records:
 - [Exact recording sheet](docs/PICNIC_RECORDING_SCRIPT.csv): 68 draft runtime lines with production/review fields.
 - [Voice auditions and production record](docs/VOICE_AUDITIONS.md); [local listening sheet](output/voice-auditions/index.html).
 - [Full recording production record](docs/VOICE_PRODUCTION.md); [68-line recording review](output/voice-production/index.html).
+- [Eight-line energy comparison](output/voice-energy-review/index.html): revised direction after user listening feedback.
 - [Home screenshot](output/picnic-review/home-1366.png); the runnable character/scene sheet is `src/picnic-preview.html`.
 - [Live development release](https://kiwanukaphil-oss.github.io/play-together-learning-app/).
 - [Source repository](https://github.com/kiwanukaphil-oss/play-together-learning-app).
@@ -117,7 +118,7 @@ Statuses: **Ready**, **In progress**, **Blocked**, **Complete**. Only mark Compl
 |---|---|---|---|---|
 | Q0 | Review and revised roadmap | Complete | User direction | Review in this conversation; this document; preserved baseline |
 | Q1 | Creative direction and picnic specification | Complete | Q0 | Linked guides, exact recording sheet, asset register, character/scene samples; 2026-10-20 validation entry |
-| Q2 | Character audio and sound production | In progress | Q1 script/cast | Tamsin/Pip and Mike/Bear selected; 68 IDs recorded and technically checked; per-line listening review and runtime integration pending |
+| Q2 | Character audio and sound production | In progress | Q1 script/cast | First 68-ID set technically checked; user found several takes whispery; eight revised energy samples produced; direction calibration, retakes and integration pending |
 | Q3 | Complete playable picnic | In progress | Q1; Q2 required for final acceptance | Word/pack/share/paper/ending route implemented; sound clues and final recordings pending |
 | Q4 | Benchmark validation and refinement | In progress | Q2, Q3 | 25 automated tests; browser routes, demonstration persistence, keyboard, narrow-layout and target-size checks; full acceptance remains open |
 | Q5 | Connected world and destination upgrades | Ready | Q4 technical/creative acceptance | Pending |
@@ -312,9 +313,13 @@ Produced two Pip and two Bear candidates with ElevenLabs v4 and added a local li
 
 The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs (one identical prompt reused), preserving originals and preparing levelled review copies. This batch used 3,833 included credits and contains 243.6 seconds of audio. Exact catalogue coverage, source/output decoding, duration and peak checks passed. A searchable local review sheet supports hash-specific listening decisions, local notes and explicit export; Chrome playback, keyboard pause, filtering, persistence and export were checked. These are first takes, not approved audio. Per-line listening/teaching review and runtime integration remain open; [production details](docs/VOICE_PRODUCTION.md) record the UI settings, filename discrepancy, licensing basis and limits.
 
+### Performance direction revision — 2026-10-20
+
+The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
+
 ## 10. Immediate build queue
 
-1. Obtain per-line listening feedback on the 68 production recordings, revise flagged takes, then integrate approved clips and verify interruption/replay/offline behaviour.
+1. Obtain listening feedback on the eight revised energy samples, apply the accepted direction across the catalogue, then review/integrate clips and verify interruption/replay/offline behaviour.
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

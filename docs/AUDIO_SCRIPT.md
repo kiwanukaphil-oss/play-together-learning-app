@@ -6,9 +6,9 @@ Runtime transcripts and stable IDs live in `src/picnic-content.js`. They are the
 
 ## Direction shared by both performers
 
-Speak to one child nearby. Invite, notice, and wait. Keep instructions concise and natural. Allow 200–400ms between a story thought and an action instruction. Never add a vowel to a consonant recording. Teaching sounds need separate professional review; narrative acting is not that review.
+Speak clearly to one child with engaged children's-presenter energy: an audible smile, playful emphasis, curious questions and a full speaking voice. Invite, notice, and wait. Keep instructions concise and natural, with time to respond. Allow 200–400ms between a story thought and an action instruction. Never add a vowel to a consonant recording. Teaching sounds need separate professional review; narrative acting is not that review.
 
-Pip: curious, bright, gentle smile. Bear: warm, thoughtful, relaxed. Keep pronunciation consistent across the cast. Accent is provisional English, to be aligned with the child's school where possible. No voice cloning or impersonation.
+Direction version 2 follows the user's report that several first takes were whispery. Pip/Tamsin is bright and animated; Bear/Mike is warm and actively engaged. Target about 70% presenter intensity for invitations, higher for discoveries and lower for precise help and endings. Even relaxed lines use a clear speaking voice. Avoid using `[softly]`, `[gently]` or `[patiently]` as blanket directions: express patience through pacing and space for the child. Keep pronunciation consistent across the cast. Accent is provisional English, to be aligned with the child's school where possible.
 
 ## Audition passage
 

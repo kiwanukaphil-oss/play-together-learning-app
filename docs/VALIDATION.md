@@ -155,3 +155,14 @@ Limits: no human listening, pronunciation, rights acceptance, parent/educator/ch
 - No runtime source or deployed asset changed. The app suite/build were not rerun for this production-artifact milestone; the preparation script and review page received the relevant checks above.
 
 Remaining: human per-line listening, any retakes, pronunciation review, approved runtime integration and its replay/interruption/offline checks. No full Q2 completion or new live deployment is claimed.
+
+## 2026-10-20 — Brighter performance-direction samples
+
+- User reported that several first takes were whispery and asked for more energy, referencing children's presenters at approximately 70% intensity. Recorded this as collection-level listening feedback and updated the creative/audio direction.
+- Generated eight final revised samples with the same Tamsin/Mike voices and displayed v4 settings. Changes are delivery tags and punctuation, including English number spelling; normalised spoken-word sequences match the existing transcripts.
+- Two initial inputs contained an encoding error in an apostrophe. Script comparison detected it; those takes were regenerated with ASCII apostrophes. Superseded originals are retained under ignored `private/voice-energy-review/`, flagged for possible retirement. Final comparisons contain only corrected inputs.
+- Ten generation requests used 784 included credits. Eight revised exports total 29.9 seconds. Every final original/comparison file decodes; duration/peak checks pass. Pairwise integrated loudness differs by at most 1.08 LUFS using the shared preparation target. This is not evidence that perceived energy or breathiness improved.
+- The comparison page loads all 16 audio players without media errors. Starting revised welcome pauses original welcome; keyboard playback/pause exercised. No console warnings/errors or horizontal overflow in the inspected desktop session. Screenshot: `output/voice-energy-review/comparison-preview.png`.
+- Local HTML source references and manifest hashes checked. Original batch preserved; no runtime source, deployed audio or live build changed. App tests/build were not rerun for this sample/documentation milestone.
+
+Listening confirmation of the revised direction, full-catalogue retakes and per-line acceptance remain open.

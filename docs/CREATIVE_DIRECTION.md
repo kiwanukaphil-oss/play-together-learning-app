@@ -32,7 +32,7 @@ Orange cat; pointed ears, cream muzzle, three forehead stripes, curled tail, tea
 
 Personality: observant, friendly, a little mischievous. Pip notices small things and invites the child to try. Never mocks mistakes.
 
-Voice brief: clear youthful adult performance, bright but not squeaky, conversational English, gentle lift on invitations, a smile that can be heard. Accent remains an audition choice pending school alignment. No celebrity imitation.
+Voice brief, revised after user listening feedback: Tamsin, with a clear youthful adult speaking voice, animated curiosity, playful emphasis and an audible smile. Aim around 7/10 energy for invitations and 8/10 for discoveries; settle to 5–6/10 for help. Preserve thinking time without adopting a whisper or breathy bedtime delivery. Accent alignment with school remains open.
 
 ## Bear
 
@@ -40,7 +40,9 @@ Cinnamon-brown bear; rounded ears, broad cream muzzle, small dark eyes, cream ap
 
 Personality: thoughtful picnic chef. Bear sometimes pauses to consider a problem and is quietly delighted when the child helps. Humour comes from the scene: a very large basket for a very small picnic.
 
-Voice brief: warm adult lower register, relaxed cadence, clear consonants, occasional soft chuckle. Avoid booming delivery, exaggerated slowness, and an identical enthusiastic cadence on every sentence.
+Voice brief, revised after user listening feedback: Mike, with a warm adult lower register, engaged conversational projection and clear consonants. Aim around 7/10 energy for the welcome and 6/10 for demonstrations/instructions. The ending can settle to 4/10 while remaining fully voiced. Use curiosity and light comic timing; avoid turning patience into sleepy or whispery delivery.
+
+The user described the desired intensity as children's-presenter energy, referencing Ms Rachel/Blippi dialled to roughly 70%. This is a creative direction scale, not a provider slider or a measured acoustic percentage. Keep the selected characters' own voices. Vary enthusiasm with the scene and leave the child time to respond. Eight revised samples are available in `output/voice-energy-review/index.html`; their performance quality still needs listening feedback before applying the direction across the catalogue.
 
 ## Pose and expression contract
 

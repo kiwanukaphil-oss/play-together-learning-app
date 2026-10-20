@@ -10,4 +10,5 @@ playwright-report/
 .openai/
 private/
 coverage/
+__pycache__/
 
