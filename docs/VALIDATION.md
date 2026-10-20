@@ -85,6 +85,7 @@ Issues found and corrected:
 - The dedicated Hear the word control could replay the most recent support message. It now always speaks the selected word.
 - Counting help initially invited touching apples even though clicking a basket apple removes it. The instruction now says to count them.
 - Sharing now explicitly introduces Bear's additional apples so its quantity does not imply the packed basket changed.
+- A further browser pass verified the third word (map) was selected as fresh practice. It found that general Replay could repeat a count response rather than the task; Replay now restores the full task instruction. This was checked after adding an apple, with the visible instruction returning to “Put 5 apples in the basket.” All 23 tests and syntax checks passed again; local build after this fix is `0e4c6ca79eb9`.
 
 Tool fallbacks and limits:
 

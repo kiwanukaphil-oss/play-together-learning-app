@@ -290,8 +290,9 @@ function actOnPicnic(action,value){
   picnicLineId=`paper-extension-${1+(picnicExtension++%2)}`;render();picnicAudio.play(picnicLineId,{muted:progress.muted});return;
  }
  if(action==='replay'){
-  if(progress.picnic.scene==='paper'){picnicPreview=false;picnicPaused=false;picnicLineId=picnicInstruction(progress.picnic);render();}
-  picnicAudio.play(picnicLineId||picnicInstruction(progress.picnic),{muted:progress.muted});return;
+  picnicLineId=picnicInstruction(progress.picnic);
+  if(progress.picnic.scene==='paper'){picnicPreview=false;picnicPaused=false;}
+  render();picnicAudio.play(picnicLineId,{muted:progress.muted});return;
  }
  if(action==='paper-preview'){picnicPreview=!picnicPreview;render();return;}
  const before=progress.picnic;
