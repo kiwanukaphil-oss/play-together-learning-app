@@ -6,7 +6,7 @@ Last updated: 2026-10-20 (Africa/Nairobi)
 **Latest completed work:** Produced all 68 picnic lines in the accepted brighter direction (Tamsin/Pip, Mike/Bear) via the ElevenLabs API, verified every take's words locally, and bundled them into the app with offline caching.
 **Next deliverable:** Sound effects and character speaking animation, then an observed play session; then the sound-clue scene aligned to the school's phonics programme.
 **Product status:** The illustrated home and picnic are implemented with recorded Pip/Bear dialogue for all 68 lines. Per-line listening review, sound effects, sound clues, human review and full benchmark acceptance remain incomplete.
-**Latest published code:** `cde5df1`, release `bbe506dbf6b3`; successful Actions run `39374550445`; live home, word demonstration, transition to the task, and updated controls verified on 2026-10-20.
+**Latest published code:** `f14d853`, release `89fefd41a061`; successful Actions run `39440450623`; live clip served as audio and the picnic opens with Bear's recorded welcome (no speech fallback, no console errors) in Chrome on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
 ## 1. Purpose and source of truth
@@ -320,7 +320,7 @@ The user reported whispery delivery in several first takes and requested childre
 
 ### Direction 2 voices produced and integrated — 2026-10-20
 
-All 68 lines produced (59 new + 8 accepted samples + 1 shared take; 8 retakes after local Whisper checks) and bundled as 64 kbps clips (1,870 KiB). 68/68 transcripts match; 26 tests, syntax and build pass; Chrome production-build checks cover decoding, recorded welcome without speech fallback, replay interruption, leaving, 68/68 offline playback and offline resume, with no console errors. Details and limits in [VOICE_PRODUCTION.md](docs/VOICE_PRODUCTION.md). Per-line human listening review remains open.
+All 68 lines produced (59 new + 8 accepted samples + 1 shared take; 8 retakes after local Whisper checks) and bundled as 64 kbps clips (1,870 KiB). 68/68 transcripts match; 26 tests, syntax and build pass; Chrome production-build checks cover decoding, recorded welcome without speech fallback, replay interruption, leaving, 68/68 offline playback and offline resume, with no console errors. Details and limits in [VOICE_PRODUCTION.md](docs/VOICE_PRODUCTION.md). Published as code `f14d853`, release `89fefd41a061`, Actions `39440450623`; live Chrome check confirmed the recorded welcome. Per-line human listening review remains open.
 
 ### Revised direction accepted; API production pipeline — 2026-10-20
 
