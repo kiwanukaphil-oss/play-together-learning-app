@@ -6,6 +6,7 @@ Last updated: 2026-10-20 (Africa/Nairobi)
 **Latest completed work:** Q1 creative specification, character sheet, visual samples, and a playable development picnic with automated and browser evidence.
 **Next deliverable:** Voice audition clips from the prepared script, reviewed sound-clue assets, and remaining benchmark quality checks.
 **Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
+**Latest published code:** `75302b8`, release `0e4c6ca79eb9`; successful Actions run `39371407554`; live home/welcome/word screen verified on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
 ## 1. Purpose and source of truth
@@ -184,7 +185,7 @@ Remaining Q3: integrate the reviewed sound-clue branch; provide a first-use demo
 - [ ] Verify visible focus, target sizes of at least 48 × 48 CSS pixels where practical, contrast, non-colour cues, mute, and reduced motion.
 - [ ] Audition the complete mixed scene on laptop speakers; verify pauses, volume consistency, and reduced ambience beneath instructions.
 - [ ] Measure startup, input feedback, asset transfer size, and scene transitions on a recorded device/network; set and meet explicit budgets before final acceptance.
-- [ ] Inspect a production build and the actual published release; record commit, release ID, and evidence.
+- [x] Inspect a production build and the actual published release; record commit, release ID, and evidence.
 - [ ] Obtain parent feedback on voice warmth, character appeal, clarity, and perceived quality.
 - [ ] Where feasible, observe voluntary child use: understanding the goal, navigation, response to mistakes, use of help, and interest in returning.
 - [ ] Keep private observations outside Git; record only anonymised product issues and resulting fixes.
@@ -294,6 +295,7 @@ Routine checkpoints are not approval stops. When an external dependency blocks o
 | 2026-10-19 | Q0: user accepted creative direction; roadmap reorganised around the picnic benchmark | Review conversation; this document; [preserved original checklist](docs/ROADMAP_BASELINE_2026-10-19.md); exact baseline preservation, local links, Q0–Q6 tracker, and diff whitespace checks verified | Documentation only; app tests not rerun; no new art, recordings, gameplay, or human review claimed |
 | 2026-10-20 | Q1 specification and first Q3 implementation: illustrated home, Pip/Bear poses, word/packing/sharing route, paper lessons, ending, partial-state backups, draft audio controller | Guides and asset register; `tests/picnic.test.mjs`; 23 automated tests, syntax/build checks; browser walkthrough and home screenshot; see validation entry | Sound clues, final character recordings, listening/educator/parent/child review, complete accessibility/performance/offline checks remain open |
 | 2026-10-20 | Follow-up replay correction: replay the task after count/support feedback; fresh map selection checked in a third browser session | Browser assertion of the restored five-apple instruction; 23 tests and syntax/build checks pass | Production verification recorded below once the final deployment is checked |
+| 2026-10-20 | Published and smoke-tested the picnic development release | Code `75302b8`; release `0e4c6ca79eb9`; successful Actions run `39371407554`; matching public module/art version, home/welcome/word rendering, no console warnings/errors | Final voice/audio, full quality audit, and human acceptance remain open |
 
 ## 10. Immediate build queue
 

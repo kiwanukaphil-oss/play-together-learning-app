@@ -96,3 +96,12 @@ Tool fallbacks and limits:
 - Sound clues are deliberately omitted until reviewed audio/art exist. The script includes a disabled-branch production brief, not an implemented listening game.
 - Full keyboard/contrast/200%-zoom audits, target-size audit, multiple-browser testing, measured startup/interaction budgets, real disconnected-browser testing, and production update recovery remain open.
 - No parent/educator acceptance, school alignment, professional audio review, real-child observation, or completed Q2/Q3/Q4 acceptance is claimed.
+
+### Published milestone verification
+
+- Implementation commit `492edc0` and replay correction `75302b8` were pushed without rewriting history. GitHub Actions run `39371407554` passed check and deploy for the final code.
+- Public release `0e4c6ca79eb9` was opened after deployment. The app module URL and woodland asset URL both carried that same version.
+- Verified the published home, all six retained destination controls, adventure welcome, and word-building screen with its answer hidden. No console warnings/errors were reported in this smoke test. No live learning observations were recorded by completing a test task.
+- The app was returned to Home and left open for review. Full gameplay, incorrect answers, paper work, and sharing were exercised locally as described above, not misreported as a full production test suite.
+- Local packaged output was approximately 1.34 MB before the small replay correction, including fonts and the new artwork. This is a file-size measurement, not measured network startup or responsiveness.
+- Roadmap status remains Q1 complete, Q2/Q3/Q4 in progress. Deployment success does not complete the audio or human-review requirements.
