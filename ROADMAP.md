@@ -3,8 +3,8 @@
 Last updated: 2026-10-20 (Africa/Nairobi)
 
 **Current milestone:** Q2/Q3 — Character audio production and completion of the picnic benchmark; Q4 technical checks are in progress.
-**Latest completed work:** Q1 specification and playable development picnic; self-paced first-use examples, answer-preserving demonstration replay, clearer sharing feedback, and larger controls verified on 2026-10-20.
-**Next deliverable:** Voice audition clips from the prepared script, reviewed sound-clue assets, and remaining benchmark quality checks.
+**Latest completed work:** Four ElevenLabs v4 voice auditions and a verified local listening sheet, following the published self-paced examples and control refinements.
+**Next deliverable:** Listen to and cast Pip/Bear from the audition sheet, then produce reviewed runtime recordings and sound-clue assets.
 **Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
 **Latest published code:** `cde5df1`, release `bbe506dbf6b3`; successful Actions run `39374550445`; live home, word demonstration, transition to the task, and updated controls verified on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
@@ -24,6 +24,7 @@ Supporting records:
 - [README](README.md): running the app and current parent guidance.
 - [Creative direction](docs/CREATIVE_DIRECTION.md), [storyboard](docs/PICNIC_STORYBOARD.md), [audio script](docs/AUDIO_SCRIPT.md), and [asset register](docs/PICNIC_ASSETS.md).
 - [Exact recording sheet](docs/PICNIC_RECORDING_SCRIPT.csv): 68 draft runtime lines with production/review fields.
+- [Voice auditions and production record](docs/VOICE_AUDITIONS.md); [local listening sheet](output/voice-auditions/index.html).
 - [Home screenshot](output/picnic-review/home-1366.png); the runnable character/scene sheet is `src/picnic-preview.html`.
 - [Live development release](https://kiwanukaphil-oss.github.io/play-together-learning-app/).
 - [Source repository](https://github.com/kiwanukaphil-oss/play-together-learning-app).
@@ -115,7 +116,7 @@ Statuses: **Ready**, **In progress**, **Blocked**, **Complete**. Only mark Compl
 |---|---|---|---|---|
 | Q0 | Review and revised roadmap | Complete | User direction | Review in this conversation; this document; preserved baseline |
 | Q1 | Creative direction and picnic specification | Complete | Q0 | Linked guides, exact recording sheet, asset register, character/scene samples; 2026-10-20 validation entry |
-| Q2 | Character audio and sound production | In progress | Q1 script/cast | Audition brief and 68 draft lines ready; production connection and listening review pending |
+| Q2 | Character audio and sound production | In progress | Q1 script/cast | Four ElevenLabs v4 auditions generated and technically verified; casting/listening review and 68 runtime recordings pending |
 | Q3 | Complete playable picnic | In progress | Q1; Q2 required for final acceptance | Word/pack/share/paper/ending route implemented; sound clues and final recordings pending |
 | Q4 | Benchmark validation and refinement | In progress | Q2, Q3 | 25 automated tests; browser routes, demonstration persistence, keyboard, narrow-layout and target-size checks; full acceptance remains open |
 | Q5 | Connected world and destination upgrades | Ready | Q4 technical/creative acceptance | Pending |
@@ -139,6 +140,7 @@ Q2 production and Q3 implementation may overlap once their contracts are defined
 ### Q2 — Character audio and sound production
 
 - [x] Prepare a common audition script covering welcome, instruction, humour, support, success, and a quiet ending.
+- [x] Generate two candidate voices per character and provide a technically verified listening sheet with preserved originals.
 - [ ] Compare available human-performed and directed generated samples; record intelligibility, warmth, pacing, consistency, pronunciation, licensing, and production cost/access.
 - [ ] Select the production route and voice per character based on listening evidence; document any unavailable candidate without inventing a comparison.
 - [ ] Produce and listen-review every required picnic line, including pronunciation and natural sentence flow.
@@ -150,7 +152,7 @@ Q2 production and Q3 implementation may overlap once their contracts are defined
 - [ ] Bundle production clips; verify loading, caching, missing-file behaviour, and interruption when navigating away.
 - [x] Keep browser speech as a clearly documented fallback; do not count fallback speech as finished character production.
 
-The audio controller cancels/replays speech and guards against late callbacks. Runtime line records and the exported recording sheet have stable IDs and review fields, but file/duration/performer/rights/reviewer fields remain empty: this is not a completed production audio manifest. Runway was discovered and suggested as an available voiceover option; connection and generated/human audition samples are unconfirmed. Continue independent work without representing fallback speech as the requested upgrade.
+The audio controller cancels/replays speech and guards against late callbacks. Runtime line records and the exported recording sheet have stable IDs and review fields, but production file/duration/performer/rights/reviewer fields remain empty. The user subscribed to ElevenLabs; four v4 library-voice auditions are available through the signed-in browser, with generation provenance and limitations in `docs/VOICE_AUDITIONS.md`. Runway was an earlier access suggestion, not a tested provider comparison. Casting and human listening review remain open; browser fallback is still used by the live app.
 
 **Acceptance:** All benchmark routes have reviewed recordings; no overlapping dialogue, clipped phrases, or blocking audio queues. The voices have distinct character and remain clear at normal laptop volume. Phonics correctness and performance quality have separate evidence. Mute and audio failure have usable visual demonstrations and clearly explained parent support where listening is essential.
 
@@ -261,7 +263,7 @@ Original-to-current mapping: learning blueprint → Q1/Q6; design → Q1/Q4/Q5; 
 | Data | Preserve local progress, backups, and optional local gallery | Migration and recovery verification |
 | Art | Coherent picture-book world with custom characters/objects | Q1 visual samples and asset production |
 | Cast | Pip and Bear first; workshop robot later | Final character/voice production choices |
-| Voice | Directed bundled recordings; audition accessible human/generated options | Access, licensing, listening reviews; no provider selected |
+| Voice | ElevenLabs selected for generated auditions; bundle reviewed production recordings | Four candidates available; final casting, effective settings, distribution rights record and listening reviews pending |
 | Teaching audio | Separately reviewed phonemes and blending | Qualified human review and school conventions where available |
 | Language | English working default | School pronunciation/phonics confirmation |
 | Handwriting | Existing generic manuscript models remain provisional | School forms and formation order |
@@ -300,9 +302,13 @@ Routine checkpoints are not approval stops. When an external dependency blocks o
 | 2026-10-20 | Published and smoke-tested the picnic development release | Code `75302b8`; release `0e4c6ca79eb9`; successful Actions run `39371407554`; matching public module/art version, home/welcome/word rendering, no console warnings/errors | Final voice/audio, full quality audit, and human acceptance remain open |
 | 2026-10-20 | Added and published self-paced first-use examples, saved demonstration frames, answer-preserving replay, clearer equal-plate feedback, and larger controls | Code `cde5df1`; public release `bbe506dbf6b3`; Actions `39374550445`; 25 tests, syntax/build checks; muted browser walkthrough, keyboard progression, 1366/1280/390 CSS-width inspection and public smoke test; [validation record](docs/VALIDATION.md) | Draft script now 68 lines; voice connection, reviewed sound guidance, complete quality audit, and human review remain open |
 
+### Voice audition milestone — 2026-10-20
+
+Produced two Pip and two Bear candidates with ElevenLabs v4 and added a local listening sheet. Four generation requests used 1,600 included credits; Generation 1 was downloaded for each voice. FFmpeg decode/level checks and Chrome loading, exclusive playback and keyboard pause were verified. See the [production record](docs/VOICE_AUDITIONS.md). Human listening/casting remains pending; export settings need resolution before full production. The 68 runtime lines are still unproduced and the live app is unchanged.
+
 ## 10. Immediate build queue
 
-1. Produce audition clips from `docs/AUDIO_SCRIPT.md` once a production route is accessible; obtain actual listening evidence.
+1. Obtain listening feedback on the four generated auditions, choose Pip/Bear, resolve effective settings, and produce/review the runtime catalogue.
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

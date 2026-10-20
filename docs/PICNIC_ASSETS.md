@@ -13,8 +13,9 @@ Date: 2026-10-20. No human educational, listening, or child review has been reco
 | Three sharing tasks | `PICNIC_SHARES` in `src/picnic-content.js` | Authored equal shares of 2/4/6, version 1 | Implemented; reviewed mastery thresholds not claimed |
 | Lantern lessons | `LANTERN_STEPS` and `ROUND_LANTERN_STEPS` in `src/picnic-content.js` | Original paths/instructions, version 1 | Four-step classic and three-step round alternative implemented, with pause/replay and two optional creative prompts |
 | Interaction examples | `PICNIC_DEMOS` in `src/picnic-content.js` | Nine original self-paced frames | Implemented with existing SVG objects; separate from answer state and content-coverage counts |
-| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 2 | Draft text only; no audio files, duration, listening review, performer, or selected provider |
-| Audition script | `docs/AUDIO_SCRIPT.md` | Original production direction | Ready for sample production |
+| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 2 | 68 draft runtime lines; production recordings and listening review pending |
+| Audition script | `docs/AUDIO_SCRIPT.md` | Original production direction | Used for four ElevenLabs candidates |
+| Voice auditions | `output/voice-auditions/` | ElevenLabs v4 library voices, 2026-10-20; see `docs/VOICE_AUDITIONS.md` | Four preserved originals and levelled comparison copies; technically checked, human listening and final casting pending; outside app bundle |
 | Exact recording sheet | `docs/PICNIC_RECORDING_SCRIPT.csv` | Reproducible export of the runtime catalogue | 68 draft lines; blank performer, rights and reviewer fields are deliberate |
 
 Generated artwork is not claimed to be human-illustrated or exclusively owned. Provider terms govern generated output. Original local SVG/code uses no imported character IP. Confirm production-service and performer rights before distributing new recordings.
@@ -29,7 +30,7 @@ Original generated file remains in the generation service's local output directo
 
 ## Voice-production access
 
-Discovery found Runway as an available, unconnected plugin with voiceover generation capability. A connection was suggested on 2026-10-20. No provider has been selected or charged, and no account connection or generated audition has been claimed. Human recordings remain an alternative. Browser speech is a temporary whole-word/instruction fallback only.
+Runway was an earlier access suggestion. The user subsequently subscribed to ElevenLabs. Its signed-in browser UI was used to generate four v4 audition candidates with 1,600 included credits; no API key was required. Provider/library distribution rights and effective settings must be recorded before production integration. Human recordings remain an alternative. Browser speech is still the live app's temporary whole-word/instruction fallback.
 
 ## Visual sample access
 

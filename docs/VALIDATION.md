@@ -130,3 +130,14 @@ Limits: the keyboard zoom shortcut did not change the browser's measured CSS vie
 - A fresh isolated public browser session verified matching versioned app/art URLs, the first two word demonstration frames, My turn into the word task, Help me and Watch an example controls, and the retained six destinations. Measured task controls met the 48-pixel minimum. No console warnings/errors were reported.
 - Returned the public test session to Home without submitting learning answers. The public smoke check is separate from the more extensive local gameplay checks above.
 - The Windows working-tree build ID was `657dad4fc318`; CI uses `bbe506dbf6b3`. The source hash currently includes line-ending bytes, so local CRLF versus repository LF produces different IDs. Each inspected build is internally coherent; deterministic cross-platform hash normalisation is a maintenance candidate, not a reported gameplay failure.
+
+## 2026-10-20 — ElevenLabs casting auditions
+
+- Generated four same-script candidates with Eleven v4: Tamsin/Beth for Pip and Mike/Cotswold for Bear. Saved Generation 1 for each; no best-take selection by ear is claimed.
+- Preserved original MP3s and made levelled comparison copies. FFmpeg decoded every copy successfully; FFprobe confirmed MP3, mono, 44.1 kHz and approximately 24–25 seconds. Post-encode integrated loudness spans -18.72 to -18.46 LUFS, with true peaks below -1.85 dBTP. Hashes and measurements are in `output/voice-auditions/media-validation.json`.
+- Chrome loaded all four players with ready state 4 and no media error. Starting Pip B paused Pip A; keyboard Space paused B. The desktop sheet was visually inspected without horizontal overflow; screenshot saved as `output/voice-auditions/listening-sheet.png`.
+- No ElevenLabs connector was available, so the existing signed-in browser was used. No API credential or private child information was stored. Four requests used 1,600 included credits.
+- Exported filenames have different parameter suffixes despite the displayed common settings. Effective settings need confirmation before production; this is not a controlled settings comparison.
+- `scripts/build.mjs` copies only app shell, `src/` and `assets/`; audition files in `output/` are excluded from the deployed app and offline cache. No runtime code changed, so the app test suite/build were not rerun for this artifact-only milestone.
+
+Limits: no human listening, pronunciation, rights acceptance, parent/educator/child review, final casting or full runtime recording is claimed. No live app audio changed. Q2 remains in progress.

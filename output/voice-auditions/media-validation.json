@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-20",
+  "human_listening_review": false,
+  "normalisation": "FFmpeg two-pass loudnorm, -18 LUFS target, -1.5 dBTP ceiling, 44.1 kHz mono 128 kbps MP3",
+  "files": [
+    {
+      "original": "bear-a-mike.mp3",
+      "comparison": "bear-a-mike-levelled.mp3",
+      "sha256_original": "4b24b93c30ea1a70cd5d5f421c058bd61cb8b70a775136c9da39d4cf93067383",
+      "sha256_comparison": "578464d9bf0c1e285737f565a9d1a236e5f55e488312a0b1031273e055955241",
+      "integrated_lufs": "-18.70",
+      "true_peak_dbtp": "-1.86",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "24.528980",
+          "size": "393343"
+        }
+      }
+    },
+    {
+      "original": "bear-b-cotswold.mp3",
+      "comparison": "bear-b-cotswold-levelled.mp3",
+      "sha256_original": "503a6d21261125661efa2d14b259dbb2b11403a6ddafd9596915f6f22f87f9a1",
+      "sha256_comparison": "146565fa4cf31ca6ed8d923e0734d78fac98e80f9b997e07cf3fba75f8cbf140",
+      "integrated_lufs": "-18.72",
+      "true_peak_dbtp": "-1.92",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "24.032653",
+          "size": "385402"
+        }
+      }
+    },
+    {
+      "original": "pip-a-tamsin.mp3",
+      "comparison": "pip-a-tamsin-levelled.mp3",
+      "sha256_original": "18500704f3513bb69c61b17bb113bddc6e5b4700c45273986a2656e40da21471",
+      "sha256_comparison": "5e51630964af16bb1abfbb4e3b68b367bed16d7b4a1351ac9501e63057d44b1f",
+      "integrated_lufs": "-18.46",
+      "true_peak_dbtp": "-1.85",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "25.155918",
+          "size": "403374"
+        }
+      }
+    },
+    {
+      "original": "pip-b-beth.mp3",
+      "comparison": "pip-b-beth-levelled.mp3",
+      "sha256_original": "4f27ae5455c437d98b97de6e3afde30d2df2c070fda892a12250865cfc0065c3",
+      "sha256_comparison": "ca8c00f805d6aad242e92b9b25a6bab99498be12e547a4e80c7435012a1d9555",
+      "integrated_lufs": "-18.70",
+      "true_peak_dbtp": "-1.88",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mp3",
+            "sample_rate": "44100",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "23.797551",
+          "size": "381640"
+        }
+      }
+    }
+  ]
+}

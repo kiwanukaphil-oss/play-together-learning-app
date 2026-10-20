@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Cast our picnic · Voice auditions</title>
+ <style>
+  *{box-sizing:border-box}body{margin:0;background:#f5f0e7;color:#263d44;font:17px/1.55 system-ui,sans-serif}
+  main{max-width:1080px;margin:auto;padding:48px 28px}header{max-width:780px;margin-bottom:32px}
+  .eyebrow{color:#826139;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+  h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,58px);line-height:1.1;font-weight:500;margin:12px 0 20px}
+  h2{font:500 30px Georgia,serif;margin:0 0 8px}h3{font-size:20px;margin:12px 0 4px}
+  p{margin:0 0 16px}.intro{color:#526367}.cast{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .character{border-radius:24px;background:#fffaf2;border:1px solid #ded7c8;padding:28px}
+  .character.bear{background:#edf1e9}.brief{min-height:54px;color:#526367;font-size:15px}
+  .candidate{padding:20px 0;border-top:1px solid #d9d8cb}.label{font-weight:800;font-size:12px;letter-spacing:1px;color:#74532e}
+  audio{display:block;width:100%;margin:14px 0 8px;min-height:54px}
+  a{color:#305f66;text-underline-offset:3px}a:focus-visible,audio:focus-visible,summary:focus-visible{outline:3px solid #80582d;outline-offset:5px}
+  .download{font-size:13px;display:inline-flex;align-items:center;min-height:44px}.note{font-size:14px;color:#526367}
+  .prompt{margin:28px 0;padding:24px 28px;border-radius:20px;background:#263d44;color:#fff9e9}
+  .prompt p:last-child{margin:0}.prompt strong{color:#f6cc84}
+  details{background:#fffaf2;border:1px solid #ded7c8;border-radius:16px;padding:18px 24px;margin-top:20px}
+  summary{cursor:pointer;font-weight:700;min-height:32px}.script{max-width:760px;padding-top:18px}
+  footer{margin-top:24px;font-size:13px;color:#526367}
+  @media(max-width:700px){main{padding:28px 18px}.cast{grid-template-columns:1fr}.character{padding:22px}.brief{min-height:0}}
+ </style>
+</head>
+<body>
+<main>
+ <header><span class="eyebrow">The Moonlight Picnic · Casting room</span>
+  <h1>Let’s find their voices.</h1>
+  <p class="intro">Two possibilities for Pip. Two for Bear. Each reads the same short passage, from a playful welcome to a quiet ending.</p>
+  <p class="note">AI-generated ElevenLabs v4 auditions · Listening review pending · Not the live app’s voices</p>
+ </header>
+ <div class="cast">
+  <section class="character" aria-labelledby="pip-title">
+   <h2 id="pip-title">Pip</h2><p class="brief">Our direction: curious, bright and gently mischievous. A companion who invites you to explore.</p>
+   <article class="candidate"><span class="label">PIP A</span><h3>Tamsin</h3>
+    <audio controls preload="metadata" aria-label="Play Pip A, Tamsin"><source src="pip-a-tamsin-levelled.mp3" type="audio/mpeg"></audio>
+    <a class="download" href="pip-a-tamsin-levelled.mp3" download>Download Pip A</a>
+   </article>
+   <article class="candidate"><span class="label">PIP B</span><h3>Beth</h3>
+    <audio controls preload="metadata" aria-label="Play Pip B, Beth"><source src="pip-b-beth-levelled.mp3" type="audio/mpeg"></audio>
+    <a class="download" href="pip-b-beth-levelled.mp3" download>Download Pip B</a>
+   </article>
+  </section>
+  <section class="character bear" aria-labelledby="bear-title">
+   <h2 id="bear-title">Bear</h2><p class="brief">Our direction: warm, thoughtful and unhurried. A gentle picnic chef with a quietly funny side.</p>
+   <article class="candidate"><span class="label">BEAR A</span><h3>Mike</h3>
+    <audio controls preload="metadata" aria-label="Play Bear A, Mike"><source src="bear-a-mike-levelled.mp3" type="audio/mpeg"></audio>
+    <a class="download" href="bear-a-mike-levelled.mp3" download>Download Bear A</a>
+   </article>
+   <article class="candidate"><span class="label">BEAR B</span><h3>Cotswold</h3>
+    <audio controls preload="metadata" aria-label="Play Bear B, Cotswold"><source src="bear-b-cotswold-levelled.mp3" type="audio/mpeg"></audio>
+    <a class="download" href="bear-b-cotswold-levelled.mp3" download>Download Bear B</a>
+   </article>
+  </section>
+ </div>
+ <section class="prompt"><p><strong>Which pair feels right?</strong></p><p>Listen for warmth, clear words, natural pauses and a little personality. Tell me your choices, such as <strong>“Pip B + Bear A”</strong>. “Neither” is useful too—say what you would change.</p></section>
+ <p class="note">Each player pauses the others. Comparison copies have matched loudness; the original downloads are preserved. These are first takes, not claims of final voice quality or phonics accuracy.</p>
+ <details><summary>The common audition passage</summary><div class="script">
+  <p>A little picnic, under the moon. Will you help us get ready?</p>
+  <p>My basket is enormous. Our picnic is quite small.</p>
+  <p>Put three apples in the basket.</p>
+  <p>Let’s count what’s here. One. Two. Three.</p>
+  <p>One more apple will make three.</p>
+  <p>Three apples. Our basket is ready.</p>
+  <p>We made a lovely little picnic. Stay a while, or come back another day.</p>
+ </div></details>
+ <footer>Local listening sheet. No login, tracking, microphone, recording or feedback upload. Voice names identify library candidates; final casting is still open.</footer>
+</main>
+<script>
+ const auditionPlayers=[...document.querySelectorAll('audio')];
+ for(const player of auditionPlayers)player.addEventListener('play',()=>{
+  for(const other of auditionPlayers)if(other!==player)other.pause();
+ });
+</script>
+</body>
+</html>
