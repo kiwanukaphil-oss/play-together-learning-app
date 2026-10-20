@@ -13,7 +13,7 @@ RUNTIME_AUDIO = ROOT / "assets" / "picnic" / "sound"
 RUNTIME_MODULE = ROOT / "src" / "picnic-sound-clips.js"
 RATE = 44100
 EFFECT_PEAK_DBFS = -9.0      # voices are levelled to -18 LUFS / -1.5 dBTP; effects sit clearly underneath
-AMBIENCE_LUFS = -36.0        # background only, then ducked further while characters speak
+AMBIENCE_LUFS = -26.0        # about 16 dB under speech in the app mix, then ducked a further ~10 dB while characters speak
 LOOP_CROSSFADE_SECONDS = 1.5
 
 
@@ -30,9 +30,19 @@ def encode(samples, output, bitrate="64k", extra_filter=None):
     subprocess.run(command + ["-ac", "1", "-b:a", bitrate, str(output)], input=samples.astype(numpy.float32).tobytes(), check=True)
 
 
+def measured_lufs(samples):
+    """Integrated loudness of raw samples, measured by FFmpeg's EBU R128 meter."""
+    result = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ac", "1", "-ar", str(RATE), "-i", "-",
+                             "-af", "loudnorm=print_format=json", "-f", "null", "-"],
+                            input=samples.astype(numpy.float32).tobytes(), capture_output=True, check=True)
+    text = result.stderr.decode("utf-8", "replace")
+    return float(json.loads(text[text.rindex("{"):text.rindex("}") + 1])["input_i"])
+
+
 def prepare_effect(samples):
     """Start on the first audible sound, fade the tail and set a consistent peak so no effect jumps out."""
-    audible = numpy.flatnonzero(numpy.abs(samples) > 10 ** (-45 / 20))
+    # Measured against this sound's own peak so soft sounds keep their natural tails.
+    audible = numpy.flatnonzero(numpy.abs(samples) > numpy.max(numpy.abs(samples)) * 10 ** (-50 / 20))
     if not len(audible):
         raise ValueError("silent effect")
     trimmed = samples[max(0, audible[0] - int(.005 * RATE)):audible[-1] + int(.05 * RATE)]
@@ -48,7 +58,8 @@ def prepare_ambience_loop(samples):
     ramp = numpy.linspace(0, 1, crossfade)
     looped = samples[:-crossfade].copy()
     looped[:crossfade] = head * ramp + tail * (1 - ramp)
-    return looped
+    # A fixed gain (not dynamic normalisation) keeps the night sounds steady instead of pumping.
+    return looped * 10 ** ((AMBIENCE_LUFS - measured_lufs(looped)) / 20)
 
 
 def prepare_picnic_sounds():
@@ -65,9 +76,10 @@ def prepare_picnic_sounds():
         samples = decode(original)
         output = RUNTIME_AUDIO / f"{name}.mp3"
         if sound.get("loop"):
-            encode(prepare_ambience_loop(samples), output, "64k", f"loudnorm=I={AMBIENCE_LUFS}:TP=-12:LRA=7")
+            encode(prepare_ambience_loop(samples), output)
         else:
-            encode(prepare_effect(samples), output)
+            # 96 kbps keeps the high shimmer of bells and wicker that 64 kbps MP3 filters away.
+            encode(prepare_effect(samples), output, "96k")
         duration = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(output)],
                                         capture_output=True, text=True, check=True).stdout)
         if not .1 < duration < 30:

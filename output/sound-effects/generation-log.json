@@ -1,0 +1,137 @@
+{
+  "entries": {
+    "tile-place": {
+      "take": 1,
+      "prompt": "a small smooth wooden letter tile placed onto a wooden tray, one soft click, close, dry, no reverb",
+      "seconds": 0.5,
+      "promptSha256": "652aa40ac0707b368640635420c82a61a493448de0bedee6444a8d8b585b6219",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 5,
+      "originalSha256": "c6594e0d52c52ce3a15321fe2ef5b5663db6b3e32c623ab2b9686702cdcf4238",
+      "generatedAt": "2026-10-20T16:06:30.194Z"
+    },
+    "tile-lift": {
+      "take": 1,
+      "prompt": "a small wooden tile gently lifted off a wooden tray, one light soft tick, close, dry",
+      "seconds": 0.5,
+      "promptSha256": "844dde696ae563028d2705364577c08c1db2b9758d0afe13d83eaea51810da2e",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 5,
+      "originalSha256": "a13cc4c2e24c53822c7c10518eef4705790fcd5578fca32527297bd839ba6e6e",
+      "generatedAt": "2026-10-20T16:06:31.935Z"
+    },
+    "apple-basket": {
+      "take": 1,
+      "prompt": "one apple gently dropped into a wicker picnic basket, soft thud with a light wicker creak, close, dry",
+      "seconds": 0.7,
+      "promptSha256": "57ffb138b2ded4f322a9bc8e90e705c7f96d8ab679c0838067f16875c5b7f9f6",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 7,
+      "originalSha256": "49c12e6a61253f46d6641ef2f96676df0fdda12181f747abfefdb0b7b02f41e9",
+      "generatedAt": "2026-10-20T16:06:34.235Z"
+    },
+    "apple-lift": {
+      "take": 1,
+      "prompt": "one apple lifted out of a wicker basket, soft brief wicker rustle, close, gentle",
+      "seconds": 0.6,
+      "promptSha256": "4a0042f455d2c1a48a031afb37e8453744ae0def60d8bfc634999bb4c464b47e",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 6,
+      "originalSha256": "b35b9fc0f3dadf223321902f9bb3b062f079346f4c3b1aa28e1a1c57e759f718",
+      "generatedAt": "2026-10-20T16:06:36.020Z"
+    },
+    "apple-plate": {
+      "take": 1,
+      "prompt": "one apple placed gently on a ceramic plate, soft muted clink, close, dry",
+      "seconds": 0.5,
+      "promptSha256": "57ca00b836628436e417edbc42314e074d128521a90948f812a374f1268fc87e",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 5,
+      "originalSha256": "569657230e7015a4c1546cf22df99aceb187ba3996e0ab0c4352d9b86f989376",
+      "generatedAt": "2026-10-20T16:06:37.843Z"
+    },
+    "reveal": {
+      "take": 1,
+      "prompt": "an old paper map unfolding, ending in a soft warm shimmer of tiny bells, gentle, magical, quiet",
+      "seconds": 1.6,
+      "promptSha256": "9b4143ceed7d475b19f8b9ab542fcf6008763dbe8714be3118403ddc2dec535b",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 16,
+      "originalSha256": "35a66a5078b02f2c2f6670b069375628b52f8500de9d8f7f55e73df444c74ca5",
+      "generatedAt": "2026-10-20T16:06:39.765Z"
+    },
+    "success": {
+      "take": 1,
+      "prompt": "gentle warm three-note rising marimba chime, soft and cheerful, for young children, short, no long tail",
+      "seconds": 1.2,
+      "promptSha256": "b1a545c8dc35a307358d3822ae8663ca00df730c1452b964eb99ef18df22812a",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 12,
+      "originalSha256": "e7dc256c463963ab3381459c8be997e27ec3797e57c15982e8053bd7bcbb871b",
+      "generatedAt": "2026-10-20T16:06:41.980Z"
+    },
+    "sparkle": {
+      "take": 1,
+      "prompt": "tiny soft twinkling sparkle like small glass bells, gentle, brief",
+      "seconds": 0.8,
+      "promptSha256": "c8bd4087c22b73a448e17edc052054823b62f3c915e0fa782599fa33362a9eaa",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 8,
+      "originalSha256": "e341081c7760edd895c99eab8e01f0065150f83bce45e060080724b15ac90923",
+      "generatedAt": "2026-10-20T16:06:43.692Z"
+    },
+    "paper-turn": {
+      "take": 1,
+      "prompt": "a single soft sheet of paper being turned, gentle, close, dry",
+      "seconds": 0.5,
+      "promptSha256": "31f8ce92c27d35f0545f1a463bf1e5f950802866a8e1253afbd50e53d63623aa",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 5,
+      "originalSha256": "113712518a85ac85ce6c4fbefe7d5a8f9603fc88565957408d51ede9a95d67d3",
+      "generatedAt": "2026-10-20T16:06:45.489Z"
+    },
+    "whoosh": {
+      "take": 1,
+      "prompt": "a soft airy gentle whoosh, like a light warm breeze, quiet, brief",
+      "seconds": 0.8,
+      "promptSha256": "9ab2304e49e9f22978e1e6f6da0d9eb0fe38833deed435e4e0afc27cde0a3f6d",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 8,
+      "originalSha256": "de99678c6a1bb6b80a779c2e595ba629a48b36ddbf49523003703283eaed713e",
+      "generatedAt": "2026-10-20T16:06:47.064Z"
+    },
+    "ending": {
+      "take": 1,
+      "prompt": "little lanterns lighting up one by one, soft twinkling glockenspiel notes and gentle shimmer, calm, warm, magical, quiet",
+      "seconds": 2.5,
+      "promptSha256": "c3468bd44418158f5b41898abb5167741132c64b4047a98ed5cbad2f1e454728",
+      "loopRequested": false,
+      "requestId": null,
+      "characterCost": 25,
+      "originalSha256": "061305d828210ed07e849c73bf03fd31bcf3ba198bfe30e49a8a39b53a96d5b1",
+      "generatedAt": "2026-10-20T16:06:49.031Z"
+    },
+    "ambience": {
+      "take": 1,
+      "prompt": "peaceful summer night meadow ambience, soft crickets, gentle breeze in leaves, a very occasional distant soft owl, calm, no music, no voices",
+      "seconds": 22,
+      "promptSha256": "3ac9ce05b99198918270362d331b59e9fdbac5b234dbb2f4d8e9a767a4282f1b",
+      "loopRequested": true,
+      "requestId": null,
+      "characterCost": 220,
+      "originalSha256": "115dee7cc60cf0ace80d78bd380399027a5eb6c4af84410f57de0058f857be10",
+      "generatedAt": "2026-10-20T16:06:54.336Z"
+    }
+  },
+  "model": "eleven_text_to_sound_v2"
+}

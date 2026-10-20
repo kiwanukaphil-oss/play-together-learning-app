@@ -150,7 +150,7 @@ Q2 production and Q3 implementation may overlap once their contracts are defined
 - [ ] Produce separately reviewed phoneme, word, and blending assets needed by the supported learning routes.
 - [ ] Record reviewer, review scope, date, pronunciation convention, and revisions for teaching audio.
 - [x] Create a versioned production audio manifest linking line IDs, transcripts, speakers, files, duration, review status, and provenance; runtime integration remains pending review.
-- [ ] Add restrained object sounds, short character reactions, and optional ambience/music that lowers beneath speech.
+- [ ] Add restrained object sounds, short character reactions, and optional ambience/music that lowers beneath speech. (Object sounds and ducked ambience implemented and measured; short character reactions and parent listening of the mix remain.)
 - [ ] Implement speech priority, replay/cancellation, separate voice/music/effects controls, and user-initiated audio start. (Engine, ducking and effects/ambience toggles implemented; awaiting produced sounds and a mixed-scene listening check.)
 - [ ] Bundle production clips; verify loading, caching, missing-file behaviour, and interruption when navigating away.
 - [x] Keep browser speech as a clearly documented fallback; do not count fallback speech as finished character production.
@@ -318,6 +318,10 @@ The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs 
 
 The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
 
+### Picnic sound effects and night ambience — 2026-10-20
+
+Twelve sounds generated with ElevenLabs sound generation (322 credits) from [the sound direction](docs/PICNIC_SOUND_DIRECTION.json): tile place/lift, apple into basket/out/onto plate, word reveal, success chime, decoration sparkle, paper turn, scene whoosh, lantern ending, and a 20.5 s night loop. `prepare-picnic-sounds.py` trims relative to each sound's peak, levels effects to -9 dBFS peaks at 96 kbps (64 kbps filtered the shimmer), and crossfades/levels the ambience loop at fixed gain (-26 LUFS file). Whisper found no speech in any sound; loop-point level and step continuity checked. `render-sound-mix-preview.py` renders a gameplay mix at the app's exact gains: speech -18 dB, apple/count -19, chime/whoosh about -24, ambience alone about -35 and ducked about 10 dB further. Ambience was raised 10 dB after measuring it 26.6 dB under speech. Chrome production-build checks: ambience starts and ducks/returns with speech, whoosh and tile effects fire, both toggles off are silent, 12 sounds precached, no console errors; 34 tests and the 12 voice/offline checks pass. Parent listening of the mix ([sound check page](output/sound-effects/index.html)) pending.
+
 ### Character animation and sound engine — 2026-10-20
 
 Pip and Bear now lip-sync to their recordings: `prepare-revised-voices.py` stores a 25 fps loudness envelope per clip, and the audio controller drives a `--mouth` value on the speaking character each frame (generic chatter only for the speech fallback). Characters blink and breathe; completion adds a short hop. All motion respects the Playful motion setting and `prefers-reduced-motion` (mouth stays closed). Added a Web Audio sound engine (`src/picnic-sound.js`): action-matched effects (mistakes stay silent), a looped night ambience that ducks under speech, separate parent toggles for effects and night sounds (backward-compatible save fields), and silent fallback when files or Web Audio are missing. Sound direction, generation and preparation scripts are ready (`docs/PICNIC_SOUND_DIRECTION.json`, `scripts/generate-picnic-sounds.mjs`, `scripts/prepare-picnic-sounds.py`); generation is waiting on the Sound Effects permission for the API key. Evidence: 34 tests; Chrome checks of six distinct mouth openings during Bear's welcome, Pip closed, reset at line end, closed under reduced motion, close-up screenshot, and the 12 voice/offline regression checks.
@@ -332,7 +336,7 @@ The user listened to the comparison and asked for the revised voices to be imple
 
 ## 10. Immediate build queue
 
-1. Add restrained sound effects/ambience (ElevenLabs sound effects via the same key) and speaking/idle character animation; then hold one observed play session (private notes outside Git).
+1. Parent listening of the sound mix; then hold one observed play session (private notes outside Git).
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

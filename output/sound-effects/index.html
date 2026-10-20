@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Picnic Sound Check</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f0e7;color:#263d44;font:16px/1.55 system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:44px 24px}.eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#79572f}
+h1{font:500 clamp(34px,5vw,52px)/1.1 Georgia,serif;margin:14px 0 18px}h2{font-size:19px;margin:6px 0 6px}.muted{color:#526367}
+.brief{background:#263d44;color:#fffaf2;padding:22px 26px;border-radius:18px;margin:26px 0}.brief strong{color:#f6cc84}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sample{background:#fffaf2;border:1px solid #ded7c8;border-radius:18px;padding:20px}
+.badge{font-size:12px;font-weight:750;letter-spacing:1px;text-transform:uppercase;color:#79572f}.direction{font-size:14px;color:#526367;min-height:42px}
+audio{width:100%;min-height:54px;display:block}audio:focus-visible{outline:3px solid #b2772d;outline-offset:4px}footer{font-size:13px;color:#526367;margin-top:28px}
+@media(max-width:700px){main{padding:28px 16px}.grid{grid-template-columns:1fr}}
+</style></head><body><main>
+<div class="eyebrow">The Moonlight Picnic · Sound check</div><h1>Small sounds, quiet night.</h1>
+<p class="muted">Twelve sounds at the exact levels the app uses. Effects confirm what your child just did; mistakes deliberately make no sound.</p>
+<div class="brief"><strong>Start with the gameplay mix.</strong> Bear's welcome over the night sounds (which dip while he speaks), packing three apples with counting, the success chime, then three seconds of night sounds alone. Listen on the laptop speakers your child uses.<audio controls preload="metadata" aria-label="Gameplay mix preview" src="mix-preview.mp3" style="margin-top:14px"></audio></div>
+<div class="grid"><section class="sample"><span class="badge">tile-place</span><h2>Letter placed in a word space</h2>
+<p class="direction">a small smooth wooden letter tile placed onto a wooden tray, one soft click, close, dry, no reverb</p><audio controls preload="metadata" aria-label="tile-place" src="../../assets/picnic/sound/tile-place.mp3"></audio></section><section class="sample"><span class="badge">tile-lift</span><h2>Letter removed or undo</h2>
+<p class="direction">a small wooden tile gently lifted off a wooden tray, one light soft tick, close, dry</p><audio controls preload="metadata" aria-label="tile-lift" src="../../assets/picnic/sound/tile-lift.mp3"></audio></section><section class="sample"><span class="badge">apple-basket</span><h2>Apple added to the basket</h2>
+<p class="direction">one apple gently dropped into a wicker picnic basket, soft thud with a light wicker creak, close, dry</p><audio controls preload="metadata" aria-label="apple-basket" src="../../assets/picnic/sound/apple-basket.mp3"></audio></section><section class="sample"><span class="badge">apple-lift</span><h2>Apple taken out of basket or off a plate</h2>
+<p class="direction">one apple lifted out of a wicker basket, soft brief wicker rustle, close, gentle</p><audio controls preload="metadata" aria-label="apple-lift" src="../../assets/picnic/sound/apple-lift.mp3"></audio></section><section class="sample"><span class="badge">apple-plate</span><h2>Apple placed on a friend&#x27;s plate</h2>
+<p class="direction">one apple placed gently on a ceramic plate, soft muted clink, close, dry</p><audio controls preload="metadata" aria-label="apple-plate" src="../../assets/picnic/sound/apple-plate.mp3"></audio></section><section class="sample"><span class="badge">reveal</span><h2>Word completed and its object appears</h2>
+<p class="direction">an old paper map unfolding, ending in a soft warm shimmer of tiny bells, gentle, magical, quiet</p><audio controls preload="metadata" aria-label="reveal" src="../../assets/picnic/sound/reveal.mp3"></audio></section><section class="sample"><span class="badge">success</span><h2>Basket, plates or drawing completed</h2>
+<p class="direction">gentle warm three-note rising marimba chime, soft and cheerful, for young children, short, no long tail</p><audio controls preload="metadata" aria-label="success" src="../../assets/picnic/sound/success.mp3"></audio></section><section class="sample"><span class="badge">sparkle</span><h2>Decoration chosen</h2>
+<p class="direction">tiny soft twinkling sparkle like small glass bells, gentle, brief</p><audio controls preload="metadata" aria-label="sparkle" src="../../assets/picnic/sound/sparkle.mp3"></audio></section><section class="sample"><span class="badge">paper-turn</span><h2>Next or previous drawing step</h2>
+<p class="direction">a single soft sheet of paper being turned, gentle, close, dry</p><audio controls preload="metadata" aria-label="paper-turn" src="../../assets/picnic/sound/paper-turn.mp3"></audio></section><section class="sample"><span class="badge">whoosh</span><h2>Moving to the next scene</h2>
+<p class="direction">a soft airy gentle whoosh, like a light warm breeze, quiet, brief</p><audio controls preload="metadata" aria-label="whoosh" src="../../assets/picnic/sound/whoosh.mp3"></audio></section><section class="sample"><span class="badge">ending</span><h2>Arriving at the picnic ending</h2>
+<p class="direction">little lanterns lighting up one by one, soft twinkling glockenspiel notes and gentle shimmer, calm, warm, magical, quiet</p><audio controls preload="metadata" aria-label="ending" src="../../assets/picnic/sound/ending.mp3"></audio></section><section class="sample"><span class="badge">ambience</span><h2>Loops quietly during the picnic, ducked under speech</h2>
+<p class="direction">peaceful summer night meadow ambience, soft crickets, gentle breeze in leaves, a very occasional distant soft owl, calm, no music, no voices</p><audio controls preload="metadata" aria-label="ambience" src="../../assets/picnic/sound/ambience.mp3" loop></audio></section></div>
+<footer>Generated with ElevenLabs sound effects from the prompts shown; the night sounds loop seamlessly in the app. Only one player runs at a time. Tell Claude which sounds to change, using the names in capitals.</footer>
+</main><script>
+const soundPlayers=[...document.querySelectorAll('audio')];
+for(const player of soundPlayers)player.addEventListener('play',()=>{for(const other of soundPlayers)if(other!==player)other.pause();});
+</script></body></html>
