@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pip &amp; Bear · Recording review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f0e7;color:#263d44;font:16px/1.5 system-ui,sans-serif}
+main{max-width:1100px;margin:auto;padding:44px 24px}header{max-width:780px}.eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#79572f}
+h1{font:500 clamp(32px,5vw,54px)/1.1 Georgia,serif;margin:14px 0 20px}h2{font-size:19px;margin:0}p{margin:12px 0}
+.muted{color:#526367}.summary{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.pill{background:#e4eadd;padding:10px 16px;border-radius:30px;font-weight:650}
+.toolbar{display:flex;gap:16px;flex-wrap:wrap;align-items:end;background:#fffaf2;border:1px solid #ded7c8;padding:20px;border-radius:20px;margin-bottom:24px}
+label{display:grid;gap:6px;font-size:13px;font-weight:650}input,select,textarea,button{font:inherit;border:1px solid #a4ada5;border-radius:9px;padding:10px;background:#fffdf8;color:#263d44;min-height:44px}
+input{min-width:240px}button{cursor:pointer;background:#263d44;color:#fffaf2;border-color:#263d44;font-weight:650}
+:focus-visible{outline:3px solid #b2772d;outline-offset:4px}.toolbar label:first-child{flex:1}
+.recordings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.recording{background:#fffaf2;border:1px solid #ded7c8;border-radius:20px;padding:22px}
+.recording.bear{background:#edf1e9}.recording[hidden]{display:none}.line-id{font-size:12px;color:#526367;overflow-wrap:anywhere;margin-bottom:8px}
+.transcript{font-size:19px;min-height:58px}.direction{font-size:13px;color:#526367;min-height:38px}
+audio{width:100%;margin:10px 0 16px;min-height:54px}textarea{resize:vertical;min-height:65px;width:100%}.review-fields{display:grid;gap:12px}
+.review-fields select{width:100%}.notice{padding:20px 24px;background:#263d44;color:#fffaf2;border-radius:18px;margin:24px 0}
+footer{font-size:13px;color:#526367;margin-top:24px}a{color:#305f66}.empty{padding:24px;border:1px dashed #79572f;border-radius:18px}
+@media(max-width:700px){main{padding:28px 16px}.recordings{grid-template-columns:1fr}.toolbar{display:grid}.transcript,.direction{min-height:0}input{min-width:0;width:100%}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">The Moonlight Picnic · Recording room</div>
+<h1>Pip &amp; Bear, line by line.</h1>
+<p class="muted">Your cast: <strong>Tamsin as Pip</strong> and <strong>Mike as Bear</strong>. These are the first production takes, ready for listening.</p>
+<p class="muted">Check the words against the transcript, then listen for warmth, clear numbers and natural pauses. Mark any take that needs another recording.</p></header>
+<div class="summary"><span class="pill" id="total">Loading recordings…</span><span class="pill" id="review-count">Listening review pending</span></div>
+<div class="toolbar">
+<label>Find a line<input id="search" type="search" placeholder="Search words, scene or line ID"></label>
+<label>Character<select id="speaker"><option value="">Pip &amp; Bear</option value="pip">Pip · Tamsin</option><option value="bear">Bear · Mike</option></select></label>
+<label>Review<select id="review-filter"><option value="">All recordings</option value="pending">Not reviewed</option><option value="good">Sounds good</option><option value="retake">Needs another take</option></select></label>
+<button id="export" type="button">Download review notes</button>
+</div>
+<p id="result-count" class="muted" aria-live="polite"></p>
+<div class="notice">Technical checks are complete. Listening review is still open. These clips are not yet enabled in the live app. Teaching pronunciation needs separate review.</div>
+<div id="recordings" class="recordings"></div><p id="empty" class="empty" hidden>No lines match these filters.</p>
+<footer>Your review notes stay in this browser. Download them to keep or share a copy; nothing is uploaded automatically. Only one player runs at a time. Original exports are preserved separately from these levelled copies.</footer>
+</main>
+<script src="catalogue.js"></script>
+<script src="review.js"></script>
+</body></html>

@@ -1,0 +1,2017 @@
+{
+  "scriptVersion": 2,
+  "model": "eleven_v4",
+  "casting": {
+    "date": "2026-10-20",
+    "evidence": "User selected Pip A + Bear A in conversation",
+    "voices": {
+      "pip": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "bear": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      }
+    }
+  },
+  "settings": {
+    "stability": 0.5,
+    "similarity": 0.75,
+    "evidence": "Displayed Eleven v4 UI values for both voices; reapplied for Mike. Filename suffixes remain different and are preserved, not treated as effective-setting evidence."
+  },
+  "entries": [
+    {
+      "id": "welcome",
+      "speaker": "bear",
+      "text": "A little picnic, under the moon. Will you help us get ready?",
+      "direction": "A small smile; pause after picnic.",
+      "generationText": "[warmly] A little picnic, under the moon. Will you help us get ready?",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/welcome.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_43_55_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/welcome.mp3",
+      "duration": 4.127347,
+      "bytes": 66917,
+      "originalSha256": "36251debcb1bf123321686b6bd6bec911a963680ea7aab54d6a15054a2b62f41",
+      "sha256": "6cba1b80ae093eba29fab5f66c6a5887e355465c785f8e55b91d539dc720e0d7",
+      "integratedLufs": -18.11,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "resume",
+      "speaker": "pip",
+      "text": "Our picnic is waiting. Shall we carry on?",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Our picnic is waiting. Shall we carry on?",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/resume.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_37_27_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "file": "clips/resume.mp3",
+      "duration": 2.925714,
+      "bytes": 47691,
+      "originalSha256": "63a06c54f50f9112355b719a113bffe64dd7aed777662d554bf329bd385fd48f",
+      "sha256": "0a06786fd70a56f19b670aa7be6f58b75a70bb3e7cad9f5514ebd1e6b24a575c",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.2,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "take": 1,
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "exit",
+      "speaker": "pip",
+      "text": "We can leave our picnic here. Come back whenever you like.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[softly] We can leave our picnic here. Come back whenever you like.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/exit.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_38_20_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "file": "clips/exit.mp3",
+      "duration": 3.474286,
+      "bytes": 56468,
+      "originalSha256": "40a9315838b7bbf872ed196d5becdf93689a05c29380c623e9cdad2fabbf6a52",
+      "sha256": "83cda6c70c0f0b7c92e8e142d72984d5b4bbc6a8b62622a3380c3609dbf26eed",
+      "integratedLufs": -18.51,
+      "truePeakDbtp": -1.94,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "take": 1,
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-help-1",
+      "speaker": "pip",
+      "text": "Listen to the word again. Which letter comes next?",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Listen to the word again. Which letter comes next?",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-help-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_39_30_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-help-1.mp3",
+      "duration": 3.709388,
+      "bytes": 60230,
+      "originalSha256": "a616a97655d9f23ef9b9e1955c21376e6932d9b6d78b65acc6cb693b1af93161",
+      "sha256": "4dec2bbc72523b97527179dd04ed1ddf38c04e71fdce303211c91305036ec257",
+      "integratedLufs": -18.93,
+      "truePeakDbtp": -1.86,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-help-2",
+      "speaker": "pip",
+      "text": "Here is one letter to help. Check the word when you are ready.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Here is one letter to help. Check the word when you are ready.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-help-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_39_38_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-help-2.mp3",
+      "duration": 4.127347,
+      "bytes": 66917,
+      "originalSha256": "44522a164acaa9f7307001520de624376b12303bfa349b52e83cc64fb8a90f1d",
+      "sha256": "25aeff4a5b584a08456a8cb168c62a829f87c6dd1f7675ccefc700989f336eb3",
+      "integratedLufs": -19.06,
+      "truePeakDbtp": -2.54,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-help-3",
+      "speaker": "pip",
+      "text": "Keep the letters that fit. Let’s look at this space together.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Keep the letters that fit. Let’s look at this space together.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-help-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_39_45_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-help-3.mp3",
+      "duration": 4.127347,
+      "bytes": 66917,
+      "originalSha256": "1e60f66c1a239ff190ea10efb6be90428c98b33d30f495dd6b5240235837ce98",
+      "sha256": "3a935f73f34667c0046e9e96a7514093e500fecd3c409c3ed8c4d18ec9330a8c",
+      "integratedLufs": -18.12,
+      "truePeakDbtp": -1.92,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-retry",
+      "speaker": "pip",
+      "text": "Some letters need another look. The letters that fit can stay.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Some letters need another look. The letters that fit can stay.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-retry.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_39_52_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-retry.mp3",
+      "duration": 4.675918,
+      "bytes": 75694,
+      "originalSha256": "1aba20c925cc0cdea0156227712e5ac49350c622fe1154ae41ca6b3471fe4b22",
+      "sha256": "e225259ace5dd308d9b8ba9a07c9eed1634ca7a67a49bca5c5468b372ae9a00b",
+      "integratedLufs": -18.79,
+      "truePeakDbtp": -1.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-few",
+      "speaker": "bear",
+      "text": "Our basket needs a little more. Count the apples, then add some.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Our basket needs a little more. Count the apples, then add some.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-few.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_44_03_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-few.mp3",
+      "duration": 4.597551,
+      "bytes": 74440,
+      "originalSha256": "1890ebc9abf9d0c00d711d1211e7b5cf646296debf22bfe20f9f3648fc066ea1",
+      "sha256": "f571ca7596c75b1f995e26e6d2a2278761f3039fcdd7ea3d62494c1848632b1f",
+      "integratedLufs": -18.37,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-many",
+      "speaker": "bear",
+      "text": "There are too many apples. Count them, then take some out.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] There are too many apples. Count them, then take some out.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-many.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_44_10_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-many.mp3",
+      "duration": 4.362449,
+      "bytes": 70679,
+      "originalSha256": "d7eb782fa47ad68b91f6a257d591fbbf9fe6a109bc404f688a7e66d78805e492",
+      "sha256": "cb3ff024d74c89cf79d996c45a8f3cc326f2778b68dc9faf10acccb64e2f7f49",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.56,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-help-1",
+      "speaker": "bear",
+      "text": "Count each apple in the basket. How many are there?",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Count each apple in the basket. How many are there?",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-help-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_44_17_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-help-1.mp3",
+      "duration": 4.127347,
+      "bytes": 66917,
+      "originalSha256": "8b05eb561f5006ae54b0e715ef191b48addba61f644595c89a291216fad60890",
+      "sha256": "ea2302380f8216d7f4c3deeda5d2135da8d9d8dd45dd640ac8a1ddca58cb0776",
+      "integratedLufs": -18.89,
+      "truePeakDbtp": -1.89,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-help-2",
+      "speaker": "bear",
+      "text": "I’ll move one apple. You can finish getting the basket ready.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] I’ll move one apple. You can finish getting the basket ready.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-help-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_44_45_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-help-2.mp3",
+      "duration": 4.04898,
+      "bytes": 65663,
+      "originalSha256": "aba000c9799e1c3cbf6154b0b4d361fbd6c232730498bfad92df5eb000d53c16",
+      "sha256": "56f93481accde44f225890e1e4a3f2b32b966f657367cdc9c7c23003ec9b7377",
+      "integratedLufs": -18.93,
+      "truePeakDbtp": -1.9,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-help-3",
+      "speaker": "bear",
+      "text": "Let’s count the basket together, one apple at a time.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Let’s count the basket together, one apple at a time.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-help-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_01_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-help-3.mp3",
+      "duration": 4.205714,
+      "bytes": 68171,
+      "originalSha256": "11b1378940262bef29db5d1d970a3fe80141e24c66f95b00ba0730189af22f51",
+      "sha256": "b9bdf185665b68b982b1e9bfdeacc452b827fa42ae062813cad07b6e41aa2744",
+      "integratedLufs": -18.65,
+      "truePeakDbtp": -1.69,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-success-1",
+      "speaker": "bear",
+      "text": "Just enough apples. Our basket is ready.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] Just enough apples. Our basket is ready.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-success-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_09_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-success-1.mp3",
+      "duration": 3.552653,
+      "bytes": 57722,
+      "originalSha256": "8a596f1c3824858dea0770997b03f0a1b6b311cb277dad5dee9cb2db5e9dc557",
+      "sha256": "4ea55264783285c46e54e3ec28d9c35d770692eec88ab99293c230029efc3964",
+      "integratedLufs": -18.77,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-success-2",
+      "speaker": "bear",
+      "text": "That is the number we need. Let’s take our basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] That is the number we need. Let’s take our basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-success-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_16_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-success-2.mp3",
+      "duration": 3.787755,
+      "bytes": 61484,
+      "originalSha256": "2cb3f4df63452d1cc5b7370a8c84459810578cc6b9b41e30dfce0cf5b4ed40ab",
+      "sha256": "bc1fdf0a2bca5fb7d17a847d66e191da94d502e37a9a80a9bc6d78dd7c9181b2",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.12,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-success-3",
+      "speaker": "bear",
+      "text": "You checked the apples. We are ready for our picnic.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] You checked the apples. We are ready for our picnic.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-success-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_24_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-success-3.mp3",
+      "duration": 3.63102,
+      "bytes": 58976,
+      "originalSha256": "45606a8014c9e24016183a66e785d8677f9c9bced6d5f32414269e63e1cb4f92",
+      "sha256": "6efdee111bf8f3af42cc536b5762761d7e86cac0e2460d69fc9dd131ffa21466",
+      "integratedLufs": -18.6,
+      "truePeakDbtp": -1.96,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share",
+      "speaker": "bear",
+      "text": "Give Pip and me the same number of apples. Use all the apples.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Give Pip and me the same number of apples. Use all the apples.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_31_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share.mp3",
+      "duration": 4.675918,
+      "bytes": 75694,
+      "originalSha256": "51d03012ce8021ad6e5dc4ac46fb10cde5fbf4cd8dd75d3a6eca2b81d6180207",
+      "sha256": "302cd09a9a5933bd6bc08198d30eeb3a522e7677420458cc3cbbfd903af9cd0b",
+      "integratedLufs": -18.59,
+      "truePeakDbtp": -3.34,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-retry",
+      "speaker": "bear",
+      "text": "Let’s look at both plates. Does each friend have the same number?",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Let’s look at both plates. Does each friend have the same number?",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-retry.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_45_53_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-retry.mp3",
+      "duration": 4.362449,
+      "bytes": 70679,
+      "originalSha256": "0b9f7d4082b1df0d52e6b736602a69d2f5b55d1aeecd6ce1d04138ff7a7d9cc3",
+      "sha256": "f7d46a81b5e4df3b839c1c5a519db9b411a78b4dd21319d7a7ae5ac415b568a5",
+      "integratedLufs": -18.05,
+      "truePeakDbtp": -1.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-left",
+      "speaker": "bear",
+      "text": "The plates match. There are still apples waiting. Give one to each friend.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] The plates match. There are still apples waiting. Give one to each friend.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-left.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_00_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-left.mp3",
+      "duration": 5.407347,
+      "bytes": 87397,
+      "originalSha256": "24927621b8e90f7ec6a052531fa5c48a94e45736af2257d82cb89d35c4d4d3c8",
+      "sha256": "6490cf9950a8b4478b17901adfca5733c144cc2892634a7d5253e7e511bc97a5",
+      "integratedLufs": -19.23,
+      "truePeakDbtp": -1.92,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-help-1",
+      "speaker": "bear",
+      "text": "Try giving one apple to Pip, then one to me.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Try giving one apple to Pip, then one to me.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-help-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_07_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-help-1.mp3",
+      "duration": 3.970612,
+      "bytes": 64409,
+      "originalSha256": "b2d104ade3e332e622fa0127eabd58095ddb671159f1c6e0f1bb9ca3b2a5967c",
+      "sha256": "bdef612b828399a32a388ccdc110d969d31782e44f8f83e6c2dec1a24e921433",
+      "integratedLufs": -18.82,
+      "truePeakDbtp": -1.92,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-help-2",
+      "speaker": "bear",
+      "text": "I’ll move one apple to help make the plates the same.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] I’ll move one apple to help make the plates the same.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-help-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_26_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-help-2.mp3",
+      "duration": 3.63102,
+      "bytes": 58976,
+      "originalSha256": "d296a0b3226cd99f75ef6965fa171f857d8c6ec0a45e8eeb61641ba900df8ec1",
+      "sha256": "4948c644b1946ecae4b11859e1e4b9bb7176c75b22307cd2aff22bcf4f8a29a9",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.4,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-help-3",
+      "speaker": "bear",
+      "text": "Count each plate. You can move an apple back if you need to.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[gently] Count each plate. You can move an apple back if you need to.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-help-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_33_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-help-3.mp3",
+      "duration": 4.519184,
+      "bytes": 73186,
+      "originalSha256": "b72306dc95d0bdbe4a41424ea72f9df4e5f2be8f48aebddd0d27a6c2f83136ca",
+      "sha256": "b543ae0f0874839a01ff935281c7531f12692b2bebc69c3a952c19cf82bf481b",
+      "integratedLufs": -18.4,
+      "truePeakDbtp": -1.94,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-success-1",
+      "speaker": "pip",
+      "text": "The same for each of us. Our picnic is ready.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] The same for each of us. Our picnic is ready.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-success-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_10_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/share-success-1.mp3",
+      "duration": 3.160816,
+      "bytes": 51453,
+      "originalSha256": "dbb7cf701644ba9b98eb988a00aa620ce6831483cc5ebe60b225aa19d56557ad",
+      "sha256": "dae67130960406fa54b10b4cc2367161baa0eb90a40e46879b501695b113394a",
+      "integratedLufs": -18.47,
+      "truePeakDbtp": -2.33,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-success-2",
+      "speaker": "pip",
+      "text": "Two happy plates. We both have the same number.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] Two happy plates. We both have the same number.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-success-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_18_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/share-success-2.mp3",
+      "duration": 3.474286,
+      "bytes": 56468,
+      "originalSha256": "7ab05eb95ddeebc98790c422655af86a0c95507f43f241335aa4b6127d092919",
+      "sha256": "f42bbd2454e41e914305e4c179e15550a283946032a8d2f2f7f3107d6fd4bd34",
+      "integratedLufs": -18.83,
+      "truePeakDbtp": -2.26,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-success-3",
+      "speaker": "pip",
+      "text": "All shared out. Thank you for checking both plates.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[pleased] All shared out. Thank you for checking both plates.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-success-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_25_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/share-success-3.mp3",
+      "duration": 3.709388,
+      "bytes": 60230,
+      "originalSha256": "b9ae029f582b5bd04e6e03d0669d150a6671f272ef8a65fcd9b7fa92df0c970c",
+      "sha256": "9526116be0370b2f08c690736558f925ca2388231ec010964cddf642d6e89fff",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -2.31,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper",
+      "speaker": "pip",
+      "text": "Get some paper and a pencil. Let’s draw a lantern for our picnic.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Get some paper and a pencil. Let’s draw a lantern for our picnic.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_32_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper.mp3",
+      "duration": 3.970612,
+      "bytes": 64409,
+      "originalSha256": "60af37406aa82fb1f7d527a2002d567b76d80a9f26cac8d1bdcff785c6061f95",
+      "sha256": "7762401ed13719abdf69027c74994a5a95633dbeeec46c6416698b74f3ec33a0",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.6,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-extension-1",
+      "speaker": "pip",
+      "text": "What pattern will your lantern have? You can invent one.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[patiently] What pattern will your lantern have? You can invent one.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-extension-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_39_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-extension-1.mp3",
+      "duration": 3.474286,
+      "bytes": 56468,
+      "originalSha256": "1ea4c63ec5c0537265e509f57ea74cd285bc386094a6b89f7653fc5b66cf5d9a",
+      "sha256": "12b9795cc12b4cb8021dba808294fee7e436ff02db97c6b7bf0b63c39b0c986f",
+      "integratedLufs": -18.46,
+      "truePeakDbtp": -1.95,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-extension-2",
+      "speaker": "pip",
+      "text": "Who could carry your lantern? Draw a little creature beside it.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[patiently] Who could carry your lantern? Draw a little creature beside it.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-extension-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_40_46_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-extension-2.mp3",
+      "duration": 4.04898,
+      "bytes": 65663,
+      "originalSha256": "2770df77eb1afc675d9c38432a3c7b0a4e0fef82c56821193f03d1a107a7f9fb",
+      "sha256": "19568264842d63a4f2ca64c99bdbb94d1096bb5f1d7dde14d4b814bccac0f1eb",
+      "integratedLufs": -18.3,
+      "truePeakDbtp": -2.43,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "ending-drawn",
+      "speaker": "bear",
+      "text": "The food is ready, and you made a lantern on paper. A lovely little picnic.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[softly] The food is ready, and you made a lantern on paper. A lovely little picnic.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/ending-drawn.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_40_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/ending-drawn.mp3",
+      "duration": 5.146122,
+      "bytes": 83217,
+      "originalSha256": "3b8a043d4a1bccc86d3b0298c7e1872445a0591bb8b67266f3aa9828addfac4a",
+      "sha256": "4fa413c5fb81364bbb3eb9f113e9afbcdf0d68a90c8336c933206e92f0e047ff",
+      "integratedLufs": -19.2,
+      "truePeakDbtp": -1.92,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "ending-skipped",
+      "speaker": "bear",
+      "text": "The food is ready. A lovely little picnic, under the moon.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[softly] The food is ready. A lovely little picnic, under the moon.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/ending-skipped.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_46_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/ending-skipped.mp3",
+      "duration": 4.362449,
+      "bytes": 70679,
+      "originalSha256": "d6b0410cb60efc35905f8240561520862739f2c686596b1350cdc53c13af776d",
+      "sha256": "88b143b0bd222bf8e3772a9567fee216005738e7faaa846b8a2952f1b1130e2d",
+      "integratedLufs": -18.41,
+      "truePeakDbtp": -1.88,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "decoration",
+      "speaker": "pip",
+      "text": "Choose a little decoration for our picnic.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Choose a little decoration for our picnic.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/decoration.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_03_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/decoration.mp3",
+      "duration": 2.507755,
+      "bytes": 41004,
+      "originalSha256": "bf9c04cb48f50f671648117a06d10e25855b54e088475694ca94656a1d5ac81e",
+      "sha256": "431eb0d69fae762b6bde36a81e06ece398f657ba1d3e6a80562357809b9ecf0d",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -3.22,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-map",
+      "speaker": "pip",
+      "text": "Let’s make map. Choose the letters for map.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Let’s make map. Choose the letters for map.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-map.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_10_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-map.mp3",
+      "duration": 3.239184,
+      "bytes": 52706,
+      "originalSha256": "4861cdfb2398dc0abeaa0e4338208fb5982cc414e50164b2b244fcfe9039987b",
+      "sha256": "278c73e01922cfd25fb1509e3ab894222ebbbb57c70223d47a3acb5fe503215b",
+      "integratedLufs": -18.46,
+      "truePeakDbtp": -3.99,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-success-map",
+      "speaker": "pip",
+      "text": "A map! Now we can find our picnic spot.",
+      "direction": "Delighted discovery, not shouting.",
+      "generationText": "[pleased] A map! Now we can find our picnic spot.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-success-map.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_17_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-success-map.mp3",
+      "duration": 3.160816,
+      "bytes": 51453,
+      "originalSha256": "645caa9cf15c40ce2cfbdc51f6b4a4556df33aa67f500b5534a3132f330f8b01",
+      "sha256": "92deca5ddbfe6b4ceeb5dd4fa1cbbb23423151324a5c49d45bcb2560327e4684",
+      "integratedLufs": -18.46,
+      "truePeakDbtp": -2.78,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-mat",
+      "speaker": "pip",
+      "text": "Let’s make mat. Choose the letters for mat.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Let’s make mat. Choose the letters for mat.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-mat.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_25_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-mat.mp3",
+      "duration": 3.395918,
+      "bytes": 55214,
+      "originalSha256": "bbaaf6d2992e0e9f204c4c1a61295b2ccf3bfb7ef3ab54ee6ffdb84b03c99310",
+      "sha256": "af740c8938fe82789c7a30451a5179739a778b99d15b06cccd7c31410025b3d2",
+      "integratedLufs": -18.46,
+      "truePeakDbtp": -2.46,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-success-mat",
+      "speaker": "pip",
+      "text": "A mat! A cosy place for our friends to sit.",
+      "direction": "Delighted discovery, not shouting.",
+      "generationText": "[pleased] A mat! A cosy place for our friends to sit.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-success-mat.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_32_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-success-mat.mp3",
+      "duration": 3.474286,
+      "bytes": 56468,
+      "originalSha256": "46fcdcb2d3531d046a5809d70467b7f727ade401a72974e952288cb2d5997411",
+      "sha256": "83f80be039021f9d9137e2b4bf20e945c7228684fcdd1edd6893fcab3a4bc961",
+      "integratedLufs": -18.79,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-pan",
+      "speaker": "pip",
+      "text": "Let’s make pan. Choose the letters for pan.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Let’s make pan. Choose the letters for pan.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-pan.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_41_39_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-pan.mp3",
+      "duration": 3.63102,
+      "bytes": 58976,
+      "originalSha256": "92be9912fcf1b1f3b1e1d1dbf3443062690d3ab94fbe1a2648a00cd2bd69cfd1",
+      "sha256": "1f57785152b092dc42c83140434d22a8e5d1e3b167cdb4130870b75de530dad6",
+      "integratedLufs": -18.52,
+      "truePeakDbtp": -1.9,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "word-success-pan",
+      "speaker": "pip",
+      "text": "A pan! Bear can get our picnic ready.",
+      "direction": "Delighted discovery, not shouting.",
+      "generationText": "[pleased] A pan! Bear can get our picnic ready.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/word-success-pan.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_03_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/word-success-pan.mp3",
+      "duration": 3.160816,
+      "bytes": 51453,
+      "originalSha256": "a9147bff77d341e1486c33af56363eaaaf48bb64f801c244faa543f13772adb2",
+      "sha256": "536353bb4b0a771eb6dcdb3d5eb3428b773d501537018de52c04ae6bb6d22ba9",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -2.36,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-one-on-cloth",
+      "speaker": "bear",
+      "text": "Put 1 apple in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put one apple in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-one-on-cloth.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_46_53_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-one-on-cloth.mp3",
+      "duration": 2.272653,
+      "bytes": 37242,
+      "originalSha256": "6f31697a47e75e9866a1dbd4516c463d4780bfe1a71a787db5f62491cb0896d8",
+      "sha256": "3781886c85286204ba53089f9c802dbae7e682e602217c07892789d591722498",
+      "integratedLufs": -20.21,
+      "truePeakDbtp": -1.9,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-two-together",
+      "speaker": "bear",
+      "text": "Put 2 apples in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put two apples in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-two-together.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_47_00_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-two-together.mp3",
+      "duration": 2.272653,
+      "bytes": 37242,
+      "originalSha256": "7d9650ea3186dd0a35b08e24532a19211702334d56e0029e1bba9841f76c0714",
+      "sha256": "62775901bb3066e454f31adcde471d3da3efce9f89c0c4e87b87c34e3a7e82c0",
+      "integratedLufs": -19.01,
+      "truePeakDbtp": -1.9,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-three-in-row",
+      "speaker": "bear",
+      "text": "Put 3 apples in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put three apples in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-three-in-row.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_47_37_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-three-in-row.mp3",
+      "duration": 2.272653,
+      "bytes": 37242,
+      "originalSha256": "fb1ccb67a9b3c984d1db8ad909ded554473178efbfb1d703be72eb6e738ec1d7",
+      "sha256": "5d578df1990057f943ddfc75e0d8b7278157170f63f7d85873f8f5d8dde3e82b",
+      "integratedLufs": -19.51,
+      "truePeakDbtp": -1.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-four-in-pairs",
+      "speaker": "bear",
+      "text": "Put 4 apples in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put four apples in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-four-in-pairs.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_47_44_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-four-in-pairs.mp3",
+      "duration": 2.35102,
+      "bytes": 38496,
+      "originalSha256": "d10786c3e422ea13046aeca1c507bd84f80069af692641f3a07131da70282eca",
+      "sha256": "9806ea934c9eff123a15c961586967b540cdc8e3bccc81e88b910f72392b468d",
+      "integratedLufs": -21.52,
+      "truePeakDbtp": -1.95,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-five-in-row",
+      "speaker": "bear",
+      "text": "Put 5 apples in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put five apples in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-five-in-row.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_47_51_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/pack-five-in-row.mp3",
+      "duration": 2.507755,
+      "bytes": 41004,
+      "originalSha256": "26b61f7b2c9111cc478f5cad69978c3f5894ffac2c8a8fb830cc7958a4aba7c8",
+      "sha256": "3986ee5dac021830900cb8ba8daca1db4c3de3aabeca93b611b16e6781436dbb",
+      "integratedLufs": -19.7,
+      "truePeakDbtp": -2.01,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "pack-five-staggered",
+      "speaker": "bear",
+      "text": "Put 5 apples in the basket.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] Put five apples in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/pack-five-in-row.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_47_51_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "reusedFrom": "pack-five-in-row",
+      "file": "clips/pack-five-staggered.mp3",
+      "duration": 2.507755,
+      "bytes": 41004,
+      "originalSha256": "26b61f7b2c9111cc478f5cad69978c3f5894ffac2c8a8fb830cc7958a4aba7c8",
+      "sha256": "3986ee5dac021830900cb8ba8daca1db4c3de3aabeca93b611b16e6781436dbb",
+      "integratedLufs": -19.7,
+      "truePeakDbtp": -2.01,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-start-share-two",
+      "speaker": "bear",
+      "text": "I brought 2 more apples. Share these between Pip and me. Give us the same number.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] I brought two more apples. Share these between Pip and me. Give us the same number.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-start-share-two.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_12_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-start-share-two.mp3",
+      "duration": 5.067755,
+      "bytes": 81964,
+      "originalSha256": "89af97adedef30bbd5f3ced2f2735b0c5c04f57ca36876db4a3fd409deeac397",
+      "sha256": "c319bdc99e1e705cb647382e204322f288e626c392e18c09e58c3357b9b1d2fd",
+      "integratedLufs": -18.64,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-start-share-four",
+      "speaker": "bear",
+      "text": "I brought 4 more apples. Share these between Pip and me. Give us the same number.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] I brought four more apples. Share these between Pip and me. Give us the same number.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-start-share-four.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_20_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-start-share-four.mp3",
+      "duration": 5.250612,
+      "bytes": 84889,
+      "originalSha256": "c210969972fc1b99a0202496add0333b885841f80892161011f60b6f7634ff0a",
+      "sha256": "e45cbb245762f13bfa7a617db3870abb9e8c2e9ca4fe79bee8bc117bde1ad75c",
+      "integratedLufs": -18.39,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "share-start-share-six",
+      "speaker": "bear",
+      "text": "I brought 6 more apples. Share these between Pip and me. Give us the same number.",
+      "direction": "Warm, clear, conversational.",
+      "generationText": "[warmly] I brought six more apples. Share these between Pip and me. Give us the same number.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/share-start-share-six.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_27_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/share-start-share-six.mp3",
+      "duration": 5.250612,
+      "bytes": 84889,
+      "originalSha256": "612d3b1ff4e61eedea6013f93f2a169091afc9aac00eb09773708e0cbb60c56f",
+      "sha256": "de62e916a18775f7e1b2962de3ddf5e32a1a82a9882b50f494e53fd9da97e270",
+      "integratedLufs": -18.72,
+      "truePeakDbtp": -1.9,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-0",
+      "speaker": "bear",
+      "text": "0",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Zero.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-0.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_41_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-0.mp3",
+      "duration": 0.992653,
+      "bytes": 16762,
+      "originalSha256": "572d69718488231da1fa0acd6ec1481d350bff31ddcd6e8cb0dd393995462faa",
+      "sha256": "a09952f42f863ef38a4ad902235ef745f3d5a947782022eff1f50708b6a5f7cf",
+      "integratedLufs": -18.48,
+      "truePeakDbtp": -5.03,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-1",
+      "speaker": "bear",
+      "text": "1",
+      "direction": "Clear number, short and dry.",
+      "generationText": "One.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_48_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-1.mp3",
+      "duration": 0.835918,
+      "bytes": 14254,
+      "originalSha256": "32fde3c68771dedf90562797e962a6453bc36f19930b80b25d3e0419559b6f92",
+      "sha256": "1ec429e9cc6fb2789d500bc2efcd659345a79d56ef15359dfa2481834f0f5b0f",
+      "integratedLufs": -18.43,
+      "truePeakDbtp": -1.98,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-2",
+      "speaker": "bear",
+      "text": "2",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Two.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_48_55_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-2.mp3",
+      "duration": 0.835918,
+      "bytes": 14254,
+      "originalSha256": "80e08b98eb23d771fa5c25783d39ff0ea59109794f692943bb97f8fb6d86499b",
+      "sha256": "78a07e3b88b58d8be48e5656f4dfe58330bb7f7efdfe2ad7f1bea93230974025",
+      "integratedLufs": -18.7,
+      "truePeakDbtp": -1.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-3",
+      "speaker": "bear",
+      "text": "3",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Three.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-3.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_49_02_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-3.mp3",
+      "duration": 0.914286,
+      "bytes": 15508,
+      "originalSha256": "5d5c57bba5b47a2b05a2a576d7311634fad38303431c28e1a5752a0f166956ce",
+      "sha256": "48d0f3ce2febebb5663f627aa318a72c2d1a9842b529fd50b80568b53ab6bd2c",
+      "integratedLufs": -18.43,
+      "truePeakDbtp": -2.56,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-4",
+      "speaker": "bear",
+      "text": "4",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Four.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-4.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_49_09_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-4.mp3",
+      "duration": 0.914286,
+      "bytes": 15508,
+      "originalSha256": "34c86ae5fcad1d77a4e98a631ee51ff0c6163955673857aafaa6da5a1dfbc1b1",
+      "sha256": "450d4294b7c255baf784400391e678a75d620b7ed3526b84a4588aca97aef8c7",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -2.5,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-5",
+      "speaker": "bear",
+      "text": "5",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Five.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-5.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_49_16_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-5.mp3",
+      "duration": 0.914286,
+      "bytes": 15508,
+      "originalSha256": "f928c5287e905c1189a854aeb06760c0012b90e03537d91f4323d8c42238e903",
+      "sha256": "be9898d6384397a23aacd3dcb568bda6103b492dfb64519d70facb623e0d2e0d",
+      "integratedLufs": -18.39,
+      "truePeakDbtp": -2.59,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "count-6",
+      "speaker": "bear",
+      "text": "6",
+      "direction": "Clear number, short and dry.",
+      "generationText": "Six.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/count-6.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_22_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/count-6.mp3",
+      "duration": 0.992653,
+      "bytes": 16762,
+      "originalSha256": "0030a31625c446eda44ca1f39bbc2cad47ad033a82a166d1fa6e3e25d38af07e",
+      "sha256": "41e3842d90916571618eddcec5aded1768b126a23902857b9243c3ef5d65fccf",
+      "integratedLufs": -18.48,
+      "truePeakDbtp": -2.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-rim",
+      "speaker": "pip",
+      "text": "Draw a short line across your paper.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Draw a short line across your paper.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-rim.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_10_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-rim.mp3",
+      "duration": 2.847347,
+      "bytes": 46437,
+      "originalSha256": "67d30137e0187bc0edb9a8ec10bb7757163074df67aeb4799dd260aff51f6e7c",
+      "sha256": "f53a29de5d5a7074f774d852b007644034350ab8d03d93f043ff8deffa3587ee",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -2.54,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-body",
+      "speaker": "pip",
+      "text": "Draw down, across, and up. There is your lantern.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Draw down, across, and up. There is your lantern.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-body.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_17_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-body.mp3",
+      "duration": 5.067755,
+      "bytes": 81964,
+      "originalSha256": "e22c31c6dc8ba675dccc711a40ed9503d31e65df9b3e2758f236cdbf2d0f4445",
+      "sha256": "9ef93e601fcb2c1a343b4f0bb51ff66e9195db995604d37ad012ec597a51059f",
+      "integratedLufs": -18.43,
+      "truePeakDbtp": -2.64,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-handle",
+      "speaker": "pip",
+      "text": "Add a curved handle at the top.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Add a curved handle at the top.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-handle.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_24_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-handle.mp3",
+      "duration": 2.35102,
+      "bytes": 38496,
+      "originalSha256": "ec9c1d1bbbc870bfd6f825688522b573c0ae2590ec173a8303a1170c7b635ac3",
+      "sha256": "95d5c6d15cf8b4243eff64562c00ca3255a82c656161e1821362478a2a53024f",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.61,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-pattern",
+      "speaker": "pip",
+      "text": "Give your lantern a stripe. Or invent your own pattern.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Give your lantern a stripe. Or invent your own pattern.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-pattern.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_32_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-pattern.mp3",
+      "duration": 4.04898,
+      "bytes": 65663,
+      "originalSha256": "8af1ed5b19a88dc778b4a0898581fac2bab0d9824b142f66ef6b3c35dcdd7a60",
+      "sha256": "8c928d7384c2d81afeae7d79e4ea276e611944370cdc6fecb8b751c8e72809ed",
+      "integratedLufs": -18.42,
+      "truePeakDbtp": -1.93,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-round-body",
+      "speaker": "pip",
+      "text": "Draw a big circle for your lantern.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Draw a big circle for your lantern.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-round-body.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_39_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-round-body.mp3",
+      "duration": 2.925714,
+      "bytes": 47691,
+      "originalSha256": "c26f7b12e1249db67540b6f7c8d4e3b29c2651452f34828c83d5702879986287",
+      "sha256": "82d5b274df9def878737daa142c4cebfd0d7279184542484538a96b7f556fae2",
+      "integratedLufs": -18.75,
+      "truePeakDbtp": -1.95,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-round-handle",
+      "speaker": "pip",
+      "text": "Add a little curved handle on top.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Add a little curved handle on top.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-round-handle.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_42_58_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-round-handle.mp3",
+      "duration": 2.690612,
+      "bytes": 43929,
+      "originalSha256": "27ea185d0a5684189d36b793e66365d09a42e55da1e48f5a7cf019079aa5ddce",
+      "sha256": "16ca9e83cc84f79f9f3a8ff16ccb4b7963080ca62bd4e9d2ee5ac51e013f56dd",
+      "integratedLufs": -19.56,
+      "truePeakDbtp": -1.87,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "paper-round-pattern",
+      "speaker": "pip",
+      "text": "Add a stripe, or a pattern of your own.",
+      "direction": "One stroke instruction, then wait.",
+      "generationText": "[patiently] Add a stripe, or a pattern of your own.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/paper-round-pattern.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_43_05_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/paper-round-pattern.mp3",
+      "duration": 3.004082,
+      "bytes": 48945,
+      "originalSha256": "5b64663d485e2731efe7fc0e1dbe11448edcaad1492beb1ae819a1b8897622d3",
+      "sha256": "1ed34511ebbd9ef4f48c53086aae3f54fa4d07af33be4d88ef59c6bcee865a79",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -3.04,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-word-0",
+      "speaker": "pip",
+      "text": "Watch my little example. I choose a letter to put it in a space.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] Watch my little example. I choose a letter to put it in a space.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-word-0.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_43_12_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-word-0.mp3",
+      "duration": 4.597551,
+      "bytes": 74440,
+      "originalSha256": "c1f227896e16a75832beff97f56036bf7e39bf554db742cab28094a5f7f46c54",
+      "sha256": "4ce8a5bae0a2e21b674f71f02bf0375d2fe8536bf005a16dd0e547bd06593a71",
+      "integratedLufs": -18.44,
+      "truePeakDbtp": -2.98,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-word-1",
+      "speaker": "pip",
+      "text": "The letter moves into the space. You can choose the next letter.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] The letter moves into the space. You can choose the next letter.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-word-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_43_19_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-word-1.mp3",
+      "duration": 4.362449,
+      "bytes": 70679,
+      "originalSha256": "9c047065397de9b2034187fe58daa031ceade50c0a8ee5ff75c3fb28ac1c4258",
+      "sha256": "9eda3b92880bceaec70c9c9c899fdf7b4c74507978a24d574a5e6ce9a6ec26b8",
+      "integratedLufs": -18.42,
+      "truePeakDbtp": -3.24,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-word-2",
+      "speaker": "pip",
+      "text": "Choose a filled space to empty it. The other letters can stay.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] Choose a filled space to empty it. The other letters can stay.",
+      "voice": {
+        "name": "Tamsin",
+        "voiceId": "dAlhI9qAHVIjXuVppzhW"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-word-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_43_27_Tamsin - Engaging British storyteller and narrator_pvc_sp100_s50_sb75_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-word-2.mp3",
+      "duration": 4.205714,
+      "bytes": 68171,
+      "originalSha256": "0269fd893afb11e216c2f36b5050e0330fda9cacbb5bd4038adfe17356b93ab4",
+      "sha256": "1f84dd8f00c261019c9272ca6cd4a69ca2d64fafcf10cf60d1421b599d693ee3",
+      "integratedLufs": -18.93,
+      "truePeakDbtp": -1.87,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-pack-0",
+      "speaker": "bear",
+      "text": "Watch my little example. I choose an apple to put it in the basket.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] Watch my little example. I choose an apple to put it in the basket.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-pack-0.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_29_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-pack-0.mp3",
+      "duration": 4.989388,
+      "bytes": 80710,
+      "originalSha256": "c6c8b2c8d7a06baf3dc7d7b292568c0908b79f8d7f4324f658c4a87c3688ada4",
+      "sha256": "89d07a2da097dc87f580c9154f3260d7d96453fb29d69e92cdc1b211226fb870",
+      "integratedLufs": -18.68,
+      "truePeakDbtp": -1.92,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-pack-1",
+      "speaker": "bear",
+      "text": "One apple is in my basket. Each tap adds one apple.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] One apple is in my basket. Each tap adds one apple.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-pack-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_36_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-pack-1.mp3",
+      "duration": 4.91102,
+      "bytes": 79456,
+      "originalSha256": "c732c19d2b21be3e26e3a55065483cb88546cd836410956d2f347b6bb4cd85ae",
+      "sha256": "9efcf394dc8fbdffbe5212e56d7c7535a59839faaacb2c1aa7d734f9f18ca539",
+      "integratedLufs": -19.14,
+      "truePeakDbtp": -1.91,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-pack-2",
+      "speaker": "bear",
+      "text": "Choose an apple in the basket to take it out. Then check when your basket is ready.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] Choose an apple in the basket to take it out. Then check when your basket is ready.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-pack-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_44_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-pack-2.mp3",
+      "duration": 5.407347,
+      "bytes": 87397,
+      "originalSha256": "86dd60c02696b16036dd46f263e4b16ba3baf588d1f3a767f2d842ce068eacbf",
+      "sha256": "6a3892b09745ef7b61a06539ae2f8e29724644ca8c6b1d3c0a2d46ee901ec6d5",
+      "integratedLufs": -19.09,
+      "truePeakDbtp": -2.15,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-share-0",
+      "speaker": "bear",
+      "text": "Watch my little example. I have four apples for two friends.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] Watch my little example. I have four apples for two friends.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-share-0.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_52_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-share-0.mp3",
+      "duration": 4.832653,
+      "bytes": 78202,
+      "originalSha256": "dd304d64e538f20777218c917bfab67ac3cbf8a5a56efc0ea4b299aa3e89ea9a",
+      "sha256": "38c8ff0c3848779d1cb1edbae12f285ed78b9cc27f243ef510d386daea377456",
+      "integratedLufs": -18.62,
+      "truePeakDbtp": -1.95,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-share-1",
+      "speaker": "bear",
+      "text": "One for Pip, and one for Bear. Two apples are still waiting.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] One for Pip, and one for Bear. Two apples are still waiting.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-share-1.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_50_59_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-share-1.mp3",
+      "duration": 5.067755,
+      "bytes": 81964,
+      "originalSha256": "f944eab4c54fcf82bbf80e16bdbffa774d54b2a4cf8cd1b554d6bf5b8059510a",
+      "sha256": "a73aea488dfcf904282a95117c88a6dabe6d60b3f4217705998e8edac737d328",
+      "integratedLufs": -18.68,
+      "truePeakDbtp": -1.88,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    },
+    {
+      "id": "demo-share-2",
+      "speaker": "bear",
+      "text": "One more for each friend. Two each, and no apples left. Both plates are ready.",
+      "direction": "Patient modelling. Pause between actions; wait for the child to continue.",
+      "generationText": "[patiently] One more for each friend. Two each, and no apples left. Both plates are ready.",
+      "voice": {
+        "name": "Mike",
+        "voiceId": "FZQ5wG88XQUxYZLhe3dp"
+      },
+      "review": "produced",
+      "originalFile": "originals/demo-share-2.mp3",
+      "providerFilename": "ElevenLabs_2026-10-20T10_51_11_Mike - Warm, Conversational British_pvc_sp94_s100_sb100_v4.mp3",
+      "take": 1,
+      "file": "clips/demo-share-2.mp3",
+      "duration": 6.19102,
+      "bytes": 99936,
+      "originalSha256": "b032d3d933090e104245b1831e9d1f114fec4e2371437005639918ae9f859794",
+      "sha256": "cc9bb75c1dcf5ea33918bac82a828b8b93a669a05dc0c10a2b46910f73ebee1c",
+      "integratedLufs": -18.45,
+      "truePeakDbtp": -2.13,
+      "media": {
+        "codec_name": "mp3",
+        "sample_rate": "44100",
+        "channels": 1
+      },
+      "reviewer": null,
+      "reviewDate": null
+    }
+  ],
+  "technicalValidation": {
+    "date": "2026-10-20",
+    "scriptIds": 68,
+    "allSourcesPreserved": true,
+    "allComparisonFilesDecoded": true,
+    "humanListeningReview": false,
+    "normalisation": "Two-pass FFmpeg loudnorm; -18 LUFS / -1.5 dBTP"
+  },
+  "manifestVersion": 1,
+  "provider": "ElevenLabs",
+  "producedAt": "2026-10-20",
+  "includedCreditsUsed": 3833,
+  "generationRequests": 67,
+  "rights": {
+    "basis": "Generated while signed in to a paid Starter subscription, using selectable Voice Library voices. No custom clone created.",
+    "providerGuidance": "https://help.elevenlabs.io/hc/en-us/articles/13313564601361-Can-I-publish-the-content-I-generate-on-the-platform",
+    "scope": "Provider states paid plans include commercial licensing except Beta Services; applicable terms and third-party rights still govern use.",
+    "checkedAt": "2026-10-20"
+  }
+}

@@ -13,9 +13,10 @@ Date: 2026-10-20. No human educational, listening, or child review has been reco
 | Three sharing tasks | `PICNIC_SHARES` in `src/picnic-content.js` | Authored equal shares of 2/4/6, version 1 | Implemented; reviewed mastery thresholds not claimed |
 | Lantern lessons | `LANTERN_STEPS` and `ROUND_LANTERN_STEPS` in `src/picnic-content.js` | Original paths/instructions, version 1 | Four-step classic and three-step round alternative implemented, with pause/replay and two optional creative prompts |
 | Interaction examples | `PICNIC_DEMOS` in `src/picnic-content.js` | Nine original self-paced frames | Implemented with existing SVG objects; separate from answer state and content-coverage counts |
-| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 2 | 68 draft runtime lines; production recordings and listening review pending |
+| Dialogue catalogue | `PICNIC_LINES` in `src/picnic-content.js` | Original script; version 2 | 68 runtime IDs have first takes; runtime records remain draft pending listening review and integration |
 | Audition script | `docs/AUDIO_SCRIPT.md` | Original production direction | Used for four ElevenLabs candidates |
-| Voice auditions | `output/voice-auditions/` | ElevenLabs v4 library voices, 2026-10-20; see `docs/VOICE_AUDITIONS.md` | Four preserved originals and levelled comparison copies; technically checked, human listening and final casting pending; outside app bundle |
+| Voice auditions | `output/voice-auditions/` | ElevenLabs v4 library voices, 2026-10-20; see `docs/VOICE_AUDITIONS.md` | User selected Tamsin/Pip and Mike/Bear; four audition originals preserved |
+| Production takes | `output/voice-production/` | ElevenLabs v4 selected library voices; see `docs/VOICE_PRODUCTION.md` | 67 preserved exports cover 68 IDs; levelled copies technically verified; per-line listening/teaching review pending; outside app bundle |
 | Exact recording sheet | `docs/PICNIC_RECORDING_SCRIPT.csv` | Reproducible export of the runtime catalogue | 68 draft lines; blank performer, rights and reviewer fields are deliberate |
 
 Generated artwork is not claimed to be human-illustrated or exclusively owned. Provider terms govern generated output. Original local SVG/code uses no imported character IP. Confirm production-service and performer rights before distributing new recordings.
@@ -30,7 +31,7 @@ Original generated file remains in the generation service's local output directo
 
 ## Voice-production access
 
-Runway was an earlier access suggestion. The user subsequently subscribed to ElevenLabs. Its signed-in browser UI was used to generate four v4 audition candidates with 1,600 included credits; no API key was required. Provider/library distribution rights and effective settings must be recorded before production integration. Human recordings remain an alternative. Browser speech is still the live app's temporary whole-word/instruction fallback.
+Runway was an earlier access suggestion. The user subscribed to ElevenLabs and selected Tamsin/Pip and Mike/Bear. The signed-in browser generated four auditions (1,600 included credits) and the first full production set (3,833 included credits); no API key was required. The production record documents the licensing basis, displayed settings and unresolved filename-metadata discrepancy. Browser speech is still the live app's temporary whole-word/instruction fallback until takes are listen-reviewed and integrated.
 
 ## Visual sample access
 

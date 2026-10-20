@@ -141,3 +141,17 @@ Limits: the keyboard zoom shortcut did not change the browser's measured CSS vie
 - `scripts/build.mjs` copies only app shell, `src/` and `assets/`; audition files in `output/` are excluded from the deployed app and offline cache. No runtime code changed, so the app test suite/build were not rerun for this artifact-only milestone.
 
 Limits: no human listening, pronunciation, rights acceptance, parent/educator/child review, final casting or full runtime recording is claimed. No live app audio changed. Q2 remains in progress.
+
+## 2026-10-20 — Selected cast and 68-line first production set
+
+- User chose Pip A / Tamsin and Bear A / Mike in conversation. This is casting evidence, not approval of unheard production takes.
+- Generated 67 first takes with ElevenLabs v4, covering 68 script IDs; two identical five-apple instructions reuse one recording. Generation text, displayed settings, provider filenames, stable voice IDs and provenance are preserved. One delayed browser response was recovered without a duplicate generation.
+- `python scripts/prepare-voice-review.py` passed exact transcript/speaker/ID coverage, source and output decoding, non-silent source checks, bounded duration and peak checks. All 68 outputs are mono 44.1 kHz MP3; combined duration 243.6 seconds, size 3,957,696 bytes. Maximum measured true peak is -1.69 dBTP. Full level/duration/hash evidence is in the production manifest.
+- Review-page JavaScript syntax checks pass. Chrome loaded all 68 media files without errors. Welcome/resume exclusive playback, keyboard pause, counting search (seven results), Bear filtering (39 results), a synthetic retake persisted across reload, and status filtering were verified.
+- The synthetic judgement was returned to pending. Exported JSON contained all 68 IDs, matching audio hashes, and pending statuses. This test did not create a listening approval. Review notes are local browser data and were not committed.
+- No console warnings/errors in the inspected review session. Desktop screenshot saved at `output/voice-production/review-preview.png`; no horizontal overflow. Complete accessibility, mobile and cross-browser checks are not claimed.
+- The browser's bulk selection helper stalled on the character selector; native keyboard input verified the filter instead. The direct media-download helper was unreliable, so normal Download Audio actions plus local completed-file checks preserved the provider exports.
+- Used 3,833 included production credits, separate from the auditions. Licensing basis and the observed-UI/export-filename settings discrepancy are recorded in `docs/VOICE_PRODUCTION.md`.
+- No runtime source or deployed asset changed. The app suite/build were not rerun for this production-artifact milestone; the preparation script and review page received the relevant checks above.
+
+Remaining: human per-line listening, any retakes, pronunciation review, approved runtime integration and its replay/interruption/offline checks. No full Q2 completion or new live deployment is claimed.

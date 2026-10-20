@@ -1,6 +1,6 @@
 # Moonlight Picnic voice auditions
 
-Generated 2026-10-20 through the user's signed-in ElevenLabs Starter account, using Eleven v4. Casting and human listening review remain open.
+Generated 2026-10-20 through the user's signed-in ElevenLabs Starter account, using Eleven v4. The user selected **Pip A (Tamsin) + Bear A (Mike)** in conversation on 2026-10-20. This records the casting preference; it does not certify future production takes or teaching pronunciation.
 
 Open [the listening sheet](../output/voice-auditions/index.html) locally, or serve that directory with `python -m http.server 4174 --bind 127.0.0.1` and visit `http://127.0.0.1:4174/`. The review page and recordings are excluded from the app build because they live outside `src/` and `assets/`.
 
@@ -27,7 +27,7 @@ Four generation requests produced two alternatives each. Generation 1 from each 
 [softly] We made a lovely little picnic. Stay a while, or come back another day.
 ```
 
-The generation UI displayed Stability 50%, Similarity 75%, language Auto, and MP3 44.1 kHz / 128 kbps. Exported filenames contain different voice-specific parameter suffixes, preserved above. Their effective interpretation has not been verified. This is a same-script casting comparison, not a controlled comparison with identical effective settings. Resolve this before producing the full catalogue.
+The generation UI displayed Stability 50%, Similarity 75%, language Auto, and MP3 44.1 kHz / 128 kbps. Exported filenames contain different voice-specific parameter suffixes, preserved above. Their effective interpretation has not been verified. This is a same-script casting comparison, not a controlled comparison with identical effective settings. Subsequent production rechecked and reapplied the displayed v4 settings; the filenames still differed, so both kinds of evidence remain explicit in the production record.
 
 ## Files and verification
 
@@ -39,9 +39,9 @@ The lack of an installed ElevenLabs connector was resolved using the already sig
 
 ## Next production decisions
 
-1. Listen and choose a Pip/Bear pair, or describe the changes needed. Assess clear words, warmth, natural pauses, character distinction, humour and fatigue at normal laptop volume.
-2. Confirm effective settings and document the applicable library/provider usage rights before production distribution.
-3. Produce the 68 runtime lines with stable IDs and per-line review records. Integrate approved clips, interruptions, replay, caching and fallback.
+1. Casting is selected: Tamsin for Pip and Mike for Bear. Preserve their voice IDs and use this pair for production.
+2. Production settings evidence and the applicable licensing basis are recorded in [the production record](VOICE_PRODUCTION.md). Filename metadata remains distinct from observed v4 settings.
+3. First takes for all 68 runtime IDs are produced. Listen-review them, then integrate approved clips, interruptions, replay, caching and fallback.
 4. Review phoneme, blending and teaching-word pronunciation separately. These seven-line auditions do not certify phonics correctness.
 
-No human listening, educational, parent acceptance or real-child review is recorded yet.
+The user's casting choice is recorded. No per-line production listening, educational, full parent acceptance or real-child review is recorded yet.

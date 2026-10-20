@@ -1,6 +1,6 @@
 # Moonlight Picnic — voice production script
 
-Date: 2026-10-20. Version 2. Draft, unrecorded, not listen-reviewed. The recording sheet now has 68 lines, including nine demonstration lines and a separate response for equal plates with apples still waiting.
+Date: 2026-10-20. Version 2. All 68 lines now have first production takes; per-line listening review remains open. See `docs/VOICE_PRODUCTION.md`. Runtime records and the recording sheet retain draft status until reviewed clips are integrated.
 
 Runtime transcripts and stable IDs live in `src/picnic-content.js`. They are the exact-text source for production; this guide describes performance, timing, and coverage. Never ship prose annotations as spoken text.
 
@@ -22,7 +22,7 @@ Record these exact lines for each suitable voice, keeping the performance charac
 6. “Three apples. Our basket is ready.” — satisfaction, not shouting.
 7. “We made a lovely little picnic. Stay a while, or come back another day.” — warm, settling cadence.
 
-Log each candidate's provider/performer, rights, production cost, voice settings, accent, sample files, and actual listening notes. Compare warmth, intelligibility, variation, consistency, and clarity on laptop speakers. No candidate has been auditioned yet.
+Log each candidate's provider/performer, rights, production cost, voice settings, accent, sample files, and actual listening notes. Four generated candidates are preserved in `docs/VOICE_AUDITIONS.md`. The user selected Tamsin for Pip and Mike for Bear on 2026-10-20; each production take still requires its own listening review.
 
 ## Trigger and performance map
 
