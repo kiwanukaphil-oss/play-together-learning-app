@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {createPicnic,updatePicnic,validatePicnic,picnicCount,picnicShare,picnicObservations,picnicNeedsDemo} from '../src/picnic-state.js';
 import {defaultProgress,validateProgress,recordObservation} from '../src/learning.js';
 import {PICNIC_LINES,PICNIC_WORDS,PICNIC_COUNTS} from '../src/picnic-content.js';
-import {createPicnicAudio} from '../src/picnic-audio.js';
+import {createPicnicAudio,PLAYABLE_CLIP_REVIEWS} from '../src/picnic-audio.js';
+import {existsSync} from 'node:fs';
 import {renderPicnic,picnicInstruction} from '../src/picnic-view.js';
 
 function finishPicnicTask(state){
@@ -73,7 +74,29 @@ test('authored starter words and quantities have matching whole-word instruction
  for(const word of PICNIC_WORDS){assert.match(word.id,/^[satpinm]+$/);assert.equal(word.letters.join(''),word.id);assert.ok(PICNIC_LINES[`word-${word.id}`]);assert.ok(PICNIC_LINES[`word-success-${word.id}`]);}
  assert.deepEqual([...new Set(PICNIC_COUNTS.map(item=>item.total))].sort(),[1,2,3,4,5]);
  for(const item of PICNIC_COUNTS)assert.ok(PICNIC_LINES[`pack-${item.id}`].text.includes(String(item.total)));
- assert.ok(Object.values(PICNIC_LINES).every(line=>line.review==='draft'&&line.file===null));
+ // Every line is either an unrecorded draft or a bundled, playable recording that exists on disk.
+ for(const [id,line] of Object.entries(PICNIC_LINES)){
+  if(line.file===null){assert.equal(line.review,'draft',id);continue;}
+  assert.ok(PLAYABLE_CLIP_REVIEWS.includes(line.review),id);
+  assert.equal(line.file,`./assets/picnic/voice/${id}.mp3`);assert.ok(existsSync(line.file),id);assert.ok(line.duration>0.2,id);
+ }
+});
+
+test('bundled recordings play through audio, replay stops the earlier clip, and unchecked takes use speech instead',()=>{
+ const clips=[],spoken=[],speakers=[];
+ const environment={
+  Audio:class{constructor(src){this.src=src;this.paused=false;clips.push(this);}play(){return Promise.resolve();}pause(){this.paused=true;}removeAttribute(){}},
+  SpeechSynthesisUtterance:class{constructor(text){this.text=text;}},speechSynthesis:{cancel(){},getVoices(){return [];},speak(value){spoken.push(value);}},
+ };
+ const welcome=PICNIC_LINES.welcome,original={...welcome};
+ try{
+  Object.assign(welcome,{file:'./assets/picnic/voice/welcome.mp3',review:'produced-auto-checked'});
+  const audio=createPicnicAudio({environment,onSpeaking:speaker=>speakers.push(speaker)});
+  audio.play('welcome');assert.equal(clips[0].src,welcome.file);assert.equal(speakers.at(-1),'bear');assert.equal(spoken.length,0);
+  audio.play('welcome');assert.ok(clips[0].paused);clips[0].onended?.();assert.equal(speakers.at(-1),'bear');
+  clips[1].onended();assert.equal(speakers.at(-1),null);
+  welcome.review='produced';audio.play('welcome');assert.equal(clips.length,2);assert.equal(spoken[0].text,welcome.text);
+ }finally{Object.assign(welcome,original);}
 });
 
 test('spelling view does not print the target word before completion and sharing identifies its new supply',()=>{

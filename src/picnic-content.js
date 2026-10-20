@@ -1,3 +1,4 @@
+import {PICNIC_VOICE_CLIPS} from './picnic-voice.js';
 // Authored examples remain draft until human teaching/audio review; random layouts are not extra content coverage.
 export const PICNIC_WORDS=[
  {id:'map',letters:['m','a','p'],bank:['p','s','m','a','t'],stage:0,purpose:'A map to our picnic',success:'A map! Now we can find our picnic spot.'},
@@ -87,4 +88,6 @@ for(const step of [...LANTERN_STEPS,...ROUND_LANTERN_STEPS])PICNIC_LINES[`paper-
 for(const [scene,steps] of Object.entries(PICNIC_DEMOS))steps.forEach((step,index)=>{
  PICNIC_LINES[`demo-${scene}-${index}`]=line(scene==='word'?'pip':'bear',step.text,'Patient modelling. Pause between actions; wait for the child to continue.');
 });
+// Attach bundled character recordings; lines without a checked clip keep the browser-speech fallback.
+for(const [id,clip] of Object.entries(PICNIC_VOICE_CLIPS))if(PICNIC_LINES[id])Object.assign(PICNIC_LINES[id],clip);
 export const PICNIC_SCRIPT_VERSION=2;

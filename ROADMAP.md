@@ -266,7 +266,7 @@ Original-to-current mapping: learning blueprint → Q1/Q6; design → Q1/Q4/Q5; 
 | Data | Preserve local progress, backups, and optional local gallery | Migration and recovery verification |
 | Art | Coherent picture-book world with custom characters/objects | Q1 visual samples and asset production |
 | Cast | Pip and Bear first; workshop robot later | Final character/voice production choices |
-| Voice | ElevenLabs v4; Tamsin/Pip and Mike/Bear selected by user | All 68 IDs have first takes; UI settings and licensing basis recorded; filename discrepancy, listening review and integration remain explicit |
+| Voice | ElevenLabs v4; Tamsin/Pip and Mike/Bear selected by user; direction v2 (~70% presenter energy) accepted 2026-10-20; API production route | Key in gitignored `.env`; full v2 production, transcript checks, per-line listening and publication pending |
 | Teaching audio | Separately reviewed phonemes and blending | Qualified human review and school conventions where available |
 | Language | English working default | School pronunciation/phonics confirmation |
 | Handwriting | Existing generic manuscript models remain provisional | School forms and formation order |
@@ -317,9 +317,13 @@ The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs 
 
 The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
 
+### Revised direction accepted; API production pipeline — 2026-10-20
+
+The user listened to the comparison and asked for the revised voices to be implemented, chose API production, and is supplying an ElevenLabs key in the gitignored `.env`. Added [direction v2 for all 68 lines](docs/PICNIC_VOICE_DIRECTION_V2.json) (8 accepted samples reused verbatim), `scripts/generate-picnic-voices.mjs` (word-sequence guard before spending credits, resumable, per-take request IDs, ElevenLabs Scribe transcript check of every take) and `scripts/prepare-revised-voices.py` (levelling, 64 kbps runtime clips in `assets/picnic/voice/`, generated `src/picnic-voice.js`, listening sheet in `output/voice-revised/`). The runtime now plays `produced-auto-checked` clips; takes with transcript mismatches are held back. Dry run: 68/68 prompts match runtime words; 59 to generate (~4,292 characters). 26 tests, syntax and build pass. Fixed missing `<option>` tags in the first-batch review sheet filters. No new takes yet; the app is unchanged until the clip module is populated. Automatic word checks do not establish tone or per-line listening approval.
+
 ## 10. Immediate build queue
 
-1. Obtain listening feedback on the eight revised energy samples, apply the accepted direction across the catalogue, then review/integrate clips and verify interruption/replay/offline behaviour.
+1. Run the direction-v2 API production (`node scripts/generate-picnic-voices.mjs`, then `python scripts/prepare-revised-voices.py`) once the user's API key is in `.env`; retake any transcript mismatches; verify in-app playback, interruption, replay and offline caching; publish.
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

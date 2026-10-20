@@ -1,5 +1,8 @@
 import {PICNIC_LINES} from './picnic-content.js';
 
+// Transcript-checked direction-v2 takes play alongside human-reviewed ones; draft/unchecked takes never reach the child.
+export const PLAYABLE_CLIP_REVIEWS=['listen-reviewed','teaching-reviewed','produced-auto-checked'];
+
 // One owner for dialogue prevents queued instructions; a generation token also cancels a late-loading audio clip.
 export function createPicnicAudio({environment=globalThis,onSpeaking=()=>{},onUnavailable=()=>{}}={}){
  let clip=null,utterance=null,generation=0;
@@ -11,7 +14,7 @@ export function createPicnicAudio({environment=globalThis,onSpeaking=()=>{},onUn
   stop();const line=PICNIC_LINES[id];if(!line||muted)return;
   const token=generation;
   const finish=()=>{if(token===generation)onSpeaking(null);};
-  if(line.file&&['listen-reviewed','teaching-reviewed'].includes(line.review)){
+  if(line.file&&PLAYABLE_CLIP_REVIEWS.includes(line.review)){
    clip=new environment.Audio(line.file);clip.onended=finish;clip.onerror=()=>{finish();onUnavailable();};
    onSpeaking(line.speaker);clip.play().catch(()=>{if(token===generation){finish();onUnavailable();}});return;
   }
