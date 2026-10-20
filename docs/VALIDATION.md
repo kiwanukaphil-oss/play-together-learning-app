@@ -123,3 +123,10 @@ Environment: Windows, Node 24.18.1, isolated Chrome DevTools browser context wit
 - The final inspected page reported no console warnings or errors after reload.
 
 Limits: the keyboard zoom shortcut did not change the browser's measured CSS viewport, so genuine 200% zoom remains unverified. These checks are targeted evidence, not a full contrast, keyboard, every-screen, offline, performance, or multiple-browser audit. No new voice tool is connected; no voice sample, listening review, phonics review, parent acceptance, or child observation is claimed. Q2/Q3/Q4 remain in progress.
+
+### Published examples milestone
+
+- Code commit `cde5df1` pushed to the authorised remote. Actions run `39374550445` passed checks and deployment; its production release is `bbe506dbf6b3` with 30 offline assets.
+- A fresh isolated public browser session verified matching versioned app/art URLs, the first two word demonstration frames, My turn into the word task, Help me and Watch an example controls, and the retained six destinations. Measured task controls met the 48-pixel minimum. No console warnings/errors were reported.
+- Returned the public test session to Home without submitting learning answers. The public smoke check is separate from the more extensive local gameplay checks above.
+- The Windows working-tree build ID was `657dad4fc318`; CI uses `bbe506dbf6b3`. The source hash currently includes line-ending bytes, so local CRLF versus repository LF produces different IDs. Each inspected build is internally coherent; deterministic cross-platform hash normalisation is a maintenance candidate, not a reported gameplay failure.

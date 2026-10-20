@@ -6,7 +6,7 @@ Last updated: 2026-10-20 (Africa/Nairobi)
 **Latest completed work:** Q1 specification and playable development picnic; self-paced first-use examples, answer-preserving demonstration replay, clearer sharing feedback, and larger controls verified on 2026-10-20.
 **Next deliverable:** Voice audition clips from the prepared script, reviewed sound-clue assets, and remaining benchmark quality checks.
 **Product status:** The new illustrated home and picnic are implemented. Character dialogue still uses the documented browser fallback; final audio, sound clues, human review, and full benchmark acceptance remain incomplete.
-**Latest published code:** `75302b8`, release `0e4c6ca79eb9`; successful Actions run `39371407554`; live home/welcome/word screen verified on 2026-10-20.
+**Latest published code:** `cde5df1`, release `bbe506dbf6b3`; successful Actions run `39374550445`; live home, word demonstration, transition to the task, and updated controls verified on 2026-10-20.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
 ## 1. Purpose and source of truth
@@ -298,7 +298,7 @@ Routine checkpoints are not approval stops. When an external dependency blocks o
 | 2026-10-20 | Q1 specification and first Q3 implementation: illustrated home, Pip/Bear poses, word/packing/sharing route, paper lessons, ending, partial-state backups, draft audio controller | Guides and asset register; `tests/picnic.test.mjs`; 23 automated tests, syntax/build checks; browser walkthrough and home screenshot; see validation entry | Sound clues, final character recordings, listening/educator/parent/child review, complete accessibility/performance/offline checks remain open |
 | 2026-10-20 | Follow-up replay correction: replay the task after count/support feedback; fresh map selection checked in a third browser session | Browser assertion of the restored five-apple instruction; 23 tests and syntax/build checks pass | Production verification recorded below once the final deployment is checked |
 | 2026-10-20 | Published and smoke-tested the picnic development release | Code `75302b8`; release `0e4c6ca79eb9`; successful Actions run `39371407554`; matching public module/art version, home/welcome/word rendering, no console warnings/errors | Final voice/audio, full quality audit, and human acceptance remain open |
-| 2026-10-20 | Added self-paced first-use examples, saved demonstration frames, answer-preserving replay, clearer equal-plate feedback, and larger controls | 25 tests, syntax/build checks; muted browser walkthrough, keyboard progression, 1366/1280/390 CSS-width inspection; [validation record](docs/VALIDATION.md) | Draft script now 68 lines; voice connection, reviewed sound guidance, complete quality audit, and human review remain open |
+| 2026-10-20 | Added and published self-paced first-use examples, saved demonstration frames, answer-preserving replay, clearer equal-plate feedback, and larger controls | Code `cde5df1`; public release `bbe506dbf6b3`; Actions `39374550445`; 25 tests, syntax/build checks; muted browser walkthrough, keyboard progression, 1366/1280/390 CSS-width inspection and public smoke test; [validation record](docs/VALIDATION.md) | Draft script now 68 lines; voice connection, reviewed sound guidance, complete quality audit, and human review remain open |
 
 ## 10. Immediate build queue
 
