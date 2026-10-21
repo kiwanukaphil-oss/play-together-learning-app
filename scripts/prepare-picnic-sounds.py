@@ -13,7 +13,7 @@ RUNTIME_AUDIO = ROOT / "assets" / "picnic" / "sound"
 RUNTIME_MODULE = ROOT / "src" / "picnic-sound-clips.js"
 RATE = 44100
 EFFECT_PEAK_DBFS = -9.0      # voices are levelled to -18 LUFS / -1.5 dBTP; effects sit clearly underneath
-AMBIENCE_LUFS = -26.0        # about 16 dB under speech in the app mix, then ducked a further ~10 dB while characters speak
+AMBIENCE_LUFS = -32.0        # about 22 dB under speech in the app mix (lowered 6 dB after parent feedback), ducked further while characters speak
 LOOP_CROSSFADE_SECONDS = 1.5
 
 
@@ -51,8 +51,18 @@ def prepare_effect(samples):
     return trimmed * (10 ** (EFFECT_PEAK_DBFS / 20) / numpy.max(numpy.abs(trimmed)))
 
 
+def level_ambience_events(samples, ceiling_db=3.0):
+    """Hold any sound rising more than ceiling_db above the bed's typical level, so owls or gusts never jump out."""
+    window = int(.02 * RATE)
+    envelope = numpy.sqrt(numpy.convolve(samples ** 2, numpy.ones(window) / window, mode="same")) + 1e-9
+    gain = numpy.minimum(1, numpy.median(envelope) * 10 ** (ceiling_db / 20) / envelope)
+    smoothing = int(.15 * RATE)
+    return samples * numpy.convolve(gain, numpy.ones(smoothing) / smoothing, mode="same")
+
+
 def prepare_ambience_loop(samples):
     """Blend the tail into the head so the loop point is continuous whether or not the provider made it seamless."""
+    samples = level_ambience_events(samples)
     crossfade = int(LOOP_CROSSFADE_SECONDS * RATE)
     head, tail = samples[:crossfade], samples[-crossfade:]
     ramp = numpy.linspace(0, 1, crossfade)

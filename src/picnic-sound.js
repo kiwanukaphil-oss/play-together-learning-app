@@ -1,7 +1,7 @@
 import {PICNIC_SOUND_CLIPS} from './picnic-sound-clips.js';
 
 // Ambience sits well beneath speech and drops further while Pip or Bear talks.
-const AMBIENCE_LEVEL=.55,AMBIENCE_DUCKED=.18,EFFECT_LEVEL=.8;
+const AMBIENCE_LEVEL=.55,AMBIENCE_DUCKED=.12,EFFECT_LEVEL=.8;
 
 // Choose the sound that matches what visibly changed; mistakes stay silent so feedback never sounds like failure.
 export function picnicSoundFor(before,after,action){

@@ -122,15 +122,16 @@
       "generatedAt": "2026-10-20T16:06:49.031Z"
     },
     "ambience": {
-      "take": 1,
-      "prompt": "peaceful summer night meadow ambience, soft crickets, gentle breeze in leaves, a very occasional distant soft owl, calm, no music, no voices",
+      "take": 5,
+      "prompt": "continuous calm night ambience: soft crickets chirping evenly through the whole clip at one constant volume, faint gentle breeze, seamless loop, no fade in, no fade out, no owls, no birds, no sudden or loud sounds, no music, no voices",
       "seconds": 22,
-      "promptSha256": "3ac9ce05b99198918270362d331b59e9fdbac5b234dbb2f4d8e9a767a4282f1b",
+      "promptSha256": "cc0b53e2328199238faf3625602da569845acc57bbc63c46a591452156715115",
       "loopRequested": true,
       "requestId": null,
       "characterCost": 220,
-      "originalSha256": "115dee7cc60cf0ace80d78bd380399027a5eb6c4af84410f57de0058f857be10",
-      "generatedAt": "2026-10-20T16:06:54.336Z"
+      "originalSha256": "b6e226373ea3ebfebba26848f16b5aad2ac6de0d38a795a0c044040e54ae0d83",
+      "generatedAt": "2026-10-21T15:05:34.684Z",
+      "selection": "Takes 2-5 generated after parent found take 1 a little distracting. Take 2 faded to near-silence; of three further candidates the steadiest (by 100 ms loudness spread) was kept and levelled. requestId/characterCost above belong to the last candidate generated, not the kept one."
     }
   },
   "model": "eleven_text_to_sound_v2"
