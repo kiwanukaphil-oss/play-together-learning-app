@@ -6,7 +6,7 @@ Last updated: 2026-10-20 (Africa/Nairobi)
 **Latest completed work:** Produced all 68 picnic lines in the accepted brighter direction (Tamsin/Pip, Mike/Bear) via the ElevenLabs API, verified every take's words locally, and bundled them into the app with offline caching.
 **Next deliverable:** Sound effects and character speaking animation, then an observed play session; then the sound-clue scene aligned to the school's phonics programme.
 **Product status:** The illustrated home and picnic are implemented with recorded Pip/Bear dialogue for all 68 lines. Per-line listening review, sound effects, sound clues, human review and full benchmark acceptance remain incomplete.
-**Latest published code:** `f14d853`, release `89fefd41a061`; successful Actions run `39440450623`; live clip served as audio and the picnic opens with Bear's recorded welcome (no speech fallback, no console errors) in Chrome on 2026-10-20.
+**Latest published code:** `4c5a4d3`, release `5982fba9ccd7`; Actions run `39621226470` (manual dispatch); 84 recorded lines, effects, ambience and lip-sync live on 2026-10-21.
 **Authority:** Continue autonomously under [AGENTS.md](AGENTS.md). No routine phase approvals; commits and pushes to the authorised repository are allowed.
 
 ## 1. Purpose and source of truth
@@ -320,7 +320,7 @@ The user reported whispery delivery in several first takes and requested childre
 
 ### Dialogue variety and play-session guide — 2026-10-21
 
-Added 16 recorded feedback variants (script version 3, 84 lines): three lines each for word retry, too few/too many apples, unequal plates and matching-plates-with-apples-left, and six success lines each for packing and sharing. `chooseLineVariant` picks randomly without back-to-back repeats; previously packing/sharing success depended only on the basket size. All 84 transcripts match on both ElevenLabs Scribe and local Whisper after one retake (pack-many-2 said "takes them out"); the cough scan found none. 35 tests; Chrome check of three consecutive too-few checks played three variants with no repeat; 12 voice/offline checks pass. User proceeded after the sound-check page (taken as acceptance; any sound can be redone). Added the [parent play-session guide](docs/PLAY_SESSION_GUIDE.md); observation itself is the parent's next step.
+Added 16 recorded feedback variants (script version 3, 84 lines): three lines each for word retry, too few/too many apples, unequal plates and matching-plates-with-apples-left, and six success lines each for packing and sharing. `chooseLineVariant` picks randomly without back-to-back repeats; previously packing/sharing success depended only on the basket size. All 84 transcripts match on both ElevenLabs Scribe and local Whisper after one retake (pack-many-2 said "takes them out"); the cough scan found none. 35 tests; Chrome check of three consecutive too-few checks played three variants with no repeat; 12 voice/offline checks pass. User proceeded after the sound-check page (taken as acceptance; any sound can be redone). Added the [parent play-session guide](docs/PLAY_SESSION_GUIDE.md); observation itself is the parent's next step. Published as `4c5a4d3`, release `5982fba9ccd7`, via manually dispatched Actions run `39621226470` (GitHub created no run for the push; deploy checks must match the run's commit SHA). New clips confirmed served live.
 
 ### Picnic sound effects and night ambience — 2026-10-20
 
