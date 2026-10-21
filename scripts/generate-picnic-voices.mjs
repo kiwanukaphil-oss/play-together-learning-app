@@ -13,6 +13,8 @@ const API='https://api.elevenlabs.io/v1';
 const VOICES={pip:{name:'Tamsin',voiceId:'dAlhI9qAHVIjXuVppzhW'},bear:{name:'Mike',voiceId:'FZQ5wG88XQUxYZLhe3dp'}};
 // Matches the displayed UI values used for the auditions, first batch and accepted energy samples.
 const VOICE_SETTINGS={stability:.5,similarity_boost:.75};
+// Recognisers write American spellings or homophones; these are the same spoken words (mirrors verify-voice-transcripts.py).
+const EQUIVALENT_SPELLINGS={cozy:'cosy',ok:'okay',matt:'mat'};
 const NUMBER_WORDS=['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 
 const args=process.argv.slice(2);
@@ -29,7 +31,8 @@ const exists=path=>access(path).then(()=>true,()=>false);
 function spokenWords(text){
  return text.replace(/\[[^\]]*\]/g,' ').replace(/[’‘]/g,"'").toLowerCase()
   .replace(/\d+/g,digits=>NUMBER_WORDS[Number(digits)]??digits)
-  .replace(/[^a-z' ]+/g,' ').split(/\s+/).map(word=>word.replace(/^'+|'+$/g,'')).filter(Boolean);
+  .replace(/[^a-z' ]+/g,' ').split(/\s+/).map(word=>word.replace(/^'+|'+$/g,'')).filter(Boolean)
+  .map(word=>EQUIVALENT_SPELLINGS[word]??word);
 }
 
 // Refuse to spend credits unless every runtime line has a direction whose words match the runtime caption exactly.

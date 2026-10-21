@@ -102,7 +102,7 @@ Default to an approximately five-minute on-screen route; no timer is shown. Shar
 - [x] Author one complete lantern paper lesson with two imaginative extensions and a simple alternative.
 - [ ] Provide a full script for every route: introduction, instruction, demonstration, partial progress, retry, success, exit, resume, and ending.
 - [x] Include specific responses to too many, too few, removing an item, and completing a quantity.
-- [ ] Supply at least three contextual success lines and three support lines per core activity, selected without immediate repetition where appropriate.
+- [x] Supply at least three contextual success lines and three support lines per core activity, selected without immediate repetition where appropriate. (Word success is word-specific; packing/sharing have six success variants; support has graduated help plus three-variant retries; no back-to-back repeats.)
 - [x] Deliver an ending that reflects completed story actions, including supported completion.
 - [x] Verify at least three sessions with different content selections; count only distinct authored/reviewed teaching examples toward coverage.
 
@@ -318,6 +318,10 @@ The user chose **Pip A + Bear A**. Produced 67 takes covering all 68 script IDs 
 
 The user reported whispery delivery in several first takes and requested children's-presenter energy at roughly 70% intensity. Updated the creative/audio direction toward fully voiced, animated performances, varying energy by scene. Produced eight same-word comparisons with the chosen cast, including lively invitations/discovery, clear instruction/help and a relaxed fully voiced ending. Ten requests used 784 included credits; two punctuation-encoding input errors were caught and corrected before handoff. Final samples total 29.9 seconds; eight transcript-word/decoding checks and 16-player browser loading/playback checks passed. The first set is preserved. Full-catalogue retakes wait on listening evidence that the revised direction meets the user's intent.
 
+### Dialogue variety and play-session guide — 2026-10-21
+
+Added 16 recorded feedback variants (script version 3, 84 lines): three lines each for word retry, too few/too many apples, unequal plates and matching-plates-with-apples-left, and six success lines each for packing and sharing. `chooseLineVariant` picks randomly without back-to-back repeats; previously packing/sharing success depended only on the basket size. All 84 transcripts match on both ElevenLabs Scribe and local Whisper after one retake (pack-many-2 said "takes them out"); the cough scan found none. 35 tests; Chrome check of three consecutive too-few checks played three variants with no repeat; 12 voice/offline checks pass. User proceeded after the sound-check page (taken as acceptance; any sound can be redone). Added the [parent play-session guide](docs/PLAY_SESSION_GUIDE.md); observation itself is the parent's next step.
+
 ### Picnic sound effects and night ambience — 2026-10-20
 
 Twelve sounds generated with ElevenLabs sound generation (322 credits) from [the sound direction](docs/PICNIC_SOUND_DIRECTION.json): tile place/lift, apple into basket/out/onto plate, word reveal, success chime, decoration sparkle, paper turn, scene whoosh, lantern ending, and a 20.5 s night loop. `prepare-picnic-sounds.py` trims relative to each sound's peak, levels effects to -9 dBFS peaks at 96 kbps (64 kbps filtered the shimmer), and crossfades/levels the ambience loop at fixed gain (-26 LUFS file). Whisper found no speech in any sound; loop-point level and step continuity checked. `render-sound-mix-preview.py` renders a gameplay mix at the app's exact gains: speech -18 dB, apple/count -19, chime/whoosh about -24, ambience alone about -35 and ducked about 10 dB further. Ambience was raised 10 dB after measuring it 26.6 dB under speech. Chrome production-build checks: ambience starts and ducks/returns with speech, whoosh and tile effects fire, both toggles off are silent, 12 sounds precached, no console errors; 34 tests and the 12 voice/offline checks pass. Parent listening of the mix ([sound check page](output/sound-effects/index.html)) pending.
@@ -336,7 +340,7 @@ The user listened to the comparison and asked for the revised voices to be imple
 
 ## 10. Immediate build queue
 
-1. Parent listening of the sound mix; then hold one observed play session (private notes outside Git).
+1. Parent holds one observed play session using [the guide](docs/PLAY_SESSION_GUIDE.md) (private notes outside Git); fix what it reveals.
 2. Produce/review phonics assets and integrate the sound-clue scene without duplicating workshop rewards.
 3. Add reviewed sound-based spelling support and remaining sound/motion polish; self-paced first-use interaction demonstrations are implemented.
 4. Complete Q4 browser, accessibility, performance, real-offline, and parent review checks; keep unperformed review clearly open.

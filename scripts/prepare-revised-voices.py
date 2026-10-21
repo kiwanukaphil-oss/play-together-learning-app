@@ -70,6 +70,13 @@ def mouth_envelope(path, frames_per_second=25):
     return "".join(str(min(9, round(9 * (level / loudest) ** 0.5))) if level / loudest > 0.04 else "0" for level in levels)
 
 
+def runtime_script_version():
+    script = subprocess.run(["node", "--input-type=module", "-e",
+                             "import {PICNIC_SCRIPT_VERSION} from './src/picnic-content.js';console.log(PICNIC_SCRIPT_VERSION);"],
+                            cwd=ROOT, capture_output=True, text=True, check=True)
+    return int(script.stdout)
+
+
 def load_runtime_lines():
     script = subprocess.run(
         ["node", "--input-type=module", "-e",
@@ -108,7 +115,7 @@ def prepare_revised_voices():
                             "review": PLAYABLE_STATUS, "sha256": packed["sha256"], "bytes": packed["bytes"],
                             "mouth": mouth_envelope(RUNTIME_AUDIO / f"{line_id}.mp3")}
 
-    manifest = {"manifestVersion": 1, "scriptVersion": 2, "directionVersion": 2, "model": log.get("modelId"),
+    manifest = {"manifestVersion": 1, "scriptVersion": runtime_script_version(), "directionVersion": 2, "model": log.get("modelId"),
                 "voices": log.get("voices"), "voiceSettings": log.get("voiceSettings"),
                 "humanListeningReview": False, "heldBack": held_back, "entries": catalogue}
     (REVISED / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

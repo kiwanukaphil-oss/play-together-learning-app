@@ -5,7 +5,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "7d9e19726791bd20499bf87ce16f9d0879ad0b62ff7a295011213f1590d5fced",
       "originalSha256": "1a20f0e7adc0ad3f5b8042ecb381059484e3b519d2b7243b1d814d49ef57f600",
-      "transcript": "A little picnic! Under the moon! Will you help us get ready?",
+      "transcript": "A little picnic under the moon. Will you help us get ready?",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -13,7 +13,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "b1bcc05a958831e0dcf8461be261d868f8b4940d1a92253308ed397b26a5d922",
       "originalSha256": "a7899d34eff2df15d59abf8de2a1acb7be011b67ccba1decb7295445506ae0ce",
-      "transcript": "Put three apples in the basket.",
+      "transcript": "Put three apples in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -21,7 +21,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "bd5247fdbe435d74ead00956e9817ea96b11b71ae0e0acae639e2938500d1db2",
       "originalSha256": "5395363fc10ff9d4540eb8e4f0d193826ce551504d3e4b6c3c24375ef5c957ba",
-      "transcript": "Watch my little example. I choose an apple to put it in the basket.",
+      "transcript": "Watch my little example. I choose an apple to put it in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -29,7 +29,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "0944ef688e5bb126a9ea35616a2913799a24d96097da52a10d96d93f1199fd5c",
       "originalSha256": "1f8aac4706590ad8aaab30594c20c41141c16ff7dcc0646e041a63f12120506f",
-      "transcript": "The food is ready. A lovely little picnic under the moon.",
+      "transcript": "The food is ready. A lovely little picnic under the moon",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -37,7 +37,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "5d93c2808ce15e21d4043b0ab6ea6b69232b42df98d2736c7be3a51fc5164c71",
       "originalSha256": "f74af381d1297c9a1645166535660dc4bd55a8c89d1f51dc9a58b4feb42e3710",
-      "transcript": "Let's make map! Choose the letters for map.",
+      "transcript": "Let's make map. Choose the letters for map",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -45,7 +45,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "29153bf4f9b5713bab4a4119c7dc6a9b03e2cfb7ea6cdc6962341f790c7c8370",
       "originalSha256": "9170c92de3749a9f9be3bf92bf3ad09418e41d35aed8f88fd7bf0d69c52ed37b",
-      "transcript": "A map! Now we can find our picnic spot!",
+      "transcript": "A map! Now we can find our picnic spot",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -61,7 +61,7 @@
       "source": "energy-review accepted sample",
       "generationTextSha256": "7e58d9774d889225673f32d2a5939027a8f8fc3afec1361d126fe509dbecbd38",
       "originalSha256": "0dcff9983b951d76a92b098ccdf6fd3e97f15900461071499abcbfa1e06380e5",
-      "transcript": "Get some paper and a pencil! Let's draw a lantern for our picnic!",
+      "transcript": "Get some paper and a pencil. Let's draw a lantern for our picnic",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -89,7 +89,7 @@
       "characterCost": 31,
       "originalSha256": "189aa57305c7668d12d99b95c062a0e6ce03df5bf2bb693deca5f8a44b035ee6",
       "generatedAt": "2026-10-20T13:57:58.901Z",
-      "transcript": "We can leave our picnic here. Come back whenever you like.",
+      "transcript": "We can leave our picnic here. Come back whenever you like",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -103,7 +103,7 @@
       "characterCost": 36,
       "originalSha256": "b3e49b969b1cb865b1dcc0d5667e134f97a9b78d97399c7a457616bd82557be0",
       "generatedAt": "2026-10-20T13:58:00.449Z",
-      "transcript": "Here is one letter to help. Check the word when you are ready.",
+      "transcript": "Here is one letter to help. Check the word when you are ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -117,7 +117,7 @@
       "characterCost": 35,
       "originalSha256": "f6cd92363f471d35ad2c0621e420253523ac8e6d548e4c533f2d2a1e5f0dc72f",
       "generatedAt": "2026-10-20T13:58:01.983Z",
-      "transcript": "Keep the letters that fit. Let's look at this space together.",
+      "transcript": "Keep the letters that fit. Let's look at this space together",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -131,7 +131,7 @@
       "characterCost": 36,
       "originalSha256": "6b10f06d38a4394b3befb9b104468b8167eec860a2ad0622cc0b00b50208076f",
       "generatedAt": "2026-10-20T13:58:03.529Z",
-      "transcript": "Some letters need another look. The letters that fit can stay.",
+      "transcript": "Some letters need another look. The letters that fit can stay",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -145,7 +145,7 @@
       "characterCost": 35,
       "originalSha256": "1f9b4b708f2da8e100febbbead77c955c8a5cbe24981ceda6665aac0a91b67d4",
       "generatedAt": "2026-10-20T13:58:05.587Z",
-      "transcript": "Our basket needs a little more. Count the apples then add some.",
+      "transcript": "Our basket needs a little more. Count the apples, then add some",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -159,7 +159,7 @@
       "characterCost": 32,
       "originalSha256": "ef88ee2236b692b4bb988875fb3de058e4e2ee090fe900f14ad5b43f79ca782d",
       "generatedAt": "2026-10-20T13:58:07.144Z",
-      "transcript": "There are too many apples! Count them, then take some out.",
+      "transcript": "There are too many apples. Count them, then take some out",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -187,7 +187,7 @@
       "characterCost": 35,
       "originalSha256": "567d344cf3d94fab305bbdf2c96992176bb98124457e3493d3a6dbb5e48161b2",
       "generatedAt": "2026-10-20T13:58:10.206Z",
-      "transcript": "I'll move one apple. You can finish getting the basket ready.",
+      "transcript": "I'll move one apple. You can finish getting the basket ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -201,7 +201,7 @@
       "characterCost": 32,
       "originalSha256": "125ac94747e9e07b6b1e1b6b4eeae2c9c0a9a01ed213cb3006419fe304d90d0e",
       "generatedAt": "2026-10-20T13:58:12.013Z",
-      "transcript": "Let's count the basket together, one apple at a time.",
+      "transcript": "Let's count the basket together one apple at a time",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -215,7 +215,7 @@
       "characterCost": 26,
       "originalSha256": "916695915a5086622a8c02b4d72587abd517f5c46441fbd178464f7e7db325b7",
       "generatedAt": "2026-10-20T13:58:13.656Z",
-      "transcript": "Just enough apples! Our basket is ready!",
+      "transcript": "Just enough apples. Our basket is ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -229,7 +229,7 @@
       "characterCost": 30,
       "originalSha256": "74ee889fb945cab7320e7a2b8f3fb870e49ebf32e2e9cf42631c11e6db0ec13d",
       "generatedAt": "2026-10-20T13:58:15.233Z",
-      "transcript": "That is the number we need. Let's take our basket.",
+      "transcript": "That is the number we need. Let's take our basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -243,7 +243,7 @@
       "characterCost": 28,
       "originalSha256": "6e77d83be2a0102a16145d3bf07eafdf1e1b76ff81241ac501f5784c7e5b5d66",
       "generatedAt": "2026-10-20T14:22:06.851Z",
-      "transcript": "You checked the apples. We are ready for our picnic.",
+      "transcript": "You checked the apples. We are ready for our picnic",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -257,7 +257,7 @@
       "characterCost": 34,
       "originalSha256": "8941e0aa4630ea7f1172c27ca4a45a5660566ca3656b27c19942a261956146cc",
       "generatedAt": "2026-10-20T14:25:09.103Z",
-      "transcript": "Give Pip and me the same number of apples. Use all the apples.",
+      "transcript": "Give Pip and me the same number of apples. Use all the apples",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -285,7 +285,7 @@
       "characterCost": 38,
       "originalSha256": "edbd0c2281d26ba79bc88e5c46de86b240ffa99d438ce4d3275434e62d129e08",
       "generatedAt": "2026-10-20T13:58:22.373Z",
-      "transcript": "The plates match! There are still apples waiting. Give one to each friend.",
+      "transcript": "The plates match. There are still apples waiting. Give one to each friend",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -299,7 +299,7 @@
       "characterCost": 28,
       "originalSha256": "c49f8e10511ad84e3165e28def7a85e93c61834570f5b1590c65bd639432ca57",
       "generatedAt": "2026-10-20T13:58:23.780Z",
-      "transcript": "Try giving one apple to Pip, then one to me.",
+      "transcript": "Try giving one apple to Pip, then one to me",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -313,7 +313,7 @@
       "characterCost": 32,
       "originalSha256": "213e08f822569fe00d37710e29085dcaec199238f8733f7e3d50eaa173d9ea1e",
       "generatedAt": "2026-10-20T13:58:25.189Z",
-      "transcript": "I'll move one apple to help make the plates the same.",
+      "transcript": "I'll move one apple to help make the plates the same",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -327,7 +327,7 @@
       "characterCost": 35,
       "originalSha256": "40ee9c9ae3f0298aafdf036e5838c73a5a9628bf638c9fc3984c07571b5c7edb",
       "generatedAt": "2026-10-20T13:58:26.675Z",
-      "transcript": "Count each plate. You can move an apple back if you need to.",
+      "transcript": "Count each plate. You can move an apple back if you need to",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -341,7 +341,7 @@
       "characterCost": 28,
       "originalSha256": "17c96322e95e05161b3da1564aa72a923d5a54304147b304cdd44b4c7919154f",
       "generatedAt": "2026-10-20T13:58:28.291Z",
-      "transcript": "The same for each of us. Our picnic is ready!",
+      "transcript": "The same for each of us. Our picnic is ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -355,7 +355,7 @@
       "characterCost": 24,
       "originalSha256": "d1b0c0d7252a6b63af5d142a136b259be4072e33dbedafeb64ee5de8e367d4e0",
       "generatedAt": "2026-10-20T13:58:29.674Z",
-      "transcript": "Two happy plates! We both have the same number!",
+      "transcript": "Two happy plates. We both have the same number",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -369,7 +369,7 @@
       "characterCost": 28,
       "originalSha256": "73122278ff786dae0bfa1fc3071268ba678a5cc7a995f3ba247307c66b4b207a",
       "generatedAt": "2026-10-20T13:58:31.056Z",
-      "transcript": "All shared out. Thank you for checking both plates.",
+      "transcript": "All shared out. Thank you for checking both plates",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -383,7 +383,7 @@
       "characterCost": 36,
       "originalSha256": "4b43c5f1a4945a56c8907b1e1a04172f5e134d7354f8aacfbb0d0dbb8763f72a",
       "generatedAt": "2026-10-20T13:58:32.528Z",
-      "transcript": "What pattern will your lantern have? You can invent one!",
+      "transcript": "What pattern will your lantern have? You can invent one",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -397,7 +397,7 @@
       "characterCost": 37,
       "originalSha256": "a3b5e45406ff42edeba11dfd3b1b50e0a7b598ef7386fcd60545461433c7ddd9",
       "generatedAt": "2026-10-20T13:58:34.231Z",
-      "transcript": "Who could carry your lantern? Draw a little creature beside it!",
+      "transcript": "Who could carry your lantern? Draw a little creature beside it",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -411,7 +411,7 @@
       "characterCost": 38,
       "originalSha256": "bbc3271aacc426dac008ad607673a4e04bc1e71b6681d7a5d6d60798ffe32095",
       "generatedAt": "2026-10-20T13:58:36.034Z",
-      "transcript": "The food is ready and you made a lantern on paper, a lovely little picnic.",
+      "transcript": "The food is ready and you made a lantern on paper. A lovely little picnic",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -425,7 +425,7 @@
       "characterCost": 24,
       "originalSha256": "0a9e01fb6d62025e949ac0b2bf8d3a5c8e88fe66469d2eaebedb4d7b9b0029b1",
       "generatedAt": "2026-10-20T13:58:37.236Z",
-      "transcript": "Choose a little decoration for our picnic.",
+      "transcript": "Choose a little decoration for our picnic",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -439,7 +439,7 @@
       "characterCost": 30,
       "originalSha256": "f2f6391696716f7167215360442b7845e32d1f9076b02d049c65727b763b1d99",
       "generatedAt": "2026-10-20T13:58:38.981Z",
-      "transcript": "Let's make Matt! Choose the letters for Matt.",
+      "transcript": "Let's make mat. Choose the letters for mat",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -453,7 +453,7 @@
       "characterCost": 26,
       "originalSha256": "3afe3ca4164c99af487b5f537caa3d2544c4cfaa05ab145cab5cc1001c93478f",
       "generatedAt": "2026-10-20T13:58:40.324Z",
-      "transcript": "A mat! A cosy place for our friends to sit.",
+      "transcript": "A mat! A cozy place for our friends to sit",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -467,7 +467,7 @@
       "characterCost": 30,
       "originalSha256": "9a7f3972def3b8a08809f938003664a1e50ccb1c483420ad38898c5a2f6e03f9",
       "generatedAt": "2026-10-20T13:58:41.646Z",
-      "transcript": "Let's make pan! Choose the letters for pan.",
+      "transcript": "Let's make pan. Choose the letters for pan",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -481,7 +481,7 @@
       "characterCost": 24,
       "originalSha256": "fd4d75e5754e74271ede33954345332cad5f76817f74ea6d5e7e368ab6d550bf",
       "generatedAt": "2026-10-20T14:22:09.953Z",
-      "transcript": "A pan! Bear can get our picnic ready!",
+      "transcript": "A pan. Bear can get our picnic ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -495,7 +495,7 @@
       "characterCost": 20,
       "originalSha256": "9956823a2a3ae63f1e7c97ded305be0e1904ebc6392f8f47e6ce41da38d5c78f",
       "generatedAt": "2026-10-20T13:58:44.206Z",
-      "transcript": "Put one apple in the basket!",
+      "transcript": "Put one apple in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -509,7 +509,7 @@
       "characterCost": 20,
       "originalSha256": "dda12f805169329032501cb5fa143bf4f09f805403481a107c97c0a70a48a2e5",
       "generatedAt": "2026-10-20T13:58:45.373Z",
-      "transcript": "Put two apples in the basket.",
+      "transcript": "Put two apples in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -523,7 +523,7 @@
       "characterCost": 21,
       "originalSha256": "1400b5458ad59939f25efab8fba0afc00ef567905a857ab85cce38acfc69224c",
       "generatedAt": "2026-10-20T13:58:46.806Z",
-      "transcript": "Put 4 apples in the basket.",
+      "transcript": "Put four apples in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -537,7 +537,7 @@
       "characterCost": 21,
       "originalSha256": "33476835cb7219882dff3a41df0314652fc08d5a6dfe3b5ae7a5cca466cf611e",
       "generatedAt": "2026-10-20T13:58:47.927Z",
-      "transcript": "Put 5 apples in the basket.",
+      "transcript": "Put five apples in the basket",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -551,7 +551,7 @@
       "characterCost": 47,
       "originalSha256": "ec105181d0ccf46431467e48958fd2ff021d249638d483abaa24910cbc8fb1f6",
       "generatedAt": "2026-10-20T13:58:50.119Z",
-      "transcript": "I brought two more apples! Share these between Pip and me. Give us the same number.",
+      "transcript": "I brought two more apples. Share these between Pip and me. Give us the same number",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -565,7 +565,7 @@
       "characterCost": 48,
       "originalSha256": "200241ea14d223e6900fd50f6939094936ae7d5e2abe0a5d25eb89545d36cba8",
       "generatedAt": "2026-10-20T13:58:52.084Z",
-      "transcript": "I brought four more apples! Share these between Pip and me. Give us the same number.",
+      "transcript": "I brought four more apples. Share these between Pip and me. Give us the same number",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -579,7 +579,7 @@
       "characterCost": 47,
       "originalSha256": "93076b48b8be131ba5766d8681f41c95572ed15e04477a73aecc9dab213afee4",
       "generatedAt": "2026-10-20T14:22:12.379Z",
-      "transcript": "I brought six more apples! Share these between Pip and me. Give us the same number.",
+      "transcript": "I brought six more apples. Share these between Pip and me. Give us the same number",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -593,7 +593,7 @@
       "characterCost": 7,
       "originalSha256": "9a74f3f64651838483da05f28333a2bd2dc1ab6a1f16b267c2b351dc8ad24021",
       "generatedAt": "2026-10-20T15:41:52.471Z",
-      "transcript": "Zero.",
+      "transcript": "Zero",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -607,7 +607,7 @@
       "characterCost": 7,
       "originalSha256": "c5beb054a8207c75d2a9e77277a1079429bcef7f74c023524988d930c0c46571",
       "generatedAt": "2026-10-20T14:25:10.176Z",
-      "transcript": "One.",
+      "transcript": "One",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -621,7 +621,7 @@
       "characterCost": 8,
       "originalSha256": "91214b46c953075acb17ef1c338097ae4ab14e06ebbade01f60e2c30727bc848",
       "generatedAt": "2026-10-20T13:58:57.157Z",
-      "transcript": "2",
+      "transcript": "Two",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -635,7 +635,7 @@
       "characterCost": 9,
       "originalSha256": "aee106f546d9710a655bf29e28d9d772b1c8e471a17549216c2cd455d8083982",
       "generatedAt": "2026-10-20T13:58:57.972Z",
-      "transcript": "3",
+      "transcript": "Three",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -663,7 +663,7 @@
       "characterCost": 8,
       "originalSha256": "e2f0f3e9856b229ae91487b77eb6685e760c297889e65ee9984d950ef410a80d",
       "generatedAt": "2026-10-20T14:22:14.106Z",
-      "transcript": "5",
+      "transcript": "Five",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -677,7 +677,7 @@
       "characterCost": 8,
       "originalSha256": "1821d44df86d4a4f0f0647b20a1be5c41b82f20f3f7b4dec03058b1fb339e46b",
       "generatedAt": "2026-10-20T13:59:00.647Z",
-      "transcript": "SIX!",
+      "transcript": "Six",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -691,7 +691,7 @@
       "characterCost": 23,
       "originalSha256": "64cf821eeb60a462da2a1dfebb6eb9f586488731753ad118ac657e374e835617",
       "generatedAt": "2026-10-20T13:59:01.835Z",
-      "transcript": "Draw a short line across your paper.",
+      "transcript": "Draw a short line across your paper",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -705,7 +705,7 @@
       "characterCost": 32,
       "originalSha256": "850ff56e8dee63ab3b52c12eaaaabcceff0072046e6aad205efff14efac8c778",
       "generatedAt": "2026-10-20T13:59:03.531Z",
-      "transcript": "Draw down, across and up. There is your lantern!",
+      "transcript": "Draw down, across, and up. There is your lantern",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -719,7 +719,7 @@
       "characterCost": 18,
       "originalSha256": "ec4d9459f9fb4addade7362df687f368776d46b72f1a82dea90f091e8ac6a5ae",
       "generatedAt": "2026-10-20T15:45:10.300Z",
-      "transcript": "Add a curved handle at the top.",
+      "transcript": "Add a curved handle at the top",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -733,7 +733,7 @@
       "characterCost": 34,
       "originalSha256": "2cd1e2f7a2620f9241ab3d3f5046a9ef4d83b97aafb02c1572b0d5cb7f00c9b5",
       "generatedAt": "2026-10-20T13:59:06.563Z",
-      "transcript": "Give your lantern a stripe, or invent your own pattern.",
+      "transcript": "Give your lantern a stripe or invent your own pattern",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -747,7 +747,7 @@
       "characterCost": 22,
       "originalSha256": "5a70190fa95591e78a346efaedc0d0d69619fd4b4462dc87d36e76819213b2dc",
       "generatedAt": "2026-10-20T13:59:07.732Z",
-      "transcript": "Draw a big circle for your lantern.",
+      "transcript": "Draw a big circle for your lantern",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -761,7 +761,7 @@
       "characterCost": 22,
       "originalSha256": "f22e0fc940d6f5a67f376aaca81fce99dfc315a8afbfb95a57b16a46eda02a4e",
       "generatedAt": "2026-10-20T13:59:08.907Z",
-      "transcript": "Add a little curved handle on top.",
+      "transcript": "Add a little curved handle on top",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -775,7 +775,7 @@
       "characterCost": 28,
       "originalSha256": "3cf0212b69b6c634a4daa862f1d129b7881a951e927472bf43b981f162d971ea",
       "generatedAt": "2026-10-20T13:59:10.155Z",
-      "transcript": "Add a stripe, or a pattern of your own.",
+      "transcript": "Add a stripe or a pattern of your own",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -789,7 +789,7 @@
       "characterCost": 35,
       "originalSha256": "8f6b99d3605c229ad3db7eaf22e6e161a171adeb392c7bd7788948dad4858e6d",
       "generatedAt": "2026-10-20T13:59:11.876Z",
-      "transcript": "Watch my little example. I choose a letter to put it in a space.",
+      "transcript": "Watch my little example. I choose a letter to put it in a space",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -803,7 +803,7 @@
       "characterCost": 41,
       "originalSha256": "769830f6a5612a25943da5d7ebe970816ac3c9675ae92cde0a894df399afef68",
       "generatedAt": "2026-10-20T13:59:13.517Z",
-      "transcript": "The letter moves into the space. You can choose the next letter.",
+      "transcript": "The letter moves into the space. You can choose the next letter",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -817,7 +817,7 @@
       "characterCost": 34,
       "originalSha256": "4ccb094cc34ee52043b8eead1e8c4369948f863d583464af11d630899a973bfb",
       "generatedAt": "2026-10-20T13:59:15.118Z",
-      "transcript": "Choose a filled space to empty it. The other letters can stay.",
+      "transcript": "Choose a filled space to empty it. The other letters can stay",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -831,7 +831,7 @@
       "characterCost": 30,
       "originalSha256": "9538eacc8ed1acbae8a7a4bb1e893255545de383b52fe24d0a2308fc0cec75fe",
       "generatedAt": "2026-10-20T13:59:16.543Z",
-      "transcript": "One apple is in my basket. Each tap adds one apple.",
+      "transcript": "One apple is in my basket. Each tap adds one apple",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -845,7 +845,7 @@
       "characterCost": 48,
       "originalSha256": "c6b627f605af5480a1b453645d0e0676d81324a9e61a681fa8d6ccc6ce423344",
       "generatedAt": "2026-10-20T13:59:18.521Z",
-      "transcript": "Choose an apple in the basket to take it out, then check when your basket is ready.",
+      "transcript": "Choose an apple in the basket to take it out. Then check when your basket is ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -859,7 +859,7 @@
       "characterCost": 34,
       "originalSha256": "7959fb4863190aabc17a5fe1781571d4f1fdf0c9c6b8d3a36774a09b0b0992a9",
       "generatedAt": "2026-10-20T13:59:20.429Z",
-      "transcript": "Watch my little example. I have four apples for two friends.",
+      "transcript": "Watch my little example. I have four apples for two friends",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -873,7 +873,7 @@
       "characterCost": 34,
       "originalSha256": "bc89870e15483f1a7bc6144fbec851c2eb7a087d5b28641d8784e8de8cc483c5",
       "generatedAt": "2026-10-20T13:59:21.892Z",
-      "transcript": "One for Pip and one for Bear. Two apples are still waiting.",
+      "transcript": "One for Pip and one for Bear. Two apples are still waiting",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -887,7 +887,7 @@
       "characterCost": 45,
       "originalSha256": "9490384f8f187316488a0b18eae19f5d7addd3cdcd7086fa680dc655b9a4a240",
       "generatedAt": "2026-10-20T13:59:23.898Z",
-      "transcript": "One more for each friend. Two each and no apples left. Both plates are ready.",
+      "transcript": "One more for each friend. Two each and no apples left. Both plates are ready",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     },
@@ -895,7 +895,230 @@
       "source": "identical prompt; reuses pack-five-in-row",
       "generationTextSha256": "b2b3761baddef0131df15347f92aaff9d57328797ddb47d7fd6a27552fa610d2",
       "originalSha256": "33476835cb7219882dff3a41df0314652fc08d5a6dfe3b5ae7a5cca466cf611e",
-      "transcript": "Put 5 apples in the basket.",
+      "transcript": "Put five apples in the basket",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "word-retry-2": {
+      "source": "api",
+      "take": 1,
+      "speaker": "pip",
+      "generationText": "[encouraging, curious] Let's listen to the word again. Which letter wants changing?",
+      "generationTextSha256": "d88bf842bc8405d17ebe08ffa7fae632d197b1bdcf2179ddb36611ec0ef19716",
+      "requestId": "TZikrHRLFakV5XRxiLaP",
+      "characterCost": 33,
+      "originalSha256": "b4d2619975cec7d3da7c2d8a0a96e3d98f354a22c5f9aeae60287d148ff31355",
+      "generatedAt": "2026-10-21T14:45:09.448Z",
+      "transcript": "Let's listen to the word again. Which letter wants changing?",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "word-retry-3": {
+      "source": "api",
+      "take": 1,
+      "speaker": "pip",
+      "generationText": "[encouraging, warm] Not quite yet. Keep the letters that fit, and try another one.",
+      "generationTextSha256": "420c077c65dc53077445691273f30b036672b0f583dc2bc536926ca9714fdc74",
+      "requestId": "wuGwFjjdXJ2Gvh324r9Q",
+      "characterCost": 33,
+      "originalSha256": "9a712b9a35a3061708ce170a6f92bb1e0881530e64a359abf8662c974101129b",
+      "generatedAt": "2026-10-21T14:45:11.113Z",
+      "transcript": "Not quite yet. Keep the letters that fit and try another one",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-few-2": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[playful] Hmm, a few more apples, please! [encouraging] Let's count what we have.",
+      "generationTextSha256": "a5a0531c0d403e15065fbd7ea0ed467a65840ce40d47cf195641c24e9b9db141",
+      "requestId": "7vNqtvYVKfK9CaPmNpMK",
+      "characterCost": 32,
+      "originalSha256": "a6f5e61c3f9039585a70abce3e40f07a3f1a34a4f506acdf8d0274459850c15e",
+      "generatedAt": "2026-10-21T14:45:13.294Z",
+      "transcript": "Hmm, a few more apples, please. Let's count what we have",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-few-3": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[playful, warm] Not quite enough yet. Count them, then add more!",
+      "generationTextSha256": "1145485352a51fddd1c9c9ae453d0c56792b9d936d4307d3a4288f3c044fb650",
+      "requestId": "zC2lbh3YuvHfe78usZya",
+      "characterCost": 26,
+      "originalSha256": "02f80a1f9bdbf02e4fce6aff8ebbd9e474a0a0496613c3bd57ea034778fad93d",
+      "generatedAt": "2026-10-21T14:45:14.820Z",
+      "transcript": "Not quite enough yet. Count them, then add more",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-many-2": {
+      "source": "api",
+      "take": 2,
+      "speaker": "bear",
+      "generationText": "[playful] Oops, our basket is too full! [encouraging] Count them, then take some out.",
+      "generationTextSha256": "db358ee9d939242ae9aa49823cd1e0b808f1f660984fe3c65004403450d8087e",
+      "requestId": "tQHzCl6Tby0vv2FKA5Zs",
+      "characterCost": 34,
+      "originalSha256": "b026bdfc6e42df145cf210c87b68a940ef9f2d2d475c37eb280c25245deb20f4",
+      "generatedAt": "2026-10-21T14:47:46.940Z",
+      "transcript": "Oops, our basket is too full. Count them, then take some out",
+      "transcriptMatches": true
+    },
+    "pack-many-3": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[playful, warm] That is more than we need! Take some apples out.",
+      "generationTextSha256": "a3377df725cb9a8ce4a5d57e5add2db6e357597ada8e1072057d0e9cfff826c5",
+      "requestId": "fqBNyOIcqsfdoNYY8Vs6",
+      "characterCost": 26,
+      "originalSha256": "09f52e6596f704e72c54a75880ecfedf08a55dfaaec498b29d504f05f8bc2ed1",
+      "generatedAt": "2026-10-21T14:45:18.606Z",
+      "transcript": "That is more than we need. Take some apples out",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-retry-2": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[curious, encouraging] Hmm, one plate has more. Can you make them the same?",
+      "generationTextSha256": "d1a3032a1bf5a7ad56671a24bfbba259a0b95c9c1eb1fa349cb062e1d42e6af5",
+      "requestId": "bQszVSUaaxOjg9TzYybD",
+      "characterCost": 30,
+      "originalSha256": "da4467c05b0256da90f0cad912a0e18e01cc384025952d4d5f26583d88ad7c9b",
+      "generatedAt": "2026-10-21T14:45:20.153Z",
+      "transcript": "Hmm, one plate has more. Can you make them the same?",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-retry-3": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[encouraging, warm] Let's check again. Pip and I need the same number.",
+      "generationTextSha256": "202fdba9f8641413012104ef4499ec5887e11b2416a2b7bb1908725080a7e9d7",
+      "requestId": "680p17sZGpVDpEdNGw6d",
+      "characterCost": 28,
+      "originalSha256": "8640a8ae815ad84b7f045b20de389cbf054dffcfcf99968f7839eea9eeacee1a",
+      "generatedAt": "2026-10-21T14:45:21.769Z",
+      "transcript": "Let's check again. Pip and I need the same number",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-left-2": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[upbeat] The plates match! [encouraging] Some apples are still waiting to be shared.",
+      "generationTextSha256": "0d9873541d905e675ddc8dc141f3ae377503e874ab261007194bd49fe5baa929",
+      "requestId": "1PCRaeMmJmpeZ2WrsfPY",
+      "characterCost": 34,
+      "originalSha256": "2c3a04b0ef2b0790cf4a809f1838c9e1f5182dbb50726aa38cda5231b31348c4",
+      "generatedAt": "2026-10-21T14:45:23.259Z",
+      "transcript": "The plates match. Some apples are still waiting to be shared",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-left-3": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[upbeat] The same so far! Now share the rest, one each.",
+      "generationTextSha256": "5dd79e08eada14defadc614dcf82af9bf39084c1c217a055045dc3ebf4c4f1c2",
+      "requestId": "2tAXPQutjPAmn6MKFKej",
+      "characterCost": 22,
+      "originalSha256": "011055f63ed39716d505ff8099b3655a954634aa386716edea299e490f31b76f",
+      "generatedAt": "2026-10-21T14:45:24.588Z",
+      "transcript": "The same so far. Now share the rest, one each",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-success-4": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[delighted] Exactly the right number of apples! [warm] Thank you.",
+      "generationTextSha256": "54b701757d387acfbe5bafdb72f5ee49c0908cde590de940c3a42d7120304ba4",
+      "requestId": "6XGDNppD8vsdto8fc4De",
+      "characterCost": 26,
+      "originalSha256": "ed5dd9f7b297e35d06530beea0e848c519971184f85db5136b2eefac3d4a99b7",
+      "generatedAt": "2026-10-21T14:45:26.202Z",
+      "transcript": "Exactly the right number of apples. Thank you",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-success-5": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[delighted] Just the number we need! [cheerfully] Off to our picnic!",
+      "generationTextSha256": "202d3eb131c0c270949abcc63d7f7dbaadd51cdc5d18495d3df8e19e5cbee6c1",
+      "requestId": "uulq6AXHFuHGLFgsgDGj",
+      "characterCost": 27,
+      "originalSha256": "12052497082936bd0da358210f256143b5b4e7d5930dadd253dee6f22871986f",
+      "generatedAt": "2026-10-21T14:45:27.746Z",
+      "transcript": "Just the number we need. Off to our picnic",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "pack-success-6": {
+      "source": "api",
+      "take": 1,
+      "speaker": "bear",
+      "generationText": "[pleased, warm] You counted carefully! Our basket is ready to go.",
+      "generationTextSha256": "3a0802d9d9c6976f51a7bccdfe0c5b57719dd70f0b3268e2607f217bc31860d5",
+      "requestId": "cLNavsqC92WyKSUaXd7w",
+      "characterCost": 26,
+      "originalSha256": "8d13bdc80b1870ae9d3f90b2e2e92645a44b70967c5066442dbd518aff4f7c9e",
+      "generatedAt": "2026-10-21T14:45:29.404Z",
+      "transcript": "You counted carefully. Our basket is ready to go",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-success-4": {
+      "source": "api",
+      "take": 1,
+      "speaker": "pip",
+      "generationText": "[delighted] Fair and square! The same for both of us.",
+      "generationTextSha256": "1d6f61d11e68fd6b4c83f108cab7b93d11375a5da9dfba0e3cc93cd4ebb6eb50",
+      "requestId": "ZlRjnAWsxmZBpFLcQjvj",
+      "characterCost": 21,
+      "originalSha256": "28d9952f5e4f743dc0e1ce0e57d9bcab5c35e19b957f0d76acecbc772de04d28",
+      "generatedAt": "2026-10-21T14:45:30.721Z",
+      "transcript": "Fair and square. The same for both of us",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-success-5": {
+      "source": "api",
+      "take": 1,
+      "speaker": "pip",
+      "generationText": "[cheerfully] You shared them all, and both plates match!",
+      "generationTextSha256": "ed36d78d89ee4caedd364ad0d706bc56736952d9f39c52227f30646b847cb9fe",
+      "requestId": "kUSBn6L5CEvmKbRTknse",
+      "characterCost": 22,
+      "originalSha256": "3e7722fda93e66f44a0a598c7d3e38db2088baa56998f9c8656fb50bd3c13da0",
+      "generatedAt": "2026-10-21T14:45:31.870Z",
+      "transcript": "You shared them all, and both plates match",
+      "transcriptMatches": true,
+      "transcriber": "faster-whisper small.en (local)"
+    },
+    "share-success-6": {
+      "source": "api",
+      "take": 1,
+      "speaker": "pip",
+      "generationText": "[playful, delighted] One for you, one for me, all the way! [warm] Thank you.",
+      "generationTextSha256": "92f0b4d6d357ef4154b67153953a4a2ad9552b8ea416b54ae6594c8f1532ac0d",
+      "requestId": "dHnJLGWbaHs80PRIGs32",
+      "characterCost": 30,
+      "originalSha256": "b44f42743639c4dddd58fcff0601edbfa5fcc331e18d6601619afe87c2bf1322",
+      "generatedAt": "2026-10-21T14:45:33.500Z",
+      "transcript": "One for you, one for me, all the way. Thank you",
       "transcriptMatches": true,
       "transcriber": "faster-whisper small.en (local)"
     }
@@ -915,5 +1138,5 @@
       "voiceId": "FZQ5wG88XQUxYZLhe3dp"
     }
   },
-  "verifiedAt": "2026-10-20T14:22:46.667Z"
+  "verifiedAt": "2026-10-21T14:48:55.798Z"
 }

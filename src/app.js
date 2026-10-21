@@ -3,13 +3,14 @@ import {DRAWINGS,drawingSvg} from './drawing.js';
 import {LETTER_MODELS,letterSvg} from './handwriting.js';
 import {SAVE_KEY,RESUME_KEY,defaultProgress,loadProgress,persistProgress,validateProgress,validateResume,recordObservation,levelFor,shuffled,chooseFresh,choosePracticeItem,dailyWorlds} from './learning.js';
 import {createPicnic,updatePicnic,picnicCount,picnicObservations,picnicNeedsDemo} from './picnic-state.js';
-import {PICNIC_LINES} from './picnic-content.js';
+import {PICNIC_LINES,chooseLineVariant} from './picnic-content.js';
 import {picnicInvitation,renderPicnic,picnicInstruction} from './picnic-view.js';
 import {createPicnicAudio} from './picnic-audio.js';
 import {createPicnicSound,picnicSoundFor} from './picnic-sound.js';
 
 const app=document.getElementById('app');
 let picnicLineId='',picnicPreview=false,picnicPaused=false,picnicExtension=0,speakingCharacter=null;
+const lastLineInFamily={};
 const picnicSound=createPicnicSound({settings:()=>({muted:progress.muted,effects:progress.effects,ambience:progress.ambience})});
 // Re-applied after every render because the stage is redrawn while a line may still be playing.
 function showSpeakingCharacter(){
@@ -268,7 +269,7 @@ function choosePicnicFeedback(before,after,action){
  if(action==='check'){
   if(after.completed.includes(after.scene)){
    if(after.scene==='word')return `word-success-${after.wordId}`;
-   return `${after.scene}-success-${1+(after.basket%3)}`;
+   return `${after.scene}-success`;
   }
   if(after.scene==='pack')return after.basket<picnicCount(after).total?'pack-few':'pack-many';
   if(after.scene==='share'&&after.plates[0]===after.plates[1])return 'share-left';
@@ -311,7 +312,8 @@ function actOnPicnic(action,value){
  const observations=picnicObservations(progress.picnic);
  for(const observation of observations)progress=recordObservation(progress,observation.skill,observation.content,'supported');
  if(observations.length)progress.picnic.recorded=true;
- picnicLineId=choosePicnicFeedback(before,progress.picnic,action);
+ const family=choosePicnicFeedback(before,progress.picnic,action);
+ picnicLineId=chooseLineVariant(family,lastLineInFamily[family]);lastLineInFamily[family]=picnicLineId;
  save();render();
  if(!['letter','clear-letter','undo','plate-add','plate-remove'].includes(action))picnicAudio.play(picnicLineId,{muted:progress.muted});
  if(before.scene!==progress.picnic.scene||picnicNeedsDemo(before)!==picnicNeedsDemo(progress.picnic)){const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true});}

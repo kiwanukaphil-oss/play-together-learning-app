@@ -1,78 +1,361 @@
 {
   "directionVersion": 2,
-  "scriptVersion": 2,
+  "scriptVersion": 3,
   "date": "2026-10-20",
   "brief": "Animated children's-presenter energy at roughly 70% intensity: clear, fully voiced speech, playful emphasis and engaged questions. Instructions stay steady; help stays encouraging; endings relax without whispering. Energy values are a creative brief, not a synthesis setting.",
   "acceptedBy": "User listened to the eight-line comparison (output/voice-energy-review) and asked for the revised voices to be implemented on 2026-10-20.",
-  "reusedFromEnergyReview": ["welcome", "pack-three-in-row", "demo-pack-0", "ending-skipped", "word-map", "word-success-map", "word-help-1", "paper"],
+  "reusedFromEnergyReview": [
+    "welcome",
+    "pack-three-in-row",
+    "demo-pack-0",
+    "ending-skipped",
+    "word-map",
+    "word-success-map",
+    "word-help-1",
+    "paper"
+  ],
   "lines": {
-    "welcome": {"energy": 7, "generationText": "[cheerfully] A little picnic, under the moon! [curious] Will you help us get ready?"},
-    "resume": {"energy": 7, "generationText": "[cheerfully] Our picnic is waiting! [curious] Shall we carry on?"},
-    "exit": {"energy": 5, "generationText": "[warm, clear voice] We can leave our picnic here. Come back whenever you like!"},
-    "word-help-1": {"energy": 5.5, "generationText": "[encouraging, clear voice] Listen to the word again. [curious] Which letter comes next?"},
-    "word-help-2": {"energy": 5.5, "generationText": "[encouraging, clear voice] Here is one letter to help. Check the word when you are ready."},
-    "word-help-3": {"energy": 5.5, "generationText": "[encouraging, clear voice] Keep the letters that fit. Let's look at this space together!"},
-    "word-retry": {"energy": 5.5, "generationText": "[encouraging, clear voice] Some letters need another look. The letters that fit can stay."},
-    "pack-few": {"energy": 6, "generationText": "[playful, clear voice] Our basket needs a little more! Count the apples, then add some."},
-    "pack-many": {"energy": 6, "generationText": "[playful, clear voice] There are too many apples! Count them, then take some out."},
-    "pack-help-1": {"energy": 5.5, "generationText": "[encouraging, clear voice] Count each apple in the basket. [curious] How many are there?"},
-    "pack-help-2": {"energy": 5.5, "generationText": "[encouraging, clear voice] I'll move one apple. You can finish getting the basket ready!"},
-    "pack-help-3": {"energy": 5.5, "generationText": "[encouraging, clear voice] Let's count the basket together, one apple at a time."},
-    "pack-success-1": {"energy": 8, "generationText": "[delighted] Just enough apples! [cheerfully] Our basket is ready!"},
-    "pack-success-2": {"energy": 8, "generationText": "[delighted] That is the number we need! [cheerfully] Let's take our basket."},
-    "pack-success-3": {"energy": 7.5, "generationText": "[pleased, bright] You checked the apples! We are ready for our picnic."},
-    "share": {"energy": 6, "generationText": "[upbeat, clear voice] Give Pip, and me, the same number of apples. Use all the apples!"},
-    "share-retry": {"energy": 5.5, "generationText": "[encouraging, clear voice] Let's look at both plates. [curious] Does each friend have the same number?"},
-    "share-left": {"energy": 6, "generationText": "[upbeat, clear voice] The plates match! There are still apples waiting. Give one to each friend."},
-    "share-help-1": {"energy": 5.5, "generationText": "[encouraging, clear voice] Try giving one apple to Pip, then one to me."},
-    "share-help-2": {"energy": 5.5, "generationText": "[encouraging, clear voice] I'll move one apple to help make the plates the same."},
-    "share-help-3": {"energy": 5.5, "generationText": "[encouraging, clear voice] Count each plate. You can move an apple back if you need to."},
-    "share-success-1": {"energy": 8, "generationText": "[delighted] The same for each of us! [cheerfully] Our picnic is ready!"},
-    "share-success-2": {"energy": 8, "generationText": "[delighted] Two happy plates! We both have the same number."},
-    "share-success-3": {"energy": 7.5, "generationText": "[cheerfully] All shared out! [warm] Thank you for checking both plates."},
-    "paper": {"energy": 7, "generationText": "[cheerfully] Get some paper and a pencil! [animated] Let's draw a lantern for our picnic."},
-    "paper-extension-1": {"energy": 6.5, "generationText": "[curious, animated] What pattern will your lantern have? [encouraging] You can invent one!"},
-    "paper-extension-2": {"energy": 6.5, "generationText": "[curious, animated] Who could carry your lantern? [playful] Draw a little creature beside it!"},
-    "ending-drawn": {"energy": 4.5, "generationText": "[warm, clear voice] The food is ready, and you made a lantern on paper! A lovely little picnic."},
-    "ending-skipped": {"energy": 4, "generationText": "[warm, clear voice] The food is ready! A lovely little picnic, under the moon."},
-    "decoration": {"energy": 7, "generationText": "[bright, animated] Choose a little decoration for our picnic!"},
-    "word-map": {"energy": 7, "generationText": "[bright, animated] Let's make map! [encouraging] Choose the letters for map."},
-    "word-success-map": {"energy": 8, "generationText": "[excited] A map! [cheerfully] Now we can find our picnic spot!"},
-    "word-mat": {"energy": 7, "generationText": "[bright, animated] Let's make mat! [encouraging] Choose the letters for mat."},
-    "word-success-mat": {"energy": 8, "generationText": "[excited] A mat! [cheerfully] A cosy place for our friends to sit!"},
-    "word-pan": {"energy": 7, "generationText": "[bright, animated] Let's make pan! [encouraging] Choose the letters for pan."},
-    "word-success-pan": {"energy": 8, "generationText": "[excited] A pan! [cheerfully] Bear can get our picnic ready!"},
-    "pack-one-on-cloth": {"energy": 6, "generationText": "[upbeat, clear voice] Put one apple in the basket!"},
-    "pack-two-together": {"energy": 6, "generationText": "[upbeat, clear voice] Put two apples in the basket!"},
-    "pack-three-in-row": {"energy": 6, "generationText": "[upbeat, clear voice] Put three apples in the basket!"},
-    "pack-four-in-pairs": {"energy": 6, "generationText": "[upbeat, clear voice] Put four apples in the basket!"},
-    "pack-five-in-row": {"energy": 6, "generationText": "[upbeat, clear voice] Put five apples in the basket!", "sharedTakeWith": "pack-five-staggered"},
-    "pack-five-staggered": {"energy": 6, "generationText": "[upbeat, clear voice] Put five apples in the basket!", "reuseTakeOf": "pack-five-in-row"},
-    "share-start-share-two": {"energy": 6.5, "generationText": "[cheerfully] I brought two more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."},
-    "share-start-share-four": {"energy": 6.5, "generationText": "[cheerfully] I brought four more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."},
-    "share-start-share-six": {"energy": 6.5, "generationText": "[cheerfully] I brought six more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."},
-    "count-0": {"energy": 6, "generationText": "[cheerfully] Zero!", "note": "[clear, upbeat] produced a cough; flagged by user listening review"},
-    "count-1": {"energy": 6, "generationText": "[cheerfully] One!", "note": "[clear, upbeat] produced a throat-clear on two takes"},
-    "count-2": {"energy": 6, "generationText": "[clear, upbeat] Two!"},
-    "count-3": {"energy": 6, "generationText": "[clear, upbeat] Three!"},
-    "count-4": {"energy": 6, "generationText": "[clear, upbeat] Four!"},
-    "count-5": {"energy": 6, "generationText": "[clear, upbeat] Five!"},
-    "count-6": {"energy": 6, "generationText": "[clear, upbeat] Six!"},
-    "paper-rim": {"energy": 5.5, "generationText": "[clear, encouraging] Draw a short line across your paper."},
-    "paper-body": {"energy": 6, "generationText": "[clear, encouraging] Draw down, across, and up. [pleased] There is your lantern!"},
-    "paper-handle": {"energy": 5.5, "generationText": "[encouraging] Add a curved handle at the top.", "note": "tags containing clear produced throat-clears on two takes"},
-    "paper-pattern": {"energy": 6.5, "generationText": "[clear, encouraging] Give your lantern a stripe. [playful] Or invent your own pattern!"},
-    "paper-round-body": {"energy": 5.5, "generationText": "[clear, encouraging] Draw a big circle for your lantern."},
-    "paper-round-handle": {"energy": 5.5, "generationText": "[clear, encouraging] Add a little curved handle on top."},
-    "paper-round-pattern": {"energy": 6.5, "generationText": "[clear, encouraging] Add a stripe, [playful] or a pattern of your own!"},
-    "demo-word-0": {"energy": 6, "generationText": "[animated, clear voice] Watch my little example! I choose a letter to put it in a space."},
-    "demo-word-1": {"energy": 6, "generationText": "[animated, clear voice] The letter moves into the space. [encouraging] You can choose the next letter."},
-    "demo-word-2": {"energy": 6, "generationText": "[animated, clear voice] Choose a filled space to empty it. The other letters can stay."},
-    "demo-pack-0": {"energy": 6, "generationText": "[animated, clear voice] Watch my little example! I choose an apple to put it in the basket."},
-    "demo-pack-1": {"energy": 6, "generationText": "[animated, clear voice] One apple is in my basket! Each tap adds one apple."},
-    "demo-pack-2": {"energy": 6, "generationText": "[animated, clear voice] Choose an apple in the basket to take it out. [encouraging] Then check when your basket is ready."},
-    "demo-share-0": {"energy": 6, "generationText": "[animated, clear voice] Watch my little example! I have four apples for two friends."},
-    "demo-share-1": {"energy": 6, "generationText": "[animated, clear voice] One for Pip, and one for Bear. Two apples are still waiting."},
-    "demo-share-2": {"energy": 6.5, "generationText": "[animated, clear voice] One more for each friend. Two each, and no apples left. [pleased] Both plates are ready!"}
-  }
+    "welcome": {
+      "energy": 7,
+      "generationText": "[cheerfully] A little picnic, under the moon! [curious] Will you help us get ready?"
+    },
+    "resume": {
+      "energy": 7,
+      "generationText": "[cheerfully] Our picnic is waiting! [curious] Shall we carry on?"
+    },
+    "exit": {
+      "energy": 5,
+      "generationText": "[warm, clear voice] We can leave our picnic here. Come back whenever you like!"
+    },
+    "word-help-1": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Listen to the word again. [curious] Which letter comes next?"
+    },
+    "word-help-2": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Here is one letter to help. Check the word when you are ready."
+    },
+    "word-help-3": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Keep the letters that fit. Let's look at this space together!"
+    },
+    "word-retry": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Some letters need another look. The letters that fit can stay."
+    },
+    "pack-few": {
+      "energy": 6,
+      "generationText": "[playful, clear voice] Our basket needs a little more! Count the apples, then add some."
+    },
+    "pack-many": {
+      "energy": 6,
+      "generationText": "[playful, clear voice] There are too many apples! Count them, then take some out."
+    },
+    "pack-help-1": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Count each apple in the basket. [curious] How many are there?"
+    },
+    "pack-help-2": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] I'll move one apple. You can finish getting the basket ready!"
+    },
+    "pack-help-3": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Let's count the basket together, one apple at a time."
+    },
+    "pack-success-1": {
+      "energy": 8,
+      "generationText": "[delighted] Just enough apples! [cheerfully] Our basket is ready!"
+    },
+    "pack-success-2": {
+      "energy": 8,
+      "generationText": "[delighted] That is the number we need! [cheerfully] Let's take our basket."
+    },
+    "pack-success-3": {
+      "energy": 7.5,
+      "generationText": "[pleased, bright] You checked the apples! We are ready for our picnic."
+    },
+    "share": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Give Pip, and me, the same number of apples. Use all the apples!"
+    },
+    "share-retry": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Let's look at both plates. [curious] Does each friend have the same number?"
+    },
+    "share-left": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] The plates match! There are still apples waiting. Give one to each friend."
+    },
+    "share-help-1": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Try giving one apple to Pip, then one to me."
+    },
+    "share-help-2": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] I'll move one apple to help make the plates the same."
+    },
+    "share-help-3": {
+      "energy": 5.5,
+      "generationText": "[encouraging, clear voice] Count each plate. You can move an apple back if you need to."
+    },
+    "share-success-1": {
+      "energy": 8,
+      "generationText": "[delighted] The same for each of us! [cheerfully] Our picnic is ready!"
+    },
+    "share-success-2": {
+      "energy": 8,
+      "generationText": "[delighted] Two happy plates! We both have the same number."
+    },
+    "share-success-3": {
+      "energy": 7.5,
+      "generationText": "[cheerfully] All shared out! [warm] Thank you for checking both plates."
+    },
+    "paper": {
+      "energy": 7,
+      "generationText": "[cheerfully] Get some paper and a pencil! [animated] Let's draw a lantern for our picnic."
+    },
+    "paper-extension-1": {
+      "energy": 6.5,
+      "generationText": "[curious, animated] What pattern will your lantern have? [encouraging] You can invent one!"
+    },
+    "paper-extension-2": {
+      "energy": 6.5,
+      "generationText": "[curious, animated] Who could carry your lantern? [playful] Draw a little creature beside it!"
+    },
+    "ending-drawn": {
+      "energy": 4.5,
+      "generationText": "[warm, clear voice] The food is ready, and you made a lantern on paper! A lovely little picnic."
+    },
+    "ending-skipped": {
+      "energy": 4,
+      "generationText": "[warm, clear voice] The food is ready! A lovely little picnic, under the moon."
+    },
+    "decoration": {
+      "energy": 7,
+      "generationText": "[bright, animated] Choose a little decoration for our picnic!"
+    },
+    "word-map": {
+      "energy": 7,
+      "generationText": "[bright, animated] Let's make map! [encouraging] Choose the letters for map."
+    },
+    "word-success-map": {
+      "energy": 8,
+      "generationText": "[excited] A map! [cheerfully] Now we can find our picnic spot!"
+    },
+    "word-mat": {
+      "energy": 7,
+      "generationText": "[bright, animated] Let's make mat! [encouraging] Choose the letters for mat."
+    },
+    "word-success-mat": {
+      "energy": 8,
+      "generationText": "[excited] A mat! [cheerfully] A cosy place for our friends to sit!"
+    },
+    "word-pan": {
+      "energy": 7,
+      "generationText": "[bright, animated] Let's make pan! [encouraging] Choose the letters for pan."
+    },
+    "word-success-pan": {
+      "energy": 8,
+      "generationText": "[excited] A pan! [cheerfully] Bear can get our picnic ready!"
+    },
+    "pack-one-on-cloth": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put one apple in the basket!"
+    },
+    "pack-two-together": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put two apples in the basket!"
+    },
+    "pack-three-in-row": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put three apples in the basket!"
+    },
+    "pack-four-in-pairs": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put four apples in the basket!"
+    },
+    "pack-five-in-row": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put five apples in the basket!",
+      "sharedTakeWith": "pack-five-staggered"
+    },
+    "pack-five-staggered": {
+      "energy": 6,
+      "generationText": "[upbeat, clear voice] Put five apples in the basket!",
+      "reuseTakeOf": "pack-five-in-row"
+    },
+    "share-start-share-two": {
+      "energy": 6.5,
+      "generationText": "[cheerfully] I brought two more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."
+    },
+    "share-start-share-four": {
+      "energy": 6.5,
+      "generationText": "[cheerfully] I brought four more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."
+    },
+    "share-start-share-six": {
+      "energy": 6.5,
+      "generationText": "[cheerfully] I brought six more apples! [upbeat, clear voice] Share these between Pip and me. Give us the same number."
+    },
+    "count-0": {
+      "energy": 6,
+      "generationText": "[cheerfully] Zero!",
+      "note": "[clear, upbeat] produced a cough; flagged by user listening review"
+    },
+    "count-1": {
+      "energy": 6,
+      "generationText": "[cheerfully] One!",
+      "note": "[clear, upbeat] produced a throat-clear on two takes"
+    },
+    "count-2": {
+      "energy": 6,
+      "generationText": "[clear, upbeat] Two!"
+    },
+    "count-3": {
+      "energy": 6,
+      "generationText": "[clear, upbeat] Three!"
+    },
+    "count-4": {
+      "energy": 6,
+      "generationText": "[clear, upbeat] Four!"
+    },
+    "count-5": {
+      "energy": 6,
+      "generationText": "[clear, upbeat] Five!"
+    },
+    "count-6": {
+      "energy": 6,
+      "generationText": "[clear, upbeat] Six!"
+    },
+    "paper-rim": {
+      "energy": 5.5,
+      "generationText": "[clear, encouraging] Draw a short line across your paper."
+    },
+    "paper-body": {
+      "energy": 6,
+      "generationText": "[clear, encouraging] Draw down, across, and up. [pleased] There is your lantern!"
+    },
+    "paper-handle": {
+      "energy": 5.5,
+      "generationText": "[encouraging] Add a curved handle at the top.",
+      "note": "tags containing clear produced throat-clears on two takes"
+    },
+    "paper-pattern": {
+      "energy": 6.5,
+      "generationText": "[clear, encouraging] Give your lantern a stripe. [playful] Or invent your own pattern!"
+    },
+    "paper-round-body": {
+      "energy": 5.5,
+      "generationText": "[clear, encouraging] Draw a big circle for your lantern."
+    },
+    "paper-round-handle": {
+      "energy": 5.5,
+      "generationText": "[clear, encouraging] Add a little curved handle on top."
+    },
+    "paper-round-pattern": {
+      "energy": 6.5,
+      "generationText": "[clear, encouraging] Add a stripe, [playful] or a pattern of your own!"
+    },
+    "demo-word-0": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] Watch my little example! I choose a letter to put it in a space."
+    },
+    "demo-word-1": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] The letter moves into the space. [encouraging] You can choose the next letter."
+    },
+    "demo-word-2": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] Choose a filled space to empty it. The other letters can stay."
+    },
+    "demo-pack-0": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] Watch my little example! I choose an apple to put it in the basket."
+    },
+    "demo-pack-1": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] One apple is in my basket! Each tap adds one apple."
+    },
+    "demo-pack-2": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] Choose an apple in the basket to take it out. [encouraging] Then check when your basket is ready."
+    },
+    "demo-share-0": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] Watch my little example! I have four apples for two friends."
+    },
+    "demo-share-1": {
+      "energy": 6,
+      "generationText": "[animated, clear voice] One for Pip, and one for Bear. Two apples are still waiting."
+    },
+    "demo-share-2": {
+      "energy": 6.5,
+      "generationText": "[animated, clear voice] One more for each friend. Two each, and no apples left. [pleased] Both plates are ready!"
+    },
+    "word-retry-2": {
+      "energy": 5.5,
+      "generationText": "[encouraging, curious] Let's listen to the word again. Which letter wants changing?"
+    },
+    "word-retry-3": {
+      "energy": 5.5,
+      "generationText": "[encouraging, warm] Not quite yet. Keep the letters that fit, and try another one."
+    },
+    "pack-few-2": {
+      "energy": 6,
+      "generationText": "[playful] Hmm, a few more apples, please! [encouraging] Let's count what we have."
+    },
+    "pack-few-3": {
+      "energy": 6,
+      "generationText": "[playful, warm] Not quite enough yet. Count them, then add more!"
+    },
+    "pack-many-2": {
+      "energy": 6,
+      "generationText": "[playful] Oops, our basket is too full! [encouraging] Count them, then take some out."
+    },
+    "pack-many-3": {
+      "energy": 6,
+      "generationText": "[playful, warm] That is more than we need! Take some apples out."
+    },
+    "share-retry-2": {
+      "energy": 5.5,
+      "generationText": "[curious, encouraging] Hmm, one plate has more. Can you make them the same?"
+    },
+    "share-retry-3": {
+      "energy": 5.5,
+      "generationText": "[encouraging, warm] Let's check again. Pip and I need the same number."
+    },
+    "share-left-2": {
+      "energy": 6,
+      "generationText": "[upbeat] The plates match! [encouraging] Some apples are still waiting to be shared."
+    },
+    "share-left-3": {
+      "energy": 6,
+      "generationText": "[upbeat] The same so far! Now share the rest, one each."
+    },
+    "pack-success-4": {
+      "energy": 8,
+      "generationText": "[delighted] Exactly the right number of apples! [warm] Thank you."
+    },
+    "pack-success-5": {
+      "energy": 8,
+      "generationText": "[delighted] Just the number we need! [cheerfully] Off to our picnic!"
+    },
+    "pack-success-6": {
+      "energy": 7.5,
+      "generationText": "[pleased, warm] You counted carefully! Our basket is ready to go."
+    },
+    "share-success-4": {
+      "energy": 8,
+      "generationText": "[delighted] Fair and square! The same for both of us."
+    },
+    "share-success-5": {
+      "energy": 8,
+      "generationText": "[cheerfully] You shared them all, and both plates match!"
+    },
+    "share-success-6": {
+      "energy": 7.5,
+      "generationText": "[playful, delighted] One for you, one for me, all the way! [warm] Thank you."
+    }
+  },
+  "tagGuidance": "Never use the word 'clear' in a delivery tag: it repeatedly produced throat-clears (count-0, count-1, count-5, paper-handle)."
 }

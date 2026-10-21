@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createPicnic,updatePicnic,validatePicnic,picnicCount,picnicShare,picnicObservations,picnicNeedsDemo} from '../src/picnic-state.js';
 import {defaultProgress,validateProgress,recordObservation} from '../src/learning.js';
-import {PICNIC_LINES,PICNIC_WORDS,PICNIC_COUNTS} from '../src/picnic-content.js';
+import {PICNIC_LINES,PICNIC_WORDS,PICNIC_COUNTS,PICNIC_LINE_VARIANTS,chooseLineVariant} from '../src/picnic-content.js';
 import {createPicnicAudio,PLAYABLE_CLIP_REVIEWS} from '../src/picnic-audio.js';
 import {existsSync} from 'node:fs';
 import {renderPicnic,picnicInstruction} from '../src/picnic-view.js';
@@ -161,4 +161,20 @@ test('reopening an example preserves partial letters and legacy backups resume w
  const fresh=updatePicnic(createPicnic(returning,()=>.99),'next');
  assert.equal(picnicNeedsDemo(fresh),false);assert.equal(picnicNeedsDemo({...fresh,scene:'share'}),true);
  for(const alteration of [{demonstrated:null},{demonstrated:['word','word']},{demonstrated:['paper']},{demoStep:3},{demoStep:null}])assert.throws(()=>validatePicnic({...state,...alteration}));
+});
+
+test('repeated feedback has at least three same-speaker variants and never repeats back to back',()=>{
+ for(const [family,ids] of Object.entries(PICNIC_LINE_VARIANTS)){
+  assert.ok(ids.length>=3,family);
+  assert.ok(ids.every(id=>PICNIC_LINES[id]),family);
+  assert.equal(new Set(ids.map(id=>PICNIC_LINES[id].speaker)).size,1,`${family} keeps one speaker`);
+ }
+ let previous=null;
+ for(let index=0;index<200;index++){const next=chooseLineVariant('pack-success',previous);assert.notEqual(next,previous);assert.ok(PICNIC_LINE_VARIANTS['pack-success'].includes(next));previous=next;}
+ assert.equal(chooseLineVariant('word-success-map',null),'word-success-map','single lines pass through');
+ // Benchmark floor: at least three success and three support lines for packing and sharing.
+ for(const scene of ['pack','share']){
+  assert.ok(PICNIC_LINE_VARIANTS[`${scene}-success`].length>=3);
+  assert.ok(Object.keys(PICNIC_LINES).filter(id=>id.startsWith(`${scene}-`)&&/(help|retry|few|many|left)/.test(id)).length>=3);
+ }
 });

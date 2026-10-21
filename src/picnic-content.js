@@ -76,6 +76,23 @@ export const PICNIC_LINES={
  'ending-drawn':line('bear','The food is ready, and you made a lantern on paper. A lovely little picnic.'),
  'ending-skipped':line('bear','The food is ready. A lovely little picnic, under the moon.'),
  decoration:line('pip','Choose a little decoration for our picnic.'),
+// Variants keep repeated feedback fresh; each is true for exactly the situation its family is chosen for.
+ 'word-retry-2':line('pip','Let’s listen to the word again. Which letter wants changing?'),
+ 'word-retry-3':line('pip','Not quite yet. Keep the letters that fit, and try another one.'),
+ 'pack-few-2':line('bear','Hmm, a few more apples, please. Let’s count what we have.'),
+ 'pack-few-3':line('bear','Not quite enough yet. Count them, then add more.'),
+ 'pack-many-2':line('bear','Oops, our basket is too full. Count them, then take some out.'),
+ 'pack-many-3':line('bear','That is more than we need. Take some apples out.'),
+ 'share-retry-2':line('bear','Hmm, one plate has more. Can you make them the same?'),
+ 'share-retry-3':line('bear','Let’s check again. Pip and I need the same number.'),
+ 'share-left-2':line('bear','The plates match. Some apples are still waiting to be shared.'),
+ 'share-left-3':line('bear','The same so far. Now share the rest, one each.'),
+ 'pack-success-4':line('bear','Exactly the right number of apples. Thank you.'),
+ 'pack-success-5':line('bear','Just the number we need. Off to our picnic.'),
+ 'pack-success-6':line('bear','You counted carefully. Our basket is ready to go.'),
+ 'share-success-4':line('pip','Fair and square. The same for both of us.'),
+ 'share-success-5':line('pip','You shared them all, and both plates match.'),
+ 'share-success-6':line('pip','One for you, one for me, all the way. Thank you.'),
 };
 for(const word of PICNIC_WORDS){
  PICNIC_LINES[`word-${word.id}`]=line('pip',`Let’s make ${word.id}. Choose the letters for ${word.id}.`);
@@ -90,4 +107,23 @@ for(const [scene,steps] of Object.entries(PICNIC_DEMOS))steps.forEach((step,inde
 });
 // Attach bundled character recordings; lines without a checked clip keep the browser-speech fallback.
 for(const [id,clip] of Object.entries(PICNIC_VOICE_CLIPS))if(PICNIC_LINES[id])Object.assign(PICNIC_LINES[id],clip);
-export const PICNIC_SCRIPT_VERSION=2;
+export const PICNIC_SCRIPT_VERSION=3;
+
+// Feedback families and the interchangeable lines each may play.
+export const PICNIC_LINE_VARIANTS={
+ 'word-retry':['word-retry','word-retry-2','word-retry-3'],
+ 'pack-few':['pack-few','pack-few-2','pack-few-3'],
+ 'pack-many':['pack-many','pack-many-2','pack-many-3'],
+ 'share-retry':['share-retry','share-retry-2','share-retry-3'],
+ 'share-left':['share-left','share-left-2','share-left-3'],
+ 'pack-success':['pack-success-1','pack-success-2','pack-success-3','pack-success-4','pack-success-5','pack-success-6'],
+ 'share-success':['share-success-1','share-success-2','share-success-3','share-success-4','share-success-5','share-success-6'],
+};
+
+// Pick a line from a family at random, never repeating the one played last time; unknown ids pass through.
+export function chooseLineVariant(family,previous,random=Math.random){
+ const options=PICNIC_LINE_VARIANTS[family];
+ if(!options)return family;
+ const fresh=options.filter(id=>id!==previous);
+ return fresh[Math.floor(random()*fresh.length)];
+}
